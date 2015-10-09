@@ -1,0 +1,27 @@
+﻿
+
+@mixin fixed($width, $direction) {
+  position: absolute;
+  width: rem-calc($width) + $column-gutter;
+  top: 0;
+  @if $direction == left {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+}
+@mixin fluid($width, $direction) {
+  @if $direction == left {
+    padding-right: rem-calc($width) + ($column-gutter * 1.5);
+  } @else {
+    padding-left: rem-calc($width) + ($column-gutter * 1.5);
+  }
+}
+@mixin min($width) {
+  width: $width + px;
+  float: left;
+  box-sizing: content-box;
+  + .column {
+    float: left;
+  }
+}
