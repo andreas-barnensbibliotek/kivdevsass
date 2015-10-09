@@ -1,0 +1,185 @@
+﻿@import 'devScss/foundation/_settings';
+@import 'foundation';
+@import 'devScss/_kivmixin';
+@import 'devScss/Komponenter/_tab-bar';
+
+// Behold, here are all the Foundation components.
+
+/*@import 'foundation/components/grid';
+@import 'foundation/components/accordion';
+@import 'foundation/components/alert-boxes';
+@import 'foundation/components/block-grid';
+@import 'foundation/components/breadcrumbs';
+@import 'foundation/components/button-groups';
+@import 'foundation/components/buttons';
+@import 'foundation/components/clearing';
+@import 'foundation/components/dropdown';
+@import 'foundation/components/dropdown-buttons';
+@import 'foundation/components/flex-video';
+@import 'foundation/components/forms';
+@import 'foundation/components/icon-bar';
+@import 'foundation/components/inline-lists';
+@import 'foundation/components/joyride';
+@import 'foundation/components/keystrokes';
+@import 'foundation/components/labels';
+@import 'foundation/components/magellan';
+@import 'foundation/components/orbit';
+@import 'foundation/components/pagination';
+@import 'foundation/components/panels';
+@import 'foundation/components/pricing-tables';
+@import 'foundation/components/progress-bars';
+@import 'foundation/components/range-slider';
+@import 'foundation/components/reveal';
+@import 'foundation/components/side-nav';
+@import 'foundation/components/split-buttons';
+@import 'foundation/components/sub-nav';
+@import 'foundation/components/switches';
+@import 'foundation/components/tables';
+@import 'foundation/components/tabs';
+@import 'foundation/components/thumbs';
+@import 'foundation/components/tooltips';
+@import 'foundation/components/top-bar';
+@import 'foundation/components/type';
+//@import 'foundation/components/offcanvas';
+@import 'foundation/components/visibility';
+    /* */
+
+.row {
+  max-width: 1200px;
+}
+
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  
+  .inline-list a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px 0 0;
+  }
+  
+  .contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    
+    li {
+      margin-bottom: 2rem;
+      
+      p {
+        padding-left: 5rem;
+      }
+    }
+    
+    i {
+      position: absolute;
+      background-color: #33383b;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 50%;
+      line-height: 1;
+      margin: 0 0 0 -4rem;
+      vertical-align: middle;
+      padding: .25em .45em;
+    }
+  }
+  
+  .copywrite {
+    color: #8f9296;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .about {
+    color: #92999f;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+    
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+    
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }  
+  @media only screen and (min-width: 40.063em) {
+    
+    p {
+      text-align: left;
+    }
+    
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+    
+    .contact {
+      text-align: left;
+      > i {
+        margin-right: 1rem;
+      }
+    }
+    
+  }
+}
+   
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+body {
+  height: auto;
+}
+
+.left-small{
+
+    background-color: #cbb069;
+
+}
+
+
+
+// Fixed 300px
+
+@media #{$small-up} {.small-min-300.column { @include min(300); 
+                                             background-color:#333;
+                     }}
+ 
+@media #{$medium-up} {
+  .medium-min-300.column { @include min(350); 
+                           background-color:#eee;
+  }
+  .large-min-300.column { @include min(270); 
+                          background-color:#666;
+  }
+}
+@media #{$large-up} {
+  
+}

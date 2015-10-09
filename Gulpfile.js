@@ -71,6 +71,8 @@ gulp.task('foundationJS', function () {
 gulp.task('SassToCssSrc', function() {
     gulp.src('sass/**/*.scss')
         .pipe(sass({
+            style: 'expanded',
+            sourceComments: 'normal',
 			includePaths: [
 				srcPath.bower +'/foundation/scss' //importera alla sass filer från foundation. gör att alla komponenter går att använda direkt
 			]			

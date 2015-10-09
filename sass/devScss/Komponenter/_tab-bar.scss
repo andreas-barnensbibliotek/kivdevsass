@@ -1,0 +1,47 @@
+﻿//basestyles
+.top-nav-main{  
+    text-align:center; 
+   &:hover{       
+       opacity: 0.5;
+   }
+}
+.top-nav-main-text{
+    font-size:small;
+    color:#fff;
+    font-weight:bold;   
+}
+
+// livestyles
+.tab-bar-logosection{
+    @media #{$small-up} {
+         margin-left:4em;
+    }
+    @media #{$medium-up} {
+         margin-left:5em;
+    }
+    @media #{$large-up} {
+        margin-left:6em;
+   }
+   
+
+}
+
+.left-small{
+      @extend .top-nav-main;
+    a{
+        span{
+            @extend .top-nav-main-text;                    
+        }
+     }
+}
+.right-small{
+    @extend .top-nav-main;
+    background-color:#333;
+
+    a{
+        span{
+            @extend .top-nav-main-text;                    
+        }
+        text-align:center;    
+    }      
+}
