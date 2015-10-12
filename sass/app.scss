@@ -3,6 +3,7 @@
 @import 'devScss/_kivmixin';
 @import 'devScss/Komponenter/_tab-bar';
 
+
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -43,6 +44,8 @@
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
     /* */
+@import 'devScss/foundation/_offcanvas.scss';
+@import 'devScss/foundation/_forms.scss';
 
 .row {
   max-width: 1200px;
@@ -145,30 +148,16 @@
   }
 }
    
-.logo {
-  color: #fff;
-  font-size: 1.5rem;
-  
-  i {
-    margin-right: 0.5rem;
-  }
-}
+
 
 body {
   height: auto;
 }
 
-.left-small{
-
-    background-color: #cbb069;
-
-}
-
-
-
 // Fixed 300px
 
-@media #{$small-up} {.small-min-300.column { @include min(300); 
+@media #{$small-up} {
+    .small-min-300.column { @include min(300); 
                                              background-color:#333;
                      }}
  
@@ -180,6 +169,18 @@ body {
                           background-color:#666;
   }
 }
-@media #{$large-up} {
-  
+@media #{$large-up} {  
 }
+
+$font-path: "../public/fonts/foundation-icons/foundation-icons";
+@font-face {
+  font-family: "foundation-icons";
+  src: url("#{$font-path}.eot");
+  src: url("#{$font-path}.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}.woff") format("woff"),
+       url("#{$font-path}.ttf") format("truetype"),
+       url("#{$font-path}.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "/public/fonts/foundation-icons/foundation-icons.css";
