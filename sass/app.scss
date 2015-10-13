@@ -148,8 +148,6 @@
   }
 }
    
-
-
 body {
   height: auto;
 }
@@ -172,7 +170,7 @@ body {
 @media #{$large-up} {  
 }
 
-$font-path: "../public/fonts/foundation-icons/foundation-icons";
+$font-path: "/public/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
   src: url("#{$font-path}.eot");
