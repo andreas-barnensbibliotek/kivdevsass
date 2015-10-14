@@ -15,6 +15,28 @@ $(document).foundation({
 
 $(document).ready(function () {
     $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
+
+    $('.showingresstext').click(function () {
+        var valdclass = $(this).find('i');
+
+        $(this).parent().siblings(".ingresstext").slideToggle( function () {
+            var addOrRemove = valdclass.hasClass("fi-plus");
+
+            if (addOrRemove) {
+                valdclass.addClass("fi-x");
+                valdclass.removeClass("fi-plus");
+            } else {
+                valdclass.addClass("fi-plus");
+                valdclass.removeClass("fi-x");
+            }
+
+            $('#kivisotope').isotope('layout');
+
+        });        
+        return false;
+    });
+
+
 });
 
 (function () {

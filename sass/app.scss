@@ -2,7 +2,10 @@
 @import 'foundation';
 @import 'devScss/_kivmixin';
 @import 'devScss/Komponenter/_tab-bar';
-
+@import 'devScss/foundation/_offcanvas';
+@import 'devScss/foundation/_forms';
+@import 'devScss/foundation/_type';
+@import 'devScss/Komponenter/_mozaikitem';
 
 // Behold, here are all the Foundation components.
 
@@ -43,9 +46,25 @@
 @import 'foundation/components/type';
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
-    /* */
-@import 'devScss/foundation/_offcanvas.scss';
-@import 'devScss/foundation/_forms.scss';
+  */
+
+.size-21 {
+    font-size: 1.2rem;
+}
+.size-24 {
+    font-size: 1.4rem;
+}
+#contentHeader{
+    h1{
+        text-transform: uppercase;
+        color:$gold; 
+        margin-bottom:0px;       
+    }
+    a{
+        text-transform: uppercase;
+    }
+}
+
 
 .row {
   max-width: 1200px;

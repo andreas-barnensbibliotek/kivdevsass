@@ -614,12 +614,16 @@ ul.multiColumn {
 
 ul.off-canvas-list {
     margin:0rem 1.0rem;
+    text-transform: uppercase;
+    font-stretch:condensed;
 }
 
 .off-canvas-submenu.multiColumn{     
     list-style:none;
     font-size:0.8rem;
     //border-bottom:1px solid #000;
+    text-transform: lowercase;
+    font-stretch:normal;
     padding-bottom:1rem;    
 }
 .off-canvas-submenu.multiColumn a{         

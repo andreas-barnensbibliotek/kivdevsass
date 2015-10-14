@@ -388,7 +388,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
       /* Styles for required inputs */
       small {
         text-transform: $form-label-small-transform;
-        color: scale-color($form-label-font-color, $lightness: 15%);
+        color:$form-label-font-color;
+        border:10px solid #000;
       }
     }
 
@@ -599,8 +600,11 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     label.error { @include form-label-error-color; }
   }
 }
-#contentfilterblock {
+#contentfilterblock {   
     line-height:1.1em;
+    label{
+        color: $black;
+    }
     label:first-child{
        padding-top: 6px;    
         padding-top: 0.2rem; 
@@ -608,12 +612,11 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     }
     span{
         display:block;
-        float:left;
-        background-color:$smoke;
+        float:left;        
         margin-left: 0.7rem;
         padding-left: 0.4rem;
         padding-top: 0.2rem; 
-  	    padding-bottom:0.2rem;
+  	    padding-bottom:0.2rem;         
     }
     input{
       margin:0rem;      
@@ -621,13 +624,34 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     .active{
         background-color:$darkgreen;
         label{          
-            color:#fff;
+            color:$white;
         }
+        &:hover{
+            opacity:(0.7);
+        }    
     }
+    
 }
+.filterbox{
+    background-color:$smoke;
+     &:hover{
+            background-color:$iron;
+        }       
 
+}
+#filtersortering{
+    a{
+        @extend .filterbox;
+        margin-right:0.4rem;
+        padding-bottom:0.2rem;       
+        padding-left: 0.4rem;
+        padding-right:0.4rem;
+        padding-top: 0.2rem; 
+    }
+
+}
 .custom.dropdown{
-    height:1.5em;
+    height:1.8em;
     padding:0.05em;
 
     /*

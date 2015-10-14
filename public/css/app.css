@@ -1,13 +1,5 @@
 @charset "UTF-8";
 @import url(/public/fonts/foundation-icons/foundation-icons.css);
-/* line 1493, C:/andreas/web/kivsassproj/sass/devScss/foundation/_settings.scss */
-.size-21 {
-  font-size: 1.2rem; }
-
-/* line 1496, C:/andreas/web/kivsassproj/sass/devScss/foundation/_settings.scss */
-.size-24 {
-  font-size: 1.4rem; }
-
 /* line 431, ./bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.3/"; }
@@ -6716,13 +6708,13 @@ td {
 /* Default Link Styles */
 /* line 220, ./bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008CBA;
+  color: #000000;
   line-height: inherit;
   text-decoration: none; }
   /* line 226, ./bower_components/foundation/scss/foundation/components/_type.scss */
   a:hover,
   a:focus {
-    color: #0078a0; }
+    color: black; }
   /* line 233, ./bower_components/foundation/scss/foundation/components/_type.scss */
   a img {
     border: none; }
@@ -7526,44 +7518,6 @@ th.hide-for-touch {
   .right-small a {
     text-align: center; }
 
-/*@import 'foundation/components/grid';
-@import 'foundation/components/accordion';
-@import 'foundation/components/alert-boxes';
-@import 'foundation/components/block-grid';
-@import 'foundation/components/breadcrumbs';
-@import 'foundation/components/button-groups';
-@import 'foundation/components/buttons';
-@import 'foundation/components/clearing';
-@import 'foundation/components/dropdown';
-@import 'foundation/components/dropdown-buttons';
-@import 'foundation/components/flex-video';
-@import 'foundation/components/forms';
-@import 'foundation/components/icon-bar';
-@import 'foundation/components/inline-lists';
-@import 'foundation/components/joyride';
-@import 'foundation/components/keystrokes';
-@import 'foundation/components/labels';
-@import 'foundation/components/magellan';
-@import 'foundation/components/orbit';
-@import 'foundation/components/pagination';
-@import 'foundation/components/panels';
-@import 'foundation/components/pricing-tables';
-@import 'foundation/components/progress-bars';
-@import 'foundation/components/range-slider';
-@import 'foundation/components/reveal';
-@import 'foundation/components/side-nav';
-@import 'foundation/components/split-buttons';
-@import 'foundation/components/sub-nav';
-@import 'foundation/components/switches';
-@import 'foundation/components/tables';
-@import 'foundation/components/tabs';
-@import 'foundation/components/thumbs';
-@import 'foundation/components/tooltips';
-@import 'foundation/components/top-bar';
-@import 'foundation/components/type';
-//@import 'foundation/components/offcanvas';
-@import 'foundation/components/visibility';
-    /* */
 /* line 413, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
@@ -8317,15 +8271,19 @@ ul.multiColumn {
 
 /* line 615, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 ul.off-canvas-list {
-  margin: 0rem 1rem; }
+  margin: 0rem 1rem;
+  text-transform: uppercase;
+  font-stretch: condensed; }
 
-/* line 619, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 621, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-submenu.multiColumn {
   list-style: none;
   font-size: 0.8rem;
+  text-transform: lowercase;
+  font-stretch: normal;
   padding-bottom: 1rem; }
 
-/* line 625, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 629, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-submenu.multiColumn a {
   color: #000;
   border-bottom: 1px solid #000;
@@ -8333,40 +8291,60 @@ ul.off-canvas-list {
   margin-left: 0px;
   padding: 0.2rem 0rem; }
 
-/* line 632, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 636, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-list {
   font-size: 0.85rem; }
 
-/* line 602, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 603, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
 #contentfilterblock {
   line-height: 1.1em; }
-  /* line 604, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 605, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  #contentfilterblock label {
+    color: #000000; }
+  /* line 608, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock label:first-child {
     padding-top: 6px;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem; }
-  /* line 609, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 613, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock span {
     display: block;
     float: left;
-    background-color: #EEEEEE;
     margin-left: 0.7rem;
     padding-left: 0.4rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem; }
-  /* line 618, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 621, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock input {
     margin: 0rem; }
-  /* line 621, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 624, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock .active {
     background-color: #0c6d4c; }
-    /* line 623, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+    /* line 626, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
     #contentfilterblock .active label {
-      color: #fff; }
+      color: #FFFFFF; }
+    /* line 629, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+    #contentfilterblock .active:hover {
+      opacity: 0.7; }
 
-/* line 629, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 635, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+.filterbox, #filtersortering a {
+  background-color: #EEEEEE; }
+  /* line 637, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  .filterbox:hover, #filtersortering a:hover {
+    background-color: #CCCCCC; }
+
+/* line 643, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+#filtersortering a {
+  margin-right: 0.4rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  padding-top: 0.2rem; }
+
+/* line 653, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown {
-  height: 1.5em;
+  height: 1.8em;
   padding: 0.05em;
   /*
         height: 2em;
@@ -8376,29 +8354,110 @@ ul.off-canvas-list {
         padding-top: 0.2em;
     */ }
 
-/* line 641, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 665, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.small {
   max-width: 134px; }
 
-/* line 644, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 668, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.medium {
   max-width: 254px; }
 
-/* line 647, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 671, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.large {
   max-width: 434px; }
 
-/* line 50, stdin */
+/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+.mozaikitems {
+  background-color: #F9F9F9;
+  padding: 0px 1em;
+  margin-bottom: 1.5rem; }
+  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems i {
+    font-size: 2.3rem;
+    color: #cbb069; }
+  /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems h4 {
+    margin-top: 0px;
+    font-size: 1rem;
+    font-weight: bold; }
+  /* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems h5 {
+    font-size: 1rem;
+    margin-bottom: 0px;
+    color: #cbb069;
+    font-weight: bold; }
+
+/* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+.ingresstext {
+  display: none; }
+
+/*@import 'foundation/components/grid';
+@import 'foundation/components/accordion';
+@import 'foundation/components/alert-boxes';
+@import 'foundation/components/block-grid';
+@import 'foundation/components/breadcrumbs';
+@import 'foundation/components/button-groups';
+@import 'foundation/components/buttons';
+@import 'foundation/components/clearing';
+@import 'foundation/components/dropdown';
+@import 'foundation/components/dropdown-buttons';
+@import 'foundation/components/flex-video';
+@import 'foundation/components/forms';
+@import 'foundation/components/icon-bar';
+@import 'foundation/components/inline-lists';
+@import 'foundation/components/joyride';
+@import 'foundation/components/keystrokes';
+@import 'foundation/components/labels';
+@import 'foundation/components/magellan';
+@import 'foundation/components/orbit';
+@import 'foundation/components/pagination';
+@import 'foundation/components/panels';
+@import 'foundation/components/pricing-tables';
+@import 'foundation/components/progress-bars';
+@import 'foundation/components/range-slider';
+@import 'foundation/components/reveal';
+@import 'foundation/components/side-nav';
+@import 'foundation/components/split-buttons';
+@import 'foundation/components/sub-nav';
+@import 'foundation/components/switches';
+@import 'foundation/components/tables';
+@import 'foundation/components/tabs';
+@import 'foundation/components/thumbs';
+@import 'foundation/components/tooltips';
+@import 'foundation/components/top-bar';
+@import 'foundation/components/type';
+//@import 'foundation/components/offcanvas';
+@import 'foundation/components/visibility';
+  */
+/* line 51, stdin */
+.size-21 {
+  font-size: 1.2rem; }
+
+/* line 54, stdin */
+.size-24 {
+  font-size: 1.4rem; }
+
+/* line 58, stdin */
+#contentHeader h1 {
+  text-transform: uppercase;
+  color: #cbb069;
+  margin-bottom: 0px; }
+
+/* line 63, stdin */
+#contentHeader a {
+  text-transform: uppercase; }
+
+/* line 69, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 54, stdin */
+/* line 73, stdin */
 .footer {
   background-color: #292c2f;
   text-align: center;
   font-size: 1.2rem;
   padding: 4rem; }
-  /* line 60, stdin */
+  /* line 79, stdin */
   .footer .inline-list a {
     display: inline-block;
     width: 2rem;
@@ -8411,19 +8470,19 @@ ul.off-canvas-list {
     text-align: center;
     line-height: 35px;
     margin: 0 3px 0 0; }
-  /* line 73, stdin */
+  /* line 92, stdin */
   .footer .contact {
     list-style-type: none;
     margin: 0;
     text-align: left;
     color: #fff; }
-    /* line 79, stdin */
+    /* line 98, stdin */
     .footer .contact li {
       margin-bottom: 2rem; }
-      /* line 82, stdin */
+      /* line 101, stdin */
       .footer .contact li p {
         padding-left: 5rem; }
-    /* line 87, stdin */
+    /* line 106, stdin */
     .footer .contact i {
       position: absolute;
       background-color: #33383b;
@@ -8435,17 +8494,17 @@ ul.off-canvas-list {
       margin: 0 0 0 -4rem;
       vertical-align: middle;
       padding: 0.25em 0.45em; }
-  /* line 100, stdin */
+  /* line 119, stdin */
   .footer .copywrite {
     color: #8f9296;
     font-size: 0.875rem;
     margin: 0 0 1rem 0; }
-  /* line 106, stdin */
+  /* line 125, stdin */
   .footer .about {
     color: #92999f;
     font-size: 0.875rem;
     margin: 0 0 1rem 0; }
-  /* line 112, stdin */
+  /* line 131, stdin */
   .footer .footer-links a {
     list-style: none;
     font-weight: normal;
@@ -8453,35 +8512,35 @@ ul.off-canvas-list {
     padding: 3rem 0 2rem;
     margin: 0;
     font-size: 0.875rem; }
-    /* line 120, stdin */
+    /* line 139, stdin */
     .footer .footer-links a::after {
       content: "•";
       padding: 0 0.2rem 0 0.4rem; }
-    /* line 125, stdin */
+    /* line 144, stdin */
     .footer .footer-links a:last-child::after {
       content: "";
       padding: 0 0.4rem 0 0.8rem; }
   @media only screen and (min-width: 40.063em) {
-    /* line 132, stdin */
+    /* line 151, stdin */
     .footer p {
       text-align: left; }
-    /* line 136, stdin */
+    /* line 155, stdin */
     .footer .social {
       text-align: left;
       margin: 0; }
-    /* line 141, stdin */
+    /* line 160, stdin */
     .footer .contact {
       text-align: left; }
-      /* line 143, stdin */
+      /* line 162, stdin */
       .footer .contact > i {
         margin-right: 1rem; } }
 
-/* line 151, stdin */
+/* line 170, stdin */
 body {
   height: auto; }
 
 @media only screen {
-  /* line 158, stdin */
+  /* line 177, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -8494,7 +8553,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 163, stdin */
+  /* line 182, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -8505,7 +8564,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 166, stdin */
+  /* line 185, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
