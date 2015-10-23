@@ -6,6 +6,7 @@
 @import 'devScss/foundation/_forms';
 @import 'devScss/foundation/_type';
 @import 'devScss/Komponenter/_mozaikitem';
+@import 'devScss/Komponenter/_omoss';
 
 // Behold, here are all the Foundation components.
 
@@ -201,3 +202,20 @@ $font-path: "/public/fonts/foundation-icons/foundation-icons";
   font-style: normal;
 }
 @import "/public/fonts/foundation-icons/foundation-icons.css";
+
+.clear {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}

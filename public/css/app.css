@@ -8258,7 +8258,7 @@ ul.off-canvas-list {
   margin-right: .5rem;
   display: inline; }
 
-/* line 608, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 606, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 ul.multiColumn {
   -webkit-column-count: 2;
      -moz-column-count: 2;
@@ -8269,13 +8269,13 @@ ul.multiColumn {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
-/* line 615, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 613, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 ul.off-canvas-list {
   margin: 0rem 1rem;
   text-transform: uppercase;
   font-stretch: condensed; }
 
-/* line 621, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 619, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-submenu.multiColumn {
   list-style: none;
   font-size: 0.8rem;
@@ -8283,7 +8283,7 @@ ul.off-canvas-list {
   font-stretch: normal;
   padding-bottom: 1rem; }
 
-/* line 629, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 627, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-submenu.multiColumn a {
   color: #000;
   border-bottom: 1px solid #000;
@@ -8291,7 +8291,7 @@ ul.off-canvas-list {
   margin-left: 0px;
   padding: 0.2rem 0rem; }
 
-/* line 636, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 634, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-list {
   font-size: 0.85rem; }
 
@@ -8391,6 +8391,46 @@ ul.off-canvas-list {
 .ingresstext {
   display: none; }
 
+/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+.omossContentBox {
+  background-color: #EEEEEE;
+  padding: 1.5rem 0rem;
+  margin-top: .5rem; }
+
+/* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+#omossKontaktContent {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #fff; }
+  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent ul {
+    list-style: none; }
+  /* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent li {
+    list-style: none;
+    border-bottom: 2px solid #EEEEEE;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem; }
+  /* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent h2 {
+    color: #cbb069;
+    border-bottom: 2px solid #EEEEEE;
+    text-transform: uppercase; }
+  /* line 28, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent .kontaktkort .namn {
+    font-weight: bold; }
+  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent .kontaktkort .avd {
+    color: #cbb069;
+    margin-bottom: 0.2rem; }
+  /* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent .kontaktkort .ftn {
+    font-weight: bold;
+    font-size: 0.8rem; }
+  /* line 39, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  #omossKontaktContent .kontaktkort .epost {
+    font-weight: bold; }
+
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -8429,35 +8469,35 @@ ul.off-canvas-list {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 51, stdin */
+/* line 52, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 54, stdin */
+/* line 55, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 58, stdin */
+/* line 59, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #cbb069;
   margin-bottom: 0px; }
 
-/* line 63, stdin */
+/* line 64, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 69, stdin */
+/* line 70, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 73, stdin */
+/* line 74, stdin */
 .footer {
   background-color: #292c2f;
   text-align: center;
   font-size: 1.2rem;
   padding: 4rem; }
-  /* line 79, stdin */
+  /* line 80, stdin */
   .footer .inline-list a {
     display: inline-block;
     width: 2rem;
@@ -8470,19 +8510,19 @@ ul.off-canvas-list {
     text-align: center;
     line-height: 35px;
     margin: 0 3px 0 0; }
-  /* line 92, stdin */
+  /* line 93, stdin */
   .footer .contact {
     list-style-type: none;
     margin: 0;
     text-align: left;
     color: #fff; }
-    /* line 98, stdin */
+    /* line 99, stdin */
     .footer .contact li {
       margin-bottom: 2rem; }
-      /* line 101, stdin */
+      /* line 102, stdin */
       .footer .contact li p {
         padding-left: 5rem; }
-    /* line 106, stdin */
+    /* line 107, stdin */
     .footer .contact i {
       position: absolute;
       background-color: #33383b;
@@ -8494,17 +8534,17 @@ ul.off-canvas-list {
       margin: 0 0 0 -4rem;
       vertical-align: middle;
       padding: 0.25em 0.45em; }
-  /* line 119, stdin */
+  /* line 120, stdin */
   .footer .copywrite {
     color: #8f9296;
     font-size: 0.875rem;
     margin: 0 0 1rem 0; }
-  /* line 125, stdin */
+  /* line 126, stdin */
   .footer .about {
     color: #92999f;
     font-size: 0.875rem;
     margin: 0 0 1rem 0; }
-  /* line 131, stdin */
+  /* line 132, stdin */
   .footer .footer-links a {
     list-style: none;
     font-weight: normal;
@@ -8512,35 +8552,35 @@ ul.off-canvas-list {
     padding: 3rem 0 2rem;
     margin: 0;
     font-size: 0.875rem; }
-    /* line 139, stdin */
+    /* line 140, stdin */
     .footer .footer-links a::after {
       content: "•";
       padding: 0 0.2rem 0 0.4rem; }
-    /* line 144, stdin */
+    /* line 145, stdin */
     .footer .footer-links a:last-child::after {
       content: "";
       padding: 0 0.4rem 0 0.8rem; }
   @media only screen and (min-width: 40.063em) {
-    /* line 151, stdin */
+    /* line 152, stdin */
     .footer p {
       text-align: left; }
-    /* line 155, stdin */
+    /* line 156, stdin */
     .footer .social {
       text-align: left;
       margin: 0; }
-    /* line 160, stdin */
+    /* line 161, stdin */
     .footer .contact {
       text-align: left; }
-      /* line 162, stdin */
+      /* line 163, stdin */
       .footer .contact > i {
         margin-right: 1rem; } }
 
-/* line 170, stdin */
+/* line 171, stdin */
 body {
   height: auto; }
 
 @media only screen {
-  /* line 177, stdin */
+  /* line 178, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -8553,7 +8593,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 182, stdin */
+  /* line 183, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -8564,7 +8604,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 185, stdin */
+  /* line 186, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -8582,3 +8622,22 @@ body {
   src: url("/public/fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("/public/fonts/foundation-icons/foundation-icons.woff") format("woff"), url("/public/fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("/public/fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+/* line 206, stdin */
+.clear {
+  clear: both; }
+
+/* line 210, stdin */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+/* line 215, stdin */
+.clearfix:after {
+  clear: both; }
+
+/* line 219, stdin */
+.clearfix {
+  zoom: 1;
+  /* ie 6/7 */ }

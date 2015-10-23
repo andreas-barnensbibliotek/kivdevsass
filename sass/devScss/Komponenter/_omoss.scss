@@ -1,0 +1,44 @@
+﻿
+.omossContentBox{
+    background-color:$smoke;
+    padding:1.5rem 0rem;
+	margin-top:.5rem;
+}
+
+#omossKontaktContent{  
+    display:block;
+	padding: 1rem 2rem;
+    background-color:#fff;
+    ul{
+        list-style:none;
+    }
+    li{
+        list-style:none;
+        border-bottom:2px solid $smoke;
+        margin-bottom:0.5rem;
+        padding-bottom:0.5rem;
+
+    }
+    h2{
+        color: $gold;
+        border-bottom:2px solid $smoke;
+        text-transform: uppercase;
+    }
+    & .kontaktkort{
+       & .namn{
+            font-weight:bold;
+        }
+        & .avd{
+            color:$gold;
+            margin-bottom:0.2rem;
+        }
+       & .ftn{
+             font-weight:bold;
+             font-size:0.8rem;
+        }
+       & .epost{
+            font-weight:bold;
+        }
+    }
+
+}
