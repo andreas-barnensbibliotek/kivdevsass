@@ -115,11 +115,11 @@ $(document).ready(function () {
     });
 
     //old
-    $('.showingresstext2').click(function (e) {
+    $('.showsnabblink').click(function (e) {
         var valdclass = $(this).find('i');
        
         //alert(cur_clicked_Item + "-->" + $(this).height());
-        $(this).parent().siblings(".ingresstext2").slideToggle("slow", function () {
+        $(this).parent().siblings(".snabblink").slideToggle("slow", function () {
             var addOrRemove = valdclass.hasClass("fi-plus");
             var valdheight = $(this).height();
             if (addOrRemove) {
@@ -137,9 +137,29 @@ $(document).ready(function () {
         return false;
     });
 
+    $('#lasMerOmOssLink').click(function (e) {        
+        $('.omossContentBox').slideToggle("slow", function () {            
+            $('#kivisotope').isotope("layout");
+        });
 
+
+        return false;
+    });
     
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scroll-top').fadeIn();
+        } else {
+            $('.scroll-top').fadeOut();
+        }
+    });
 
+    $('.scroll-top').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
     /*!
      * jQuery Sticky Footer 1.1
      * Corey Snyder
@@ -202,7 +222,7 @@ $(document).ready(function () {
             var current = getCSS("footer", "margin-top");
 
             if (isNaN(current) == true) {
-                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:0px;");
+                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:2rem;");
                 current = 0;
             } else {
                 current = parseInt(current);
