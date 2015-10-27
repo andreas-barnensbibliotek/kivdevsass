@@ -23,39 +23,43 @@ $(document).ready(function () {
     $('.showingresstext').click(function (e) {
         var valdclass = $(this).find('i');
         var st = $(this).attr("style");
-
-        //hämta clickat item
-        var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
-        
-        ////hämta clickatitem leftvärde:                
-        var start_pos = cur_clicked_Item.indexOf('left:') + 5;
-        var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
-        //var currentItemLeftvalue = cur_clicked_Item.substring(start_pos, end_pos).replace('px;', '').trim();
-       
-        //hämta clickatitem topvärde
-        var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
-        var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
-
-        // hämta första delen av style för sökning senare
-        var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
-
-
-        //alert(cur_clicked_Item + "-->" + $(this).height());
-       // $(this).parent().siblings(".ingresstext").slideToggle("slow", function () {
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
 
-        var Maincontainerheight = $('#kivisotope').attr("style");
-        var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
-        var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
-        Maincontainerheight= Maincontainerheight.substring(0, cont_start_pos).trim();
+        if (thatobj == undefined) {
+            thatobj = $(e.currentTarget).closest('.columns').children('.ingresstext');
+        } else {
+            //hämta clickat item
+            var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
 
-        var ny_cont_height = cont_height;
+            ////hämta clickatitem leftvärde:                
+            var start_pos = cur_clicked_Item.indexOf('left:') + 5;
+            var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
+            //var currentItemLeftvalue = cur_clicked_Item.substring(start_pos, end_pos).replace('px;', '').trim();
 
-        var addOrRemove = valdclass.hasClass("fi-plus");
-        var valdheight = thatobj.height();
+            //hämta clickatitem topvärde
+            var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
+            var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
+
+            // hämta första delen av style för sökning senare
+            var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
+
+
+            //alert(cur_clicked_Item + "-->" + $(this).height());
+            // $(this).parent().siblings(".ingresstext").slideToggle("slow", function () {
+
+
+            var Maincontainerheight = $('#kivisotope').attr("style");
+            var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
+            var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
+            Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
+
+            var ny_cont_height = cont_height;
+
+            var addOrRemove = valdclass.hasClass("fi-plus");
+            var valdheight = thatobj.height();
             if (addOrRemove) {
                 valdclass.addClass("fi-x");
-                valdclass.removeClass("fi-plus");   
+                valdclass.removeClass("fi-plus");
                 //clicked_item_height = parseInt(clicked_item_height) + parseInt(valdheight);
                 ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight)
                 Maincontainerheight = Maincontainerheight + ny_cont_height;
@@ -63,40 +67,45 @@ $(document).ready(function () {
                 valdclass.addClass("fi-plus");
                 valdclass.removeClass("fi-x");
                 //clicked_item_height = parseInt(clicked_item_height) - parseInt(valdheight);
-                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight) );
+                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight));
                 Maincontainerheight = Maincontainerheight + ny_cont_height.toString();
 
             }
             $('#kivisotope').attr('style', Maincontainerheight + "px;");
-           
+
             var rakna = 0;
             var loopdom = $('div[style^="' + itemSelectStyleValue + '"]');
 
             loopdom.each(function (index, value) {
                 //hämta clickatitem topvärde
-                             
+
                 var currentItem = $(value).attr('style');
-                
+
                 var curitmTop_start = currentItem.indexOf('top:') + 4;
                 var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
                 var nyposition = current_item_height;
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
-                    
+
                     if (addOrRemove) {
                         nyposition = parseInt(current_item_height) + parseInt(valdheight);
-                       
+
                     } else {
                         nyposition = parseInt(current_item_height) - parseInt(valdheight);
                     }
                     var updatedStyleToAdd = itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
-                    $(value).attr('style', updatedStyleToAdd);                   
+                    $(value).attr('style', updatedStyleToAdd);
                 }
-                
+
                 //console.log(rakna + "-----------------");
                 //console.log(parseInt(ny_cont_height));
                 //console.log(parseInt(cont_height));
                 //console.log(Maincontainerheight);
             });
+
+
+        }
+
+        
 
  thatobj.slideToggle(100, function () {
      if (!$('i').hasClass("fi-x")) {
