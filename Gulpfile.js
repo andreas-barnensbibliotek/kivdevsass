@@ -51,13 +51,13 @@ var gulp = require('gulp'),
 gulp.task('foundationJS', function () {
     gulp.src(
 			[
-				srcPath.bower +'/jquery/dist/jquery.js',
+				//srcPath.bower +'/jquery/dist/jquery.js',
 				srcPath.bower +'/foundation/js/foundation.js',
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 srcPath.js + '/kivjs.js',
 			]
 		)			
-		.pipe(concat('vendor.js'))
+		.pipe(concat('app.js'))
 		.pipe(gulp.dest(srcPath.publik +'/js'));
 		
     return gulp.src([

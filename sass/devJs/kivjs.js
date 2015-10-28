@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $('.showingresstext').click(function (e) {
         var valdclass = $(this).find('i');
-        var addOrRemove = valdclass.hasClass("fi-plus");
+        var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
 
@@ -85,16 +85,18 @@ $(document).ready(function () {
         }
           
         if (addOrRemove) {
-            valdclass.addClass("fi-x");
-            valdclass.removeClass("fi-plus");
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('-');
             
         } else {
-            valdclass.addClass("fi-plus");
-            valdclass.removeClass("fi-x");           
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('+');
         }
 
          thatobj.slideToggle(100, function () {
-             if (!$('i').hasClass("fi-x")) {
+             if (!$('i').hasClass("open")) {
                  $('#kivisotope').isotope("layout", {
                      transitionDuration: 0
                  });
