@@ -168,13 +168,15 @@
             <!-- </div> END BACKGROUND -->
         </div><!-- END INNER WRAP -->
     </div><!-- END OFF CANVAS WRAP -->
-    <script src="public/js/vendor.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="public/js/app.js"></script>
     <script src="public/js/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
 
                 $(document).ready(function () {
 
-                    var $container = $('#kivisotope').isotope({
+                    var $container = $('.kivisotope').isotope({
                         itemSelector: '.item',
                         masonry: {
                             columnWidth: '.columns'

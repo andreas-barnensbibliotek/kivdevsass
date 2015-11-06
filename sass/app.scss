@@ -83,11 +83,11 @@ body {
 @media #{$small-up} {
     .small-min-300.column { @include min(300); 
                                              background-color:#333;
-                     }}
- 
+                     }
+}
 @media #{$medium-up} {
   .medium-min-300.column { @include min(350); 
-                           background-color:#eee;
+                           background-color:$smoke;
   }
   .large-min-300.column { @include min(270); 
                           background-color:#666;
@@ -95,8 +95,8 @@ body {
 }
 @media #{$large-up} {  
 }
-
-$font-path: "/public/fonts/foundation-icons/foundation-icons";
+//$font-path: "/public/fonts/foundation-icons/foundation-icons";
+$font-path: "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
   src: url("#{$font-path}.eot");
@@ -107,7 +107,7 @@ $font-path: "/public/fonts/foundation-icons/foundation-icons";
   font-weight: normal;
   font-style: normal;
 }
-@import "/public/fonts/foundation-icons/foundation-icons.css";
+@import "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 
 .clear {
   clear: both;
@@ -147,5 +147,13 @@ $font-path: "/public/fonts/foundation-icons/foundation-icons";
         color:$oil;
     }
 }
-
 .open{font-size:1.2rem;}
+
+
+.move-right .exit-off-canvas {
+    transition: background 300ms ease;
+    background: rgba(000, 000, 000, 0.8);
+    &:hover{
+        background: rgba(000, 000, 000, 0.8);
+    }
+}

@@ -1,15 +1,22 @@
 ﻿
 .omossContentBox{
     display:none;
-    background-color:$smoke;
-    padding:1.5rem 0rem;
-	margin-top:.5rem;
+    background-color:$jumbo;
+    padding:0rem;
+    padding-top:4rem;	
      h2{
         color: $gold;
-        border-bottom:2px solid $smoke;
+        border-bottom:2px solid $jumbo;
         text-transform: uppercase;
     }
+     .omoss_snabblink{
+         margin-top:1.5rem;
+     }
 }
+#omossContent{
+	padding:0px 10% 0px 0px;
+}
+
 #omossKontaktContent{  
     display:block;
 	padding: 1rem 2rem;
@@ -48,5 +55,30 @@
             line-height:1.0rem;
         }
     }
-
+}
+.omossspace{
+    margin-left:1rem;
+    .omossMenu{
+        text-transform: uppercase;
+        height:3rem;
+        line-height:3rem;
+        background-color:$gainsboro;
+        padding:0px 1.0rem;  
+        margin-right:2rem;
+    }
+    .arrowhead{
+        &:after 
+        {
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            left: 2rem;
+            border-style: solid;
+            border-width: 20px 20px 0;
+            border-color: $gainsboro transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+        }
+    }
 }
