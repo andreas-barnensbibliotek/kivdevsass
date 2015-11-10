@@ -53,7 +53,7 @@ gulp.task('foundationJS', function () {
 			[
 				srcPath.bower +'/jquery/dist/jquery.js',
 				srcPath.bower +'/foundation/js/foundation.js',
-				//srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
+				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 srcPath.js + '/kivjs.js',
 			]
 		)			

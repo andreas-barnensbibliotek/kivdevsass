@@ -16,11 +16,11 @@
 #omossContent{
 	padding:0px 10% 0px 0px;
 }
-
 #omossKontaktContent{  
     display:block;
-	padding: 1rem 2rem;
+	//padding: 1rem 2rem;
     background-color:#fff;
+    //margin:0 4rem 0 3.5rem;
     ul{
         list-style:none;
     }
@@ -57,14 +57,14 @@
     }
 }
 .omossspace{
-    margin-left:1rem;
+    //margin-left:1rem;
     .omossMenu{
         text-transform: uppercase;
         height:3rem;
         line-height:3rem;
         background-color:$gainsboro;
         padding:0px 1.0rem;  
-        margin-right:2rem;
+        //margin-right:2rem;
     }
     .arrowhead{
         &:after 

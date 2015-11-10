@@ -21,9 +21,28 @@
         padding-top:0.6rem;
          text-transform:uppercase;
     }
+    
 }
 
 .ingresstext{
     display:none;
 }
+.lasMerOmOssLink{
+@media #{$small-only} {
+        font-size:0.7em;
+        line-height:12px;
+    }
+}
+.item{
+        max-width:400px;
+    }
+  
 
+@media only screen and (min-width: 50.063em) and (max-width: 64em) { 
+  .wrapper{
+    position: relative;	
+    width: 80%;	
+    height: 100%;	
+    margin: 0px auto;	  
+  }
+} /* min-width 641px, medium screens */

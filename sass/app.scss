@@ -125,13 +125,12 @@ $font-path: "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 .clearfix {
   zoom: 1; /* ie 6/7 */
 }
-
 .scroll-top {
     width: 40px;
     height: 40px;
     position: fixed;
-    bottom: 20px;
-    right: 100px;
+    bottom: 1.5rem;
+    right: 1rem;
     display: none;
     text-align:center;
     border-radius:4px;
@@ -141,19 +140,21 @@ $font-path: "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
         padding:0px;
         margin:0px;
         color:$white;
-   }
+    }
     &:hover{
         background-color: $aluminum;
         color:$oil;
     }
 }
 .open{font-size:1.2rem;}
-
-
 .move-right .exit-off-canvas {
     transition: background 300ms ease;
     background: rgba(000, 000, 000, 0.8);
     &:hover{
         background: rgba(000, 000, 000, 0.8);
     }
+}
+.item img{
+    width:100%;
+
 }

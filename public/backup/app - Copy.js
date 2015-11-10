@@ -15791,50 +15791,6 @@ return jQuery;
   };
 }(jQuery, window, window.document));
 
-;(function ($, window, document, undefined) {
-  'use strict';
-
-  Foundation.libs.alert = {
-    name : 'alert',
-
-    version : '5.5.3',
-
-    settings : {
-      callback : function () {}
-    },
-
-    init : function (scope, method, options) {
-      this.bindings(method, options);
-    },
-
-    events : function () {
-      var self = this,
-          S = this.S;
-
-      $(this.scope).off('.alert').on('click.fndtn.alert', '[' + this.attr_name() + '] .close', function (e) {
-        var alertBox = S(this).closest('[' + self.attr_name() + ']'),
-            settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
-
-        e.preventDefault();
-        if (Modernizr.csstransitions) {
-          alertBox.addClass('alert-close');
-          alertBox.on('transitionend webkitTransitionEnd oTransitionEnd', function (e) {
-            S(this).trigger('close.fndtn.alert').remove();
-            settings.callback();
-          });
-        } else {
-          alertBox.fadeOut(300, function () {
-            S(this).trigger('close.fndtn.alert').remove();
-            settings.callback();
-          });
-        }
-      });
-    },
-
-    reflow : function () {}
-  };
-}(jQuery, window, window.document));
-
 
 
 // CENTER LANDING PAGE TEXT
@@ -15857,7 +15813,6 @@ $(document).ready(function () {
     // Menu offcanvas show hide START
     $('.left-off-canvas-toggle').on('click', function (e) {
         $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-        return false;
     });
 
     $('.exit-off-canvas').on('click', function (e) {
@@ -15872,78 +15827,65 @@ $(document).ready(function () {
         var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-        var itembottommargin = 15;
-
 
         if (thatobj.length <= 0) {           
             thatobj = $(e.currentTarget).parent().siblings().find('.ingresstext');
         } else {
             //hämta clickat item
             var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
-           
-            //rensa bort absolut värdet från stringen
-            cur_clicked_Item = cur_clicked_Item.replace('position: absolute;', '').trim();
 
             ////hämta clickatitem leftvärde:                
             var start_pos = cur_clicked_Item.indexOf('left:') + 5;
-            console.log("start_pos " + start_pos);
+            console.log("start_pos" + start_pos);
             var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
-            console.log("end_pos " + end_pos);
+            console.log("end_pos" + end_pos);
             //hämta clickatitem topvärde
             var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
-            console.log("clickeditmTop_start " + clickeditmTop_start);
+            console.log("clickeditmTop_start" + clickeditmTop_start);
             var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
-            console.log("clicked_item_height " + clicked_item_height);
+            console.log("clicked_item_height" + clicked_item_height);
 
             // hämta första delen av style för sökning senare
             var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
             var Maincontainerheight = $(this).closest('.kivisotope').attr("style");
-            console.log("Maincontainerheight " + Maincontainerheight);
+            console.log("Maincontainerheight" + Maincontainerheight);
 
-            //rensa bort position: relative; värdet från stringen
-            Maincontainerheight = Maincontainerheight.replace('position: relative;', '').trim();
-                       
             var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
             var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
             Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
-            console.log("Maincontainerheight2 " + Maincontainerheight);
+            console.log("Maincontainerheight2" + Maincontainerheight);
             var ny_cont_height = cont_height;
-            console.log("ny_cont_height " + ny_cont_height);
+            console.log("ny_cont_height" + ny_cont_height);
             var valdheight = thatobj.height();
-            console.log("thatobj.height() " + thatobj.height());
             if (addOrRemove) {                
-                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight + itembottommargin)
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height;
+                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight)
+                Maincontainerheight = Maincontainerheight + ny_cont_height;
             } else {                
-                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight - itembottommargin));
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
+                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight));
+                Maincontainerheight = Maincontainerheight + ny_cont_height.toString();
 
             }
-            $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
+            $(this).closest('.kivisotope').attr('style', Maincontainerheight + "px;");
 
             var rakna = 0;
-            var loopdom = $('div[style*="' + itemSelectStyleValue + '"]');
+            var loopdom = $('div[style^="' + itemSelectStyleValue + '"]');
 
             loopdom.each(function (index, value) {
                 //hämta clickatitem topvärde
                 var currentItem = $(value).attr('style');
-                //rensa bort absolut värdet från stringen
-                currentItem = currentItem.replace('position: absolute;', '').trim();
 
                 var curitmTop_start = currentItem.indexOf('top:') + 4;
                 var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
-                console.log("domloop current_item_height " + current_item_height);
                 var nyposition = current_item_height;
-                console.log("domloop nyposition " + nyposition);
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
 
                     if (addOrRemove) {
-                        nyposition = parseInt(current_item_height) + parseInt(valdheight + itembottommargin);
+                        nyposition = parseInt(current_item_height) + parseInt(valdheight);
 
                     } else {
-                        nyposition = parseInt(current_item_height) - parseInt(valdheight - itembottommargin);
+                        nyposition = parseInt(current_item_height) - parseInt(valdheight);
                     }
-                    var updatedStyleToAdd =" position: absolute; " + itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
+                    var updatedStyleToAdd = itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
                     $(value).attr('style', updatedStyleToAdd);
                 }               
             });
@@ -15967,10 +15909,9 @@ $(document).ready(function () {
                  });
                  console.log(" isotope run-----------------");
              }
-             return false;
          });
-
-         return false;
+              
+        return false;
     });
 
     //old
@@ -15978,10 +15919,7 @@ $(document).ready(function () {
         var valdclass = $(this).find('i');
        
         //alert(cur_clicked_Item + "-->" + $(this).height());
-        $(this).parent().siblings(".snabblink").slideToggle("fast", function () {
-            $('#kivisotope2').isotope("layout", {
-                transitionDuration: 0
-            });
+        $(this).parent().siblings(".snabblink").slideToggle("slow", function () {
             var addOrRemove = valdclass.hasClass("fi-plus");
             var valdheight = $(this).height();
             if (addOrRemove) {
@@ -15992,7 +15930,7 @@ $(document).ready(function () {
                 valdclass.removeClass("fi-x");              
             }
            
-            
+            $('#kivisotope').isotope("layout");
         });
 
 
@@ -16002,7 +15940,7 @@ $(document).ready(function () {
     $('#lasMerOmOssLink').click(function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
         $('.omossContentBox').slideToggle("slow", function () {            
-            $('.kivisotope').isotope("layout");            
+            $('#kivisotope').isotope("layout");            
             if (addOrRemove) {
                 $('.omossMenu').removeClass("arrowhead");
             };
@@ -16109,101 +16047,3 @@ $(document).ready(function () {
 
 
 });
-
-
-/* OLD 
-$('.showingresstext').click(function (e) {
-        var valdclass = $(this).find('i');
-        var addOrRemove = valdclass.hasClass("closed");
-        var st = $(this).attr("style");
-        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-
-        if (thatobj.length <= 0) {           
-            thatobj = $(e.currentTarget).parent().siblings().find('.ingresstext');
-        } else {
-            //hämta clickat item
-            var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
-           
-            ////hämta clickatitem leftvärde:                
-            var start_pos = cur_clicked_Item.indexOf('left:') + 5;
-            console.log("start_pos " + start_pos);
-            var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
-            console.log("end_pos " + end_pos);
-            //hämta clickatitem topvärde
-            var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
-            console.log("clickeditmTop_start " + clickeditmTop_start);
-            var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
-            console.log("clicked_item_height " + clicked_item_height);
-
-            // hämta första delen av style för sökning senare
-            var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
-            var Maincontainerheight = $(this).closest('.kivisotope').attr("style");
-            console.log("Maincontainerheight " + Maincontainerheight);
-
-            var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
-            var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
-            Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
-            console.log("Maincontainerheight2 " + Maincontainerheight);
-            var ny_cont_height = cont_height;
-            console.log("ny_cont_height " + ny_cont_height);
-            var valdheight = thatobj.height();
-            console.log("thatobj.height() " + thatobj.height());
-            if (addOrRemove) {                
-                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight)
-                Maincontainerheight = Maincontainerheight + ny_cont_height;
-            } else {                
-                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight));
-                Maincontainerheight = Maincontainerheight + ny_cont_height.toString();
-
-            }
-            $(this).closest('.kivisotope').attr('style', Maincontainerheight + "px;");
-
-            var rakna = 0;
-            var loopdom = $('div[style^="' + itemSelectStyleValue + '"]');
-
-            loopdom.each(function (index, value) {
-                //hämta clickatitem topvärde
-                var currentItem = $(value).attr('style');
-
-                var curitmTop_start = currentItem.indexOf('top:') + 4;
-                var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
-                console.log("domloop current_item_height " + current_item_height);
-                var nyposition = current_item_height;
-                console.log("domloop nyposition " + nyposition);
-                if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
-
-                    if (addOrRemove) {
-                        nyposition = parseInt(current_item_height) + parseInt(valdheight);
-
-                    } else {
-                        nyposition = parseInt(current_item_height) - parseInt(valdheight);
-                    }
-                    var updatedStyleToAdd = itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
-                    $(value).attr('style', updatedStyleToAdd);
-                }               
-            });
-        }
-          
-        if (addOrRemove) {
-            valdclass.removeClass("closed");
-            valdclass.addClass("open");
-            valdclass.html('-');
-            
-        } else {
-            valdclass.addClass("closed");
-            valdclass.removeClass("open");
-            valdclass.html('+');
-        }
-
-         thatobj.slideToggle(100, function () {
-             if (!$('i').hasClass("open")) {
-                 $(this).closest('.kivisotope').isotope("layout", {
-                     transitionDuration: 0
-                 });
-                 console.log(" isotope run-----------------");
-             }
-         });
-              
-        return false;
-    });
-*/

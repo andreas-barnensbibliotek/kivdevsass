@@ -20,6 +20,7 @@ $(document).ready(function () {
     // Menu offcanvas show hide START
     $('.left-off-canvas-toggle').on('click', function (e) {
         $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+        return false;
     });
 
     $('.exit-off-canvas').on('click', function (e) {
@@ -34,6 +35,8 @@ $(document).ready(function () {
         var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
+        var itembottommargin = 15;
+
 
         if (thatobj.length <= 0) {           
             thatobj = $(e.currentTarget).parent().siblings().find('.ingresstext');
@@ -72,14 +75,14 @@ $(document).ready(function () {
             var valdheight = thatobj.height();
             console.log("thatobj.height() " + thatobj.height());
             if (addOrRemove) {                
-                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight)
+                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight + itembottommargin)
                 Maincontainerheight = Maincontainerheight + " " + ny_cont_height;
             } else {                
-                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight));
+                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight - itembottommargin));
                 Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
 
             }
-            $(this).closest('.kivisotope').attr('style', Maincontainerheight + "px;");
+            $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
 
             var rakna = 0;
             var loopdom = $('div[style*="' + itemSelectStyleValue + '"]');
@@ -98,12 +101,12 @@ $(document).ready(function () {
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
 
                     if (addOrRemove) {
-                        nyposition = parseInt(current_item_height) + parseInt(valdheight);
+                        nyposition = parseInt(current_item_height) + parseInt(valdheight + itembottommargin);
 
                     } else {
-                        nyposition = parseInt(current_item_height) - parseInt(valdheight);
+                        nyposition = parseInt(current_item_height) - parseInt(valdheight - itembottommargin);
                     }
-                    var updatedStyleToAdd = itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
+                    var updatedStyleToAdd =" position: absolute; " + itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
                     $(value).attr('style', updatedStyleToAdd);
                 }               
             });
@@ -127,9 +130,10 @@ $(document).ready(function () {
                  });
                  console.log(" isotope run-----------------");
              }
+             return false;
          });
-              
-        return false;
+
+         return false;
     });
 
     //old
@@ -137,7 +141,10 @@ $(document).ready(function () {
         var valdclass = $(this).find('i');
        
         //alert(cur_clicked_Item + "-->" + $(this).height());
-        $(this).parent().siblings(".snabblink").slideToggle("slow", function () {
+        $(this).parent().siblings(".snabblink").slideToggle("fast", function () {
+            $('#kivisotope2').isotope("layout", {
+                transitionDuration: 0
+            });
             var addOrRemove = valdclass.hasClass("fi-plus");
             var valdheight = $(this).height();
             if (addOrRemove) {
@@ -148,7 +155,7 @@ $(document).ready(function () {
                 valdclass.removeClass("fi-x");              
             }
            
-            $('#kivisotope').isotope("layout");
+            
         });
 
 
@@ -158,7 +165,7 @@ $(document).ready(function () {
     $('#lasMerOmOssLink').click(function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
         $('.omossContentBox').slideToggle("slow", function () {            
-            $('#kivisotope').isotope("layout");            
+            $('.kivisotope').isotope("layout");            
             if (addOrRemove) {
                 $('.omossMenu').removeClass("arrowhead");
             };
