@@ -2,6 +2,7 @@
 (function () {
     $(function () {
         // VAR
+        var _currentHuvudomradeID; // div id= currentTID
         var localOrServerURL = "http://dev.kulturivast.se.www395.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
         var mozaikItems = [];
         
@@ -20,7 +21,7 @@
 
             $.ajax({
                 type: "GET",
-                url: localOrServerURL + "/json-kivsearch/12,1601?callback=?",                
+                url: localOrServerURL + "/json-kivsearch/"+searchstr+"?callback=?",
                 dataType: "jsonp",
                 success: function (data) {
 
@@ -42,13 +43,38 @@
             });
 
            
-            if (searchstr) {
-                var testar = datatlocal.kivsearch;
-                var testar = datatlocal.kivsearch[0].kivsearchitem;
-                var testar = datatlocal.kivsearch.kivsearchitem;
-                callback(datatlocal.kivsearch);
-            }
+            
         };
+
+
+        var initomradesdrp = function (omradesid) {
+
+            $.ajax({
+                type: "GET",
+                url: localOrServerURL + "/json-kivsearch-cat/" + omradesid + "?callback=?",
+                dataType: "jsonp",
+                success: function (data) {
+
+                    var i = 1;
+                    $.each(data.kivsearch.kivsearchitem, function (item, val) {
+
+                        bookid[i] = val.bookid;
+
+                        mainhtmloutput(bookid[1], present[1], pageurl[1], forfattare[1], title[1], forlag[1], isbn[1], ljudfil[1], upplasare[1]);
+                        i++;
+                        return false;
+                    });
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Nått blev fel!"); // <-- skicka error json !!!!
+
+                }
+            });
+
+            return false;
+
+        }
         // WEBSERVICE END
 
         var renderdata = function (incRenderOutputObj) {
@@ -75,11 +101,11 @@
             //});
             var str = $("#drpFilter option:selected").text();
             //do AJAXCALL
-            kivSearchJsonData(str, function(datat){
+            kivSearchJsonData("16", function(datat){
                 renderdata(datat, function (str) {
                     $(".wrapper, .kivlistview").html(str);
                 })
-        });
+            });
 
         });
     
@@ -87,7 +113,15 @@
 
         // SETTINGS
         var init = function () {
-        
+            // hämta current område
+            _currentHuvudomradeID = $('#currentTID').html();
+
+            if (_currentHuvudomradeID) {
+
+                //initera dropdown
+                initomradesdrp(_currentHuvudomradeID);
+
+            };
 
         };
 

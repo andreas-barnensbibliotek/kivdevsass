@@ -55,11 +55,7 @@
         <div class="wrapper kivlistview">
 
          
-          <?php if ($header): ?>
-            <div class="view-header">
-              <?php print $header; ?>
-            </div>
-          <?php endif; ?>
+          
 
           <?php if ($exposed): ?>
             <div class="view-filters">
@@ -117,3 +113,8 @@
         <?php endif; ?>
     </div>
 </div>
+<?php if ($header): ?>
+<div class="view-header"style="display:none;">
+    <?php print $header; ?>
+</div>
+<?php endif; ?>
