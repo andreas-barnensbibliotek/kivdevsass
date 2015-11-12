@@ -28,30 +28,9 @@
  */
 
 ?>
+
 <div class="row">
-    <div class="small-9 columns">
-        <div id="contentfilterblock">
-            <select id="drpFilter" class=" custom dropdown small">
-                <option>Se alla</option>
-                <option>Arkitektur</option>
-                <option>Barn och unga</option>
-                <option>Dans</option>
-            </select>
-            <select id="drpSortering" class=" custom dropdown small">
-                <option>Nyast</option>
-                <option>Fallande</option>
-            </select>
-        </div>
-    </div>
-    <div class="small-3 columns text-right">
-        <span id="filtersortering">
-            <a id="kivmozaik" href=""><i class="fi-thumbnails "></i></a>
-            <a id="kivlist" href=""><i class="fi-list "></i></a>                                                      
-        </span>
-    </div>
-</div>
-<div class="row">
-    <div id="kivisotope" class="kivisotope clearfix">
+    <div id="kivisotope2" class="kivisotope clearfix">
         <div class="wrapper kivlistview">
 
          
@@ -107,13 +86,5 @@
             </div>
           <?php endif; ?>
         </div> 
-    </div>
-</div>
-<div class="row">
-    <div class="small-12">
-        <?php /* class view */ ?>
-        <?php if ($pager): ?>
-        <?php print $pager; ?>
-        <?php endif; ?>
     </div>
 </div>

@@ -8368,22 +8368,26 @@ ul.off-canvas-list {
   max-width: 434px; }
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+.mosaikblockheader {
+  margin-top: 1.5rem; }
+
+/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .mozaikitems {
   background-color: #F6F6F6;
   padding: 0px 1em;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #DDDDDD; }
-  /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems i {
     font-size: 2.3rem;
     color: #cbb069; }
-  /* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h4 {
     margin-top: 0px;
     font-size: 1rem;
     font-weight: normal;
     text-transform: uppercase; }
-  /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h5 {
     font-size: 1rem;
     margin-bottom: 0px;
@@ -8392,22 +8396,22 @@ ul.off-canvas-list {
     padding-top: 0.6rem;
     text-transform: uppercase; }
 
-/* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 29, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstext {
   display: none; }
 
 @media only screen and (max-width: 40em) {
-  /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .lasMerOmOssLink {
     font-size: 0.7em;
     line-height: 12px; } }
 
-/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   max-width: 400px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 44, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 80%;
@@ -8419,8 +8423,7 @@ ul.off-canvas-list {
 .kivlistview {
   background-color: #F6F6F6;
   padding: 0px 1em;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #DDDDDD; }
+  margin-bottom: 1.5rem; }
   /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview i {
     font-size: 2.3rem;
@@ -8512,68 +8515,69 @@ ul.off-canvas-list {
   display: none;
   background-color: #888888;
   padding: 0rem;
-  padding-top: 4rem; }
-  /* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  padding-top: 4rem;
+  margin-bottom: 1.5rem; }
+  /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox h2 {
     color: #cbb069;
     border-bottom: 2px solid #888888;
     text-transform: uppercase; }
-  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .omoss_snabblink {
     margin-top: 1.5rem;
     padding-top: 0rem; }
-  /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .snabblinks h2 {
     border-top: 1px solid #fff;
     margin-top: 2.0rem;
     padding-top: 0rem;
     color: #fff; }
 
-/* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossContent {
   padding: 0px 10% 0px 0px; }
 
-/* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossKontaktContent {
   display: block;
   padding: 1rem 2rem 2rem;
   background-color: #fff; }
-  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent ul {
     list-style: none; }
-  /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent h2 {
     border-bottom: 2px solid #EEEEEE; }
-  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 44, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent .kontaktkort {
     font-size: 0.9rem; }
-    /* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .avd {
       color: #cbb069;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .ftn {
       font-weight: bold;
       font-size: 0.8rem;
       line-height: 1.0rem; }
-    /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 61, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .epost {
       font-weight: bold;
       line-height: 1.0rem; }
 
-/* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossspace .omossMenu {
   text-transform: uppercase;
   height: 3rem;
@@ -8581,7 +8585,7 @@ ul.off-canvas-list {
   background-color: #DDDDDD;
   padding: 0px 1rem; }
 
-/* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossspace .arrowhead:after {
   content: "";
   position: absolute;

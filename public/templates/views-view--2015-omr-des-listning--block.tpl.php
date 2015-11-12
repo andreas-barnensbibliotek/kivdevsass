@@ -28,14 +28,33 @@
  */
 
 ?>
+<div class="row mosaikblockheader">
+    <div class="small-9 columns">
+        <div id="contentfilterblock">
+            <select id="drpFilter" class=" custom dropdown small">
+                <option>Se alla</option>
+                <option>Arkitektur</option>
+                <option>Barn och unga</option>
+                <option>Dans</option>
+            </select>
+            <select id="drpSortering" class=" custom dropdown small">
+                <option>Nyast</option>
+                <option>Fallande</option>
+            </select>
+        </div>
+    </div>
+    <div class="small-3 columns text-right">
+        <span id="filtersortering">
+            <a id="kivmozaik" href=""><i class="fi-thumbnails "></i></a>
+            <a id="kivlist" href=""><i class="fi-list "></i></a>                                                      
+        </span>
+    </div>
+</div>
 <div class="row">
     <div id="kivisotope" class="kivisotope clearfix">
         <div class="wrapper kivlistview">
-          <?php print render($title_prefix); ?>
-          <?php if ($title): ?>
-            <?php print $title; ?>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
+
+         
           <?php if ($header): ?>
             <div class="view-header">
               <?php print $header; ?>
@@ -64,9 +83,7 @@
             </div>
           <?php endif; ?>
 
-          <?php if ($pager): ?>
-            <?php print $pager; ?>
-          <?php endif; ?>
+          
 
           <?php if ($attachment_after): ?>
             <div class="attachment attachment-after">
@@ -91,4 +108,12 @@
           <?php endif; ?>
         </div> 
     </div>
-</div><?php /* class view */ ?>
+</div>
+<div class="row">
+    <div class="small-12">
+        <?php /* class view */ ?>
+        <?php if ($pager): ?>
+        <?php print $pager; ?>
+        <?php endif; ?>
+    </div>
+</div>

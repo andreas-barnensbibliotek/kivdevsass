@@ -3,12 +3,12 @@
 /**
  * @file
  * Default simple view template to display a list of rows.
- *
+ * Funkar visar  <div class="large-4 medium-6 small-12 columns item">++
  * @ingroup views_templates
  */
 ?>
 <?php if (!empty($title)): ?>
-  <h3><?php print $title; ?></h3>andreasTESTAR
+  <h3><?php print $title; ?></h3>
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>

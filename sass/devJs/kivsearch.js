@@ -2,7 +2,7 @@
 (function () {
     $(function () {
         // VAR
-        var localOrServerURL = ""; // webservern att hämta data ifrån
+        var localOrServerURL = "http://dev.kulturivast.se.www395.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
         var mozaikItems = [];
         
 
@@ -18,29 +18,28 @@
         // WEBSERVICE START
         function kivSearchJsonData(searchstr, callback) {
 
-            //$.ajax({
-            //    type: "GET",
-            //    url: localOrServerURL + "/bokpuffenService.php?callback=?",
-            //    data: { key: "getpuff", searchkey: searchstr  },
-            //    dataType: "jsonp",
-            //    success: function (data) {
+            $.ajax({
+                type: "GET",
+                url: localOrServerURL + "/json-kivsearch/12,1601?callback=?",                
+                dataType: "jsonp",
+                success: function (data) {
 
-            //        var i = 1;
-            //        $.each(data.kivsearch.kivsearchitem, function (item, val) {
+                    var i = 1;
+                    $.each(data.kivsearch.kivsearchitem, function (item, val) {
 
-            //            bookid[i] = val.bookid;
+                        bookid[i] = val.bookid;
                    
-            //            mainhtmloutput(bookid[1], present[1], pageurl[1], forfattare[1], title[1], forlag[1], isbn[1], ljudfil[1], upplasare[1]);
-            //            i++;
-            //            return false;
-            //        });             
+                        mainhtmloutput(bookid[1], present[1], pageurl[1], forfattare[1], title[1], forlag[1], isbn[1], ljudfil[1], upplasare[1]);
+                        i++;
+                        return false;
+                    });             
 
-            //    },
-            //    error: function (xhr, ajaxOptions, thrownError) {
-            //        alert("Nått blev fel!"); // <-- skicka error json !!!!
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Nått blev fel!"); // <-- skicka error json !!!!
 
-            //    }
-            //});
+                }
+            });
 
            
             if (searchstr) {
