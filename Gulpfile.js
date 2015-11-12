@@ -55,6 +55,7 @@ gulp.task('foundationJS', function () {
 				srcPath.bower +'/foundation/js/foundation.js',
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 srcPath.js + '/kivjs.js',
+                srcPath.js + '/kivsearch.js',
 			]
 		)			
 		.pipe(concat('app.js'))

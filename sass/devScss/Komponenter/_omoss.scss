@@ -11,14 +11,21 @@
     }
      .omoss_snabblink{
          margin-top:1.5rem;
+         padding-top:0rem;
      }
+     .snabblinks h2{
+		border-top:1px solid #fff;
+  	    margin-top:2.0rem;
+        padding-top:0rem;  
+        color:#fff;
+    }
 }
 #omossContent{
 	padding:0px 10% 0px 0px;
 }
 #omossKontaktContent{  
     display:block;
-	//padding: 1rem 2rem;
+	padding:1rem 2rem 2rem;
     background-color:#fff;
     //margin:0 4rem 0 3.5rem;
     ul{

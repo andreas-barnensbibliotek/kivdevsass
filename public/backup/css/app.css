@@ -8396,25 +8396,10 @@ ul.off-canvas-list {
 .ingresstext {
   display: none; }
 
-@media only screen and (max-width: 40em) {
-  /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
-  .lasMerOmOssLink {
-    font-size: 0.7em;
-    line-height: 12px; } }
-
-/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
-  max-width: 400px; }
+  max-width: 368px; }
 
-@media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
-  .wrapper {
-    position: relative;
-    width: 80%;
-    height: 100%;
-    margin: 0px auto; } }
-
-/* min-width 641px, medium screens */
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .kivlistview {
   background-color: #F6F6F6;
@@ -8520,79 +8505,75 @@ ul.off-canvas-list {
     text-transform: uppercase; }
   /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .omoss_snabblink {
-    margin-top: 1.5rem;
-    padding-top: 0rem; }
-  /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
-  .omossContentBox .snabblinks h2 {
-    border-top: 1px solid #fff;
-    margin-top: 2.0rem;
-    padding-top: 0rem;
-    color: #fff; }
+    margin-top: 1.5rem; }
 
-/* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossContent {
   padding: 0px 10% 0px 0px; }
 
-/* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossKontaktContent {
   display: block;
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 2rem;
   background-color: #fff; }
-  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent ul {
     list-style: none; }
-  /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent h2 {
     border-bottom: 2px solid #EEEEEE; }
-  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent .kontaktkort {
     font-size: 0.9rem; }
-    /* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .avd {
       color: #cbb069;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 47, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .ftn {
       font-weight: bold;
       font-size: 0.8rem;
       line-height: 1.0rem; }
-    /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .epost {
       font-weight: bold;
       line-height: 1.0rem; }
 
-/* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
-.omossspace .omossMenu {
-  text-transform: uppercase;
-  height: 3rem;
-  line-height: 3rem;
-  background-color: #DDDDDD;
-  padding: 0px 1rem; }
-
-/* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
-.omossspace .arrowhead:after {
-  content: "";
-  position: absolute;
-  bottom: -0.8rem;
-  left: 2rem;
-  border-style: solid;
-  border-width: 20px 20px 0;
-  border-color: #DDDDDD transparent;
-  display: block;
-  width: 0;
-  z-index: 1; }
+/* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+.omossspace {
+  margin-left: 1rem; }
+  /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  .omossspace .omossMenu {
+    text-transform: uppercase;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: #DDDDDD;
+    padding: 0px 1rem;
+    margin-right: 2rem; }
+  /* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  .omossspace .arrowhead:after {
+    content: "";
+    position: absolute;
+    bottom: -0.8rem;
+    left: 2rem;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #DDDDDD transparent;
+    display: block;
+    width: 0;
+    z-index: 1; }
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer {
@@ -8858,22 +8839,22 @@ body {
 .clear {
   clear: both; }
 
-/* line 117, stdin */
+/* line 116, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 122, stdin */
+/* line 121, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 126, stdin */
+/* line 125, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 129, stdin */
+/* line 128, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -8885,18 +8866,18 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 139, stdin */
+  /* line 138, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 145, stdin */
+  /* line 144, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 150, stdin */
+/* line 149, stdin */
 .open {
   font-size: 1.2rem; }
 
@@ -8908,7 +8889,3 @@ body {
   /* line 154, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
-
-/* line 158, stdin */
-.item img {
-  width: 100%; }

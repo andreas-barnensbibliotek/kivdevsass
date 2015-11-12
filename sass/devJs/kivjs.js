@@ -178,6 +178,36 @@ $(document).ready(function () {
         return false;
     });
     
+    $('#kivlist').on('click', function (e) {
+        $('.kivisotope').isotope('destroy');
+                
+        $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
+        $('.mozaikimg').attr('class',"large-2 columns small-3 imgplaceholder crop-height");
+        $('.mozaikitems').attr('class',"large-10 columns listcontent").removeClass('mozaikitems');                  
+
+        return false;
+    });
+
+    $('#kivmozaik').on('click', function (e) {
+
+        $('.kivlist').attr('class', "large-4 medium-6 small-12 columns item");
+        $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
+        $('.listcontent').attr('class', "").addClass('mozaikitems');               
+
+        $('.kivisotope').isotope({
+            itemSelector: '.item',
+            //containerStyle: null,
+            masonry: {
+                // use element for option
+                columnWidth: 400
+            }
+        });
+
+
+        return false;
+    })
+
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scroll-top').fadeIn();

@@ -29,7 +29,7 @@ startinnan
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
   <?php endif; ?>
-
+DETTA visas
   <?php print $field->wrapper_prefix; ?> wrapperprefixAJ
     <?php print $field->label_html; ?> labelhtmlAJ
     <?php print $field->content; ?>contentAJ

@@ -24,7 +24,7 @@
  * @ingroup views_templates
  */
 ?>
-<h1>SNABB länkar</h1>
+
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>

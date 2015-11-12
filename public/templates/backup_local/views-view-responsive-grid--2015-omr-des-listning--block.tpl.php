@@ -14,7 +14,7 @@
 <?php if (!empty($title)) : ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
-  <div class="kivisotope AJTESTAR ">
+  <div class="kivisotope ">
 <?php if ($options['alignment'] == 'vertical') : ?>
 <?php foreach ($columns as $column_id => $column) : ?>
   <div class="<?php print trim($column_classes[$column_id]); ?>">
@@ -27,13 +27,13 @@
 <?php endforeach; ?>
 <?php else : ?>
   <?php foreach ($rows as $row_id => $row) : ?>
-    <div class="AJRAD<?php print trim($row_classes[$row_id]); ?>">
+    <div class="row">
   <?php foreach ($row as $item_id => $item) : ?>
-    <div class="AJITEM<?php print trim($item['classes']); ?>">
+    <div class="<?php print trim($item['classes']); ?>">
       <?php print $item['content']; ?>
     </div>
   <?php endforeach; ?>
   </div>
   <?php endforeach; ?>
 <?php endif; ?>
-      </div>
+     </div>
