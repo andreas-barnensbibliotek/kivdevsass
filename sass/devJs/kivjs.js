@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
 
-    $('.showingresstext').click(function (e) {
+    $(document).on('click', '.showingresstext', function (e) {
         var valdclass = $(this).find('i');
         var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
@@ -159,7 +159,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#lasMerOmOssLink').click(function (e) {
+    $('#lasMerOmOssLink').on('click', function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
         $('.omossContentBox').slideToggle("slow", function () {            
             $('.kivisotope').isotope("layout");            
@@ -294,6 +294,5 @@ $(document).ready(function () {
     /*
     ! end sticky footer
     */
-
-
+   
 });

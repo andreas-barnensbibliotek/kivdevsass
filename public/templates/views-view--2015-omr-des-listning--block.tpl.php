@@ -32,10 +32,7 @@
     <div class="small-9 columns">
         <div id="contentfilterblock">
             <select id="drpFilter" class=" custom dropdown small">
-                <option>Se alla</option>
-                <option>Arkitektur</option>
-                <option>Barn och unga</option>
-                <option>Dans</option>
+                <option value="11">Se alla</option>                
             </select>
             <select id="drpSortering" class=" custom dropdown small">
                 <option>Nyast</option>
@@ -48,6 +45,13 @@
             <a id="kivmozaik" href=""><i class="fi-thumbnails "></i></a>
             <a id="kivlist" href=""><i class="fi-list "></i></a>                                                      
         </span>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <ul id="breadcrumbval">
+
+        </ul>
     </div>
 </div>
 <div class="row">

@@ -1,0 +1,39 @@
+/* Tillfällig css*/
+
+/* Frontpage*/
+
+.view-frontpage .bigImage-box{
+	margin-bottom: 10px;
+}
+.view-frontpage .bigImage{
+	position: relative;
+
+}
+.view-frontpage .bigImage-content{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 60%;
+  	transform: translateY(-40%);
+}
+
+.view-frontpage .bigImage-content h2,
+.view-frontpage .bigImage-content h3{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 300%;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 5px #666;
+	line-height: 100%;
+	letter-spacing: 1.1px;
+}
+
+.view-frontpage .bigImage-content h2{
+	font-weight: bold;
+	
+}
+.view-frontpage .bigImage-content h3{
+	
+}

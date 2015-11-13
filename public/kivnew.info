@@ -27,7 +27,7 @@ base theme = zurb_foundation
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; For CSS users, load the STARTER.css file:
-;stylesheets[all][] = css/STARTER.css
+stylesheets[all][] = css/tmp.css
 stylesheets[all][] = css/app.css
 
 ; Block loading of foundation.min.css from the base theme. This file should either
@@ -46,8 +46,8 @@ stylesheets[all][] = css/app.css
 ; Foundation framework scripts (minified).
 ; Control specific components via Gruntfile.js.
 ;scripts[] = //code.jquery.com/jquery-migrate-1.2.1.min.js
-scripts[] = js/foundation.min.js
-scripts[] = js/foundation.offcanvas.js
+;scripts[] = js/foundation.min.js
+;scripts[] = js/foundation.offcanvas.js
 
 ; Theme scripts (minified).
 ; Grunt will compress any custom theme scripts matching the _*.js naming convention

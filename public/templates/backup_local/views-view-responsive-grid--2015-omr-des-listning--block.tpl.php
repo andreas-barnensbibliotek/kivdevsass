@@ -14,7 +14,7 @@
 <?php if (!empty($title)) : ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
-  <div class="kivisotope ">
+  <div class="kivisotope DETTA DÅ">
 <?php if ($options['alignment'] == 'vertical') : ?>
 <?php foreach ($columns as $column_id => $column) : ?>
   <div class="<?php print trim($column_classes[$column_id]); ?>">

@@ -1,70 +1,115 @@
 ﻿//kapsla Start
 (function () {
+
+    
     $(function () {
         // VAR
-        var _currentHuvudomradeID; // div id= currentTID
-        var localOrServerURL = "http://dev.kulturivast.se.www395.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
+        var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
+        var localOrServerURL = "http://dev.kulturivast.se.www359.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
         var mozaikItems = [];
-        
+        var drphuvudomradenlista = [];
+        var drphuvudomradenvalue = [];
+        var _renderDOMList = "";
+        var _renderDrpList = "";
+        var _breadcrumbval = [];
+        var _breadcrumbindex = [];
 
         // OBJECT LITERALS
-        var _RenderOutputObj = {
-            "title" : "",
-            "body" : "",
-            "Huvudomrade" : "",
-            "kategoritaggning" : ""    
+        var _RenderOutputListObj = {
+            rubrik: "",
+            overrub: "",
+            ingress: "",
+            huvudomrade: "",
+            kategoritaggning: "",
+            datum: "",
+            link: "",
+            bild: "",
+            extra: ""
         }
 
+        var _RenderOutputdrpObj = {
+            namn: "",
+            value: ""   
+        }
 
         // WEBSERVICE START
         function kivSearchJsonData(searchstr, callback) {
-
+            var serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";
             $.ajax({
                 type: "GET",
-                url: localOrServerURL + "/json-kivsearch/"+searchstr+"?callback=?",
+                url: serverrequest,
                 dataType: "jsonp",
                 success: function (data) {
+                    var currentdomitems = "";
+                    //var i = 0;
+                    //$.each(data.kivsearch[i], function (item, val) {
+                    for (var x = 0; x < data.kivsearch.length; x++) {
 
-                    var i = 1;
-                    $.each(data.kivsearch.kivsearchitem, function (item, val) {
+                        _RenderOutputListObj.bild = data.kivsearch[x].kivsearchitem.bild;
+                        _RenderOutputListObj.overrub = data.kivsearch[x].kivsearchitem.overrub;
+                        _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrk;
+                        _RenderOutputListObj.link = data.kivsearch[x].kivsearchitem.link;
+                        _RenderOutputListObj.ingress = data.kivsearch[x].kivsearchitem.ingress;
 
-                        bookid[i] = val.bookid;
-                   
-                        mainhtmloutput(bookid[1], present[1], pageurl[1], forfattare[1], title[1], forlag[1], isbn[1], ljudfil[1], upplasare[1]);
-                        i++;
-                        return false;
-                    });             
+                        currentdomitems += Renderdata(_RenderOutputListObj);
 
+                    };
+                    
+
+                    _renderDOMList = currentdomitems;
+
+                    callback(currentdomitems);
+                   // RenderDomItem(_renderDOMList);
+
+                    return false;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert("Nått blev fel!"); // <-- skicka error json !!!!
 
                 }
-            });
-
-           
+            });                     
             
         };
 
-
+        // listar alla huvudområdena i en dropdown lista
         var initomradesdrp = function (omradesid) {
-
+            var serverrequest = localOrServerURL + "/json-kivsearch-cat/" + omradesid + "?callback=?";
             $.ajax({
                 type: "GET",
-                url: localOrServerURL + "/json-kivsearch-cat/" + omradesid + "?callback=?",
+                url: serverrequest,
                 dataType: "jsonp",
                 success: function (data) {
 
-                    var i = 1;
-                    $.each(data.kivsearch.kivsearchitem, function (item, val) {
+                    var currentdomitems = "";
+                    var testdubbletter=[];
+                    
+                    for (var x = 0; x < data.kivsearch.length; x++) {
+                        var tid = data.kivsearch[x].kivomraden.tid;
+                        if (testdubbletter.length > 0) {
+                            if (testdubbletter.indexOf(tid) == -1) {
+                                _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
+                                _RenderOutputdrpObj.value = tid;
+                                testdubbletter.push(tid);
+                                InitUpdatDrpOmraden(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
+                                
+                            }
 
-                        bookid[i] = val.bookid;
+                        } else {
+                            _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
+                            _RenderOutputdrpObj.value = tid;
+                            testdubbletter.push(tid);
+                            InitUpdatDrpOmraden(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
+                            
+                        }
+                       
+                        //currentdomitems += Renderdata(_RenderOutputListObj);
+                        
 
-                        mainhtmloutput(bookid[1], present[1], pageurl[1], forfattare[1], title[1], forlag[1], isbn[1], ljudfil[1], upplasare[1]);
-                        i++;
-                        return false;
-                    });
+                    };
 
+                    //_renderDrpList = currentdomitems;
+                                       
+                    
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert("Nått blev fel!"); // <-- skicka error json !!!!
@@ -77,44 +122,117 @@
         }
         // WEBSERVICE END
 
-        var renderdata = function (incRenderOutputObj) {
+        var Renderdata = function (incRenderOutputObj) {
             var tmpstr ="";
-            $.each(incRenderOutputObj, function (item, val) {
-                tmpstr = "<div class='large-4 medium-6 small-12 columns item'><div class='mozaikimg'>";
-                tmpstr =+ "<img src='"+ val.image + "' /></div>";
-                tmpstr =+ "<div class='mozaikitems'><div class='row'>";
-                tmpstr =+ "<div class='small-10 columns'><a href='#'><h5>"+ val.subtitle + "</h5><h4>"+ val.title + "</h4></a></div>";
-                tmpstr =+ "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'>+</i></a></div>";
-                tmpstr =+ "<div class='medium-12 columns ingresstext'>"+ val.ingress + "</div></div></div></div>";
-            });
-            return tmpstr;
+            
+                tmpstr += "<div class='large-4 medium-6 small-12 columns item'><div class='mozaikimg'>";
+                tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
+                tmpstr += "<div class='mozaikitems'><div class='row'>";
+                tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a></div>";
+                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'>+</i></a></div>";
+                tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
+
+           return tmpstr;
         };
+      
+        // FUNKTIONER
+        var RenderDomItem = function (renderitem) {
+            $('#kivisotope .wrapper').html(""); //remove all child nodes   
+            $('#kivisotope .wrapper').html(renderitem);
+           
+            $('.kivisotope').isotope("destroy");
+            $('.kivisotope').isotope({
+                itemSelector: '.item',
+                //containerStyle: null,
+                masonry: {
+                    // use element for option
+                    columnWidth: 400
+                }
+            });
+            $('.loader').hide();
+            return false;
+        }
+        var UpdatDrpOmraden = function (value, name) {
+            $('#drpFilter').empty(); //remove all child nodes                                   
+            var newOption = $('<option value="' + value + '">' + name + '</option>');
+            $('#drpFilter').append(newOption);                        
+            $('#drpFilter').trigger("chosen:updated");
+            return true;
+        }
+        var InitUpdatDrpOmraden = function (value, name) {                                      
+            var newOption = $('<option value="' + value + '">' + name + '</option>');
+            $('#drpFilter').append(newOption);
+            $('#drpFilter').trigger("chosen:updated");
+            return true;
+        }
+
+
+        /// BREADCRUMB START  (lägg över till helper js)
+
+        // Lägger till breadrumb valt område från arrayerna med a-länkar och index OBS måste ha samma index!!!
+        var Addtobreadcrumbval = function (valomr, valdid) {
+            var addhref = "<li><a href=''class='removebreadcrumbval' rel='" + valdid + "'>" + valomr + "</a></li>";
+            // Lägger tillendast här ifrån annars blir det osynk
+            _breadcrumbval.push(addhref);
+            _breadcrumbindex.push(valdid);
+
+            $("#breadcrumbval").append(addhref);
+            return false;
+        }
+
+        // tabort valt breadrumb område från arrayerna med a-länkar och index OBS måste ha samma index!!!
+        var Delbreadcrumval = function (valid) {
+            var rerender="";
+            var i = _breadcrumbindex.indexOf(valid);
+            if (i != -1) {
+                // tar bort endast här ifrån annars blir det osynk
+                _breadcrumbindex.splice(i, 1);
+                _breadcrumbval.splice(i, 1);
+            }
+
+            $.each(_breadcrumbval,function(item, val){
+                rerender += val;
+            });
+
+            $("#breadcrumbval").html(rerender);
+            return false;
+
+        }
+        /// BREADCRUMB END
+
+
 
         // EVENT HANDLERs
-
+                      
         $('#drpFilter').change(function (e) {
-            //
-            //var searchObj = [];
-            //var str = "";
-            //$("#drpFilter option:selected").each(function () {
-            //    str += $(this).text() + " ";
-            //});
-            var str = $("#drpFilter option:selected").text();
-            //do AJAXCALL
-            kivSearchJsonData("16", function(datat){
-                renderdata(datat, function (str) {
-                    $(".wrapper, .kivlistview").html(str);
-                })
+            $('.loader').show();
+
+            var currentdrp = $("#drpFilter option:selected");
+            var valtid = currentdrp.val();
+            var valtomr = currentdrp.text();
+
+            //add to breadcrumb
+            Addtobreadcrumbval(valtomr, valtid);
+            var str = _currentHuvudomradeID + "," + valtid;
+           
+            // gör filtrering
+            kivSearchJsonData(str, function (datat) {
+                RenderDomItem(datat);
             });
 
         });
-    
-
+       
+        $(document).on('click', '.removebreadcrumbval', function () {
+            //Del from breadcrumb
+            var relval = $(this).attr('rel'); // hämta områsdesid
+            Delbreadcrumval(relval);
+            return false;
+        });
 
         // SETTINGS
         var init = function () {
             // hämta current område
-            _currentHuvudomradeID = $('#currentTID').html();
+            //_currentHuvudomradeID = $('#currentTID').html();
 
             if (_currentHuvudomradeID) {
 
@@ -128,95 +246,7 @@
         // INITIERING
         init();
 
-        var datatlocal = {
-            "kivsearch": [{
-                "kivsearchitem": {
-                    "title": "Teater",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Scenkonst",
-                    "kategoritaggning": ""
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "husfilmer",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Film",
-                    "kategoritaggning": "Arkitektur"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Arkitekt",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Arkitektur",
-                    "kategoritaggning": "Arkitektur"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Ren dans",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Dans",
-                    "kategoritaggning": ""
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Ren arkitektur",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Arkitektur",
-                    "kategoritaggning": ""
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Hollywodd i stan",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Film",
-                    "kategoritaggning": "Dans"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Dansa dansa dansa",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Dans",
-                    "kategoritaggning": "Film, Scenkonst"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "dansa p\u00e5 gator",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Dans",
-                    "kategoritaggning": "Arkitektur, Frame"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "dans i hus",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Dans",
-                    "kategoritaggning": "Arkitektur"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "Villatr\u00e4dg\u00e5rden",
-                    "body": "",
-                    "Huvudomr\u00e5de": "Arkitektur",
-                    "kategoritaggning": "Dans"
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "H\u00f6ghus",
-                    "body": "Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.\n",
-                    "Huvudomr\u00e5de": "Arkitektur",
-                    "kategoritaggning": ""
-                }
-            }, {
-                "kivsearchitem": {
-                    "title": "HUs och byggnader",
-                    "body": "Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.\n",
-                    "Huvudomr\u00e5de": "Arkitektur",
-                    "kategoritaggning": ""
-                }
-            }
-            ]
-        };
-
+        
 
 });//Jqueryready end
 
