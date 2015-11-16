@@ -2,7 +2,7 @@
 
 // CENTER LANDING PAGE TEXT
 
-$(document).ready(function () {
+jQuery(function ($){
 
     $(document).foundation({
         orbit: {
@@ -49,19 +49,19 @@ $(document).ready(function () {
 
             ////hämta clickatitem leftvärde:                
             var start_pos = cur_clicked_Item.indexOf('left:') + 5;
-            console.log("start_pos " + start_pos);
+            //console.log("start_pos " + start_pos);
             var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
-            console.log("end_pos " + end_pos);
+            //console.log("end_pos " + end_pos);
             //hämta clickatitem topvärde
             var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
-            console.log("clickeditmTop_start " + clickeditmTop_start);
+            //console.log("clickeditmTop_start " + clickeditmTop_start);
             var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
-            console.log("clicked_item_height " + clicked_item_height);
+            //console.log("clicked_item_height " + clicked_item_height);
 
             // hämta första delen av style för sökning senare
             var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
             var Maincontainerheight = $(this).closest('.kivisotope').attr("style");
-            console.log("Maincontainerheight " + Maincontainerheight);
+            //console.log("Maincontainerheight " + Maincontainerheight);
 
             //rensa bort position: relative; värdet från stringen
             Maincontainerheight = Maincontainerheight.replace('position: relative;', '').trim();
@@ -69,11 +69,11 @@ $(document).ready(function () {
             var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
             var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
             Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
-            console.log("Maincontainerheight2 " + Maincontainerheight);
+            //console.log("Maincontainerheight2 " + Maincontainerheight);
             var ny_cont_height = cont_height;
-            console.log("ny_cont_height " + ny_cont_height);
+            //console.log("ny_cont_height " + ny_cont_height);
             var valdheight = thatobj.height();
-            console.log("thatobj.height() " + thatobj.height());
+            //console.log("thatobj.height() " + thatobj.height());
             if (addOrRemove) {                
                 ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight + itembottommargin)
                 Maincontainerheight = Maincontainerheight + " " + ny_cont_height;
@@ -95,9 +95,9 @@ $(document).ready(function () {
 
                 var curitmTop_start = currentItem.indexOf('top:') + 4;
                 var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
-                console.log("domloop current_item_height " + current_item_height);
+                // console.log("domloop current_item_height " + current_item_height);
                 var nyposition = current_item_height;
-                console.log("domloop nyposition " + nyposition);
+                // console.log("domloop nyposition " + nyposition);
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
 
                     if (addOrRemove) {
@@ -128,7 +128,7 @@ $(document).ready(function () {
                  $(this).closest('.kivisotope').isotope("layout", {
                      transitionDuration: 0
                  });
-                 console.log(" isotope run-----------------");
+                 //console.log(" isotope run-----------------");
              }
              return false;
          });

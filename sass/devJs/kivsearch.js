@@ -2,7 +2,7 @@
 (function () {
 
     
-    $(function () {
+    jQuery(function ($){
         // VAR
         var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
         var localOrServerURL = "http://dev.kulturivast.se.www359.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
@@ -81,15 +81,15 @@
                 success: function (data) {
 
                     var currentdomitems = "";
-                    var testdubbletter=[];
+                    var removedubbletter=[];
                     
                     for (var x = 0; x < data.kivsearch.length; x++) {
                         var tid = data.kivsearch[x].kivomraden.tid;
-                        if (testdubbletter.length > 0) {
-                            if (testdubbletter.indexOf(tid) == -1) {
+                        if (removedubbletter.length > 0) {
+                            if (removedubbletter.indexOf(tid) == -1) {
                                 _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
                                 _RenderOutputdrpObj.value = tid;
-                                testdubbletter.push(tid);
+                                removedubbletter.push(tid);
                                 InitUpdatDrpOmraden(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
                                 
                             }
@@ -97,7 +97,7 @@
                         } else {
                             _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
                             _RenderOutputdrpObj.value = tid;
-                            testdubbletter.push(tid);
+                            removedubbletter.push(tid);
                             InitUpdatDrpOmraden(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
                             
                         }
@@ -152,6 +152,8 @@
             $('.loader').hide();
             return false;
         }
+
+        // Filter dropdown
         var UpdatDrpOmraden = function (value, name) {
             $('#drpFilter').empty(); //remove all child nodes                                   
             var newOption = $('<option value="' + value + '">' + name + '</option>');
@@ -237,7 +239,9 @@
             if (_currentHuvudomradeID) {
 
                 //initera dropdown
-                initomradesdrp(_currentHuvudomradeID);
+                InitUpdatDrpOmraden(_currentHuvudomradeID, "Se alla");//lägg till visa alla direkt
+
+                initomradesdrp(_currentHuvudomradeID);// lägger till alla kopplade länkar
 
             };
 

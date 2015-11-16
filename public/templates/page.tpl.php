@@ -132,7 +132,7 @@
     <script src="<?php print $base_path.$directory ?>/js/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
 
-        $(document).ready(function () {
+        jQuery(function ($) {
 
             var $container = $('.kivisotope').isotope({
                 itemSelector: '.item',

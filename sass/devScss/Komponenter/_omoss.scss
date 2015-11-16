@@ -67,26 +67,27 @@
 .omossspace{
     //margin-left:1rem;
     .omossMenu{
-        text-transform: uppercase;
+       text-transform: uppercase;
         height:3rem;
         line-height:3rem;
-        background-color:$gainsboro;
         padding:0px 1.0rem;  
         //margin-right:2rem;
+        background-color:$gainsboro;
+       
     }
     .arrowhead{
         &:after 
         {
-            content: "";
-            position: absolute;
-            bottom: -0.8rem;
-            left: 2rem;
-            border-style: solid;
-            border-width: 20px 20px 0;
-            border-color: $gainsboro transparent;
-            display: block;
-            width: 0;
-            z-index: 1;
+          content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: 2rem;
+        border-style: solid;
+        border-width: 20px 20px 0;           
+        display: block;
+        width: 0;
+        z-index: 1;            
+         border-color: $gainsboro transparent;            
         }
     }
 }

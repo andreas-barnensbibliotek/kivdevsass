@@ -34,7 +34,7 @@
 
                 <a id="main-content"></a>
 
-                <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+               <!-- <?php if ($breadcrumb): print $breadcrumb; endif; ?>-->
 
                 <?php if ($title && !$is_front): ?>
                 <?php print render($title_prefix); ?>
@@ -137,7 +137,8 @@
             var $container = $('.kivisotope').isotope({
                 itemSelector: '.item',
                 masonry: {
-                    columnWidth: '.columns'
+                    // use element for option
+                    columnWidth: 400
                 }
             });
 

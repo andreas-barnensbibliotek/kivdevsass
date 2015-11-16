@@ -32,7 +32,6 @@
     <div class="small-9 columns">
         <div id="contentfilterblock">
             <select id="drpFilter" class=" custom dropdown small">
-                <option value="11">Se alla</option>                
             </select>
             <select id="drpSortering" class=" custom dropdown small">
                 <option>Nyast</option>

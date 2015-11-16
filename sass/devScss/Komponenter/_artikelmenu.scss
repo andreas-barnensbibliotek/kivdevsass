@@ -1,0 +1,41 @@
+﻿.artikelsubmenuContent{
+    //display:none;
+   
+    	
+    margin-bottom:1.5rem;
+   
+    .row-node-top-menu{
+ background-color:$jumbo;
+    }
+}
+.atikelsubmenu{
+    //margin-left:1rem;
+    .artikelMenu{
+        text-transform: uppercase;
+        height:3rem;
+        line-height:3rem;
+        
+        background-color:$jet ;
+       
+    }
+    a{
+        margin-left:1rem;
+
+    }
+    .arrowhead{
+        &:after 
+        {
+         content: "";
+        position: absolute;
+        bottom: -0.8rem;
+        left: 2rem;
+        border-style: solid;
+        border-width: 20px 20px 0;           
+        display: block;
+        width: 0;
+        z-index: 1;                   
+         border-color: $jet transparent;            
+        }
+    }
+}
+

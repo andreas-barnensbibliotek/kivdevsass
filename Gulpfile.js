@@ -51,7 +51,7 @@ var gulp = require('gulp'),
 gulp.task('foundationJS', function () {
     gulp.src(
 			[
-				srcPath.bower +'/jquery/dist/jquery.js',
+				//srcPath.bower +'/jquery/dist/jquery.js',
 				srcPath.bower +'/foundation/js/foundation.js',
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 srcPath.js + '/kivjs.js',

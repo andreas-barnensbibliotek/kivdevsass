@@ -1,0 +1,66 @@
+﻿.artikelMainContainer{
+    .level1{
+        padding-bottom:3rem;          
+        //border-bottom:1px solid #333;
+    }
+     .level2{
+    	padding-top:3rem;  
+        padding-bottom:3rem;
+        //border-bottom:1px solid #333;
+        &:nth-child(odd){
+            background-color:$smoke;
+        }
+    }
+    .artmaincontent{
+       
+        @media #{$medium-up} {padding-right: 5rem; }
+        @media #{$large-up} {padding-right: 10rem; }
+    }
+    .success{ width:100%;}
+}
+.artsidecontainer{
+     display:block;
+	padding:1rem 2rem 2rem;
+    background-color:#fff;
+    //margin:0 4rem 0 3.5rem;
+    ul{
+        list-style:none;
+        margin-left:0px;
+    }
+    li{
+        list-style:none;
+        border-bottom:2px solid $smoke;
+        margin-bottom:0.5rem;
+        padding-bottom:0.5rem;
+    }
+    h2{        
+        border-bottom:2px solid $smoke;        
+    }
+    & .kontaktkort{
+        font-size:0.9rem;
+         & .namn{
+            font-weight:bold;
+             line-height:1.1rem;
+             text-transform: uppercase;
+        }
+        & .avd{
+            color:$gold;
+            margin-bottom:0.4rem;
+            line-height:1.2rem;
+        }
+       & .artikelkontatkort{
+            font-weight:bold;
+             line-height:1.1rem;
+             text-transform: uppercase;
+        }
+        & .artikelFakta{
+            color:$gold;
+            margin-bottom:0.4rem;
+            line-height:1.2rem;
+        }
+       
+    }
+     .success{ width:100%;}
+
+}
+
