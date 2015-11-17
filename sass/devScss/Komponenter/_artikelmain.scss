@@ -1,28 +1,31 @@
-﻿.artikelMainContainer{
+﻿
+.artikelMainContainer{
     .level1{
-        padding-bottom:3rem;          
-        //border-bottom:1px solid #333;
+        padding-bottom:3rem;                  
     }
-     .level2{
-    	padding-top:3rem;  
-        padding-bottom:3rem;
-        //border-bottom:1px solid #333;
-        &:nth-child(odd){
-            background-color:$smoke;
-        }
-    }
-    .artmaincontent{
-       
+    
+    .artmaincontent{       
         @media #{$medium-up} {padding-right: 5rem; }
         @media #{$large-up} {padding-right: 10rem; }
     }
     .success{ width:100%;}
+    .row{
+        &:first-child{
+            margin-bottom:1.5rem;
+        }
+    }
+    .artikeltopImage{
+        //display:none;
+        margin-bottom:-7.5rem; //obs hänger ihop med _artikelmenu.scss .atikelMenuBlock margin-top
+        max-height:300px;
+        overflow:hidden;
+    }   
+    .artikelwrapper {margin-top:2.5rem;}
 }
 .artsidecontainer{
-     display:block;
+    display:block;
 	padding:1rem 2rem 2rem;
-    background-color:#fff;
-    //margin:0 4rem 0 3.5rem;
+    background-color:$white;  
     ul{
         list-style:none;
         margin-left:0px;
@@ -36,6 +39,7 @@
     h2{        
         border-bottom:2px solid $smoke;        
     }
+   
     & .kontaktkort{
         font-size:0.9rem;
          & .namn{
@@ -61,6 +65,16 @@
        
     }
      .success{ width:100%;}
-
+    
 }
 
+.l-main{display:none;} // ta bort denna sedan !!!
+.view-2015-supporting-articles{
+        .level2{
+    	        padding-top:3rem;  
+                padding-bottom:3rem;        
+                &:nth-child(odd){
+                    background-color:$smoke;
+                }
+            }
+    }

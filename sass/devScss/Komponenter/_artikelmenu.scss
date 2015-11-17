@@ -1,15 +1,40 @@
 ﻿.artikelsubmenuContent{
-    //display:none;
-   
-    	
-    margin-bottom:1.5rem;
-   
-    .row-node-top-menu{
- background-color:$jumbo;
+    display:none;
+    //margin-bottom:1.5rem;       
+    .view-content{
+        background-color:$gold;
+    }
+    ul{
+        list-style:none;
+        padding:1.5rem;  
+        /*@media #{$small-up} {column-count: 1;}
+        @media #{$medium-up} {column-count: 2;}
+        @media #{$large-up} {column-count: 4;}*/
+        
+        //column-gap:1.5rem;
+        margin-left:2.5rem;
+        margin-right:2.5rem;
+    }
+    li{
+        display: inline-block;
+        zoom:1;
+        *display:inline; /* this fix is needed for IE7- */
+         border-top:1px solid $black;
+        border-bottom:1px solid $black;
+        padding:0.1rem;
+        padding-left:0.6rem;
+        margin-right:1.5rem;
+        overflow:hidden;
+        text-transform: lowercase;
+        min-width:20%;
+    }
+    .row:first-child{
+        margin-bottom:1.5rem;
     }
 }
-.atikelsubmenu{
+.atikelMenuBlock{
     //margin-left:1rem;
+    margin-top:2rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
     .artikelMenu{
         text-transform: uppercase;
         height:3rem;
@@ -21,6 +46,13 @@
     a{
         margin-left:1rem;
 
+    }
+    //.artikelShowMenuLink{
+    .lasMerOmOssLink{
+        	color:$smoke;
+            &:hover{
+                color:$gainsboro;
+            }
     }
     .arrowhead{
         &:after 
