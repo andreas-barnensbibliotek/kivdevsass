@@ -47,7 +47,7 @@
 
                         _RenderOutputListObj.bild = data.kivsearch[x].kivsearchitem.bild;
                         _RenderOutputListObj.overrub = data.kivsearch[x].kivsearchitem.overrub;
-                        _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrk;
+                        _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrik;
                         _RenderOutputListObj.link = data.kivsearch[x].kivsearchitem.link;
                         _RenderOutputListObj.ingress = data.kivsearch[x].kivsearchitem.ingress;
 

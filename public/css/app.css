@@ -6743,9 +6743,9 @@ p {
 /* line 255, ./bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #222222;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "acumin-pro", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.4;
   margin-bottom: 0.5rem;
   margin-top: 0.2rem;
@@ -8444,7 +8444,6 @@ ul.off-canvas-list {
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .kivlistview {
-  background-color: #F6F6F6;
   padding: 0px 1em;
   margin-bottom: 1.5rem; }
   /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
@@ -8521,7 +8520,14 @@ ul.off-canvas-list {
     float: right;
     margin-top: -24px;
     /* clearfix after? */ }
-  /* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 75, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .kivlist {
+    background-color: #F6F6F6;
+    margin-bottom: 0.5rem; }
+    /* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .kivlist:hover {
+      background-color: #eee; }
+  /* line 82, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .flip {
     /*-webkit-transform: rotate(180deg);
 	    -moz-transform:    rotate(180deg);

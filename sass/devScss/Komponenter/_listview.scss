@@ -1,17 +1,17 @@
 ﻿.kivlistview{
-    background-color: $vapor;
+    //background-color: $vapor;
     padding: 0px 1em; 
     margin-bottom:1.5rem;
     //border-bottom:1px solid $gainsboro;
     i{
         font-size:2.3rem;
-         color:$gold;
+        color:$gold;
     }
      h4{        
         margin-top:0px;
-         font-size:1rem;
-         font-weight:normal;
-         text-transform:uppercase;
+        font-size:1rem;
+        font-weight:normal;
+        text-transform:uppercase;
     }
     h5{
         font-size:1rem;
@@ -69,6 +69,14 @@
           float: right;
           margin-top:-24px;
 	        /* clearfix after? */
+        }
+        
+    }
+    .kivlist {
+        background-color:$vapor; 
+        margin-bottom:0.5rem;
+        &:hover{
+            background-color:#eee;
         }
     }
     .flip {
