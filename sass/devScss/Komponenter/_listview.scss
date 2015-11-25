@@ -27,9 +27,15 @@
         text-align:right;
     }
     .open {
-        font-size: 1.2rem; 
+        img{
+            max-height:30px;
+        }
     }
-
+    .closed {
+       img{
+            max-height:30px;
+        }
+    }
     .titlebox{padding-top:0.6rem;padding-bottom:0rem;}
     .imgplaceholder{
         margin-top:0.5rem;
@@ -73,7 +79,7 @@
         
     }
     .kivlist {
-        background-color:$vapor; 
+        background-color:$beigelight; 
         margin-bottom:0.5rem;
         &:hover{
             background-color:#eee;

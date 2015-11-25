@@ -632,21 +632,19 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
     }
     
 }
-.filterbox{
-    background-color:$smoke;
-     &:hover{
-            background-color:$iron;
-        }       
 
-}
 #filtersortering{
-    a{
-        @extend .filterbox;
-        margin-right:0.4rem;
+    a{     
+        margin-right:0rem;
         padding-bottom:0.2rem;       
-        padding-left: 0.4rem;
-        padding-right:0.4rem;
+        padding-left: 0rem;
+        padding-right:0rem;
         padding-top: 0.2rem; 
+        &:hover{opacity: 0.7;}
+    }
+    img{
+        height:1.8rem;
+
     }
 
 }

@@ -41,8 +41,12 @@
     </div>
     <div class="small-3 columns text-right">
         <span id="filtersortering">
-            <a id="kivmozaik" href=""><i class="fi-thumbnails "></i></a>
-            <a id="kivlist" href=""><i class="fi-list "></i></a>                                                      
+            <a id="kivmozaik" href="">
+                <img src="<?php print $base_path.$directory ?>/images/mosaikicon.png" />
+            </a>
+            <a id="kivlist" href="">
+                <img src="<?php print $base_path.$directory ?>/images/listicon.png" />
+            </a>                                                      
         </span>
     </div>
 </div>

@@ -28,37 +28,17 @@
  */
 
 ?>
-<div class="row mosaikblockheader">
-    <div class="small-9 columns">
-        <div id="contentfilterblock">
-            <select id="drpFilter" class=" custom dropdown small">
-            </select>
-            <select id="drpSortering" class=" custom dropdown small">
-                <option>Nyast</option>
-                <option>Fallande</option>
-            </select>
-        </div>
-    </div>
-    <div class="small-3 columns text-right">
-        <span id="filtersortering">
-            <a id="kivmozaik" href=""><i class="fi-thumbnails "></i></a>
-            <a id="kivlist" href=""><i class="fi-list "></i></a>                                                      
-        </span>
-    </div>
-</div>
-<div class="row">
-    <div class="small-12 columns">
-        <ul id="breadcrumbval">
 
-        </ul>
-    </div>
-</div>
 <div class="row">
-    <div id="kivisotope" class="kivisotope clearfix">
+    <div id="kivisotope2" class="kivisotope clearfix">
         <div class="wrapper kivlistview">
 
          
-          
+          <?php if ($header): ?>
+            <div class="view-header">
+              <?php print $header; ?>
+            </div>
+          <?php endif; ?>
 
           <?php if ($exposed): ?>
             <div class="view-filters">
@@ -108,16 +88,3 @@
         </div> 
     </div>
 </div>
-<div class="row">
-    <div class="small-12">
-        <?php /* class view */ ?>
-        <?php if ($pager): ?>
-        <?php print $pager; ?>
-        <?php endif; ?>
-    </div>
-</div>
-<?php if ($header): ?>
-<div class="view-header"style="display:none;">
-    <?php print $header; ?>
-</div>
-<?php endif; ?>

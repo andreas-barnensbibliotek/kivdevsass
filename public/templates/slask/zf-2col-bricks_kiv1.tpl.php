@@ -25,26 +25,25 @@
             <?php print $top; ?>
             <?php endif; ?> <!--Balken logger i ds region "Balk-->
             <?php if (!empty($middle)): ?> <!--Döljer balken om nodmeny är tom-->
-            <?php print $balk; ?>
-
+           
+                <?php print $balk; ?>
+            
             <?php endif; ?>
         </div>
-    </div>
-        <div class="large-12  artikelsubmenuContent">
+
+        <div class="large-12 columns artikelsubmenuContent">
             <!--Nodmeny logger i ds region "Middle"-->
             <?php if (!empty($middle)): ?>
             <div class="row-node-top-menu">
-                <div class="row">
                 <!--<div class="<?php print $zf_wrapper_classes; ?>">-->
                 <!--<<?php print $middle_wrapper ?> class="group-middle<?php print $middle_classes; ?>">-->
                 <?php print $middle; ?>
                 <!--</<?php print $middle_wrapper ?>>-->
                 <!--</div>-->
             </div>
-            </div>
             <?php endif; ?>
         </div>
-    
+    </div>
     <!-- artMenu END -->
     <!-- lv1 START -->
     <div class="artikelwrapper level1">

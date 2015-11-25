@@ -127,6 +127,7 @@
 
 
 </div>
+Visa detta<?php print $term->tid; ?>
 <!--/.page -->
 <script src="https://use.typekit.net/qpl5lxd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>

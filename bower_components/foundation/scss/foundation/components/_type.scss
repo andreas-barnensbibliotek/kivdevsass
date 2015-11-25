@@ -17,11 +17,11 @@ $header-bottom-margin: .5rem !default;
 $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(44) !default;
-$h2-font-size: rem-calc(32) !default;//orginal 37
-$h3-font-size: rem-calc(27) !default;
-$h4-font-size: rem-calc(23) !default;
-$h5-font-size: rem-calc(18) !default;
+$h1-font-size: rem-calc(12) !default; //44
+$h2-font-size: rem-calc(27) !default;// 32
+$h3-font-size: rem-calc(23) !default; //27
+$h4-font-size: rem-calc(18) !default; //23
+$h5-font-size: rem-calc(16) !default; //18
 $h6-font-size: 1rem !default;
 
 // We use these to control header size reduction on small screens
@@ -261,14 +261,14 @@ $align-class-breakpoints:
       margin-bottom: $header-bottom-margin;
       margin-top: $header-top-margin;
       text-rendering: $header-text-rendering;
-
+       text-transform: uppercase;
       small {
         color: $small-font-color;
         font-size: $small-font-size;
         line-height: 0;
       }
     }
-
+  
     h1 { font-size: $h1-font-size - $h1-font-reduction; }
     h2 { font-size: $h2-font-size - $h2-font-reduction; }
     h3 { font-size: $h3-font-size - $h3-font-reduction; }

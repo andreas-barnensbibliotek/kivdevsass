@@ -1,28 +1,29 @@
 ﻿.artikelsubmenuContent{
     display:none;
-    //margin-bottom:1.5rem;       
-    .view-content{
-        background-color:$gold;
-    }
+    background-color:$beigelight;
+        
+    
     ul{
         list-style:none;
         padding:1.5rem;  
-        /*@media #{$small-up} {column-count: 1;}
+        padding-left:0rem;
+        @media #{$small-up} {column-count: 1;}
         @media #{$medium-up} {column-count: 2;}
-        @media #{$large-up} {column-count: 4;}*/
+        @media #{$large-up} {column-count: 4;}
         
         //column-gap:1.5rem;
-        margin-left:2.5rem;
+        margin-left:0rem;
         margin-right:2.5rem;
     }
     li{
         display: inline-block;
         zoom:1;
         *display:inline; /* this fix is needed for IE7- */
-         border-top:1px solid $black;
-        border-bottom:1px solid $black;
+         border-top:1px solid $jumbo;
+        border-bottom:1px solid $jumbo;
         padding:0.1rem;
-        padding-left:0.6rem;
+        padding-left:0.6rem !important;
+        margin-left:1rem !important;
         margin-right:1.5rem;
         overflow:hidden;
         text-transform: lowercase;
@@ -31,16 +32,20 @@
     .row:first-child{
         margin-bottom:1.5rem;
     }
+    .item-list{
+        color:$black;
+    }
+    
 }
 .atikelMenuBlock{
     //margin-left:1rem;
-    margin-top:2rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
+    margin-top:2.5rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
     .artikelMenu{
         text-transform: uppercase;
-        height:3rem;
-        line-height:3rem;
+        height:2rem;
+        line-height:2.1rem;
         
-        background-color:$jet ;
+        background-color:$beige;
        
     }
     a{
@@ -49,7 +54,7 @@
     }
     //.artikelShowMenuLink{
     .lasMerOmOssLink{
-        	color:$smoke;
+        	color:$black;
             &:hover{
                 color:$gainsboro;
             }
@@ -66,8 +71,11 @@
         display: block;
         width: 0;
         z-index: 1;                   
-         border-color: $jet transparent;            
+         border-color: $beige transparent;            
         }
     }
+    #contentHeader{
+        h1{color:$black;}
+        }
 }
 

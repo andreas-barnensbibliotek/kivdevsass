@@ -1,0 +1,22 @@
+/* line 2, stdin */
+.filicons ul {
+  list-style: none; }
+
+/* line 5, stdin */
+.filicons li {
+  margin-bottom: 2px;
+  padding: 0.3rem 0px 0.3rem 1rem; }
+  /* line 8, stdin */
+  .filicons li:nth-child(even) {
+    background-color: #ccc; }
+
+/* line 15, stdin */
+.filer a:before {
+  content: "";
+  display: block;
+  background: url("http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png") no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 2px 0.5rem 0 0; }

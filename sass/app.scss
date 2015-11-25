@@ -5,7 +5,6 @@
 @import 'devScss/Komponenter/_tab-bar';
 @import 'devScss/foundation/_offcanvas';
 @import 'devScss/foundation/_forms';
-@import 'devScss/foundation/_type.scss';
 @import 'devScss/Komponenter/_mozaikitem';
 @import 'devScss/base/_submenubase';
 @import 'devScss/Komponenter/_listview';
@@ -14,6 +13,7 @@
 @import 'devScss/Komponenter/_breadcrumb';
 @import 'devScss/Komponenter/_artikelmain';
 @import 'devScss/Komponenter/_artikelmenu';
+@import 'devScss/Komponenter/_artikelextra';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -54,7 +54,7 @@
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-
+  @import 'devScss/foundation/_type';
 .size-21 {
     font-size: 1.2rem;
 }
@@ -71,7 +71,13 @@
         text-transform: uppercase;
     }
 }
-
+.omossspace{
+    h1{
+        text-transform: uppercase;
+        color:$orange; 
+        margin-bottom:0px;       
+    }
+}
 
 .row {
   max-width: 1200px;
@@ -176,3 +182,25 @@ position: absolute;
   top:10%;
   left: 50%;
   margin-left: -100px; }
+
+
+// drupal style fix
+.block-title{ display:none;}
+
+.views-field-field-category, .views-label-field-underomr-de{display:none;}
+#drpFilter, #drpSortering{  
+   background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
+    border-radius:0px 10px 10px 0px;
+   border: 1px solid $gold;  
+   background-size: 1.8rem 1.8rem;
+   color:$white;
+   option {    
+        background: $white;
+        color:$gold;
+        padding: 0.3rem 0.2rem;
+        text-shadow:0px;
+        border:0px;
+    &:checked { box-shadow: 0 0 10px 100px $gold inset; }
+    }
+}
+

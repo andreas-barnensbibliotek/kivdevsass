@@ -85,7 +85,7 @@ $include-html-global-classes: $include-html-classes;
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-$kiv-header-font-family: "acumin-pro",sans-serif;
+$kiv-header-font-family: "acumin-pro","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 $kiv-header-font-style: normal;
 $kiv-header-font-weight_light: 300; //light;
 $kiv-header-font-weight_regular: 400; //regular;
@@ -96,8 +96,8 @@ $kiv-header-font-weight_black: 800; //black;
  $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
  $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 // We use these to define default font weights
-// $font-weight-normal: normal;
-// $font-weight-bold: bold;
+ $font-weight-normal: normal;
+ $font-weight-bold: bold;
 
 $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -120,6 +120,10 @@ $tuatara     : #444444;
 $black      : #000000;
 $gold       : #cbb069;
 $darkgreen  : #0c6d4c;
+$orange     : #ea6100;
+$beige      :#efebde;
+$beigelight :#f7f5ef;
+$browngrey  :#949086;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -217,54 +221,54 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
-// $header-font-style: normal;
+$header-font-weight: $font-weight-normal;
+ $header-font-style: normal;
 $header-font-family: $kiv-header-font-family;
 $header-font-weight: $kiv-header-font-weight_light;
 $header-font-style: $kiv-header-font-style;
-// $header-font-color: $jet;
-// $header-line-height: 1.4;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
-// $header-text-rendering: optimizeLegibility;
+ $header-font-color: $jet;
+ $header-line-height: 1.4;
+ $header-top-margin: .2rem;
+ $header-bottom-margin: .5rem;
+ $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(37); //44
+ $h2-font-size: rem-calc(27); //37
+ $h3-font-size: rem-calc(27);//27
+ $h4-font-size: rem-calc(23); //23
+ $h5-font-size: rem-calc(18); //18
+ $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
-// $h3-font-reduction: rem-calc(5);
-// $h4-font-reduction: rem-calc(5);
-// $h5-font-reduction: 0;
-// $h6-font-reduction: 0;
+ $h1-font-reduction: rem-calc(10);
+ $h2-font-reduction: rem-calc(10);
+ $h3-font-reduction: rem-calc(5);
+ $h4-font-reduction: rem-calc(5);
+ $h5-font-reduction: 0;
+ $h6-font-reduction: 0;
 
 // These control how subheaders are styled.
-// $subheader-line-height: 1.4;
-// $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-// $subheader-font-weight: $font-weight-normal;
-// $subheader-top-margin: .2rem;
-// $subheader-bottom-margin: .5rem;
+ $subheader-line-height: 1.4;
+ $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+ $subheader-font-weight: $font-weight-normal;
+ $subheader-top-margin: .2rem;
+ $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
-// $small-font-color: scale-color($header-font-color, $lightness: 35%);
+ $small-font-size: 60%;
+ $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
-// $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
-// $paragraph-aside-font-size: rem-calc(14);
-// $paragraph-aside-line-height: 1.35;
-// $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
+ $paragraph-font-family: inherit;
+ $paragraph-font-weight: $font-weight-normal;
+ $paragraph-font-size: 1rem;
+ $paragraph-line-height: 1.6;
+ $paragraph-margin-bottom: rem-calc(20);
+ $paragraph-aside-font-size: rem-calc(14);
+ $paragraph-aside-line-height: 1.35;
+ $paragraph-aside-font-style: italic;
+ $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
 // $code-color: $oil;

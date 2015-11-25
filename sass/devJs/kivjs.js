@@ -115,12 +115,12 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('-');
+            valdclass.html('<img src="http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
             
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('+');
+            valdclass.html('<img src="http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
         }
 
          thatobj.slideToggle(100, function () {

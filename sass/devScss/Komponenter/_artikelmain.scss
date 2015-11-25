@@ -1,5 +1,8 @@
 ﻿
 .artikelMainContainer{
+    h1,h2,h3{
+        color:$orange;
+    }
     .level1{
         padding-bottom:3rem;                  
     }
@@ -11,7 +14,7 @@
     .success{ width:100%;}
     .row{
         &:first-child{
-            margin-bottom:1.5rem;
+            margin-bottom:0rem;
         }
     }
     .artikeltopImage{
@@ -20,12 +23,28 @@
         max-height:300px;
         overflow:hidden;
     }   
-    .artikelwrapper {margin-top:2.5rem;}
+    .artikelwrapper {
+        padding-top:2.5rem;
+        .medium-4 {       
+            background-color:$beige;                  
+        } 
+        
+    }
+    .artikelbild{
+        margin:1.5rem 0rem;
+    }
+   
+}
+.faktabox{
+    background-color: $beige;
+    h1,h2,h3{
+        color:$orange;
+    }
 }
 .artsidecontainer{
     display:block;
 	padding:1rem 2rem 2rem;
-    background-color:$white;  
+    //background-color:$white;  
     ul{
         list-style:none;
         margin-left:0px;
@@ -37,7 +56,7 @@
         padding-bottom:0.5rem;
     }
     h2{        
-        border-bottom:2px solid $smoke;        
+        border-bottom:2px solid $smoke;                
     }
    
     & .kontaktkort{
@@ -74,7 +93,11 @@
     	        padding-top:3rem;  
                 padding-bottom:3rem;        
                 &:nth-child(odd){
-                    background-color:$smoke;
+                    background-color:$beige;
+                    .faktabox{
+                        background-color: $white;
+                    }
                 }
             }
+       
     }

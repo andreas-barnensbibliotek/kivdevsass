@@ -62,15 +62,19 @@
     <!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+    <script src="https://use.typekit.net/qpl5lxd.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-    
-	<div class="off-canvas-wrap">     
+
+    <div class="off-canvas-wrap">
         <?php print $page_top; ?>
         <?php print $page; ?>
         <?php print $page_bottom; ?>
-        <?php print _zurb_foundation_add_reveals(); ?>       
+        <?php print _zurb_foundation_add_reveals(); ?>
     </div>
-    
+    <div class="loader">
+        <img src="<?php print $base_path.$directory ?>/images/page-loader.gif" />
+    </div>
 </body>
 </html>
