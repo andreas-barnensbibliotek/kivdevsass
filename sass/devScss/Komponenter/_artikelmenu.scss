@@ -40,6 +40,7 @@
 .atikelMenuBlock{
     //margin-left:1rem;
     margin-top:2.5rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
+    //padding-right:0px;
     .artikelMenu{
         text-transform: uppercase;
         height:2rem;
@@ -49,14 +50,13 @@
        
     }
     a{
-        margin-left:1rem;
-
+        margin-left:1rem;        
     }
     //.artikelShowMenuLink{
     .lasMerOmOssLink{
         	color:$black;
             &:hover{
-                color:$gainsboro;
+                color:$jet;
             }
     }
     .arrowhead{
@@ -75,7 +75,10 @@
         }
     }
     #contentHeader{
-        h1{color:$black;}
+        h1{color:$black;
+           text-transform:none;
+
         }
+    }
 }
 

@@ -6805,8 +6805,8 @@ jQuery(function ($){
         $('.kivisotope').isotope('destroy');
                 
         $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
-        $('.mozaikimg').attr('class',"large-2 columns small-3 imgplaceholder crop-height");
-        $('.mozaikitems').attr('class',"large-10 columns listcontent").removeClass('mozaikitems');                  
+        $('.mozaikimg').attr('class',"large-3 columns small-3 imgplaceholder crop-height");
+        $('.mozaikitems').attr('class',"large-9 columns listcontent").removeClass('mozaikitems');                  
 
         return false;
     });
@@ -6822,7 +6822,7 @@ jQuery(function ($){
             //containerStyle: null,
             masonry: {
                 // use element for option
-                columnWidth: 400
+                columnWidth: 300
             }
         });        
         return false;
@@ -6843,6 +6843,17 @@ jQuery(function ($){
         }, 600);
         return false;
     });
+
+    // scrollar ner från artikelmenyn till artikel ancor
+    $('.artikelsubmenuContent .field-content a').on('click', function (e) {
+        var href = $(e.currentTarget).attr('href');
+        $("html, body").animate({
+            scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
+        }, 800);       
+
+        
+    });
+
     /*!
      * jQuery Sticky Footer 1.1
      * Corey Snyder
@@ -7056,7 +7067,7 @@ jQuery(function ($){
                 tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
                 tmpstr += "<div class='mozaikitems'><div class='row'>";
                 tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a></div>";
-                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'>+</i></a></div>";
+                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'><img alt='Visa' src='http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png'></i></a></div>";
                 tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
 
            return tmpstr;
@@ -7072,7 +7083,7 @@ jQuery(function ($){
                 itemSelector: '.item',                
                 masonry: {
                     // use element for option
-                    columnWidth: 400
+                    columnWidth: 300
                 }
             });
             $('.loader').hide();

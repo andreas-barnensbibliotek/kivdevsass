@@ -101,17 +101,22 @@
 
     <footer class="footer">
         <div class="row">
-            <div class="small-12 medium-6 columns kivfootcolleft">
+            <div class="small-12 medium-3 columns kivfootcolleft">
                 <?php print render($page['footer_leftcolumn']); ?>
             </div>
 
             <div class="small-12 medium-3 columns kivfootmiddle">
-                <?php print render($page['footer_middlecolumn']); ?>
+                <?php print render($page['footer_middleleftcolumn']); ?>
             </div>
 
+            <div class="small-12 medium-3 columns kivfootmiddle">
+                <?php print render($page['footer_middlerightcolumn']); ?>
+            </div>
+            
             <div class="small-12 medium-3 columns kivfootcolright">
                 <?php print render($page['footer_rightcolumn']); ?>
             </div>
+            
         </div>
 
         <div class="row">
@@ -127,7 +132,7 @@
 
 
 </div>
-
+Visa detta<?php print $term->tid; ?>
 <!--/.page -->
 <script src="https://use.typekit.net/qpl5lxd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -141,7 +146,7 @@
                 itemSelector: '.item',
                 masonry: {
                     // use element for option
-                    columnWidth: 400
+                    columnWidth: 300
                 }
             });
 

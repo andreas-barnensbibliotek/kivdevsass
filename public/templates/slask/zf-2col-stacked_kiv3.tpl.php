@@ -24,15 +24,15 @@
    <div class="large-12 columns omossContentBox">
         <div class="row">    
             
-				<<?php print $left_wrapper ?> class="medium-8 columns">
+				<<?php print $left_wrapper ?> class="medium-9 columns">
 					<div id="omossContent">
 						<?php print $left; ?>
 					</div>
 				</<?php print $left_wrapper ?>>
 
-				<<?php print $right_wrapper ?> class="medium-4 columns">
+				<<?php print $right_wrapper ?> class="medium-3 columns">
 					<div id="omossKontaktContent">
-						<h3>Kontakt</h3>
+						<h2>Kontakt</h2>
 						<?php print $right; ?>
 					</div>
 				</<?php print $right_wrapper ?>>	

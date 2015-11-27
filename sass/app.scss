@@ -7,13 +7,16 @@
 @import 'devScss/foundation/_forms';
 @import 'devScss/Komponenter/_mozaikitem';
 @import 'devScss/base/_submenubase';
+@import 'devScss/Komponenter/_mainMenu';
 @import 'devScss/Komponenter/_listview';
 @import 'devScss/Komponenter/_omoss';
 @import 'devScss/Komponenter/_footer';
 @import 'devScss/Komponenter/_breadcrumb';
+@import 'devScss/Komponenter/_kalender';
 @import 'devScss/Komponenter/_artikelmain';
 @import 'devScss/Komponenter/_artikelmenu';
 @import 'devScss/Komponenter/_artikelextra';
+@import 'devScss/Komponenter/_startsida';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -203,4 +206,21 @@ position: absolute;
     &:checked { box-shadow: 0 0 10px 100px $gold inset; }
     }
 }
+#filtersortering{
+     margin-right:0.5rem;
+a{ 
+    img{width:44px; height:44px;}
+    }
+} 
+#contentfilterblock{line-height:2.5rem;}
 
+#debug h1.thin{
+font-weight:100 !important;;
+    }
+  #debug h1.extralight{font-weight:200 !important;}
+   #debug h1.light{font-weight:300 !important;}
+  #debug h1.regular{font-weight:400 !important;}
+    #debug h1.simibold{font-weight:600 !important;}
+    
+
+ 

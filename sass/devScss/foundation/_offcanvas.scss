@@ -600,36 +600,3 @@ $menu-slide: "transform 500ms ease" !default;
 
   }
 }
-
-ul.multiColumn {  
-    column-count: 2;
-    column-gap:0.5rem;
-    margin-left:0.5rem;
-    margin-right:0.5rem;
-}
-
-ul.off-canvas-list {
-    margin:0rem 1.0rem;
-    text-transform: uppercase;
-    font-stretch:condensed;
-}
-
-.off-canvas-submenu.multiColumn{     
-    list-style:none;
-    font-size:0.8rem;
-    //border-bottom:1px solid #000;
-    text-transform: lowercase;
-    font-stretch:normal;
-    padding-bottom:1rem;    
-}
-.off-canvas-submenu.multiColumn a{         
-    color:#000;
-    border-bottom:1px solid #000;
-    border-top:0px;
-    margin-left:0px;
-    padding:0.2rem 0rem;
-}
-.off-canvas-list{
-    font-size:0.85rem;    
-}
-

@@ -8,7 +8,7 @@
  */
 ?>
 <div class="artikelkontatkort artsidecontainer">
-    <h3>Kontakt</h3>
+    <h2>Kontakt</h2>
     <?php if (!empty($title)): ?>
     <h3><?php print $title; ?></h3>
     <?php endif; ?>

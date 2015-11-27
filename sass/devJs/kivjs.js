@@ -179,8 +179,8 @@ jQuery(function ($){
         $('.kivisotope').isotope('destroy');
                 
         $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
-        $('.mozaikimg').attr('class',"large-2 columns small-3 imgplaceholder crop-height");
-        $('.mozaikitems').attr('class',"large-10 columns listcontent").removeClass('mozaikitems');                  
+        $('.mozaikimg').attr('class',"large-3 columns small-3 imgplaceholder crop-height");
+        $('.mozaikitems').attr('class',"large-9 columns listcontent").removeClass('mozaikitems');                  
 
         return false;
     });
@@ -196,7 +196,7 @@ jQuery(function ($){
             //containerStyle: null,
             masonry: {
                 // use element for option
-                columnWidth: 400
+                columnWidth: 300
             }
         });        
         return false;
@@ -217,6 +217,17 @@ jQuery(function ($){
         }, 600);
         return false;
     });
+
+    // scrollar ner från artikelmenyn till artikel ancor
+    $('.artikelsubmenuContent .field-content a').on('click', function (e) {
+        var href = $(e.currentTarget).attr('href');
+        $("html, body").animate({
+            scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
+        }, 800);       
+
+        
+    });
+
     /*!
      * jQuery Sticky Footer 1.1
      * Corey Snyder

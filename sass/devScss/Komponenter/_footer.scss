@@ -171,4 +171,21 @@
     
   }
 }
-   
+   /* TMP för tillfällig bottenmeny, Detta kan man ta bort sedan. */
+
+.kivfootbottom .off-canvas-submenu.multiColumn a{
+	color: orange !important;
+}
+.kivfootbottom ul.multiColumn{
+	-moz-column-count: 1 !important;
+	-webkit-column-count: 1 !important;
+}
+.kivfootbottom .off-canvas-submenu.multiColumn li ul li a{
+	color: red !important;
+}
+.kivfootbottom .off-canvas-submenu.multiColumn LI UL li ul li a{
+	color: BLUE !important;
+}
+.footer .kivfootbottom{
+	text-align: left;
+}

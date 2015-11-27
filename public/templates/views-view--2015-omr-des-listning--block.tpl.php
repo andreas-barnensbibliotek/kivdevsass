@@ -28,7 +28,10 @@
  */
 
 ?>
-<div class="row mosaikblockheader">
+
+<div class="row mosaikblockheader"><div class="small-12 columns">
+    <ul id="breadcrumbval"></ul>
+</div>
     <div class="small-9 columns">
         <div id="contentfilterblock">
             <select id="drpFilter" class=" custom dropdown small">
@@ -50,13 +53,7 @@
         </span>
     </div>
 </div>
-<div class="row">
-    <div class="small-12 columns">
-        <ul id="breadcrumbval">
 
-        </ul>
-    </div>
-</div>
 <div class="row">
     <div id="kivisotope" class="kivisotope clearfix">
         <div class="wrapper kivlistview">

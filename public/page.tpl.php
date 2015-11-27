@@ -146,7 +146,7 @@ Visa detta<?php print $term->tid; ?>
                 itemSelector: '.item',
                 masonry: {
                     // use element for option
-                    columnWidth: 300
+                    columnWidth: 400
                 }
             });
 

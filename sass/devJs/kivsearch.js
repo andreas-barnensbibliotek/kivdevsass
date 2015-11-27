@@ -132,7 +132,7 @@
                 tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
                 tmpstr += "<div class='mozaikitems'><div class='row'>";
                 tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a></div>";
-                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'>+</i></a></div>";
+                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'><img alt='Visa' src='http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png'></i></a></div>";
                 tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
 
            return tmpstr;
@@ -148,7 +148,7 @@
                 itemSelector: '.item',                
                 masonry: {
                     // use element for option
-                    columnWidth: 400
+                    columnWidth: 300
                 }
             });
             $('.loader').hide();
