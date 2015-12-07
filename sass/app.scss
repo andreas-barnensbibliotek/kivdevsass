@@ -17,6 +17,7 @@
 @import 'devScss/Komponenter/_artikelmenu';
 @import 'devScss/Komponenter/_artikelextra';
 @import 'devScss/Komponenter/_startsida';
+@import 'devScss/Komponenter/_filter_meny_block';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -191,28 +192,9 @@ position: absolute;
 .block-title{ display:none;}
 
 .views-field-field-category, .views-label-field-underomr-de{display:none;}
-#drpFilter, #drpSortering{  
-   background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
-    border-radius:0px 10px 10px 0px;
-   border: 1px solid $gold;  
-   background-size: 1.8rem 1.8rem;
-   color:$white;
-   option {    
-        background: $white;
-        color:$gold;
-        padding: 0.3rem 0.2rem;
-        text-shadow:0px;
-        border:0px;
-    &:checked { box-shadow: 0 0 10px 100px $gold inset; }
-    }
-}
-#filtersortering{
-     margin-right:0.5rem;
-a{ 
-    img{width:44px; height:44px;}
-    }
-} 
-#contentfilterblock{line-height:2.5rem;}
+
+
+
 
 #debug h1.thin{
 font-weight:100 !important;;

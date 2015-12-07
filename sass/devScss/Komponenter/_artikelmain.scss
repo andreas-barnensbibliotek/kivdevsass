@@ -34,18 +34,16 @@
    
 }
 .faktabox{
-    background-color: $beige;
+    background-color: $lightermediumgrey;
     h1,h2,h3{
         color:$orange;
     }
 }
 .artsidecontainer{
     display:block;
-    
-  
-   padding:1rem 1.2rem 1rem 1.2rem;
+    padding:1rem 1.2rem 1rem 1.2rem;
     @media #{$large-up} {padding:1rem 2rem 2rem 2rem; }
-    background-color:$beige;     
+    background-color:$lightermediumgrey;     
     //background-color:$white;  
     ul{
         list-style:none;
@@ -73,7 +71,7 @@
              text-transform: uppercase;
         }
         & .avd{
-            color:$gold;
+            color:$black;
             margin-bottom:0.4rem;
             line-height:1.2rem;
         }
@@ -83,7 +81,7 @@
              text-transform: uppercase;
         }
         & .artikelFakta{
-            color:$gold;
+            color:$black;
             margin-bottom:0.4rem;
             line-height:1.2rem;
         }
@@ -99,9 +97,9 @@
     	        padding-top:3rem;  
                 padding-bottom:3rem;        
                 &:nth-child(odd){
-                    background-color:$beige;
+                    background-color:$lightermediumgrey;
                     .artsidecontainer{
-                        background-color: $white;
+                        background-color: $lightgrey;
                     }
                 }
             }

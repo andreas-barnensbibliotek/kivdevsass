@@ -9212,64 +9212,16 @@ ul.multiColumn {
   padding: 0;
   text-align: center;
   color: #fff;
+  font-size: 300%;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px #666;
   line-height: 100%;
   letter-spacing: 1.1px; }
-  @media only screen and (max-width: 40em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 100%; } }
-  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 200%; } }
-  @media only screen and (min-width: 64.0625em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 300%; } }
 
-/* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .view-frontpage .bigImage-content h2 {
   font-weight: bold; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
-#filtersortering {
-  margin-right: 0.5rem; }
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
-  #filtersortering a img {
-    width: 44px;
-    height: 44px; }
-
-/* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
-#contentfilterblock {
-  line-height: 2.5rem; }
-
-/*#drpFilter, #drpSortering{  
-   background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
-    border-radius:0px 10px 10px 0px;
-   border: 1px solid $gold;  
-   background-size: 1.8rem 1.8rem;
-   color:$white;
-   option {    
-        background: $white;
-        color:$gold;
-        padding: 0.3rem 0.2rem;
-        text-shadow:0px;
-        border:0px;
-    &:checked { box-shadow: 0 0 10px 100px $gold inset; }
-    }
-}
-#filtersortering{
-     margin-right:0.5rem;
-a{ 
-    img{width:44px; height:44px;}
-    }
-} 
-#contentfilterblock{line-height:2.5rem;}*/
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -9308,40 +9260,40 @@ a{
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 62, stdin */
+/* line 61, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 65, stdin */
+/* line 64, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 69, stdin */
+/* line 68, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #cbb069;
   margin-bottom: 0px; }
 
-/* line 74, stdin */
+/* line 73, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 79, stdin */
+/* line 78, stdin */
 .omossspace h1 {
   text-transform: uppercase;
   color: #ea6100;
   margin-bottom: 0px; }
 
-/* line 86, stdin */
+/* line 85, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 91, stdin */
+/* line 90, stdin */
 body {
   height: auto; }
 
 @media only screen {
-  /* line 98, stdin */
+  /* line 97, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -9354,7 +9306,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 103, stdin */
+  /* line 102, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -9365,7 +9317,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 106, stdin */
+  /* line 105, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -9384,26 +9336,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 126, stdin */
+/* line 125, stdin */
 .clear {
   clear: both; }
 
-/* line 131, stdin */
+/* line 130, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 136, stdin */
+/* line 135, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 140, stdin */
+/* line 139, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 143, stdin */
+/* line 142, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -9415,35 +9367,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 153, stdin */
+  /* line 152, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 159, stdin */
+  /* line 158, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 164, stdin */
+/* line 163, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 165, stdin */
+/* line 164, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 168, stdin */
+  /* line 167, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 172, stdin */
+/* line 171, stdin */
 .item img {
   width: 100%; }
 
-/* line 177, stdin */
+/* line 176, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -9457,30 +9409,62 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 192, stdin */
+/* line 191, stdin */
 .block-title {
   display: none; }
 
-/* line 194, stdin */
+/* line 193, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 199, stdin */
+/* line 194, stdin */
+#drpFilter, #drpSortering {
+  background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right #cbb069;
+  -webkit-border-radius: 0px 10px 10px 0px;
+          border-radius: 0px 10px 10px 0px;
+  border: 1px solid #cbb069;
+  background-size: 1.8rem 1.8rem;
+  color: #FFFFFF; }
+  /* line 200, stdin */
+  #drpFilter option, #drpSortering option {
+    background: #FFFFFF;
+    color: #cbb069;
+    padding: 0.3rem 0.2rem;
+    text-shadow: 0px;
+    border: 0px; }
+    /* line 206, stdin */
+    #drpFilter option:checked, #drpSortering option:checked {
+      -webkit-box-shadow: 0 0 10px 100px #cbb069 inset;
+              box-shadow: 0 0 10px 100px #cbb069 inset; }
+
+/* line 209, stdin */
+#filtersortering {
+  margin-right: 0.5rem; }
+  /* line 212, stdin */
+  #filtersortering a img {
+    width: 44px;
+    height: 44px; }
+
+/* line 215, stdin */
+#contentfilterblock {
+  line-height: 2.5rem; }
+
+/* line 217, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 202, stdin */
+/* line 220, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 203, stdin */
+/* line 221, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 204, stdin */
+/* line 222, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 205, stdin */
+/* line 223, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }

@@ -1,15 +1,106 @@
-/* Tillfällig css flyttas till scss*/
+/* NY Färsk CSS*/
 
-/* Frontpage*/
+/*Webb TV*/
 
+.webbtv p{
+	/*För att filtret inte skall ligga under boxarna*/
+	margin: 90px 0 0; /*kompensation för den absoluta positioneringen av Boxarna */
 
-
-/* ================== kalender tabellen =========================== */
-
-/*Overides för  .item*/
-
-.view-2015-kalender .item{
-	width: 100%;
+}
+.webbtv p iframe{
+	margin: 0;
+	/*width: 270px;*/
 }
 
 
+/*Frontpage*/
+.view-frontpage .bigImage-content h2.textcolor-1,
+.view-frontpage .bigImage-content h3.textcolor-1{
+	color: black;
+}
+.view-frontpage .bigImage-content h2.textcolor-2,
+.view-frontpage .bigImage-content h3.textcolor-2{
+	color: white;
+}
+.view-frontpage .bigImage-content h2.textcolor-3,
+.view-frontpage .bigImage-content h3.textcolor-3{
+	color: orange;
+}
+.view-frontpage .bigImage-content h2.textcolor-4,
+.view-frontpage .bigImage-content h3.textcolor-4{
+	color: green;
+}
+.view-frontpage .bigImage-content .frontpagebody p{
+text-align: center;
+color: #fff;
+	
+}
+
+
+/*Listvyer*/
+.n0 a{
+	background-color: white;
+	padding: 4px;
+}
+.n1 a{
+	background-color: orange;
+	padding: 4px;
+}
+.n2 a{
+	background-color: cyan;
+	padding: 4px;
+}
+.n3 a{
+	background-color: green;
+	padding: 4px;
+}
+.listcontent .small-2{
+	/*display: block;*/
+	/*width: 180px;*/
+	max-width: 200px;
+}
+
+/*Personallistvy*/
+.working-title{
+	color: orange;
+}
+
+/*Kommentar
+
+Skulle vilja ta bort (position: relative) på kivisotope
+Då blir pagerna inte i sidfoten
+*/
+
+
+/* ==================================== Overrides =====================================*/
+
+/*Kalendern igen
+	nambyte calender istället för kalender
+*/
+
+.view-2015-calender .item {
+  width: 100%; 
+}
+
+.view-2015-calender .month-view{
+	padding: 0 1em;
+}
+/*Denna borde vara generell, formulärknapp */
+.views-exposed-form .views-exposed-widget .form-submit{
+	margin: 1.1rem !important;
+	padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+}
+
+/*DIverse för att få fram Titel på vissa sidor
+Dettta kan nog tas bort i template senare
+*/
+.l-main {
+    display: inherit !important;
+}
+.breadcrumbs{
+	display: none !important;
+}
+
+.footer .block-title {
+    display: inherit !important;
+}

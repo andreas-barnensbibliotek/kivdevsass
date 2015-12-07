@@ -58,7 +58,7 @@
 @import 'foundation/functions';
 
 //urllänken till background-url mm
-$current-kiv-domain-url: "http://dev.kulturivast.se.www359.your-server.de";
+$current-kiv-domain-url: "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";
 
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
@@ -124,14 +124,18 @@ $tuatara     : #444444;
 // $oil         : #333333;
  $jet         : #222222;
 $black      : #000000;
-$gold       : #cbb069;
+$gold       : #b2a16c;
 $darkgreen  : #0c6d4c;
-$orange     : #ea6100;
+$orange     : #f85014;
 $beige      :#efebde;
 $beigelight :#f7f5ef;
 $browngrey  :#949086;
-$darkergrey: #575756;
-$lightgrey:#e3e3e3;
+$darkgrey: #5a5958;
+$darkergrey: #6e6d6c; //#575756;
+$mediumgrey: #828180;  //#e3e3e3;
+$lightmediumgrey: #b4b3b2;
+$lightermediumgrey: #dcdbda;
+$lightgrey: #ebeae9; //#e3e3e3;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;

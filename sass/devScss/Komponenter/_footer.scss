@@ -6,18 +6,22 @@
   text-align: center;
   font-size: 1.2rem;
   padding: 4rem;
-  
+  a{
+    color:$white;
+   }
   .inline-list a {
     display: inline-block;
     width: 2rem;
     height: 2rem;
     background-color: #33383b;
     border-radius: 2px;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #fff;
     text-align: center;
     line-height: 35px;
     margin: 0 3px 0 0;
+    padding-left:0px;
+    margin-right:2px !important;
   }
   
   .contact {

@@ -1,25 +1,29 @@
 ﻿.mosaikblockheader{margin-top:1.5rem;}
 
 .mozaikitems {
-    background-color: $beigelight;
+    background-color: $darkgrey;
     padding: 0px 1em; 
     padding-bottom:2rem;
-    margin-bottom:1.5rem;
-    border-bottom:1px solid $beige;   
+    margin-bottom:1.5rem;   
+    color:$white;  
     i{
         font-size:2.3rem;
          color:$gold;
     }
-    h4{        
+    h4{   
+        color:$white;       
         margin-top:0px;
          font-size:1.3rem;
          font-weight:300;
          text-transform:none;
     }
+    a{
+        color:$white;  
+    }
     h5{
         font-size:1.3rem;
         margin-bottom:0px;
-        color:$gold;
+        color:$lightmediumgrey;
         font-weight:300;
         padding-top:0.6rem;
         text-transform:none;

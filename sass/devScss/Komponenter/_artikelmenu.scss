@@ -1,26 +1,20 @@
 ﻿.artikelsubmenuContent{
     display:none;
-    background-color:$beigelight;
-        
-    
+    background-color:$darkergrey;       
+    color:$white;
     ul{
         list-style:none;
         padding:1.5rem;  
         padding-left:0rem;
-        @media #{$small-up} {column-count: 1;}
-        @media #{$medium-up} {column-count: 2;}
-        @media #{$large-up} {column-count: 4;}
-        
+
         //column-gap:1.5rem;
         margin-left:0rem;
         margin-right:2.5rem;
     }
     li{
-        display: inline-block;
+       
         zoom:1;
-        *display:inline; /* this fix is needed for IE7- */
-         border-top:1px solid $jumbo;
-        border-bottom:1px solid $jumbo;
+        *display:inline; /* this fix is needed for IE7- */        
         padding:0.1rem;
         padding-left:0.6rem !important;
         margin-left:1rem !important;
@@ -28,6 +22,18 @@
         overflow:hidden;
         text-transform: lowercase;
         min-width:20%;
+    }
+    .menucolumns{
+        @media #{$small-up} {column-count: 1;}
+        @media #{$medium-up} {column-count: 2;}
+        @media #{$large-up} {column-count: 4;}
+    }
+    a{
+        margin-right:0.4rem;
+        margin-top:4px;
+        &:before {
+            @include arrowiconbefore("iconopenarrowright.png");
+        }
     }
     .row:first-child{
         margin-bottom:1.5rem;
@@ -46,7 +52,7 @@
         height:2rem;
         line-height:2.1rem;
         
-        background-color:$beige;
+        background-color:$lightgrey;
        
     }
     a{

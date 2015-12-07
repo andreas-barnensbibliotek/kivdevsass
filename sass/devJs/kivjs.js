@@ -228,6 +228,23 @@ jQuery(function ($){
         
     });
 
+    $(document).swipe({
+
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            
+            if (direction == 'right'){
+                //$('.off-canvas-wrap').addClass('move-right');                
+                    $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+                    return false;
+                };               
+                       
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:40
+    });
+
+  
+ 
     /*!
      * jQuery Sticky Footer 1.1
      * Corey Snyder

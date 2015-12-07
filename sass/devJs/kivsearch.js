@@ -250,6 +250,12 @@
             return false;
 
         }
+
+        //initera breadcrumblistan
+        var initbreadcrumb = function () {
+
+
+        }
         /// BREADCRUMB END
         
         // EVENTS START
