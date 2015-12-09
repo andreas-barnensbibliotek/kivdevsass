@@ -18,6 +18,7 @@
 @import 'devScss/Komponenter/_artikelextra';
 @import 'devScss/Komponenter/_startsida';
 @import 'devScss/Komponenter/_filter_meny_block';
+@import 'devScss/Komponenter/_evenemang';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -90,9 +91,9 @@
 
 body {
   height: auto;
+  overflow: scroll;
 }
 
-// Fixed 300px
 
 @media #{$small-up} {
     .small-min-300.column { @include min(300); 
@@ -197,7 +198,7 @@ position: absolute;
 
 
 #debug h1.thin{
-font-weight:100 !important;;
+font-weight:100 !important;
     }
   #debug h1.extralight{font-weight:200 !important;}
    #debug h1.light{font-weight:300 !important;}
@@ -205,4 +206,25 @@ font-weight:100 !important;;
     #debug h1.simibold{font-weight:600 !important;}
     
 
- 
+ /*// Small screens
+@media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
+
+//@media only screen and (max-width: 40em) {body{ background-color:#faf790;} } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+//@media only screen and (min-width: 40.063em) {body{ background-color:#58b351;} } /* min-width 641px, medium screens */
+
+//@media only screen and (min-width: 40.063em) and (max-width: 64em) {body{ background-color:#4392a3;} } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+//@media only screen and (min-width: 64.063em) {body{ background-color:#be62bf;} } /* min-width 1025px, large screens */
+
+//@media only screen and (min-width: 64.063em) and (max-width: 90em) {body{ background-color:#cccccc;} } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+//@media only screen and (min-width: 90.063em) { body{ background-color:#faf963;}} /* min-width 1441px, xlarge screens */
+
+//@media only screen and (min-width: 90.063em) and (max-width: 120em) {body{ background-color:#089e01;} } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+//@media only screen and (min-width: 120.063em) { body{ background-color:#089e01;}} /* min-width 1921px, xxlarge screens */*/

@@ -4,7 +4,7 @@
  * Template for Zurb Foundation Two column stacked Display Suite layout.
  */
  
-  // Denna template använs till: Artikelsida, Fullständigt innehåll
+  // Denna template använs till: Områden, Fullständigt innehåll
  
 ?>
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="zf-2col-stacked <?php print $classes;?>">
@@ -12,7 +12,7 @@
   <?php if (isset($title_suffix['contextual_links'])): ?>
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
-
+    är det denna då
   <div class="row r1">
     <?php if (!empty($header)): ?>
       <<?php print $header_wrapper ?> class="group-header<?php print $header_classes; ?>">

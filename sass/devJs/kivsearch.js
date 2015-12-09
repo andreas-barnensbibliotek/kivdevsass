@@ -7,7 +7,7 @@
         var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
         var _drpFilter = $('#drpFilter');
 
-        var localOrServerURL = "http://dev.kulturivast.se.www359.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
+        var localOrServerURL = "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
         //var mozaikItems = [];
         var _drphuvudomradenlista = [];
         var _drphuvudomradenvalue = [];        

@@ -21,9 +21,9 @@
     <?php endif; ?>
   </div>
 
-   <div class="large-12 columns  omossContentBox">
+   <div class="large-12 columns omossContentBox">
         <div class="row">    
-            <div class="medium-12 columns "> 
+            
 				<<?php print $left_wrapper ?> class="medium-8 columns">
 					<div id="omossContent">
 						<?php print $left; ?>
@@ -32,19 +32,19 @@
 
 				<<?php print $right_wrapper ?> class="medium-4 columns">
 					<div id="omossKontaktContent">
-						<h2>Kontakt</h2>
+						<h3>Kontakt</h3>
 						<?php print $right; ?>
 					</div>
 				</<?php print $right_wrapper ?>>	
 <?php if (!empty($footer)): ?>
-				<<?php print $footer_wrapper ?> class="medium-12 columns snabblinks">
+				<<?php print $footer_wrapper ?> class="medium-12 columns">
 				<h2>Snabblänkar</h2>
 					<?php print $footer; ?>
 				</<?php print $footer_wrapper ?>>
 <?php endif; ?>
-			</div>
+			
 		</div>
-	</div rel="här slutar omoss>
+	</div>
 
 </<?php print $layout_wrapper ?>>
 

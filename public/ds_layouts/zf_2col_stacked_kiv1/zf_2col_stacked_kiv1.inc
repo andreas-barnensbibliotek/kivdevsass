@@ -5,7 +5,6 @@
  */
 
 function ds_zf_2col_stacked_kiv1() {
-echo "test";
   return array(
     'label' => t('KiV 1 Two column stacked'),
     'regions' => array(

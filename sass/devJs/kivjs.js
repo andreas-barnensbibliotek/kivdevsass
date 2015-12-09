@@ -16,7 +16,7 @@ jQuery(function ($){
             variable_height: false,
         }
     });
-    
+   
     // Menu offcanvas show hide START
     $('.left-off-canvas-toggle').on('click', function (e) {
         $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
@@ -179,17 +179,18 @@ jQuery(function ($){
         $('.kivisotope').isotope('destroy');
                 
         $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
-        $('.mozaikimg').attr('class',"large-3 columns small-3 imgplaceholder crop-height");
-        $('.mozaikitems').attr('class',"large-9 columns listcontent").removeClass('mozaikitems');                  
-
+        $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder crop-height");
+        $('.mozaikitems').attr('class', "large-9 medium-9 small-9 columns listcontent ").removeClass('mozaikitems');        
+        $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
         return false;
     });
 
     $('#kivmozaik').on('click', function (e) {
 
-        $('.kivlist').attr('class', "large-4 medium-6 small-12 columns item");
+        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
+        $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
 
         $('.kivisotope').isotope({
             itemSelector: '.item',
@@ -224,24 +225,24 @@ jQuery(function ($){
         $("html, body").animate({
             scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
         }, 800);       
-
+        //alert("test");
         
     });
+    
+    //$(document).swipe({
 
-    $(document).swipe({
-
-        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+    //    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
             
-            if (direction == 'right'){
-                //$('.off-canvas-wrap').addClass('move-right');                
-                    $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-                    return false;
-                };               
+    //        if (direction == 'right'){
+    //            //$('.off-canvas-wrap').addClass('move-right');                
+    //                $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+    //                return false;
+    //            };               
                        
-        },
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-        threshold:40
-    });
+    //    },
+    //    //Default is 75px, set to 0 for demo so any distance triggers swipe
+    //    threshold:40
+    //});
 
   
  

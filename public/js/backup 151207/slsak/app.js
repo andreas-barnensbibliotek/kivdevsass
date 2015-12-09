@@ -7757,7 +7757,7 @@ jQuery(function ($){
 
     $('#kivmozaik').on('click', function (e) {
 
-        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item");
+        $('.kivlist').attr('class', "large-4 medium-6 small-12 columns item");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
         $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
@@ -7795,7 +7795,7 @@ jQuery(function ($){
         $("html, body").animate({
             scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
         }, 800);       
-        //alert("test");
+        alert("test");
         
     });
     
@@ -7904,7 +7904,7 @@ jQuery(function ($){
         var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
         var _drpFilter = $('#drpFilter');
 
-        var localOrServerURL = "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
+        var localOrServerURL = "http://dev.kulturivast.se.www359.your-server.de"; //"http://kivdev.monoclick-dev.se"; // http://dev.kulturivast.se.www395.your-server.de webservern att hämta data ifrån
         //var mozaikItems = [];
         var _drphuvudomradenlista = [];
         var _drphuvudomradenvalue = [];        
@@ -8226,28 +8226,3 @@ jQuery(function ($){
 
     });// Jquery END
 })();// kappsla och exeute END
-
-
-    jQuery(function ($) {
-
-        $(document).on('click', 'a', function (e) {
-           
-            alert("japp");
-            setTimeout(function () {
-                //jQuery('.kivisotope').isotope('destroy');
-                $('.kivisotope').isotope('reloadItems');
-                $('.kivisotope').isotope({
-                    itemSelector: '.item',
-                    //containerStyle: null,
-                    masonry: {
-                        // use element for option
-                        columnWidth: 300
-                    }
-                });
-                $('.kivisotope').isotope('reloadItems');
-                alert("tee");
-
-            }, 3500);
-       
-        });
-    });

@@ -8493,60 +8493,71 @@ ul.multiColumn {
     font-size: 0.8rem; }
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.kivlistview {
+.kivlistview, .evenemang {
   padding: 0px 1em;
   margin-bottom: 1.5rem; }
   /* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview i {
+  .kivlistview i, .evenemang i {
     font-size: 2.3rem;
     color: #b2a16c; }
   /* line 11, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview h4 {
+  .kivlistview h4, .evenemang h4 {
     margin-top: 0px;
     font-size: 1.2rem;
     text-transform: none; }
   /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview h5 {
+  .kivlistview h5, .evenemang h5 {
     font-size: 1.2rem;
     margin-bottom: 0px;
     color: #b4b3b2;
     padding-top: 0.6rem;
     text-transform: none; }
   /* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .pluss {
+  .kivlistview .pluss, .evenemang .pluss {
     padding-top: 0.6rem;
     padding-bottom: 0rem;
     text-align: right; }
   /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .open img {
+  .kivlistview .open img, .evenemang .open img {
     max-height: 30px; }
   /* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .closed img {
+  .kivlistview .closed img, .evenemang .closed img {
     max-height: 30px; }
   /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .titlebox {
+  .kivlistview .titlebox, .evenemang .titlebox {
     padding-top: 0.6rem;
     padding-bottom: 0rem; }
   /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .imgplaceholder {
+  .kivlistview .imgplaceholder, .evenemang .imgplaceholder {
     padding-right: 0px;
-    padding-left: 0px;
-    width: 270px; }
-  /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .ingresstext {
+    padding-left: 0px; }
+    /* line 47, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .imgplaceholder img, .evenemang .imgplaceholder img {
+      width: 100%; }
+  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .ingresstext, .evenemang .ingresstext {
     display: hidden; }
-  /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .crop-height {
-    /* max-width: 1200px; /* native or declared width of img src (if known) */
-    max-height: 4.3rem;
-    overflow: hidden; }
-  /* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .noimage {
+  @media only screen {
+    /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .crop-height, .evenemang .crop-height {
+      max-height: 100%; } }
+  @media only screen and (min-width: 40.0625em) {
+    /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .crop-height, .evenemang .crop-height {
+      max-height: 7.3rem;
+      overflow: hidden; } }
+  @media only screen and (min-width: 64.0625em) {
+    /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .crop-height, .evenemang .crop-height {
+      max-height: 4.3rem;
+      overflow: hidden; } }
+  /* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .noimage, .evenemang .noimage {
     background-color: #b2a16c;
     width: 100%;
     height: 5rem; }
-  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview img .scale {
+  /* line 70, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview img .scale, .evenemang img .scale {
     /* corrects small inline gap at bottom of containing div */
     display: block;
     /* just in case, to force correct aspect ratio */
@@ -8565,30 +8576,30 @@ ul.multiColumn {
     /* optionally force a minimum size if img src size is known: */
     /* max-height: 50px;  max-height of .crop-height */
     /* min-width: 480px; /* proportional to above */ }
-  /* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview img .flip {
+  /* line 88, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview img .flip, .evenemang img .flip {
     /* actually, aligns left within .cropheight */
     float: right;
     margin-top: -24px;
     /* clearfix after? */ }
-  /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .kivlist {
+  /* line 96, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .kivlist, .evenemang .kivlist {
     background-color: #5a5958;
     margin-bottom: 0.5rem;
     margin-left: 0px;
     margin-right: 0px; }
-    /* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-    .kivlistview .kivlist:hover {
+    /* line 101, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .kivlist:hover, .evenemang .kivlist:hover {
       background-color: #eee; }
-    /* line 93, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-    .kivlistview .kivlist .showingresstext {
+    /* line 104, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .kivlist .showingresstext, .evenemang .kivlist .showingresstext {
       float: right;
-      margin-right: -1.5rem; }
-    /* line 94, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-    .kivlistview .kivlist .columns {
+      margin-right: 0.3rem; }
+    /* line 105, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .kivlist .columns, .evenemang .kivlist .columns {
       float: left !important; }
-  /* line 98, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-  .kivlistview .flip {
+  /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .flip, .evenemang .flip {
     /*-webkit-transform: rotate(180deg);
 	    -moz-transform:    rotate(180deg);
 	    -ms-transform:     rotate(180deg);
@@ -8598,8 +8609,30 @@ ul.multiColumn {
             transform: rotate(180deg);
     /* needed? not sure */
     zoom: 1; }
+  /* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .apsisboxmain, .evenemang .apsisboxmain, .kivlistview .apsisbtnbox, .evenemang .apsisbtnbox, .kivlistview .apsisbtnboxList, .evenemang .apsisbtnboxList {
+    padding-top: 0.2rem; }
+    /* line 122, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .apsisboxmain a, .evenemang .apsisboxmain a, .kivlistview .apsisbtnbox a, .evenemang .apsisbtnbox a, .kivlistview .apsisbtnboxList a, .evenemang .apsisbtnboxList a {
+      margin-bottom: 0px; }
+      /* line 124, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+      .kivlistview .apsisboxmain a:empty, .evenemang .apsisboxmain a:empty, .kivlistview .apsisbtnbox a:empty, .evenemang .apsisbtnbox a:empty, .kivlistview .apsisbtnboxList a:empty, .evenemang .apsisbtnboxList a:empty {
+        display: none; }
+  @media only screen {
+    /* line 134, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .apsisbtnboxList, .evenemang .apsisbtnboxList {
+      margin-bottom: 2px; } }
+  @media only screen and (min-width: 64.0625em) {
+    /* line 134, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    .kivlistview .apsisbtnboxList, .evenemang .apsisbtnboxList {
+      position: absolute;
+      right: 0px;
+      top: 1.1rem; } }
+  /* line 146, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .button.expand, .evenemang .button.expand, .kivlistview .button.expand, .evenemang .button.expand {
+    padding: 0.2rem; }
 
-/* line 108, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 150, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h5, .listcontent h4 {
   margin: 0px; }
 
@@ -9294,6 +9327,40 @@ a{
     }
 } 
 #contentfilterblock{line-height:2.5rem;}*/
+/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+.evenemang {
+  position: relative;
+  height: 100%;
+  -webkit-overflow-scrolling: touch; }
+  /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  .evenemang .imgplaceholder {
+    padding-right: 0px;
+    padding-left: 0px; }
+  /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  .evenemang .kivlist .showingresstext {
+    margin-right: 0.3rem; }
+  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  .evenemang .kivlist .imgplaceholder img {
+    min-width: 100%; }
+  @media only screen {
+    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    .evenemang .kivlist .crop-height {
+      max-height: 100%; } }
+  @media only screen and (min-width: 40.0625em) {
+    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    .evenemang .kivlist .crop-height {
+      max-height: 4.3rem;
+      overflow: hidden; } }
+  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  .evenemang .apsisbtnbox {
+    padding-top: 0.2rem; }
+    /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    .evenemang .apsisbtnbox a {
+      margin-bottom: 0px; }
+  /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  .evenemang .button.expand, .evenemang .button.expand {
+    padding: 1.1rem; }
+
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -9332,40 +9399,41 @@ a{
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 62, stdin */
+/* line 63, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 65, stdin */
+/* line 66, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 69, stdin */
+/* line 70, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 74, stdin */
+/* line 75, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 79, stdin */
+/* line 80, stdin */
 .omossspace h1 {
   text-transform: uppercase;
   color: #f85014;
   margin-bottom: 0px; }
 
-/* line 86, stdin */
+/* line 87, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 91, stdin */
+/* line 92, stdin */
 body {
-  height: auto; }
+  height: auto;
+  overflow: scroll; }
 
 @media only screen {
-  /* line 98, stdin */
+  /* line 99, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -9378,7 +9446,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 103, stdin */
+  /* line 104, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -9389,7 +9457,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 106, stdin */
+  /* line 107, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -9408,26 +9476,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 126, stdin */
+/* line 127, stdin */
 .clear {
   clear: both; }
 
-/* line 131, stdin */
+/* line 132, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 136, stdin */
+/* line 137, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 140, stdin */
+/* line 141, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 143, stdin */
+/* line 144, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -9439,35 +9507,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 153, stdin */
+  /* line 154, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 159, stdin */
+  /* line 160, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 164, stdin */
+/* line 165, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 165, stdin */
+/* line 166, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 168, stdin */
+  /* line 169, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 172, stdin */
+/* line 173, stdin */
 .item img {
   width: 100%; }
 
-/* line 177, stdin */
+/* line 178, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -9481,30 +9549,33 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 192, stdin */
+/* line 193, stdin */
 .block-title {
   display: none; }
 
-/* line 194, stdin */
+/* line 195, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 199, stdin */
+/* line 200, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 202, stdin */
+/* line 203, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 203, stdin */
+/* line 204, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 204, stdin */
+/* line 205, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 205, stdin */
+/* line 206, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
+
+/*// Small screens
+@media only screen {body{ background-color:#fad490;}} /* Define mobile styles */

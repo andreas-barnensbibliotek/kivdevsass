@@ -11,6 +11,7 @@ function ds_zf_2col_bricks_kiv1() {
       'topimage' => t('Image Top'),
       'top' => t('Top'),
       'balk' => t('Balk'),
+      'tombalk' => t('Tom Balk'),
       'middle' => t('Middle'),
       'below_left' => t('Below Left'),
       'below_right' => t('Below Right'),

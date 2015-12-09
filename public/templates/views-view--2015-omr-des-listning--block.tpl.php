@@ -32,7 +32,7 @@
 <div class="row mosaikblockheader"><div class="small-12 columns">
     <ul id="breadcrumbval"></ul>
 </div>
-    <div class="small-9 columns">
+    <div class="medium-9 small-6 columns">
         <div id="contentfilterblock">
             <select id="drpFilter" class=" custom dropdown small">
             </select>
@@ -42,7 +42,7 @@
             </select>
         </div>
     </div>
-    <div class="small-3 columns text-right">
+    <div class="medium-3 small-6 columns text-right">
         <span id="filtersortering">
             <a id="kivmozaik" href="">
                 <img src="<?php print $base_path.$directory ?>/images/mosaikicon.png" />

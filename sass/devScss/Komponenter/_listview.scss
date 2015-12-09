@@ -43,16 +43,27 @@
         padding-right:0px;
         padding-left:0px;
          //margin-bottom:0.5rem;
-         width:270px;
-    }    
+         //width:270px;
+         img{ width: 100%;}
+           
+    } 
+    
     .ingresstext{
         display:hidden;
     }
     
-    .crop-height {
-      /* max-width: 1200px; /* native or declared width of img src (if known) */     
-	    max-height: 4.3rem;
-	    overflow: hidden; 
+    .crop-height {      
+          @media #{$small-up} { 
+            max-height: 100%;	     
+	      }    
+          @media #{$medium-up} { 
+            max-height: 7.3rem;
+	        overflow: hidden; 
+	      } 
+	      @media #{$large-up} { 
+            max-height: 4.3rem;
+	        overflow: hidden; 
+	      } 
     }
     .noimage{background-color:$gold; width:100%; height:5rem;}
     img{
@@ -90,7 +101,7 @@
         &:hover{
             background-color:#eee;
         }
-        .showingresstext{float:right; margin-right: -1.5rem;}
+        .showingresstext{float:right; margin-right: 0.3rem;}
         .columns{
             float:left !important;
         }
@@ -104,5 +115,36 @@
 	    /* needed? not sure */
 	    zoom: 1; 
     }     
+
+    .apsisboxmain{
+        padding-top:0.2rem;
+        
+        a{
+            margin-bottom:0px;
+            &:empty {
+                display: none;
+            }
+         }       
+    }
+
+    .apsisbtnbox {        
+         @extend .apsisboxmain;
+    }
+
+    .apsisbtnboxList {  
+        @extend .apsisboxmain;
+        @media #{$small-up} { 
+             margin-bottom:2px;	     
+	    }    
+        @media #{$large-up} { 
+            position:absolute;
+            right:0px; 
+            top:1.1rem;
+	    } 
+    }
+
+   .button.expand, .button.expand{
+        padding:0.2rem;
+    }
 }
 .listcontent h5 ,.listcontent h4{margin:0px;}
