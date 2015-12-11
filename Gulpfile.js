@@ -53,8 +53,10 @@ gulp.task('foundationJS', function () {
 			[
 				//srcPath.bower +'/jquery/dist/jquery.js',
 				srcPath.bower +'/foundation/js/foundation.js',
-				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',                
+				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
+                srcPath.js + '/imagesloaded.pkgd.min.js',
 			    srcPath.js + '/iscroll-lite.js',
+                srcPath.js + '/kivglobalvars.js',
                 srcPath.js + '/kivjs.js',
                 srcPath.js + '/kivsearch.js',
                 srcPath.js + '/kivartikel.js',

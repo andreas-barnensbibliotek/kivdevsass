@@ -4,6 +4,27 @@
 
 jQuery(function ($){
 
+    $.fn.getSize = function () {
+        var $wrap = $("<div />").appendTo($("body"));
+        $wrap.css({
+            "position": "absolute !important",
+            "visibility": "hidden !important",
+            "display": "block !important"
+        });
+
+        $clone = $(this).clone().appendTo($wrap);
+
+        sizes = {
+            "width": this.width(),
+            "height": this.height()
+        };
+
+        $wrap.remove();
+
+        return sizes;
+    };
+
+
     $(document).foundation({
         orbit: {
             stack_on_small: false,
@@ -17,6 +38,7 @@ jQuery(function ($){
         }
     });
    
+    
     // Menu offcanvas show hide START
     $('.left-off-canvas-toggle').on('click', function (e) {
         $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
@@ -35,7 +57,9 @@ jQuery(function ($){
         var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-        var itembottommargin = 15;
+
+        
+        var itembottommargin = 0;
 
 
         if (thatobj.length <= 0) {           
@@ -73,14 +97,22 @@ jQuery(function ($){
             var ny_cont_height = cont_height;
             //console.log("ny_cont_height " + ny_cont_height);
             var valdheight = thatobj.height();
+            var debugg = thatobj.getSize();
             //console.log("thatobj.height() " + thatobj.height());
-            if (addOrRemove) {                
-                ny_cont_height = parseFloat(ny_cont_height) + parseFloat(valdheight + itembottommargin)
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height;
-            } else {                
-                ny_cont_height = parseFloat(ny_cont_height) - (parseFloat(valdheight - itembottommargin));
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
 
+            if (addOrRemove) {
+                thatobj.attr("rel", valdheight);
+                itembottommargin += parseFloat(valdheight)
+                ny_cont_height = parseFloat(ny_cont_height) + itembottommargin;
+
+                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
+            } else {
+                valdheight = thatobj.attr("rel");
+                itembottommargin += parseFloat(valdheight)
+
+                ny_cont_height = parseFloat(ny_cont_height) - itembottommargin;
+                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
+                thatobj.attr("rel", "");
             }
             $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
 
@@ -99,12 +131,11 @@ jQuery(function ($){
                 var nyposition = current_item_height;
                 // console.log("domloop nyposition " + nyposition);
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
-
+                    var addedheight = itembottommargin + 30;
                     if (addOrRemove) {
-                        nyposition = parseInt(current_item_height) + parseInt(valdheight + itembottommargin);
-
+                        nyposition = parseInt(current_item_height) + addedheight;
                     } else {
-                        nyposition = parseInt(current_item_height) - parseInt(valdheight - itembottommargin);
+                        nyposition = parseInt(current_item_height) - addedheight;
                     }
                     var updatedStyleToAdd =" position: absolute; " + itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
                     $(value).attr('style', updatedStyleToAdd);
@@ -180,7 +211,7 @@ jQuery(function ($){
                 
         $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
         $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder crop-height");
-        $('.mozaikitems').attr('class', "large-9 medium-9 small-9 columns listcontent ").removeClass('mozaikitems');        
+        $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
         return false;
     });
@@ -197,12 +228,23 @@ jQuery(function ($){
             //containerStyle: null,
             masonry: {
                 // use element for option
-                columnWidth: 300
+                columnWidth: 250
             }
         });        
         return false;
     })
+    var removePlussicon = function (e) {
+        var istextset = $('.ingresstext');
+        istextset.each(function (index, value) {
+            var testar = $(value).html();
+            if (!$(value).html()) {
+                $(value).siblings().find('.showingresstext').hide();
+            }
 
+        });
+
+    }();
+    
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {

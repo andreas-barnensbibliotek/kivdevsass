@@ -148,7 +148,7 @@
                 itemSelector: '.item',                
                 masonry: {
                     // use element for option
-                    columnWidth: 300
+                    columnWidth: 250
                 }
             });
             $('.loader').hide();

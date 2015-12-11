@@ -1,6 +1,8 @@
 ﻿/* version v0.0.2 */
 @import 'devScss/foundation/_settings';
+
 @import 'foundation';
+
 @import 'devScss/_kivmixin';
 @import 'devScss/Komponenter/_tab-bar';
 @import 'devScss/foundation/_offcanvas';
@@ -19,6 +21,8 @@
 @import 'devScss/Komponenter/_startsida';
 @import 'devScss/Komponenter/_filter_meny_block';
 @import 'devScss/Komponenter/_evenemang';
+@import 'devScss/Komponenter/_imagecrop';
+
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -60,6 +64,11 @@
 @import 'foundation/components/visibility';
   */
   @import 'devScss/foundation/_type';
+
+.row {
+max-width: rem-calc(1000) !important;
+}
+
 .size-21 {
     font-size: 1.2rem;
 }
