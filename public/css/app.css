@@ -8369,24 +8369,28 @@ ul.off-canvas-list {
     height: 24px;
     float: right;
     margin-right: -0.5rem; }
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems .ingresstext {
+    display: none;
+    width: 220px !important; }
 
-/* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstext {
   display: none;
   width: 220px; }
 
 @media only screen and (max-width: 40em) {
-  /* line 39, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .lasMerOmOssLink {
     font-size: 0.7em;
     line-height: 12px; } }
 
-/* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   width: 250px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 100%;
@@ -8596,9 +8600,19 @@ ul.multiColumn {
         top: 1.1rem; } }
   /* line 112, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .button.expand, .evenemang .button.expand, .kivlistview .button.expand, .evenemang .button.expand {
-    padding: 0.2rem; }
+    padding: 0.2rem;
+    min-width: 140px; }
+  /* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .n0, .evenemang .n0 {
+    display: none; }
+  /* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .success.n2, .evenemang .success.n2 {
+    background-color: #622626; }
+  /* line 123, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .success.n3, .evenemang .success.n3 {
+    background-color: #b2a16c; }
 
-/* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 128, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h5, .listcontent h4 {
   margin: 0px; }
 
@@ -8931,105 +8945,118 @@ ul.multiColumn {
 .artikelMainContainer .artikeltopImage {
   margin-bottom: -7.5rem;
   max-height: 300px;
+  min-height: 150px;
   overflow: hidden; }
+  /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  .artikelMainContainer .artikeltopImage img {
+    min-height: 150px; }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelwrapper {
   padding-top: 2.5rem;
   /*.medium-4 {       
             background-color:$beige;                  
         }*/ }
 
-/* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelbild {
   margin: 1.5rem 0rem; }
 
-/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .faktabox {
   background-color: #dcdbda; }
-  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .faktabox h1, .faktabox h2, .faktabox h3 {
     color: #f85014; }
 
-/* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artikelButton {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; }
+
+/* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artsidecontainer {
   display: block;
   padding: 1rem 1.2rem 1rem 1.2rem;
   background-color: #dcdbda; }
   @media only screen and (min-width: 64.0625em) {
-    /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer {
       padding: 1rem 2rem 2rem 2rem; } }
-  /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer ul {
     list-style: none;
     margin-left: 0px; }
-  /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h2 {
     text-transform: uppercase; }
-  /* line 61, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h3 {
     text-transform: uppercase; }
-  /* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 72, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer p {
     font-size: 0.9rem; }
-  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .kontaktkort {
     font-size: 0.9rem; }
-    /* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 76, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 73, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .avd {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 86, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelkontatkort {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 83, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelFakta {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-  /* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 98, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .success {
     width: 100%; }
 
-/* line 94, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 102, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .l-main {
   display: none; }
 
-/* line 96, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 104, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .view-2015-supporting-articles .level2, .view-2015-supporting-articles-suo .level2 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  /* line 99, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 107, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .view-2015-supporting-articles .level2:nth-child(odd), .view-2015-supporting-articles-suo .level2:nth-child(odd) {
     background-color: #dcdbda; }
-    /* line 101, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .view-2015-supporting-articles .level2:nth-child(odd) .artsidecontainer, .view-2015-supporting-articles-suo .level2:nth-child(odd) .artsidecontainer {
       background-color: #ebeae9; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 117, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 0.5rem; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 117, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 10rem; } }
+
+/* line 121, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.element-invisible {
+  display: none; }
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
 .artikelsubmenuContent {
@@ -9097,22 +9124,26 @@ ul.multiColumn {
 /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
 .atikelMenuBlock {
   margin-top: 2.5rem; }
-  /* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+    /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    .atikelMenuBlock {
+      margin-top: 3.5rem; } }
+  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .artikelMenu {
     text-transform: uppercase;
     height: 2rem;
     line-height: 2.1rem;
     background-color: #ebeae9; }
-  /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock a {
     margin-left: 1rem; }
-  /* line 62, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .lasMerOmOssLink {
     color: #000000; }
-    /* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 65, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .atikelMenuBlock .lasMerOmOssLink:hover {
       color: #222222; }
-  /* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 70, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .arrowhead:after {
     content: "";
     position: absolute;
@@ -9124,7 +9155,7 @@ ul.multiColumn {
     width: 0;
     z-index: 1;
     border-color: #efebde transparent; }
-  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock #contentHeader h1 {
     color: #000000;
     text-transform: none; }
@@ -9378,6 +9409,106 @@ img .flip {
   margin-top: -24px;
   /* clearfix after? */ }
 
+/*anmälnings button färger */
+/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.success.n0 {
+  display: none; }
+
+/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.success.n2 {
+  background-color: #622626; }
+
+/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.success.n3 {
+  background-color: #b2a16c; }
+
+/* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card .card-label {
+  border-color: transparent #333 transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #333 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.primary {
+  border-color: #446CB3; }
+  /* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.primary .card-label {
+    border-color: transparent #446CB3 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #446CB3 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.secondary {
+  border-color: #ADB2BD; }
+  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.secondary .card-label {
+    border-color: transparent #ADB2BD transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #ADB2BD rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.info {
+  border-color: #89c4f4; }
+  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.info .card-label {
+    border-color: transparent #89c4f4 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #89c4f4 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.alert {
+  border-color: #F22613; }
+  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.alert .card-label {
+    border-color: transparent #F22613 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #F22613 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.aktuellt {
+  border-color: #b2a16c; }
+  /* line 67, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.aktuellt .card-label {
+    border-color: transparent #b2a16c transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #b2a16c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 72, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.warning {
+  border-color: #F89406; }
+  /* line 75, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.warning .card-label {
+    border-color: transparent #F89406 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #F89406 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+
+/* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card .card-label {
+  border-style: solid;
+  border-width: 0 70px 40px 0;
+  float: right;
+  height: 0px;
+  width: 0px;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  margin-bottom: -40px; }
+
+/* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card .callout-card-content {
+  padding: 0.5rem 1.5rem 0.875rem; }
+
+/* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.radius {
+  -webkit-border-radius: 0.6rem;
+          border-radius: 0.6rem; }
+
+/* line 99, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card .label-text {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  right: -29px;
+  top: -5px;
+  white-space: nowrap;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg); }
+
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -9416,45 +9547,45 @@ img .flip {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 68, stdin */
+/* line 69, stdin */
 .row {
   max-width: 62.5rem !important; }
 
-/* line 72, stdin */
+/* line 73, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 75, stdin */
+/* line 76, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 79, stdin */
+/* line 80, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 84, stdin */
+/* line 85, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 89, stdin */
+/* line 90, stdin */
 .omossspace h1 {
   text-transform: uppercase;
   color: #f85014;
   margin-bottom: 0px; }
 
-/* line 96, stdin */
+/* line 97, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 101, stdin */
+/* line 102, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 108, stdin */
+  /* line 109, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -9467,7 +9598,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 113, stdin */
+  /* line 114, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -9478,7 +9609,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 116, stdin */
+  /* line 117, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -9497,26 +9628,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 136, stdin */
+/* line 137, stdin */
 .clear {
   clear: both; }
 
-/* line 141, stdin */
+/* line 142, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 146, stdin */
+/* line 147, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 150, stdin */
+/* line 151, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 153, stdin */
+/* line 154, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -9528,35 +9659,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 163, stdin */
+  /* line 164, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 169, stdin */
+  /* line 170, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 174, stdin */
+/* line 175, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 175, stdin */
+/* line 176, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 178, stdin */
+  /* line 179, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 182, stdin */
+/* line 183, stdin */
 .item img {
   width: 100%; }
 
-/* line 187, stdin */
+/* line 188, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -9570,31 +9701,31 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 202, stdin */
+/* line 203, stdin */
 .block-title {
   display: none; }
 
-/* line 204, stdin */
+/* line 205, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 209, stdin */
+/* line 208, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 212, stdin */
+/* line 211, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 213, stdin */
+/* line 212, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 214, stdin */
+/* line 213, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 215, stdin */
+/* line 214, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 

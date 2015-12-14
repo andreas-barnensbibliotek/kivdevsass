@@ -7787,16 +7787,17 @@ jQuery(function ($){
     $('#kivlist').on('click', function (e) {
         $('.kivisotope').isotope('destroy');
                 
-        $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
+        $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
         $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder crop-height");
         $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
+       
         return false;
     });
 
     $('#kivmozaik').on('click', function (e) {
 
-        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item");
+        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
         $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
@@ -7808,7 +7809,8 @@ jQuery(function ($){
                 // use element for option
                 columnWidth: 250
             }
-        });        
+        });
+       
         return false;
     })
     var removePlussicon = function (e) {
@@ -7976,7 +7978,11 @@ jQuery(function ($){
             datum: "",
             link: "",
             bild: "",
-            extra: ""
+            extra: "",
+            btntyp: "", 
+            btntitle: "", 
+            btnlink: "",
+            anktuellt:""
         }
 
         var _RenderOutputdrpObj = {
@@ -8001,7 +8007,10 @@ jQuery(function ($){
                         _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrik;
                         _RenderOutputListObj.link = data.kivsearch[x].kivsearchitem.link;
                         _RenderOutputListObj.ingress = data.kivsearch[x].kivsearchitem.ingress;
-
+                        _RenderOutputListObj.aktuellt = data.kivsearch[x].kivsearchitem.aktuellt;
+                        _RenderOutputListObj.btntyp = data.kivsearch[x].kivsearchitem.btntyp;
+                        _RenderOutputListObj.btntitle = data.kivsearch[x].kivsearchitem.btntitle;
+                        _RenderOutputListObj.btnlink = data.kivsearch[x].kivsearchitem.btnlink;
                         currentdomitems += Renderdata(_RenderOutputListObj);
 
                     };
@@ -8075,13 +8084,25 @@ jQuery(function ($){
         var Renderdata = function (incRenderOutputObj) {
             var tmpstr ="";
             
-                tmpstr += "<div class='large-4 medium-6 small-12 columns item'><div class='mozaikimg'>";
+                tmpstr += "<div class='large-4 medium-6 small-12 columns item callout-card aktuellt'>";
+                if (incRenderOutputObj.aktuellt) {
+                    if (incRenderOutputObj.aktuellt > 0) {
+                        tmpstr += "<div class='card-label'><div class='label-text'>Aktuellt</div></div>";
+                    }
+                }
+                tmpstr += "<div class='mozaikimg'>";
                 tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
                 tmpstr += "<div class='mozaikitems'><div class='row'>";
-                tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a></div>";
-                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'><i class='closed'><img alt='Visa' src='http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png'></i></a></div>";
+                tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a>";
+                tmpstr += "<div class='apsisbtnbox'><a href='" + incRenderOutputObj.btnlink + "' class='button expand success " + incRenderOutputObj.btntyp + "'>" + incRenderOutputObj.btntitle + "</a></div></div>";
+                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'>";
+                if (incRenderOutputObj.ingress) {
+                    tmpstr += "<i class='closed'><img alt='Visa' src='" + localOrServerURL + "/sites/all/themes/kivnew/images/plussicon.png'></i>";
+                }                
+                tmpstr += "</a></div>";
                 tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
 
+                
            return tmpstr;
         };
       
@@ -8157,7 +8178,7 @@ jQuery(function ($){
             return true;
         }
         
-
+      
         /// BREADCRUMB START  (lägg över till helper js)
 
             // Lägger till breadrumb valt område från arrayerna med a-länkar och index OBS måste ha samma index!!!
@@ -8218,15 +8239,16 @@ jQuery(function ($){
                 ResetFilter();
             } else {
                 Addtobreadcrumbval(valtomr, valtid);
-            }
+            }            
             $('.kivisotope').isotope("layout");
+            
         });
        
         $(document).on('click', '.removebreadcrumbval', function () {
             //Del from breadcrumb
             $('.loader').show();
             var relval = $(this).attr('rel'); // hämta områsdesid
-            Delbreadcrumval(relval);
+            Delbreadcrumval(relval);            
             return false;
         });
         // EVENTS END
@@ -8241,7 +8263,7 @@ jQuery(function ($){
         
         // INITIERING
         init();
-
+       
         
 
 });//Jqueryready end

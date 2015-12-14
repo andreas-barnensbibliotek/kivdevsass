@@ -132,7 +132,7 @@
 
 
 </div>
-Visa detta<?php print $term->tid; ?>
+<?php print $term->tid; ?>
 <!--/.page -->
 <script src="https://use.typekit.net/qpl5lxd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -149,7 +149,15 @@ Visa detta<?php print $term->tid; ?>
                     columnWidth: 250
                 }
             });
-
+            
+			var $container = $('.kivisotope-webbtv').isotope({
+			    itemSelector: '.item',
+			    masonry: {
+			        // use element for option
+			        columnWidth: 330
+			    }
+			});
 
         });
+        
 </script>

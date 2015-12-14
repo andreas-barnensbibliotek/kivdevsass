@@ -209,16 +209,17 @@ jQuery(function ($){
     $('#kivlist').on('click', function (e) {
         $('.kivisotope').isotope('destroy');
                 
-        $('.kivlistview').children().attr('class',"kivlist row").attr('style',"");
+        $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
         $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder crop-height");
         $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
+       
         return false;
     });
 
     $('#kivmozaik').on('click', function (e) {
 
-        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item");
+        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
         $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
@@ -230,7 +231,8 @@ jQuery(function ($){
                 // use element for option
                 columnWidth: 250
             }
-        });        
+        });
+       
         return false;
     })
     var removePlussicon = function (e) {

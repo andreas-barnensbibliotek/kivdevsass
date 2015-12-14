@@ -22,6 +22,7 @@
 @import 'devScss/Komponenter/_filter_meny_block';
 @import 'devScss/Komponenter/_evenemang';
 @import 'devScss/Komponenter/_imagecrop';
+@import 'devScss/Komponenter/_buttons';
 
 // Behold, here are all the Foundation components.
 
@@ -202,8 +203,6 @@ position: absolute;
 .block-title{ display:none;}
 
 .views-field-field-category, .views-label-field-underomr-de{display:none;}
-
-
 
 
 #debug h1.thin{

@@ -19,7 +19,9 @@
         //display:none;
         margin-bottom:-7.5rem; //obs hänger ihop med _artikelmenu.scss .atikelMenuBlock margin-top
         max-height:300px;
+        min-height:150px;
         overflow:hidden;
+        img{min-height:150px;}
     }   
     .artikelwrapper {
         padding-top:2.5rem;
@@ -39,6 +41,12 @@
         color:$orange;
     }
 }
+
+.artikelButton {
+            padding-top:0px !important;
+            padding-bottom:0px !important;
+        }
+
 .artsidecontainer{
     display:block;
     padding:1rem 1.2rem 1rem 1.2rem;
@@ -85,7 +93,7 @@
             margin-bottom:0.4rem;
             line-height:1.2rem;
         }
-       
+         
     }
      .success{ width:100%;}
     
@@ -110,3 +118,4 @@
        @media #{$medium-up} {padding-right: 0.5rem; }
         @media #{$large-up} {padding-right: 10rem; }
     }
+.element-invisible{display:none;}

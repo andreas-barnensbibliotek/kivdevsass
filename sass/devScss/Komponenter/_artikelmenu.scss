@@ -46,6 +46,7 @@
 .atikelMenuBlock{
     //margin-left:1rem;
     margin-top:2.5rem; //obs hänger ihop med _artikelmain.scss .artikeltopImage margin-bottom
+     @media #{$medium-only} { margin-top:3.5rem;}
     //padding-right:0px;
     .artikelMenu{
         text-transform: uppercase;
