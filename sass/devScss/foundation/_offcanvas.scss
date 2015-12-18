@@ -25,8 +25,8 @@ $tabbar-header-margin: 0 !default;
 // Off Canvas Menu Variables
 $off-canvas-width: rem-calc(290) !default;
 $off-canvas-height: rem-calc(300) !default;
-$off-canvas-bg: $gold !default;
-$off-canvas-bg-hover: scale-color($gold, $lightness: -30%) !default;
+$off-canvas-bg: $menybg !default;
+$off-canvas-bg-hover: scale-color($menybg, $lightness: -30%) !default;
 $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%) !default;
 
 // Off Canvas Menu List Variables
@@ -35,14 +35,14 @@ $off-canvas-label-color: $aluminum !default;
 $off-canvas-label-text-transform: uppercase !default;
 $off-canvas-label-font-size: rem-calc(12) !default;
 $off-canvas-label-font-weight: $font-weight-bold !default;
-$off-canvas-label-bg: $gold !default; 
+$off-canvas-label-bg: $menybg !default; 
 $off-canvas-label-border-top: 0px solid $black !default;
 $off-canvas-label-border-bottom: none !default;
 $off-canvas-label-margin:0 !default;
 $off-canvas-link-padding: rem-calc(4, 8) !default;
 $off-canvas-link-color: $white !default;
 $off-canvas-link-border-bottom: 1px solid $black !default;
-$off-canvas-back-bg: $gold !default;
+$off-canvas-back-bg: $menybg !default;
 $off-canvas-back-border-top: $off-canvas-label-border-top !default;
 $off-canvas-back-border-bottom: $off-canvas-label-border-bottom !default;
 $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%) !default;

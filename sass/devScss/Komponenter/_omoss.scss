@@ -89,8 +89,10 @@
         line-height:2.5rem;
         padding:0px 1.0rem 0px 0.5rem;  
         //margin-right:2rem;
-        background-color:$lightgrey;
+        background-color:$black;
+        
        font-size:0.9rem;
+       a{color:$white !important;}
     }
     .arrowhead{
         &:after 
@@ -104,7 +106,7 @@
         display: block;
         width: 0;
         z-index: 1;            
-         border-color: $lightgrey transparent;            
+         border-color: $black transparent;            
         }
     }
 }

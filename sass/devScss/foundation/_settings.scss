@@ -126,7 +126,8 @@ $tuatara     : #444444;
 $black      : #000000;
 $gold       : #b2a16c;
 $darkgreen  : #0c6d4c;
-$orange     : #f85014;
+$orange     : #f77136; //#f85014;
+$orangeLight: #e2974a;
 $beige      :#efebde;
 $beigelight :#f7f5ef;
 $browngrey  :#949086;
@@ -137,6 +138,7 @@ $lightmediumgrey: #b4b3b2;
 $lightermediumgrey: #dcdbda;
 $lightgrey: #ebeae9; //#e3e3e3;
 $buttoninstalltred: #622626; 
+$menybg:$darkgrey;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;

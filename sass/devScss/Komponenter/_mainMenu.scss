@@ -8,7 +8,7 @@ ul.off-canvas-list {
     margin:0rem 1.0rem;
     text-transform: uppercase;
     font-stretch:condensed;
-    font-size:1.0rem;
+    font-size:0.9rem;
     .nolink{
         color:$white;
         margin-top:0.5rem;
@@ -23,8 +23,8 @@ ul.off-canvas-list {
                 text-transform: capitalize;
             }
             &:hover {
-                background: $white;
-            color:$black;
+                background: $orange;
+            color:$white;
             }
         }
     }     

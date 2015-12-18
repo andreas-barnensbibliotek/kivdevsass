@@ -8,6 +8,19 @@ a{
 #contentfilterblock{line-height:2.5rem;}
 
 
+#edit-field-production-tid{
+     margin-right:0.5rem;
+}
+
+.form-item.form-type-select{
+    line-height:2.5rem;
+}
+#contentfilterblock select{
+   height: 1.8em;
+  padding: 0.05em;
+  max-width: 134px;
+ }
+
 /*#drpFilter, #drpSortering{  
    background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
     border-radius:0px 10px 10px 0px;

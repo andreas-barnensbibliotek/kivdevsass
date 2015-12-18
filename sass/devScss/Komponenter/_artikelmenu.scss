@@ -53,7 +53,7 @@
         height:2rem;
         line-height:2.1rem;
         
-        background-color:$lightgrey;
+        background-color:$black;
        
     }
     a{
@@ -61,9 +61,9 @@
     }
     //.artikelShowMenuLink{
     .lasMerOmOssLink{
-        	color:$black;
+        	color:$white;
             &:hover{
-                color:$jet;
+                color:$aluminum;
             }
     }
     .arrowhead{
@@ -78,7 +78,7 @@
         display: block;
         width: 0;
         z-index: 1;                   
-         border-color: $beige transparent;            
+         border-color: $black transparent;            
         }
     }
     #contentHeader{
