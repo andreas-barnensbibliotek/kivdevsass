@@ -8290,11 +8290,7 @@ jQuery(function ($){
 
             return false;
         });       
-        $('.level2').on('click', function (e) {
-            $(this).find(".faktabox").toggle();
-            $(this).find(".bread").toggle();
-
-        });
+        
 
     });// Jquery END
 })();// kappsla och exeute END

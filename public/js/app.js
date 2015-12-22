@@ -7581,6 +7581,7 @@ var _isotopecolumns = 250;
 // CENTER LANDING PAGE TEXT
 
 jQuery(function ($){
+    var _base_server_url = "http://kivdev.monoclick-dev.se";
 
     $.fn.getSize = function () {
         var $wrap = $("<div />").appendTo($("body"));
@@ -7724,12 +7725,12 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('<img src="http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
+            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
             
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('<img src="http://dev.kulturivast.se.www359.your-server.de/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
         }
 
          thatobj.slideToggle(100, function () {
@@ -7743,6 +7744,28 @@ jQuery(function ($){
          });
 
          return false;
+    });
+
+    // körs på alla sidor som har en egen drupal listsida  dvs ingen css växling mellan mosaik och lista
+    $(document).on('click', '.showingresstextlist', function (e) {
+        var valdclass = $(this).find('i');
+        var addOrRemove = valdclass.hasClass("closed");       
+        var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlist");
+             
+        if (addOrRemove) {
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
+            thatobj.show();
+
+        } else {
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
+            thatobj.hide();
+        }
+
+        return false;
     });
 
     //old
@@ -7824,6 +7847,22 @@ jQuery(function ($){
         });
 
     }();
+
+    var removeListPagesPlussicon = function (e) {
+        var istextset = $('.ingresstextlist');
+        if (istextset.length <=0) {
+            return function () { return false; };
+        }
+
+        istextset.each(function (index, value) {
+            var testar = $(value).html();
+            if (!$(value).html()) {
+                $(value).siblings().find('.showingresstextlist').hide();
+            }
+
+        });
+        
+    }();
     
 
     $(window).scroll(function () {
@@ -7851,6 +7890,9 @@ jQuery(function ($){
         
     });
     
+    removeListPagesPlussicon();
+    
+
     //$(document).swipe({
 
     //    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {

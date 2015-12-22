@@ -13,79 +13,98 @@ $font-color: #333;
 .success.n0{
     display:none;
 }
+.success.n1{
+    //background-color:$orange;
+    //&:hover{
+        //background-color:$orange;
+           //opacity:0.7;
+      // }
+}
+
 .success.n2{
-    background-color:$buttoninstalltred;
+    background-color:$orange;
 }
 .success.n3{
-    background-color: $gold;
+    background-color: $orange;
+    &:hover{
+           background-color: $orange;
+       }
 }
-   
-
+  
 .callout-card {
 	
   
-  .card-label {
-	    border-color: transparent #333 transparent transparent;
-	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);
+  .card-label {       
+	    border-color: $smoke;
+
+	    /* använd denna för att få snedställd aktuellruta
+            border-color: transparent #333 transparent transparent;
+	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
  
   &.primary {
     border-color: $primary;
     
     .card-label {
-	    border-color: transparent $primary transparent transparent;
-	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);
+        border-color: $primary;
+	    /*border-color: transparent $primary transparent transparent;
+	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   &.secondary {
     border-color: $secondary;
     
     .card-label {
-	    border-color: transparent $secondary transparent transparent;
-	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);
+         border-color: $secondary;
+	    /*border-color: transparent $secondary transparent transparent;
+	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   &.info {
     border-color: $info;
     
     .card-label {
-	    border-color: transparent $info transparent transparent;
-	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);
+        border-color: $info;
+	    /*border-color: transparent $info transparent transparent;
+	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   &.alert {
     border-color: $alert;
     
     .card-label {
-	    border-color: transparent $alert transparent transparent;
-	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);
+        border-color: $alert;
+	    /*border-color: transparent $alert transparent transparent;
+	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   &.aktuellt {
     border-color: $gold; 
     
     .card-label {
-	    border-color: transparent $gold transparent transparent;
-	    border-color: rgba(255,255,255,0) $gold rgba(255,255,255,0) rgba(255,255,255,0);
+        border-color: $gold;
+	    /*border-color: transparent $gold transparent transparent;
+	    border-color: rgba(255,255,255,0) $gold rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   &.warning {
     border-color: $warning; 
     
     .card-label {
-	    border-color: transparent $warning transparent transparent;
-	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);
+	    /*border-color: transparent $warning transparent transparent;
+	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);*/
     }
   }
   
   .card-label {	
-    border-style: solid; 
-    border-width: 0 70px 40px 0;  
+    //border-style: solid; 
+    //border-width: 0 70px auto 0;  
     float:right; 
     height: 0px; 
-    width: 0px;
-    transform:rotate(360deg);
-    margin-bottom: -40px;
+    width: 80px;
+    //transform:rotate(360deg);
+    margin-bottom: -2px;
+
   }
   
   .callout-card-content{
@@ -101,12 +120,28 @@ $font-color: #333;
     font-size: 0.75rem; 
     font-weight: bold; 
     position: relative; 
-    right: -29px; 
-    top: -5px; 
+    right: 0px; 
+    //top: -5px; 
     white-space: nowrap;
-    transform: rotate(30deg);
+    width:100%;
+    //transform: rotate(30deg);
+    text-align:center;  
+    background-color:$gold;
+    border-radius:0px 0px 0px 8px;
+    text-transform:uppercase;
   }	
-}
+}
+
+.button.expand, .button.expand{
+    padding:0.2rem;
+    min-width:140px;
+    margin:1rem;
+}
+.n0{
+    display:none;
+}
+ 
+   
 
 
 

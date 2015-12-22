@@ -83,10 +83,15 @@
 .omossspace{
     //margin-left:1rem;
     margin-top:2rem;
+    h1{
+        text-transform: uppercase;
+        color:$orange; 
+        margin-bottom:0px;       
+    }
     .omossMenu{
        text-transform: uppercase;
-        height:2.5rem;
-        line-height:2.5rem;
+        height:1.5rem;
+        line-height:1.5rem;
         padding:0px 1.0rem 0px 0.5rem;  
         //margin-right:2rem;
         background-color:$black;
@@ -97,17 +102,20 @@
     .arrowhead{
         &:after 
         {
-          content: "";
-        position: absolute;
-        bottom: -0.8rem;
-        left: 2rem;
-        border-style: solid;
-        border-width: 20px 20px 0;           
-        display: block;
-        width: 0;
-        z-index: 1;            
-         border-color: $black transparent;            
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            left: 2rem;
+            border-style: solid;
+            border-width: 20px 20px 0;           
+            display: block;
+            width: 0;
+            z-index: 1;            
+            border-color: $black transparent;            
         }
     }
+}
+.omossspace{
+   
 }
 

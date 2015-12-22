@@ -37,9 +37,13 @@
 }
 
 .ingresstext{
-        display:none;
-        width:220px;
-    }
+    display:none;
+    width:220px;
+}
+.ingresstextlist{
+    display:none;    
+}
+
 .lasMerOmOssLink{
 @media #{$small-only} {
         font-size:0.7em;

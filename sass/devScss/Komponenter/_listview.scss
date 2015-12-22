@@ -110,22 +110,9 @@
         @media #{$large-up} { 
             position:absolute;
             right:0px; 
-            top:1.1rem;
+            top:0rem;
 	    } 
     }
     
-   .button.expand, .button.expand{
-        padding:0.2rem;
-        min-width:140px;
-    }
-   .n0{
-       display:none;
-   }
-   .success.n2{
-       background-color:$buttoninstalltred;
-
-   }
-   .success.n3{
-       background-color: $gold;
-
-   }
+   
+  

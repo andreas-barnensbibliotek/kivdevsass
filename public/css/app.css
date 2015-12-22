@@ -8379,18 +8379,22 @@ ul.off-canvas-list {
   display: none;
   width: 220px; }
 
+/* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+.ingresstextlist {
+  display: none; }
+
 @media only screen and (max-width: 40em) {
-  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 47, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .lasMerOmOssLink {
     font-size: 0.7em;
     line-height: 12px; } }
 
-/* line 49, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   width: 250px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 100%;
@@ -8606,24 +8610,7 @@ ul.multiColumn {
     .apsisbtnboxList {
       position: absolute;
       right: 0px;
-      top: 1.1rem; } }
-
-/* line 117, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.button.expand, .button.expand {
-  padding: 0.2rem;
-  min-width: 140px; }
-
-/* line 121, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.n0 {
-  display: none; }
-
-/* line 124, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.success.n2 {
-  background-color: #622626; }
-
-/* line 128, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.success.n3 {
-  background-color: #b2a16c; }
+      top: 0rem; } }
 
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossContentBox {
@@ -8711,17 +8698,22 @@ ul.multiColumn {
 .omossspace {
   margin-top: 2rem; }
   /* line 86, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  .omossspace h1 {
+    text-transform: uppercase;
+    color: #f77136;
+    margin-bottom: 0px; }
+  /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .omossMenu {
     text-transform: uppercase;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
     padding: 0px 1rem 0px 0.5rem;
     background-color: #000000;
     font-size: 0.9rem; }
-    /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 100, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossspace .omossMenu a {
       color: #FFFFFF !important; }
-  /* line 98, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 103, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .arrowhead:after {
     content: "";
     position: absolute;
@@ -9440,100 +9432,117 @@ img .flip {
 .success.n0 {
   display: none; }
 
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .success.n2 {
-  background-color: #622626; }
-
-/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-.success.n3 {
-  background-color: #b2a16c; }
+  background-color: #f77136; }
 
 /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-.callout-card .card-label {
-  border-color: transparent #333 transparent transparent;
-  border-color: rgba(255, 255, 255, 0) #333 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+.success.n3 {
+  background-color: #f77136; }
+  /* line 29, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .success.n3:hover {
+    background-color: #f77136; }
 
-/* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card .card-label {
+  border-color: #EEEEEE;
+  /* använd denna för att få snedställd aktuellruta
+            border-color: transparent #333 transparent transparent;
+	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);*/ }
+
+/* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.primary {
   border-color: #446CB3; }
-  /* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.primary .card-label {
-    border-color: transparent #446CB3 transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #446CB3 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+    border-color: #446CB3;
+    /*border-color: transparent $primary transparent transparent;
+	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.secondary {
   border-color: #ADB2BD; }
-  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.secondary .card-label {
-    border-color: transparent #ADB2BD transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #ADB2BD rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+    border-color: #ADB2BD;
+    /*border-color: transparent $secondary transparent transparent;
+	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.info {
   border-color: #89c4f4; }
-  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.info .card-label {
-    border-color: transparent #89c4f4 transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #89c4f4 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
-
-/* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-.callout-card.alert {
-  border-color: #F22613; }
-  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-  .callout-card.alert .card-label {
-    border-color: transparent #F22613 transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #F22613 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
-
-/* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-.callout-card.aktuellt {
-  border-color: #b2a16c; }
-  /* line 67, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-  .callout-card.aktuellt .card-label {
-    border-color: transparent #b2a16c transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #b2a16c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+    border-color: #89c4f4;
+    /*border-color: transparent $info transparent transparent;
+	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
 /* line 72, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-.callout-card.warning {
-  border-color: #F89406; }
+.callout-card.alert {
+  border-color: #F22613; }
   /* line 75, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
-  .callout-card.warning .card-label {
-    border-color: transparent #F89406 transparent transparent;
-    border-color: rgba(255, 255, 255, 0) #F89406 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .callout-card.alert .card-label {
+    border-color: #F22613;
+    /*border-color: transparent $alert transparent transparent;
+	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
 /* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.aktuellt {
+  border-color: #b2a16c; }
+  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.aktuellt .card-label {
+    border-color: #b2a16c;
+    /*border-color: transparent $gold transparent transparent;
+	    border-color: rgba(255,255,255,0) $gold rgba(255,255,255,0) rgba(255,255,255,0);*/ }
+
+/* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.callout-card.warning {
+  border-color: #F89406; }
+  /* line 93, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  .callout-card.warning .card-label {
+    /*border-color: transparent $warning transparent transparent;
+	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);*/ }
+
+/* line 99, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .card-label {
-  border-style: solid;
-  border-width: 0 70px 40px 0;
   float: right;
   height: 0px;
-  width: 0px;
-  -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
-  margin-bottom: -40px; }
+  width: 80px;
+  margin-bottom: -2px; }
 
-/* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 110, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .callout-card-content {
   padding: 0.5rem 1.5rem 0.875rem; }
 
-/* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 114, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.radius {
   -webkit-border-radius: 0.6rem;
           border-radius: 0.6rem; }
 
-/* line 99, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 118, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .label-text {
   color: #fff;
   font-size: 0.75rem;
   font-weight: bold;
   position: relative;
-  right: -29px;
-  top: -5px;
+  right: 0px;
   white-space: nowrap;
-  -webkit-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-          transform: rotate(30deg); }
+  width: 100%;
+  text-align: center;
+  background-color: #b2a16c;
+  -webkit-border-radius: 0px 0px 0px 8px;
+          border-radius: 0px 0px 0px 8px;
+  text-transform: uppercase; }
+
+/* line 135, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.button.expand, .button.expand {
+  padding: 0.2rem;
+  min-width: 140px;
+  margin: 1rem; }
+
+/* line 140, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.n0 {
+  display: none; }
 
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
@@ -9596,22 +9605,16 @@ img .flip {
   text-transform: uppercase; }
 
 /* line 90, stdin */
-.omossspace h1 {
-  text-transform: uppercase;
-  color: #f77136;
-  margin-bottom: 0px; }
-
-/* line 97, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 102, stdin */
+/* line 95, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 109, stdin */
+  /* line 102, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -9624,7 +9627,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 114, stdin */
+  /* line 107, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -9635,7 +9638,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 117, stdin */
+  /* line 110, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -9654,26 +9657,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 137, stdin */
+/* line 130, stdin */
 .clear {
   clear: both; }
 
-/* line 142, stdin */
+/* line 135, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 147, stdin */
+/* line 140, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 151, stdin */
+/* line 144, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 154, stdin */
+/* line 147, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -9685,35 +9688,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 164, stdin */
+  /* line 157, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 170, stdin */
+  /* line 163, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 175, stdin */
+/* line 168, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 176, stdin */
+/* line 169, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 179, stdin */
+  /* line 172, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 183, stdin */
+/* line 176, stdin */
 .item img {
   width: 100%; }
 
-/* line 188, stdin */
+/* line 181, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -9727,31 +9730,31 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 203, stdin */
+/* line 196, stdin */
 .block-title {
   display: none; }
 
-/* line 205, stdin */
+/* line 198, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 208, stdin */
+/* line 201, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 211, stdin */
+/* line 204, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 212, stdin */
+/* line 205, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 213, stdin */
+/* line 206, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 214, stdin */
+/* line 207, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
