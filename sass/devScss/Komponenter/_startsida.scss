@@ -1,42 +1,75 @@
 ﻿/* Frontpage*/
+.firstpagerow{
+    margin-bottom:1rem; 
+}
+.threecol{padding-top:2rem;}
 
-.view-frontpage .bigImage-box{
-	margin-bottom: 10px;
-}
-.view-frontpage .bigImage{
-	position: relative;
-
-}
-.view-frontpage .bigImage-content{
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	top: 60%;
-  	transform: translateY(-40%);
-}
-
-.view-frontpage .bigImage-content h2,
-.view-frontpage .bigImage-content h3{
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	color: #fff; 
-    @media #{$small-only} { font-size: 100%;}
-    @media #{$medium-only} {font-size: 200%; }
-    @media #{$large-up} {font-size: 300%;}
-	
-	text-transform: uppercase;
-	text-shadow: 2px 2px 5px #666;
-	line-height: 100%;
-	letter-spacing: 1.1px;
-}
-
-.view-frontpage .bigImage-content h2{
-	font-weight: bold;
-	
-}
-.view-frontpage .bigImage-content h3{
-	
-}
-
+.thrbgWhite{ background-color:$white;}
+.thrbgSnow{background-color:$snow;}
+.thrbgIron{background-color:$iron;}
+.thrbgBlack{background-color:$black;}
  
+.text-right{
+    h1{text-align: right;}
+    p{text-align: right;}
+} 
+.text-center{
+    h1{text-align: center;}
+    p{text-align: center;}
+} 
+.text-left{
+    h1{text-align: left;}
+    p{text-align: left;}
+} 
+ 
+.ajimage { 
+    position: relative; 
+    width: 100%; /* for IE 6 */
+    max-height:400px;
+    overflow:hidden;
+    margin-bottom:1.0rem;
+    
+    &.textleft{text-align:left;}
+    &.textcenter{text-align:center;}
+    &.textright{text-align:right;}
+    
+    .textboxcontainer{ 
+        position: absolute; 
+        top: 30%; 
+        left: 0; 
+        width: 100%; 
+        span { 
+            line-height:3.6rem;
+            &.bgWhitetxtBlack{
+                color: $black; 
+                background: $black; /* fallback color */
+                background: rgba(255, 255, 255, 0.7);
+            }
+            &.bgBlacktxtWhite{
+                color: $white; 
+                background: $white; /* fallback color */
+                background: rgba(0, 0, 0, 0.7);
+            }
+            &.bgtransparenttxtWhite{
+                color: $white; 
+                background-color:transparent; /* fallback color */
+                
+            }
+            //font: bold 24px/45px Helvetica, Sans-Serif; 
+            letter-spacing: -1px;            
+            padding: 10px; 
+                
+            &.hrub{font-size:2rem !important;}
+            &.urub{font-size:1.8rem !important;}
+            &.utxtrub{
+                font-size:1.0rem !important;line-height:2.2rem !important; margin-top:0.5rem;
+                .spacer {
+                    display:inline;
+                    padding:0 5px;
+                    line-height:2.2rem !important;
+                    background-color:transparent;
+                }
+            }
+        }      
+    }  
+} //.ajimage END

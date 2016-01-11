@@ -9245,54 +9245,116 @@ ul.multiColumn {
   margin: 2px 0.5rem 0 0; }
 
 /* Frontpage*/
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.view-frontpage .bigImage-box {
-  margin-bottom: 10px; }
+/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.firstpagerow {
+  margin-bottom: 1rem; }
 
-/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.view-frontpage .bigImage {
-  position: relative; }
+/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.threecol {
+  padding-top: 2rem; }
+
+/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.thrbgWhite {
+  background-color: #FFFFFF; }
+
+/* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.thrbgSnow {
+  background-color: #F9F9F9; }
+
+/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.thrbgIron {
+  background-color: #CCCCCC; }
 
 /* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.view-frontpage .bigImage-content {
-  position: absolute;
-  z-index: 1;
+.thrbgBlack {
+  background-color: #000000; }
+
+/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-right h1 {
+  text-align: right; }
+
+/* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-right p {
+  text-align: right; }
+
+/* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-center h1 {
+  text-align: center; }
+
+/* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-center p {
+  text-align: center; }
+
+/* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-left h1 {
+  text-align: left; }
+
+/* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.text-left p {
+  text-align: left; }
+
+/* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.ajimage {
+  position: relative;
   width: 100%;
-  top: 60%;
-  -webkit-transform: translateY(-40%);
-      -ms-transform: translateY(-40%);
-          transform: translateY(-40%); }
-
-/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.view-frontpage .bigImage-content h2,
-.view-frontpage .bigImage-content h3 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px #666;
-  line-height: 100%;
-  letter-spacing: 1.1px; }
-  @media only screen and (max-width: 40em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 100%; } }
-  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 200%; } }
-  @media only screen and (min-width: 64.0625em) {
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .view-frontpage .bigImage-content h2,
-    .view-frontpage .bigImage-content h3 {
-      font-size: 300%; } }
-
-/* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.view-frontpage .bigImage-content h2 {
-  font-weight: bold; }
+  /* for IE 6 */
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 1.0rem; }
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajimage.textleft {
+    text-align: left; }
+  /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajimage.textcenter {
+    text-align: center; }
+  /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajimage.textright {
+    text-align: right; }
+  /* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajimage .textboxcontainer {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%; }
+    /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .ajimage .textboxcontainer span {
+      line-height: 3.6rem;
+      letter-spacing: -1px;
+      padding: 10px; }
+      /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.bgWhitetxtBlack {
+        color: #000000;
+        background: #000000;
+        /* fallback color */
+        background: rgba(255, 255, 255, 0.7); }
+      /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.bgBlacktxtWhite {
+        color: #FFFFFF;
+        background: #FFFFFF;
+        /* fallback color */
+        background: rgba(0, 0, 0, 0.7); }
+      /* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.bgtransparenttxtWhite {
+        color: #FFFFFF;
+        background-color: transparent;
+        /* fallback color */ }
+      /* line 62, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.hrub {
+        font-size: 2rem !important; }
+      /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.urub {
+        font-size: 1.8rem !important; }
+      /* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer span.utxtrub {
+        font-size: 1.0rem !important;
+        line-height: 2.2rem !important;
+        margin-top: 0.5rem; }
+        /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        .ajimage .textboxcontainer span.utxtrub .spacer {
+          display: inline;
+          padding: 0 5px;
+          line-height: 2.2rem !important;
+          background-color: transparent; }
 
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 #filtersortering {
