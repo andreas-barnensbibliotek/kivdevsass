@@ -98,9 +98,9 @@ $kiv-header-font-weight_regular: 400; //regular;
 $kiv-header-font-weight_semibold: 600; //semibold;
 $kiv-header-font-weight_black: 800; //black;
 // We use these to define default font stacks
- $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
- $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
- $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+ $font-family-sans-serif: $kiv-header-font-family;//"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+ $font-family-serif:$kiv-header-font-family; // Georgia, Cambria, "Times New Roman", Times, serif;
+ $font-family-monospace: $kiv-header-font-family; //Consolas, "Liberation Mono", Courier, monospace;
 // We use these to define default font weights
  $font-weight-normal: normal;
  $font-weight-bold: bold;
@@ -246,6 +246,16 @@ $header-font-style: $kiv-header-font-style;
  $header-top-margin: .2rem;
  $header-bottom-margin: .5rem;
  $header-text-rendering: optimizeLegibility;
+
+
+ // We use these to control header font sizes
+$h1-font-size-Startpage: rem-calc(48); //44 50
+ $h2-font-size-Startpage: rem-calc(35); //37 44
+ $h3-font-size-Startpage: rem-calc(18);//27 23
+ $h4-font-size-Startpage: rem-calc(18); //23 18
+ $h5-font-size-Startpage: rem-calc(14); //18 16
+ $h6-font-size-Startpage: 1rem;
+
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(42); //44 50

@@ -76,7 +76,7 @@ body {
   background: #fff;
   color: #222;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -1222,7 +1222,7 @@ select {
       background: #EFEFEF;
       color: #222222;
       display: block;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
       padding: 1rem; }
       /* line 147, ./bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -1769,7 +1769,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4347,7 +4347,7 @@ kbd {
 /* line 91, ./bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
   margin-bottom: auto;
@@ -4833,7 +4833,7 @@ button:focus {
   .pricing-table .title {
     background-color: #333333;
     color: #EEEEEE;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1rem;
     font-weight: normal;
     padding: 0.9375rem 1.25rem;
@@ -4842,7 +4842,7 @@ button:focus {
   .pricing-table .price {
     background-color: #F6F6F6;
     color: #333333;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 2rem;
     font-weight: normal;
     padding: 0.9375rem 1.25rem;
@@ -5197,7 +5197,7 @@ button:focus {
 /* line 118, ./bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   list-style-position: outside;
   list-style-type: none;
   margin: 0;
@@ -5224,7 +5224,7 @@ button:focus {
     /* line 91, ./bower_components/foundation/scss/foundation/components/_side-nav.scss */
     .side-nav li.active > a:first-child:not(.button) {
       color: #1cc7ff;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-weight: normal; }
     /* line 97, ./bower_components/foundation/scss/foundation/components/_side-nav.scss */
     .side-nav li.divider {
@@ -5381,7 +5381,7 @@ button:focus {
   .sub-nav li {
     color: #999999;
     float: left;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.875rem;
     font-weight: normal;
     margin-left: 1rem;
@@ -5624,7 +5624,7 @@ table {
       display: block;
       background-color: #EFEFEF;
       color: #222222;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
       padding: 1rem 2rem; }
       /* line 50, ./bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -6024,7 +6024,7 @@ meta.foundation-mq-topbar {
     .top-bar-section ul li > a {
       color: #FFFFFF;
       display: block;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 0.8125rem;
       font-weight: normal;
       padding-left: 0.9375rem;
@@ -6821,7 +6821,7 @@ code {
   border-style: solid;
   border-width: 1px;
   color: #333333;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "acumin-pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -9245,117 +9245,146 @@ ul.multiColumn {
   margin: 2px 0.5rem 0 0; }
 
 /* Frontpage*/
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.firstpagerow {
-  margin-bottom: 1rem; }
-
-/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.threecol {
-  padding-top: 2rem; }
+/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.textleft {
+  text-align: left; }
 
 /* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.thrbgWhite {
-  background-color: #FFFFFF; }
+.textcenter {
+  text-align: center; }
 
 /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.thrbgSnow {
-  background-color: #F9F9F9; }
-
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.thrbgIron {
-  background-color: #CCCCCC; }
+.textright {
+  text-align: right; }
 
 /* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.thrbgBlack {
-  background-color: #000000; }
+.bgWhitetxtBlack h1, .bgWhitetxtBlack h2, .bgWhitetxtBlack h3, .bgWhitetxtBlack h4, .bgWhitetxtBlack p {
+  color: #000000; }
 
-/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-right h1 {
-  text-align: right; }
+/* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.bgBlacktxtWhite h1, .bgBlacktxtWhite h2, .bgBlacktxtWhite h3, .bgBlacktxtWhite h4, .bgBlacktxtWhite p {
+  color: #FFFFFF; }
 
-/* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-right p {
-  text-align: right; }
-
-/* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-center h1 {
-  text-align: center; }
-
-/* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-center p {
-  text-align: center; }
-
-/* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-left h1 {
-  text-align: left; }
-
-/* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.text-left p {
-  text-align: left; }
+/* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.bgtransparenttxtWhite h1, .bgtransparenttxtWhite h2, .bgtransparenttxtWhite h3, .bgtransparenttxtWhite h4, .bgtransparenttxtWhite p {
+  color: #FFFFFF; }
 
 /* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.bgtxtTurkos h1, .bgtxtTurkos h2, .bgtxtTurkos h3, .bgtxtTurkos h4 {
+  color: #476a8b; }
+
+/* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.hovereffect {
+  opacity: 0.8; }
+  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .hovereffect:hover {
+    opacity: 1; }
+
+/* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.ajspalter {
+  padding-top: 3%;
+  padding-bottom: 3%; }
+  /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajspalter h1 {
+    text-transform: uppercase;
+    margin-bottom: 2rem; }
+    @media only screen {
+      /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajspalter h1 {
+        font-size: 2.1875rem; } }
+    @media only screen and (min-width: 40.0625em) {
+      /* line 40, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajspalter h1 {
+        font-size: 3rem; } }
+  /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajspalter article {
+    text-align: left;
+    color: #000000; }
+    @media only screen {
+      /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajspalter article {
+        -webkit-columns: 1;
+           -moz-columns: 1;
+                columns: 1; } }
+    @media only screen and (min-width: 40.0625em) {
+      /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajspalter article {
+        -webkit-columns: 4 200px;
+           -moz-columns: 4 200px;
+                columns: 4 200px; } }
+
+/* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .ajimage {
   position: relative;
   width: 100%;
   /* for IE 6 */
   max-height: 400px;
   overflow: hidden;
-  margin-bottom: 1.0rem; }
-  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-  .ajimage.textleft {
-    text-align: left; }
-  /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-  .ajimage.textcenter {
-    text-align: center; }
-  /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-  .ajimage.textright {
-    text-align: right; }
-  /* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  background: #000;
+  text-align: center; }
+  /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajimage .textboxcontainer {
     position: absolute;
-    top: 30%;
     left: 0;
-    width: 100%; }
-    /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .ajimage .textboxcontainer span {
-      line-height: 3.6rem;
-      letter-spacing: -1px;
-      padding: 10px; }
-      /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.bgWhitetxtBlack {
-        color: #000000;
-        background: #000000;
-        /* fallback color */
-        background: rgba(255, 255, 255, 0.7); }
-      /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.bgBlacktxtWhite {
-        color: #FFFFFF;
-        background: #FFFFFF;
-        /* fallback color */
-        background: rgba(0, 0, 0, 0.7); }
-      /* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.bgtransparenttxtWhite {
-        color: #FFFFFF;
-        background-color: transparent;
-        /* fallback color */ }
-      /* line 62, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.hrub {
-        font-size: 2rem !important; }
+    width: 100%;
+    line-height: 3.6rem;
+    letter-spacing: -1px;
+    padding: 10px; }
+    @media only screen {
       /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.urub {
-        font-size: 1.8rem !important; }
-      /* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .ajimage .textboxcontainer span.utxtrub {
-        font-size: 1.0rem !important;
+      .ajimage .textboxcontainer {
+        top: 6%; } }
+    @media only screen and (min-width: 40.0625em) {
+      /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer {
+        top: 20%; } }
+    @media only screen and (min-width: 64.0625em) {
+      /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer {
+        top: 30%; } }
+    /* line 76, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .ajimage .textboxcontainer h1 {
+      text-transform: uppercase; }
+      @media only screen {
+        /* line 76, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        .ajimage .textboxcontainer h1 {
+          font-size: 2.1875rem; } }
+      @media only screen and (min-width: 40.0625em) {
+        /* line 76, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        .ajimage .textboxcontainer h1 {
+          font-size: 3rem; } }
+    /* line 82, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .ajimage .textboxcontainer.hrub {
+      font-size: 2rem !important; }
+    /* line 83, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .ajimage .textboxcontainer.urub {
+      font-size: 1.8rem !important; }
+    /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .ajimage .textboxcontainer.utxtrub {
+      font-size: 1.0rem !important;
+      line-height: 2.2rem !important;
+      margin-top: 0.5rem; }
+      /* line 86, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .ajimage .textboxcontainer.utxtrub .spacer {
+        display: inline;
+        padding: 0 5px;
         line-height: 2.2rem !important;
-        margin-top: 0.5rem; }
-        /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-        .ajimage .textboxcontainer span.utxtrub .spacer {
-          display: inline;
-          padding: 0 5px;
-          line-height: 2.2rem !important;
-          background-color: transparent; }
+        background-color: transparent; }
 
+@media only screen {
+  /* line 96, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajcolmargin {
+    display: none; } }
+
+@media only screen and (min-width: 64.0625em) {
+  /* line 96, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .ajcolmargin {
+    display: block; } }
+
+/*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
+<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
+<img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
+<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" />*/
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 #filtersortering {
   margin-right: 0.5rem; }
