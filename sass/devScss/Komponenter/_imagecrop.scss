@@ -3,7 +3,8 @@
             max-height: 100%;	     
 	      }    
           @media #{$medium-up} { 
-            max-height: 7.3rem;
+            //max-height: 7.3rem;
+            max-height:70px;
 	        overflow: hidden; 
 	      } 
 	      @media #{$large-up} { 

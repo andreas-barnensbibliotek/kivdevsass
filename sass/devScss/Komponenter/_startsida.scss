@@ -28,9 +28,14 @@
 }
 
 .hovereffect{
-    opacity: 0.8;
-    &:hover{opacity: 1;}
-    //filter: alpha(opacity=60); /* For IE8 and earlier */}
+    &:hover{ opacity: .7;
+        filter: alpha(opacity=70); /* For IE8 and earlier */
+        transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    }
+    //
 }
 
 

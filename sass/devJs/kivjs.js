@@ -132,7 +132,7 @@ jQuery(function ($){
                 var nyposition = current_item_height;
                 // console.log("domloop nyposition " + nyposition);
                 if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
-                    var addedheight = itembottommargin + 30;
+                    var addedheight = itembottommargin + 0;
                     if (addOrRemove) {
                         nyposition = parseInt(current_item_height) + addedheight;
                     } else {
@@ -233,7 +233,7 @@ jQuery(function ($){
         $('.kivisotope').isotope('destroy');
                 
         $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
-        $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder crop-height");
+        $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder  listheight crop-height");
         $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
        
@@ -285,7 +285,15 @@ jQuery(function ($){
         });
         
     }();
-    
+
+
+   //handlebars test START
+    var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
+    var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });
+    console.log("start: " + tmphtml);
+   // handlebars test END 
+
+
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {

@@ -55,6 +55,8 @@ gulp.task('foundationJS', function () {
 				srcPath.bower +'/foundation/js/foundation.js',
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 srcPath.js + '/imagesloaded.pkgd.min.js',
+                srcPath.js + '/handlebars-v4.0.5.js',
+                srcPath.js + '/getHandlebarTemplate.js',
 			    srcPath.js + '/iscroll-lite.js',
                 srcPath.js + '/kivglobalvars.js',
                 srcPath.js + '/kivjs.js',

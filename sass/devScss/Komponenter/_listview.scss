@@ -2,7 +2,7 @@
     //background-color: $vapor;
     padding: 0px 1em; 
     margin-bottom:1.5rem;
-   color:$white; 
+   color:$black; 
     //border-bottom:1px solid $gainsboro;
     i{
         font-size:2.3rem;
@@ -18,7 +18,7 @@
     h5{
         font-size:1.2rem;
         margin-bottom:0px;
-        color:$lightmediumgrey;
+        color:$gold;
         //font-weight:normal;
         padding-top:0.6rem;
         text-transform:none;
@@ -46,20 +46,32 @@
         padding-left:0px;
          //margin-bottom:0.5rem;
          //width:270px;
-         img{ width: 100%; min-width:220px;
-              max-width:220px;
+         img{ width: 100%; min-width:245px;
+              max-width:230px;
          }
-           
+           background-color:$darkgrey; 
     } 
-    
+    .listheight{
+        min-height:70px;
+        background-color:$darkgrey; 
+    }
     .ingresstext{
         display:hidden;
-        width:80%;        
+        width:100%;        
+         @media #{$medium-up} {
+           padding-right:5rem;
+	      } 
+        @media #{$large-up} { 
+           padding-right:10rem;
+	      } 
+        
+        padding-top:0.2rem;
+        background-color: #f8f4ec;
     }
     
 
     .kivlist {
-        background-color:$darkgrey; 
+        //background-color:$darkgrey; 
         margin-bottom:0.5rem;
         margin-left:0px;
         margin-right:0px;
@@ -103,7 +115,7 @@
 
     .apsisbtnboxList {  
         @extend .apsisboxmain;
-        max-width:144px;
+        //max-width:144px;
         @media #{$small-up} { 
              margin-bottom:2px;	     
 	    }    
