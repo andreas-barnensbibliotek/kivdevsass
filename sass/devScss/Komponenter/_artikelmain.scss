@@ -50,7 +50,14 @@
 .artsidecontainer{
     display:block;
     padding:1rem 1.2rem 1rem 1.2rem;
-    @media #{$large-up} {padding:1rem 2rem 2rem 2rem; }
+   
+    @media #{$large-up} {
+        //padding:1rem 2rem 2rem 2rem;  
+        padding-bottom: 2rem;
+        padding-left: 0.7rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+    }
     background-color:$lightermediumgrey;     
     //background-color:$white;  
     ul{
@@ -67,6 +74,7 @@
           text-transform: uppercase;          
     }
     h3{
+        font-size:$omoss-h3-font-size;
           text-transform: uppercase;          
     }
     p{ font-size:0.9rem;}

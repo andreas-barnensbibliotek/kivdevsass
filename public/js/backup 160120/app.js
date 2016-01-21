@@ -7867,17 +7867,6 @@ jQuery(function ($){
         $('.searchMainWrapper').slideToggle('600', function () {           
         });
     });
-
-
-    //$('.multiColumn').hide();
-    //$('.active').on('click', function (e) {
-    //    $('.multiColumn').slideToggle("slow", function () {
-    //        // Animation complete.
-    //    });
-    //    return false;
-
-    //});
-
    ////handlebars test START
    // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
    // var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });

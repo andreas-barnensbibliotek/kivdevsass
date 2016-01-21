@@ -7718,12 +7718,12 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
+            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
             
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
         }
 
          thatobj.slideToggle(100, function () {
@@ -7748,13 +7748,13 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
             thatobj.show();
 
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
             thatobj.hide();
         }
 
@@ -7801,26 +7801,28 @@ jQuery(function ($){
     });
     
    
+
+   
     $('#kivlist').on('click', function (e) {
         $('.kivisotope').isotope('destroy');
-        //$('.mozaikitems .small-10').removeClass('small-10').addClass('small-11');
-        //$('.mozaikitems .small-2').removeClass('small-2').addClass('small-1');        
+                
         $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
         $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder  listheight crop-height");
         $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
-        
+        $('.kivlistview .medium-10').removeClass('medium-10').addClass('medium-11');
+    $('.kivlistview .medium-2').removeClass('medium-2').addClass('medium-1');
         return false;
     });
 
     $('#kivmozaik').on('click', function (e) {
-//$('.kivlistview .small-11').removeClass('small-11').addClass('small-10');
-//        $('.kivlistview .small-1').removeClass('small-1').addClass('small-2');
+
         $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
         $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
-        
+ $('.mozaikitems .medium-11').removeClass('medium-11').addClass('medium-10');
+        $('.mozaikitems .medium-1').removeClass('medium-1').addClass('medium-2');
  
         $('.kivisotope').isotope({
             itemSelector: '.item',
@@ -7833,7 +7835,6 @@ jQuery(function ($){
        
         return false;
     })
-
     var removePlussicon = function (e) {
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
@@ -7862,21 +7863,6 @@ jQuery(function ($){
         
     }();
 
-    $('.searchMainWrapper').hide();
-    $('.right-small').on('click', function (e) {
-        $('.searchMainWrapper').slideToggle('600', function () {           
-        });
-    });
-
-
-    //$('.multiColumn').hide();
-    //$('.active').on('click', function (e) {
-    //    $('.multiColumn').slideToggle("slow", function () {
-    //        // Animation complete.
-    //    });
-    //    return false;
-
-    //});
 
    ////handlebars test START
    // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');

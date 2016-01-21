@@ -1,8 +1,10 @@
-﻿.kivlistview{
+// version 1 fram till: 2016-01-15 
+
+.kivlistview{
     //background-color: $vapor;
     padding: 0px 1em; 
     margin-bottom:1.5rem;
-   color:$black; 
+   color:$white; 
     //border-bottom:1px solid $gainsboro;
     i{
         font-size:2.3rem;
@@ -20,7 +22,7 @@
         margin-bottom:0px;
         color:$lightmediumgrey;
         //font-weight:normal;
-        //padding-top:0.6rem;
+        padding-top:0.6rem;
         text-transform:none;
        
     }
@@ -46,32 +48,20 @@
         padding-left:0px;
          //margin-bottom:0.5rem;
          //width:270px;
-         img{ width: 100%; min-width:245px;
-              max-width:230px;
+         img{ width: 100%; min-width:220px;
+              max-width:220px;
          }
-           background-color:$darkgrey; 
+           
     } 
-    .listheight{
-        min-height:88px;
-        background-color:$darkgrey; 
-    }
+    
     .ingresstext{
         display:hidden;
-        width:100%;        
-         @media #{$medium-up} {
-           padding-right:5rem;
-	      } 
-        @media #{$large-up} { 
-           padding-right:10rem;
-	      } 
-        
-        padding-top:0.2rem;
-        background-color: $ingressbggrey;
+        width:80%;        
     }
     
 
     .kivlist {
-        //background-color:$darkgrey; 
+        background-color:$darkgrey; 
         margin-bottom:0.5rem;
         margin-left:0px;
         margin-right:0px;
@@ -83,12 +73,6 @@
             float:left !important;
         }
         h4{color:$white;}
-
-        .imgplaceholder{
-           @media #{$small-only} {
-                display:none;
-                }
-        }
     }
     .flip {
 	    /*-webkit-transform: rotate(180deg);
@@ -102,46 +86,17 @@
 
     
 }
+.listcontent h5 ,.listcontent h4{margin:0px;}
 
-    .listcontent{        
-        .row{min-width:245px;background-color:$darkgrey;}
-        h5{margin:0px;
-           margin-top:0.5rem;
-        }
-        h4{margin:0px;}
-        .listheight{
-            .rub{
-                float:left; 
-                margin-left:-6px;
-                max-width:350px;
-            }
-        } 
-        .apsisbtnboxList {
-             @media #{$medium-up} { 
-                //float:right; 
-                width:35%;  
-	        }    
-            
-            .button{
-                width:100%!important; 
-                text-align:center; 
-                float:right;
-            }
-        }
-    }
-    .apsisboxmain{
-        padding-top:0.4rem;
-        max-width:110px;
+.apsisboxmain{
+        padding-top:0.2rem;
+        
         a{
             margin-bottom:0px;
             &:empty {
                 display: none !important;
             }
-         }  
-        .button.expand{
-            font-size:0.8rem;
-            font-weight:200;
-        }     
+         }       
     }
 
     .apsisbtnbox {        
@@ -150,10 +105,9 @@
 
     .apsisbtnboxList {  
         @extend .apsisboxmain;
-        //max-width:144px;
+        max-width:144px;
         @media #{$small-up} { 
-             margin-bottom:2px;	 
-             margin-left:-6px;    
+             margin-bottom:2px;	     
 	    }    
         @media #{$large-up} { 
             position:absolute;

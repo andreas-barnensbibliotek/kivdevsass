@@ -6,7 +6,7 @@
             </a>
         </section>
 
-        <section class="left tab-bar-section tab-bar-logosection">
+        <section class="right tab-bar-section tab-bar-logosection">
             <?php if ($linked_logo): print $linked_logo; endif; ?>
         </section>
 
@@ -22,7 +22,20 @@
     </aside>
 
     <a class="exit-off-canvas"></a>
-    <!-- drupal tabbmeny start --------------------------------------------------------------------- -->
+    
+    <div class="searchMainWrapper searh-opener">
+        <div class="small-12 columns">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="searchmainContent">
+                        <?php print render($page['search_top']); ?>
+                    </div>
+                 </div>
+            </div>              
+        </div>
+    </div>
+    
+    <!-- drupal tabbmeny start -->
     <main role="main" class="row l-main">
         <div class="<?php print $main_grid; ?> main columns">
             <?php if (!empty($page['highlighted'])): ?>
@@ -31,7 +44,7 @@
             </div>
             <?php endif; ?>
 
-            <a id="main-content"></a>
+            <!--<a id="main-content"></a>
 
             <?php if ($breadcrumb): print $breadcrumb; endif; ?>
 
@@ -41,7 +54,7 @@
                 <?php print $title; ?>
             </h1>
             <?php print render($title_suffix); ?>
-            <?php endif; ?>
+            <?php endif; ?>-->
 
             <?php if (!empty($tabs)): ?>
             <?php print render($tabs); ?>
@@ -94,9 +107,20 @@
     <?php endif; ?>
 
 
-    <!-- drupal tabbmeny stopp --------------------------------------------------------------------- -->
-
-
+    <!-- drupal tabbmeny stopp  -->
+    
+    
+	<?php if ($breadcrumb):?>
+	<div class="small-12 columns">
+		<div class="row">
+			<div class="menybreadcrumb">
+				 <?php print $breadcrumb; ?> 
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+	
+    
     <?php print render($page['content']); ?>
 
     <footer class="footer">
@@ -132,7 +156,7 @@
 
 
 </div>
-Visa detta<?php print $term->tid; ?>
+<?php print $term->tid; ?>
 <!--/.page -->
 <script src="https://use.typekit.net/qpl5lxd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -146,10 +170,18 @@ Visa detta<?php print $term->tid; ?>
                 itemSelector: '.item',
                 masonry: {
                     // use element for option
-                    columnWidth: 300
+                    columnWidth: 250
                 }
             });
-
+            
+			var $container = $('.kivisotope-webbtv').isotope({
+			    itemSelector: '.item',
+			    masonry: {
+			        // use element for option
+			        columnWidth: 330
+			    }
+			});
 
         });
+        
 </script>

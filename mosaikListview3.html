@@ -5,8 +5,8 @@
     <meta charset="utf-8"> 
     <meta content="kiv.se version: 0.0.4" />   
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="public/css/app.css" rel="stylesheet" />
-    <script src="public/js/modernizr.js"></script>
+    <link href="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/css/app.css" rel="stylesheet" />
+    <script src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/js/modernizr.js"></script>
     
     
     
@@ -23,7 +23,7 @@
                 </section>
 
                 <section class="left tab-bar-section tab-bar-logosection">
-                    <a href="index.html"><img src="public/images/kivlogo.png" alt="Kultur i Väst" /></a>
+                    <a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/kivlogo.png" alt="Kultur i Väst" /></a>
                 </section>
 
                 <section class="right-small">
@@ -82,7 +82,7 @@
                             <div id="contentHeader">
                                 <h1>Musik och ljudkonst</h1>                                
                             </div>
-                            <div class="omossMenu ">
+                            <div class="omossMenu arrowhead ">
                                 <a class="lasMerOmOssLink" id="lasMerOmOssLink" href="#">Läs mer om Arkitektur | Kontakt | Snabblänkar</a>
                                 <div class="arrow-down"></div>
                             </div>
@@ -92,12 +92,12 @@
                 <div class="large-12 columns omossContentBox">
                     <div class="row">                        
 
-                            <div class="large-8 medium-7 small-12 columns">
+                            <div class="large-8 columns">
                                 <div id="omossContent">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a enim felis. Duis fermentum metus eget urna rhoncus interdum. Etiam feugiat nisl nec est dignissim, non condimentum enim ultrices. Aenean purus nisl, venenatis in dignissim eu, aliquam a orci. Proin vel nulla nec nulla vehicula dictum eu at libero. Nam quis ante in turpis ullamcorper venenatis. Donec sodales molestie libero, eget tincidunt ipsum aliquam eget. Duis et dolor sem. Aliquam erat volutpat. Aenean rhoncus nisi non convallis viverra. Vestibulum mollis tristique mi, sit amet congue sem tincidunt ut. Phasellus tempor, sem commodo suscipit venenatis, quam ex auctor elit, nec malesuada massa enim ut nisl. Suspendisse placerat efficitur elit dapibus sodales.</p>
                                 </div>
                             </div>
-                            <div class="large-4 medium-5 small-12 columns">
+                            <div class="medium-4 columns">
                                 <div id="omossKontaktContent">
                                     <h2>Kontakt</h2>
                                     <ul>
@@ -134,11 +134,13 @@
                                 <div class="row">
                                     <!-- Content Items start isotope start -->
                                     <div id="kivisotope2" class="kivisotope clearfix">
-                                        <div class="wrapper">
+                                        <div class="wrapper kivlistview">
                                             <!-- Content item row start -->
-                                            <div class="large-4 medium-6 small-12 columns item"><div class="mozaikimg listheight">
-                                                <img src="public/images/c3po.png" />
-                                                </div><div class="mozaikitems">
+                                            <div class="large-4 medium-6 small-12 columns item">
+                                                <div class="mozaikimg listheight">
+                                                    <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/c3po.png" />
+                                                </div>
+                                                <div class="mozaikitems">
                                                     <div class="row">
                                                         <div class="small-10 columns"><a href="#">
                                                             <h5>Över rubrik</h5><h4>This is a content section.</h4></a>
@@ -152,7 +154,7 @@
                                                 </div>
                                             </div>
                                             <div class="large-4 medium-6 small-12 columns item"><div class="mozaikimg listheight">
-                                                <img src="public/images/frame.jpg" />
+                                                <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/frame.jpg" />
                                                 </div><div class="mozaikitems">
                                                     <div class="row">
                                                         <div class="small-10 columns"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -164,7 +166,7 @@
                                                 </div>
                                             </div>
                                             <div class="large-4 medium-6 small-12 columns item"><div class="mozaikimg listheight">
-                                                <img src="public/images/katy_guillen.jpg" />
+                                                <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/katy_guillen.jpg" />
                                                 </div><div class="mozaikitems">
                                                     <div class="row">
                                                         <div class="small-10 columns"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -191,7 +193,15 @@
                         </div>
                     </div>
                 </div>
-                <br />
+                <div class="row"><br />
+                    <div class="small-12 columns">
+                        <ul id="breadcrumbval">
+                            <li>MUSIK OCH LJUDKONST</li>
+                            <li>Visa allt</li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="small-9 columns">
                         <div id="contentfilterblock">
@@ -215,14 +225,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="small-12 columns">
-                        <ul id="breadcrumbval">
-
-                        </ul>
-                    </div>
-                </div>
-                    <br />
+              
                     <div class="row">
                         <!-- Content Items start isotope start -->
                         <div id="kivisotope" class="kivisotope clearfix">
@@ -232,17 +235,18 @@
                                 <div class="large-4 medium-6 small-12 columns item">
                                     <div class="mozaikimg listheight">
                                         <a href="artikel4.html">
-                                            <img src="public/images/terrie_odabi_0.jpg" />
+                                            <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/terrie_odabi_0.jpg" />
                                         </a>
                                     </div>
                                     <div class="mozaikitems">
                                         <div class="row">
-                                            <div class="small-10 columns listheight"><a href="artikel4.html"><h5>Över rubrik</h5><h4>This is a content section.</h4></a>
+                                            <div class="small-10 columns listheight">
+                                                <a class="rub" href="artikel4.html"><h5>Över rubrik</h5><h4>This is a content section.</h4></a>
                                                 <div class="apsisbtnbox">
                                                     <a class="button expand success n3" href="http://di.se">Till Anmälan</a>
                                                 </div>
                                             </div>
-                                            <div class="small-2 columns listheight"><a href="" class="showingresstext"><i class="closed">+</i></a></div>
+                                            <div class="small-2  columns listheight"><a href="" class="showingresstext"><i class="closed"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/plussicon.png" alt="Visa"></i></a></div>
                                             <div class="medium-12 columns ingresstext">
                                                 <p>teseatat <br>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p><p>tretretre</p>
                                             </div>
@@ -252,7 +256,7 @@
 
                                 <div class="large-4 medium-6 small-12 columns item">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/frame.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/frame.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -265,7 +269,7 @@
                                 </div>
                                 <div class="large-4 medium-6 small-12 columns item">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/katy_guillen.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/katy_guillen.jpg" />
                                     </div>
                                     <div class="mozaikitems">
                                         <div class="row">
@@ -282,7 +286,7 @@
 
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/c3po.png" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/c3po.png" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -295,7 +299,7 @@
                                 </div>
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/litenkonferensbild.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/litenkonferensbild.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -323,7 +327,7 @@
 
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/carmen_souza2_1.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/carmen_souza2_1.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -336,7 +340,7 @@
                                 </div>
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/dam.png" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/dam.png" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -369,7 +373,7 @@
                                         </div>
                                     </div>
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/goodbye_girls.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/goodbye_girls.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -382,7 +386,7 @@
                                 </div>
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/3519021_2048_1152.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/3519021_2048_1152.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -400,7 +404,7 @@
                                         </div>
                                     </div>
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/bide_labb_1.jpeg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/bide_labb_1.jpeg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -429,7 +433,7 @@
                                 <div class="large-4 medium-6 small-12 columns item" callout-card aktuellt>
                                     <div class="mozaikimg listheight">
                                         <a href="">
-                                            <img src="public/images/fautolj.jpg" />
+                                            <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/fautolj.jpg" />
                                         </a>
                                     </div>
                                     <div class="mozaikitems">
@@ -444,7 +448,7 @@
                                 </div>
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight">
-                                        <img src="public/images/frauke_no_otsuki_sama_0.jpeg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/frauke_no_otsuki_sama_0.jpeg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -466,7 +470,7 @@
                                         </div>
                                     </div>
                                         <div class="mozaikimg listheight">
-                                            <img src="public/images/lagerbiblioteket-livat-marke-forslag1.jpg" />
+                                            <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/lagerbiblioteket-livat-marke-forslag1.jpg" />
                                         </div>
                                         
 
@@ -483,7 +487,7 @@
                                     </div>
                                 <div class="large-4 medium-6 small-12 columns item callout-card aktuellt">
                                     <div class="mozaikimg listheight ">
-                                        <img src="public/images/lagerbiblioteket-livat-marke-forslag1.jpg" />
+                                        <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/lagerbiblioteket-livat-marke-forslag1.jpg" />
                                     </div><div class="mozaikitems">
                                         <div class="row">
                                             <div class="small-10 columns listheight"><a href="#"><h5>Över rubrik</h5><h4>This is a content section.</h4></a></div>
@@ -519,7 +523,7 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="small-12 medium-6 columns kivfootcolleft">
-                                <p><a href="index.html"><img src="public/images/kivlogo.png" alt="Kultur i Väst" /></a></p>
+                                <p><a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/kivlogo.png" alt="Kultur i Väst" /></a></p>
 
                                 <ul class="adress">
                                     <li>
@@ -569,9 +573,9 @@
                             </div>
                             <div class="small-12 medium-3 columns kivfootcolright">
                                 <ul>
-                                    <li><a href="index.html"><img src="public/images/filmrullenicon.png" alt="Kultur i Väst" /></a></li>
-                                    <li><a href="index.html"><img src="public/images/frameicon.png" alt="Kultur i Väst" /></a></li>
-                                    <li><a href="index.html"><img src="public/images/kulturplusicon.png" alt="Kultur i Väst" /></a></li>
+                                    <li><a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/filmrullenicon.png" alt="Kultur i Väst" /></a></li>
+                                    <li><a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/frameicon.png" alt="Kultur i Väst" /></a></li>
+                                    <li><a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/kulturplusicon.png" alt="Kultur i Väst" /></a></li>
 
                                 </ul>
                             </div>
@@ -579,7 +583,7 @@
 
                         <div class="row">
                             <div class="small-12 medium-12 columns kivfootbottom">
-                                <a href="index.html"><img src="public/images/vg_logo_white.png" alt="Västra Götalandsregionen" /></a>
+                                <a href="index.html"><img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/vg_logo_white.png" alt="Västra Götalandsregionen" /></a>
 
                             </div>
                         </div>
@@ -591,28 +595,39 @@
         <div id="currentTID">12</div>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="public/js/jquery.touchSwipe.min.js"></script>
         
-            <script src="public/js/app.js"></script>
-            <script src="public/js/isotope.pkgd.min.js"></script>    
+        
+            <script src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/js/app.js"></script>
+            <script src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/js/isotope.pkgd.min.js"></script>    
             <script type="text/javascript">
 
-                $(document).ready(function () {
+
+
+                jQuery(function ($) {
 
                     var $container = $('.kivisotope').isotope({
                         itemSelector: '.item',
                         masonry: {
                             // use element for option
-                            columnWidth: 400
+                            columnWidth: 250
                         }
                     });
-                   
+
+                    var $container = $('.kivisotope-webbtv').isotope({
+                        itemSelector: '.item',
+                        masonry: {
+                            // use element for option
+                            columnWidth: 330
+                        }
+                    });
 
                 });
+
+
             </script>
         
         <div class="loader">
-            <img src="public/images/page-loader.gif" /></div>
+            <img src="http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/page-loader.gif" /></div>
 </body>
 
 </html>

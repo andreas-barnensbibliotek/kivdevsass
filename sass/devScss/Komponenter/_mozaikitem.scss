@@ -1,7 +1,6 @@
 ﻿.mosaikblockheader{margin-top:1.5rem;}
 
-.mozaikitems {
-   
+.mozaikitems {   
     padding: 0px 1em;
     padding-right:0.9rem; 
     padding-bottom:0rem;
@@ -15,7 +14,7 @@
         color:$white;       
         margin-top:0px;
          font-size:1.3rem;
-         font-weight:300;
+         font-weight:200;
          text-transform:none;
     }
     a{
@@ -24,18 +23,47 @@
     h5{
         font-size:1.3rem;
         margin-bottom:0px;
-        color:$lightmediumgrey;
-        font-weight:300;
-        padding-top:0.6rem;
+        color:$lightmediumgrey !important;
+        font-weight:200;
+        padding-top:6px !important;
         text-transform:none;
     }
-   .showingresstext {width:24px !important; height:24px; float:right;margin-right:-0.5rem;}
+   .showingresstext {
+       width:24px !important; 
+       height:24px; 
+       float:right;
+       margin-right:-0.5rem;
+       i{
+            img {
+                margin-top:-1.3rem !important
+            }       
+        }
+   }
    .ingresstext{
         display:none;
         width:220px !important;
         padding-right:0rem !important;
+       p{
+           margin-left:-5px;
+           margin-top:5px;
+           margin-right:2px;
+       }
     }
    .row { background-color: $darkgrey;}
+   .listheight{
+        padding-left:10px;
+        min-height: 5rem !important;
+   }
+   .apsisbtnbox{
+       //float:right;
+       padding-top:0px;
+     .button.expand{
+           margin-left:0px;
+           max-width:110px; 
+           margin-bottom:0.7rem;
+       }
+   }
+  
 }
 
 .ingresstext{
@@ -46,12 +74,7 @@
     display:none;    
 }
 
-.lasMerOmOssLink{
-@media #{$small-only} {
-        font-size:0.7em;
-        line-height:12px;
-    }
-}
+
 .item{
        width:250px;
     }

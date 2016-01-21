@@ -41,6 +41,11 @@ jQuery(function ($){
    
     
     // Menu offcanvas show hide START
+   
+    $('.left-small').on('click', function (e) {
+        $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+        return false;
+    });
     $('.left-off-canvas-toggle').on('click', function (e) {
         $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
         return false;
@@ -147,12 +152,12 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
+            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
             
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
         }
 
          thatobj.slideToggle(100, function () {
@@ -177,13 +182,13 @@ jQuery(function ($){
         if (addOrRemove) {
             valdclass.removeClass("closed");
             valdclass.addClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/iconkryss.png" alt="Dölj" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
             thatobj.show();
 
         } else {
             valdclass.addClass("closed");
             valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/plussicon.png" alt="Visa" />');
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
             thatobj.hide();
         }
 
@@ -215,6 +220,7 @@ jQuery(function ($){
 
     $('#lasMerOmOssLink').on('click', function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
+      
         $('.omossContentBox').slideToggle("slow", function () {            
             $('.kivisotope').isotope("layout");            
             if (addOrRemove) {
@@ -228,25 +234,56 @@ jQuery(function ($){
         
         return false;
     });
-    
+
+
+    // TEST BLOCK om oss visa START
+    $('.omossmenycontainer a').on('click', function (e) {
+        var that = $(this);
+        var addOrRemove = that.hasClass("arrowhead2");
+        var isAllreadyvisible= $('.omossContentBox2').is(':visible')
+        $('.omossContentBox2').slideToggle("slow", function () {
+            $('.kivisotope').isotope("layout");
+            if (addOrRemove) {
+                $('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
+                
+            };
+        });
+
+        if (!addOrRemove) {
+            //$('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
+            if (!isAllreadyvisible) {
+                that.addClass("arrowhead2");
+            }
+            
+        }
+
+        return false;
+    });
+    // TEST BLOCK om oss visa END
+
+
+
     $('#kivlist').on('click', function (e) {
         $('.kivisotope').isotope('destroy');
-                
+        //$('.mozaikitems .small-10').removeClass('small-10').addClass('small-11');
+        //$('.mozaikitems .small-2').removeClass('small-2').addClass('small-1');        
         $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
         $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder  listheight crop-height");
         $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
         $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
-       
+        
         return false;
     });
 
     $('#kivmozaik').on('click', function (e) {
-
+//$('.kivlistview .small-11').removeClass('small-11').addClass('small-10');
+//        $('.kivlistview .small-1').removeClass('small-1').addClass('small-2');
         $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
         $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
         $('.listcontent').attr('class', "").addClass('mozaikitems');               
         $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
-
+        
+ 
         $('.kivisotope').isotope({
             itemSelector: '.item',
             //containerStyle: null,
@@ -258,6 +295,7 @@ jQuery(function ($){
        
         return false;
     })
+
     var removePlussicon = function (e) {
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
@@ -286,12 +324,32 @@ jQuery(function ($){
         
     }();
 
+    $('.searchMainWrapper').hide();
+    $('.right-small').on('click', function (e) {
+        $('.searchMainWrapper').slideToggle('600', function () {           
+        });
+    });
 
-   //handlebars test START
-    var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
-    var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });
-    console.log("start: " + tmphtml);
-   // handlebars test END 
+    $(".menu-mlid-6811 span").addClass('togglebgimagehide');
+    //$('.multiColumn').hide();
+    $(".menu-mlid-6811 span").on('click', function (e) {
+        var toggle_switch = $(this);
+        $('.multiColumn').slideToggle("slow", function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.addClass('togglebgimageshow').removeClass('togglebgimagehide')               
+            } else {
+                toggle_switch.addClass('togglebgimagehide').removeClass('togglebgimageshow')
+            }
+        });
+        return false;
+
+    });
+
+   ////handlebars test START
+   // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
+   // var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });
+   // console.log("start: " + tmphtml);
+   //// handlebars test END 
 
 
 

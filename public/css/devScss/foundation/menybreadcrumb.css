@@ -1,0 +1,9 @@
+/* line 3, stdin */
+.menybreadcrumb .mbc_navlinklist li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  border-right: 1px solid #808080; }
+  /* line 8, stdin */
+  .menybreadcrumb .mbc_navlinklist li:not(:last-child) {
+    border: 0px; }

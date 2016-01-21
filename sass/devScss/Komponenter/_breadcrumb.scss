@@ -1,17 +1,21 @@
 ﻿#breadcrumbval{
+    margin-top:0.5rem;
     margin-left:0px;
     margin-right:0px;
     margin-bottom:-0.3rem;
-    font-size:small;
-    color:#333;
+    font-size:0.85rem;
+    font-style:400;
+    color:$black;
     li{
 	    display: inline;
 	    list-style-type: none;
-	    padding-right: 0.5rem;
-        border-right:1px solid #333;
-        margin-right:0.5rem;
-    }
-    li:last-child {
-	    border:0px;
+        padding-right: 0.5rem;
+	   
+        a{
+        border-left:1px solid $jet;
+        margin-right:4px;
+        padding-left:4px;
+        }
+
     }
 }

@@ -50,7 +50,7 @@
     }
     article {         
         @media #{$small-up} { columns: 1; }
-        @media #{$medium-up} { columns: 4 200px;}
+        @media #{$medium-up} { columns: 3 200px;}
         text-align:left;
         color:$black;
     }

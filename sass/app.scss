@@ -23,6 +23,8 @@
 @import 'devScss/Komponenter/_evenemang';
 @import 'devScss/Komponenter/_imagecrop';
 @import 'devScss/Komponenter/_buttons';
+@import 'devScss/Komponenter/_menybreadcrumb';
+@import 'devScss/Komponenter/_searchTopbox';
 
 // Behold, here are all the Foundation components.
 
@@ -229,3 +231,31 @@ font-weight:100 !important;
 
 // XXLarge screens
 //@media only screen and (min-width: 120.063em) { body{ background-color:#089e01;}} /* min-width 1921px, xxlarge screens */*/
+ .mozaikitems .row {
+   margin: 0 -0.9rem 0 -0.99rem;}
+ 
+ .left-small{
+    height: 65px; 
+    width: 65px;
+    span{
+        font-size:15px !important;
+    }
+    line-height:56px;
+ }
+
+ .right-small {
+      height: 65px; 
+    width: 65px;
+     span{
+         font-size:15px !important;
+    }
+     line-height:56px;
+ }
+ .tab-bar {
+   height: 65px;
+   
+ }
+ .tab-bar-logosection{
+     margin-right: 5em;
+     margin-top: 0.31rem;
+ }

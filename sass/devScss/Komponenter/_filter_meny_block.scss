@@ -1,11 +1,14 @@
 ﻿
 #filtersortering{
-     margin-right:0.5rem;
+     //margin-right:0.5rem;
 a{ 
     img{width:36px; height:36px;}
     }
 } 
-#contentfilterblock{line-height:2.5rem;}
+#contentfilterblock{
+    line-height:2.5rem;
+    margin-bottom: 0.5rem;
+}
 
 
 #edit-field-production-tid{
@@ -18,7 +21,11 @@ a{
 #contentfilterblock select{
    height: 1.8em;
   padding: 0.05em;
-  max-width: 134px;
+  padding-left:0.25rem;
+  max-width: 108px;
+  color:$black;
+  font-size:0.85rem;
+  
  }
 
 /*#drpFilter, #drpSortering{  

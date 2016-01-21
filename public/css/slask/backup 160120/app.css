@@ -6770,7 +6770,7 @@ h3 {
 
 /* line 275, ./bower_components/foundation/scss/foundation/components/_type.scss */
 h4 {
-  font-size: 0.8125rem; }
+  font-size: 0.625rem; }
 
 /* line 276, ./bower_components/foundation/scss/foundation/components/_type.scss */
 h5 {
@@ -6983,7 +6983,7 @@ blockquote p {
     font-size: 1.125rem; }
   /* line 465, ./bower_components/foundation/scss/foundation/components/_type.scss */
   h4 {
-    font-size: 1.125rem; }
+    font-size: 0.9375rem; }
   /* line 466, ./bower_components/foundation/scss/foundation/components/_type.scss */
   h5 {
     font-size: 0.875rem; }
@@ -8341,64 +8341,84 @@ ul.off-canvas-list {
   padding-bottom: 0rem;
   margin-bottom: 1.5rem;
   color: #000000; }
-  /* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems i {
     font-size: 2.3rem;
     color: #b2a16c; }
-  /* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h4 {
     color: #FFFFFF;
     margin-top: 0px;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 200;
     text-transform: none; }
-  /* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems a {
     color: #FFFFFF; }
-  /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h5 {
     font-size: 1.3rem;
     margin-bottom: 0px;
-    color: #b4b3b2;
-    font-weight: 300;
-    padding-top: 0.6rem;
+    color: #b4b3b2 !important;
+    font-weight: 200;
+    padding-top: 6px !important;
     text-transform: none; }
-  /* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .showingresstext {
     width: 24px !important;
     height: 24px;
     float: right;
     margin-right: -0.5rem; }
-  /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    .mozaikitems .showingresstext i img {
+      margin-top: -1.3rem !important; }
+  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .ingresstext {
     display: none;
     width: 220px !important;
     padding-right: 0rem !important; }
-  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    .mozaikitems .ingresstext p {
+      margin-left: -5px;
+      margin-top: 5px;
+      margin-right: 2px; }
+  /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .row {
     background-color: #5a5958; }
+  /* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems .listheight {
+    padding-left: 10px;
+    min-height: 5rem !important; }
+  /* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  .mozaikitems .apsisbtnbox {
+    padding-top: 0px; }
+    /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    .mozaikitems .apsisbtnbox .button.expand {
+      margin-left: 0px;
+      max-width: 110px;
+      margin-bottom: 0.7rem; }
 
-/* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstext {
   display: none;
   width: 220px; }
 
-/* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 73, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstextlist {
   display: none; }
 
 @media only screen and (max-width: 40em) {
-  /* line 49, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .lasMerOmOssLink {
     font-size: 0.7em;
     line-height: 12px; } }
 
-/* line 55, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 83, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   width: 250px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 61, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 100%;
@@ -8526,8 +8546,7 @@ ul.multiColumn {
   .kivlistview h5, .evenemang h5 {
     font-size: 1.2rem;
     margin-bottom: 0px;
-    color: #b2a16c;
-    padding-top: 0.6rem;
+    color: #b4b3b2;
     text-transform: none; }
   /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .pluss, .evenemang .pluss {
@@ -8556,7 +8575,7 @@ ul.multiColumn {
       max-width: 230px; }
   /* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .listheight, .evenemang .listheight {
-    min-height: 70px;
+    min-height: 88px;
     background-color: #5a5958; }
   /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .ingresstext, .evenemang .ingresstext {
@@ -8606,52 +8625,60 @@ ul.multiColumn {
     /* needed? not sure */
     zoom: 1; }
 
-/* line 108, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 107, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .row {
   min-width: 245px;
   background-color: #5a5958; }
 
-/* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 108, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h5 {
-  margin: 0px; }
+  margin: 0px;
+  margin-top: 0.5rem; }
 
-/* line 110, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 111, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h4 {
   margin: 0px; }
 
-/* line 112, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 113, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .listheight .rub {
-  float: left; }
+  float: left;
+  margin-left: -6px;
+  max-width: 350px; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .listcontent .apsisbtnboxList {
-    float: right;
     width: 35%; } }
 
-/* line 122, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 125, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .apsisbtnboxList .button {
   width: 100% !important;
   text-align: center;
   float: right; }
 
-/* line 129, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .apsisboxmain, .apsisbtnbox, .apsisbtnboxList {
-  padding-top: 0.2rem; }
-  /* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  padding-top: 0.4rem;
+  max-width: 110px; }
+  /* line 135, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisboxmain a, .apsisbtnbox a, .apsisbtnboxList a {
     margin-bottom: 0px; }
-    /* line 134, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 137, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .apsisboxmain a:empty, .apsisbtnbox a:empty, .apsisbtnboxList a:empty {
       display: none !important; }
+  /* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .apsisboxmain .button.expand, .apsisbtnbox .button.expand, .apsisbtnboxList .button.expand {
+    font-size: 0.8rem;
+    font-weight: 200; }
 
 @media only screen {
-  /* line 144, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 151, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
-    margin-bottom: 2px; } }
+    margin-bottom: 2px;
+    margin-left: -6px; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 144, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 151, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
     position: absolute;
     right: 0px;
@@ -9665,19 +9692,29 @@ img .flip {
 /* line 120, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .label-text {
   color: #fff;
-  font-size: 0.75rem;
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 300;
   position: relative;
   right: 0px;
   white-space: nowrap;
   width: 100%;
   text-align: center;
   background-color: #b2a16c;
-  -webkit-border-radius: 0px 0px 8px 0px;
-          border-radius: 0px 0px 8px 0px;
-  text-transform: uppercase; }
+  -webkit-border-radius: 0px 0px 10px 0px;
+          border-radius: 0px 0px 10px 0px;
+  text-transform: uppercase;
+  height: 26px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.5rem; }
 
-/* line 137, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .button.expand, .button.expand {
   padding: 0.2rem;
   width: 204px;
@@ -9687,7 +9724,7 @@ img .flip {
   text-transform: uppercase;
   font-size: 0.9rem; }
 
-/* line 146, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 150, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .n0 {
   display: none; }
 
