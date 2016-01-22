@@ -221,15 +221,15 @@ jQuery(function ($){
     $('#lasMerOmOssLink').on('click', function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
       
-        $('.omossContentBox').slideToggle("slow", function () {            
+        $('.omossContentBox2').slideToggle("slow", function () {            ///ändrat till 2
             $('.kivisotope').isotope("layout");            
             if (addOrRemove) {
-                $('.omossMenu').removeClass("arrowhead");
+                $('.omossMenu2').removeClass("arrowhead2");  // ändrat till 2
             };
         });
         
         if (!addOrRemove) {
-            $('.omossMenu').addClass("arrowhead");
+            $('.omossMenu2').addClass("arrowhead2");
         }
         
         return false;

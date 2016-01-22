@@ -141,14 +141,14 @@
                         tmpstr += "<div class='card-label'><div class='label-text'>Aktuellt</div></div>";
                     }
                 }
-                tmpstr += "<div class='mozaikimg'>";
+                tmpstr += "<div class='mozaikimg listheight'>";
                 tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
                 tmpstr += "<div class='mozaikitems'><div class='row'>";
-                tmpstr += "<div class='small-10 columns'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a>";
+                tmpstr += "<div class='small-10 columns listheight'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a>";
                 tmpstr += "<div class='apsisbtnbox'><a href='" + incRenderOutputObj.btnlink + "' class='button expand success " + incRenderOutputObj.btntyp + "'>" + incRenderOutputObj.btntitle + "</a></div></div>";
-                tmpstr += "<div class='small-2 columns'><a href='' class='showingresstext'>";
+                tmpstr += "<div class='small-2 columns listheight'><a href='' class='showingresstext'>";
                 if (incRenderOutputObj.ingress) {
-                    tmpstr += "<i class='closed'><img alt='Visa' src='" + localOrServerURL + "/sites/all/themes/kivnew/images/plussicon.png'></i>";
+                    tmpstr += "<i class='closed'><img alt='Visa' src='" + localOrServerURL + "/sites/all/themes/kivnew/images/MosaikPlus28.png'></i>";
                 }                
                 tmpstr += "</a></div>";
                 tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
@@ -156,6 +156,11 @@
                 
            return tmpstr;
         };
+
+
+
+
+
       
         // FUNKTIONER
         var RenderDomItem = function (renderitem) {

@@ -60,11 +60,17 @@
     position: relative; 
     width: 100%; /* for IE 6 */
     max-height:400px;
+   min-height:100%;
     overflow:hidden;
     //margin-bottom:1.0rem;
     background:#000;
     text-align: center;
-  
+    img{       
+        object-fit: none; /* Do not scale the image */
+        object-position: center; /* Center the image within the element */  
+        min-height: 200px;
+    }
+   
     .textboxcontainer{ 
         position: absolute; 
         
@@ -102,6 +108,7 @@
       @media #{$small-up} {display:none;}
       @media #{$large-up} {display:block;}
   }
+
 
  
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>

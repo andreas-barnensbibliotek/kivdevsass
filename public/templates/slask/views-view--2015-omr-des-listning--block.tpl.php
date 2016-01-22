@@ -42,10 +42,10 @@
     <div class="small-3 columns text-right">
         <span id="filtersortering">
             <a id="kivmozaik" href="">
-                <img src="<?php print $base_path.$directory ?>/images/mosaikicon.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Mosaik44.png" />
             </a>
             <a id="kivlist" href="">
-                <img src="<?php print $base_path.$directory ?>/images/listicon.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Lista44.png" />
             </a>                                                      
         </span>
     </div>

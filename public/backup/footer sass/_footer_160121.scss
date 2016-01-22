@@ -1,0 +1,195 @@
+﻿.footer {
+  background-color: $black;
+  background-image:url("https://www.fusioncorpdesign.com/packages/fruitful/themes/fruitful/img/footerbg.jpg" );
+  background-repeat:  no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  a{
+    color:$white;
+   }
+  .inline-list a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px 0 0;
+    padding-left:0px;
+    margin-right:2px !important;
+  }
+  
+  .contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    
+    li {
+      margin-bottom: 2rem;
+      
+      p {
+        padding-left: 5rem;
+      }
+    }
+    
+    i {
+      position: absolute;
+      background-color: #33383b;
+      color: #fff;
+      font-size: 2rem;
+      border-radius: 50%;
+      line-height: 1;
+      margin: 0 0 0 -4rem;
+      vertical-align: middle;
+      padding: .25em .45em;
+    }
+  }
+
+    .kivfootcolleft{
+        h3{
+            font-size:1.0rem;
+            color:$gold !important;
+            margin-bottom:0px;
+        }
+        ul{
+            margin-left:0px;
+        }
+        li{
+	        font-size:0.9rem;
+            color:#fff;
+            margin-bottom:0.9rem;
+            list-style:none;
+        }
+        .adress{
+            text-align:left;
+        }  
+    }    
+    .kivfootmiddle{
+        padding-top:2.5rem;
+	    text-align:left;
+        color:#fff;
+        h3{
+            color:$gold; 
+            margin:0px;
+            font-size:1.0rem; 
+            padding-bottom:0.3rem
+        }
+        
+        .snabbnavblock{
+            margin-top:2.6rem;
+        }
+        ul{
+            list-style:none;
+            margin-top:0px;
+            margin-left:0px;
+            a{
+                color:$white;
+            }
+        }
+
+    }
+    .kivfootcolright{
+        padding-top:2.5rem;
+        ul{
+            margin-left:0px;
+        }
+        li{
+            list-style:none;
+            margin-bottom:1rem;
+            width:200px;
+  	        text-align:right !important;
+            float:right;
+        }    
+    }
+
+  .kivfootbottom{
+      border-top:1px solid $white;
+      padding-top:2rem;
+      margin-top:2.5rem;
+  }
+  .copywrite {
+    color: #8f9296;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .about {
+    color: #92999f;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+    
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+    
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+
+  }  
+  .social{        
+        text-align:right;
+        clear: both;
+    }
+  .inline-list {
+      a{
+            margin-right:0px;
+            padding-right:0px;
+
+        }
+  }
+  @media only screen and (min-width: 40.063em) {
+    
+    p {
+      text-align: left;
+    }
+    
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+    
+    .contact {
+      text-align: left;
+      > i {
+        margin-right: 1rem;
+      }
+    }
+    
+  }
+}
+   /* TMP för tillfällig bottenmeny, Detta kan man ta bort sedan. */
+
+.kivfootbottom .off-canvas-submenu.multiColumn a{
+	color: orange !important;
+}
+.kivfootbottom ul.multiColumn{
+	-moz-column-count: 1 !important;
+	-webkit-column-count: 1 !important;
+}
+.kivfootbottom .off-canvas-submenu.multiColumn li ul li a{
+	color: red !important;
+}
+.kivfootbottom .off-canvas-submenu.multiColumn LI UL li ul li a{
+	color: BLUE !important;
+}
+.footer .kivfootbottom{
+	text-align: left;
+}

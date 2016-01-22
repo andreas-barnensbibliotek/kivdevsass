@@ -120,8 +120,37 @@
 	</div>
 	<?php endif; ?>
 	
+	<?php if ($content_second):?>
+		<div class="row">
+			<div class="small-12 medium-12 small-12 columns">
+				<?php print render($page['content_second_top']); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-12 small-12 columns">	
+				<?php print render($page['content_second']); ?>
+			</div>
+	    </div>
+    <?php endif; ?>
     
-    <?php print render($page['content']); ?>
+    
+    <?php $sokvag = url($_GET['q']);?>
+    <?php $soksidapath = '/search';?>
+    
+    <?php if($sokvag == $soksidapath):?>
+    	<div class="row">
+    		<div class="large-9 medium-9 small-12 columns">
+	  <?php endif; ?>   
+    			<?php print render($page['content']); ?>
+			
+	<?php if($sokvag == $soksidapath):?>
+        </div>
+			<div class="large-3 medium-3 small-12 columns">	
+				<?php print render($page['search_right']); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
 
     <footer class="footer">
         <div class="row">

@@ -7792,15 +7792,15 @@ jQuery(function ($){
     $('#lasMerOmOssLink').on('click', function (e) {
         var addOrRemove = $('.omossMenu').hasClass("arrowhead");
       
-        $('.omossContentBox2').slideToggle("slow", function () {            ///ändrat till 2
+        $('.omossContentBox').slideToggle("slow", function () {            
             $('.kivisotope').isotope("layout");            
             if (addOrRemove) {
-                $('.omossMenu2').removeClass("arrowhead2");  // ändrat till 2
+                $('.omossMenu').removeClass("arrowhead");
             };
         });
         
         if (!addOrRemove) {
-            $('.omossMenu2').addClass("arrowhead2");
+            $('.omossMenu').addClass("arrowhead");
         }
         
         return false;
