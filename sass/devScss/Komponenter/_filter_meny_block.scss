@@ -1,8 +1,16 @@
 ﻿
 #filtersortering{
      //margin-right:0.5rem;
-a{ 
-    img{width:36px; height:36px;}
+    a{ 
+        img{
+             @media #{$medium-up} {
+                width:36px; height:36px;
+             }     
+             @media #{$small-only} {
+                 width:25px; height:25px;
+             }     
+
+        }
     }
 } 
 #contentfilterblock{

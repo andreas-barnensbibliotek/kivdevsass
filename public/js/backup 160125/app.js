@@ -7629,37 +7629,8 @@ jQuery(function ($){
 
     $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
 
-    ////$('.ingresstextlista').hide();
-    //// fixa listningar på listsidor utan mosaik 
-    //$(document).on('click', '.showingresstextlista', function (e) {
-    //    var valdclass = $(this).find('i');
-    //    var addOrRemove = valdclass.hasClass("closed");
-    //    var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlista");
-
-    //    if (addOrRemove) {
-    //        valdclass.removeClass("closed");
-    //        valdclass.addClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
-    //        thatobj.show();
-
-    //    } else {
-    //        valdclass.addClass("closed");
-    //        valdclass.removeClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-    //        thatobj.hide();
-    //    }
-
-    //    return false;
-
-
-    //});
-
-
-
-
     $(document).on('click', '.showingresstext', function (e) {
-        //var valdclass = $(this).find('i');
-        var valdclass = $(e.currentTarget).find('i');
+        var valdclass = $(this).find('i');
         var addOrRemove = valdclass.hasClass("closed");
         var st = $(this).attr("style");
         var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
@@ -7721,9 +7692,9 @@ jQuery(function ($){
                 thatobj.attr("rel", "");
             }
             $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
-            var curid = $(this).closest('.kivisotope').attr('id');
+
             var rakna = 0;
-            var loopdom = $('#' + curid + ' div[style*="' + itemSelectStyleValue + '"]');
+            var loopdom = $('div[style*="' + itemSelectStyleValue + '"]');
 
             loopdom.each(function (index, value) {
                 //hämta clickatitem topvärde
@@ -7930,9 +7901,9 @@ jQuery(function ($){
         });
     });
 
-    $(".menu-mlid-7255 a").first().addClass('togglebgimagehide');
+    $(".menu-mlid-6811 span").addClass('togglebgimagehide');
     //$('.multiColumn').hide();
-    $(".menu-mlid-7255 a").first().on('click', function (e) {
+    $(".menu-mlid-6811 span").on('click', function (e) {
         var toggle_switch = $(this);
         $('.multiColumn').slideToggle("slow", function () {
             if ($(this).css('display') == 'none') {

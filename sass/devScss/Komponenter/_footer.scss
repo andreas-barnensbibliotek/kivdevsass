@@ -1,4 +1,4 @@
-﻿
+﻿.footencol{padding-left:0px; padding-right:0px;}
 .footer {
     background-color: $black;
     background-image:url("https://www.fusioncorpdesign.com/packages/fruitful/themes/fruitful/img/footerbg.jpg" );
@@ -6,7 +6,14 @@
     background-size: cover;
     text-align: center;
     font-size: 1.2rem;
-    padding: 4rem;
+     @media #{$medium-up} {
+                     padding-left: 4rem;
+                     padding-right:4rem;
+                }
+    @media #{$small-only} {
+                     padding-left: 1rem;
+                     padding-right:4rem;
+	            }
     padding-top:2rem;
     color:$white;
 
@@ -31,16 +38,25 @@
 	    margin-top:10rem; 	
 
         .socialiconlist{
-            float:right;
+            
+             @media #{$small-up} {
+                    float:left;
+                    margin-top:1.2rem;
+                    margin-left:0px !important;
+	            }
+              @media #{$medium-up} {
+                    float:right;
+                }
+
             li{
                 list-style:none;
                 
 	            float:left;
-                @media #{$small-up} {
-                    margin-left:0.96rem;
+                @media #{$small-only} {
+                    margin-right:0.5rem;
 	            }
                 @media #{$medium-up} {
-                    margin-left:0.6rem;
+                    margin-left:0.5rem;
                 }
                 @media #{$large-up} 
                 {
@@ -50,7 +66,7 @@
             img{
 	            
                 @media #{$small-up} {
-                    max-width:63px;
+                    max-width:51px;
 	            }
                 @media #{$medium-up} {
                     max-width:50px;
