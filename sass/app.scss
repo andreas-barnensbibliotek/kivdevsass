@@ -25,6 +25,7 @@
 @import 'devScss/Komponenter/_buttons';
 @import 'devScss/Komponenter/_menybreadcrumb';
 @import 'devScss/Komponenter/_searchTopbox';
+@import 'devScss/Komponenter/_innehallsmeny';
 
 // Behold, here are all the Foundation components.
 
@@ -261,3 +262,9 @@ font-weight:100 !important;
      margin-right: 5em;
      margin-top: 0.31rem;
  }
+ .artikelwrapper{
+     a{
+         color:$orange;
+     }
+ }
+  

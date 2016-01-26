@@ -26,16 +26,42 @@
 .form-item.form-type-select{
     line-height:2.5rem;
 }
-#contentfilterblock select{
-   height: 1.8em;
+
+.baseformkomponenter{
+  height: 1.8em;
   padding: 0.05em;
   padding-left:0.25rem;
-  max-width: 108px;
+  width: 108px;
   color:$black;
   font-size:0.85rem;
+}
+#contentfilterblock select{
+ @extend .baseformkomponenter;
   
  }
+#contentfilterblock input{
+ @extend .baseformkomponenter;
+ max-width: 218px;
+}
+#contentfilterblock button{
+ 
+}
+//
+.views-submit-button {
+    padding:0px!important;
+}
 
+.views-exposed-widget{
+    padding:0px;
+    label{display:none;}
+    
+} 
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin: 0rem !important;
+    margin-left:1rem !important;
+    padding:0.1rem;
+    min-width:8rem;
+}
 /*#drpFilter, #drpSortering{  
    background: url(/sites/all/themes/kivnew/images/drpicon.png) no-repeat right $gold;
     border-radius:0px 10px 10px 0px;
