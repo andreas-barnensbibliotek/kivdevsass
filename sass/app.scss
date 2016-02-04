@@ -26,6 +26,8 @@
 @import 'devScss/Komponenter/_menybreadcrumb';
 @import 'devScss/Komponenter/_searchTopbox';
 @import 'devScss/Komponenter/_innehallsmeny';
+@import 'devScss/Komponenter/_view-2015-evenemang';
+@import 'devScss/Komponenter/_view-2015-staff';
 
 // Behold, here are all the Foundation components.
 
@@ -242,6 +244,7 @@ font-weight:100 !important;
         font-size:15px !important;
     }
     line-height:56px;
+     cursor: pointer; cursor: hand; 
  }
 
  .right-small {
@@ -251,6 +254,7 @@ font-weight:100 !important;
          font-size:15px !important;
     }
      line-height:56px;
+      cursor: pointer; cursor: hand; 
  }
  .tab-bar {
    height: 65px;
@@ -266,5 +270,8 @@ font-weight:100 !important;
      a{
          color:$orange;
      }
+ }
+ .outeromrade{
+     display:none;
  }
   

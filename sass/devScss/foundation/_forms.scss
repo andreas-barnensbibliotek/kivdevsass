@@ -602,6 +602,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
 }
 #contentfilterblock {   
     line-height:1.1em;
+    
     label{
         color: $black;
     }

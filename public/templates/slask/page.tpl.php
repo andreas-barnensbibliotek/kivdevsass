@@ -142,6 +142,7 @@
     		<div class="large-9 medium-9 small-12 columns">
 	  <?php endif; ?>   
     			<?php print render($page['content']); ?>
+		
 			
 	<?php if($sokvag == $soksidapath):?>
         </div>
@@ -152,33 +153,71 @@
 	<?php endif; ?>
 
 
+	<?php if (!empty($page['xtra_content'])): ?>
+		<?php print render($page['xtra_content']); ?>
+	<?php endif; ?>
+
+<div class="small-12 columns footencol">
     <footer class="footer">
-        <div class="row">
-            <div class="small-12 medium-3 columns kivfootcolleft">
+    	<div class="row">
+	        <div class="small-12 medium-12 large-12 columns">
+	            <div class="vglogo">
+	                <a href="http://www.vgregion.se" target="_blank">
+	                    <img alt="Västra Götalandsregionen" src="/sites/all/themes/kivnew/images/vg_logo_white.png">
+	                </a>
+	            </div>
+	        </div>
+        </div>
+        <div class="row annonsrow">
+            <div class="small-12 medium-6 large-3 columns">
                 <?php print render($page['footer_leftcolumn']); ?>
             </div>
 
-            <div class="small-12 medium-3 columns kivfootmiddle">
+            <div class="small-12 medium-6 large-3 columns">
                 <?php print render($page['footer_middleleftcolumn']); ?>
             </div>
 
-            <div class="small-12 medium-3 columns kivfootmiddle">
+            <div class="small-12 medium-6 large-3 columns">
                 <?php print render($page['footer_middlerightcolumn']); ?>
             </div>
             
-            <div class="small-12 medium-3 columns kivfootcolright">
+            <div class="small-12 medium-6 large-3 columns">
                 <?php print render($page['footer_rightcolumn']); ?>
             </div>
             
         </div>
-
-        <div class="row">
-            <div class="small-12 medium-12 columns kivfootbottom">
+		<div class="row footdelare">
+			<div class="small-12 medium-6 large-6 columns">
+				<div class="foot-kivlogo-container">
+				    <a href="/"><img alt="Kultur i Väst" src="/sites/all/themes/kivnew/images/kivlogo.png"></a>
+				</div>
+			</div>
+			<div class="small-12 medium-6 large-6 columns">
+				<div class="foot-social-container">
+                    <ul class="socialiconlist">
+                        <li>
+                            <a href="http://facebook.se" target="_blank"><img src="/sites/all/themes/kivnew/images/FACEBOOKlogga.png"></a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.se" target="_blank"><img src="/sites/all/themes/kivnew/images/TWITTERlogga.png"></a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com" target="_blank"><img src="/sites/all/themes/kivnew/images/INSTAGRAMlogga.png"></a>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+			<div class="small-12 columns footdelarehrbox">
+				<hr>
+			</div>
+		</div>
+        <div class="row adressrow">
+            <!--<div class="small-12 medium-12 columns kivfootbottom">-->
                 <?php print render($page['footer_bottomcolumn']); ?>
-            </div>
+            <!--</div>-->
         </div>
     </footer>
-
+</div>
     <a href="#0" class="scroll-top">
         <i class="fi-arrow-up"></i>
     </a>

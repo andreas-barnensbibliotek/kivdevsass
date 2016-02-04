@@ -15,9 +15,19 @@
 } 
 #contentfilterblock{
     line-height:2.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+#filtersortering{
+    margin-top: 1.5rem;
+    display:block;
 }
 
+.views-submit-button{
+    margin-top:2rem; 
+    button{
+        margin-left:0px !important;
+    }
+}
 
 #edit-field-production-tid{
      margin-right:0.5rem;
@@ -41,7 +51,7 @@
  }
 #contentfilterblock input{
  @extend .baseformkomponenter;
- max-width: 218px;
+ //max-width: 218px;
 }
 #contentfilterblock button{
  
@@ -51,14 +61,16 @@
     padding:0px!important;
 }
 
-.views-exposed-widget{
+.views-exposed-widgets{
     padding:0px;
+    margin-bottom:0px !important;
+
     label{display:none;}
     
 } 
 .views-exposed-form .views-exposed-widget .form-submit {
     margin: 0rem !important;
-    margin-left:1rem !important;
+    //margin-left:1rem !important;
     padding:0.1rem;
     min-width:8rem;
 }

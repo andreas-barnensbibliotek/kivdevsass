@@ -29,5 +29,17 @@
             margin:0px;
         }
     } 
+
+    #contentfilterblock{
+        input{ height: 50px;
+            width: 90% !important;
+            font-size:1.5rem;
+            border:0px;
+            @media #{$small-only}{
+                width: 75%;
+             }
+            }
+
+    } 
 }
 

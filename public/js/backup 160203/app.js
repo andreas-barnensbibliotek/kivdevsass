@@ -7629,30 +7629,30 @@ jQuery(function ($){
 
     $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
 
-    ////$('.ingresstextlista').hide();
-    //// fixa listningar på listsidor utan mosaik 
-    //$(document).on('click', '.showingresstextlista', function (e) {
-    //    var valdclass = $(this).find('i');
-    //    var addOrRemove = valdclass.hasClass("closed");
-    //    var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlista");
+    //$('.ingresstextlista').hide();
+    // fixa listningar på listsidor utan mosaik 
+    $(document).on('click', '.showingresstextlista', function (e) {
+        var valdclass = $(this).find('i');
+        var addOrRemove = valdclass.hasClass("closed");
+        var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlista");
 
-    //    if (addOrRemove) {
-    //        valdclass.removeClass("closed");
-    //        valdclass.addClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
-    //        thatobj.show();
+        if (addOrRemove) {
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
+            thatobj.show();
 
-    //    } else {
-    //        valdclass.addClass("closed");
-    //        valdclass.removeClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-    //        thatobj.hide();
-    //    }
+        } else {
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+            thatobj.hide();
+        }
 
-    //    return false;
+        return false;
 
 
-    //});
+    });
 
 
 
@@ -7896,49 +7896,12 @@ jQuery(function ($){
         return false;
     })
 
-    //evenemang
-    // körs på alla sidor som har en egen drupal listsida  dvs ingen css växling mellan mosaik och lista
-    $(document).on('click', '.showingresstext_list', function (e) {
-        var valdclass = $(this).find('i');
-        var addOrRemove = valdclass.hasClass("closed");
-        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-
-        if (addOrRemove) {
-            valdclass.removeClass("closed");
-            valdclass.addClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dölj" />');
-            thatobj.show();
-
-        } else {
-            valdclass.addClass("closed");
-            valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-            thatobj.hide();
-        }
-
-        return false;
-    });
-
-
-
     var removePlussicon = function (e) {
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
             var testar = $(value).html();
             if (!$(value).html()) {
                 $(value).siblings().find('.showingresstext').hide();
-            }
-
-        });
-
-    }();
-
-    var removelistPlussicon = function (e) {
-        var istextset = $('.ingresstext');
-        istextset.each(function (index, value) {
-            var testar = $(value).html();
-            if (!$(value).html()) {
-                $(value).siblings().find('.showingresstext_list').hide();
             }
 
         });
