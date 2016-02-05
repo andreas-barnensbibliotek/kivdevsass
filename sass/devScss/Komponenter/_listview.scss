@@ -1,7 +1,7 @@
 ﻿.kivlistview{
     //background-color: $vapor;
     padding: 0px 1em; 
-    margin-bottom:1.5rem;
+    margin-bottom:0.5rem;
    color:$black; 
     //border-bottom:1px solid $gainsboro;
     i{
@@ -164,4 +164,34 @@
     }
     
    .ingresstextlista{display:none;}
-  
+
+  .view-press-gallery{
+      .kivlistview{
+        .imgplaceholder{
+            //text-align:center;
+            img{
+                max-width:180px;
+                min-width:140px;
+            }
+        }
+     }     
+  }
+
+  .view-id-press_gallery.view-display-id-page_2 .view-filters{
+    margin-bottom:1rem;
+  }
+
+  .view-2015-dokument{
+      .kivlistview{
+          .imgplaceholder{
+            //text-align:center;
+            img{
+                max-width:180px;
+                min-width:140px;
+            }
+          }
+          .listheight{
+              min-height: 130px;
+          }
+      }
+  }

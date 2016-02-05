@@ -613,7 +613,7 @@ function kiv_mod_search_box_form($form, &$form_state) {
       '#default_value' => '',
       '#attributes' => array(
         'title' => t('Skriv in vad du vill söka på!'),
-        'placeholder' => t('Sök på kultur i väst!')
+        'placeholder' => t('Search')
        ),
   );
   $form['#attributes']['class'][] = 'search-block-form ';

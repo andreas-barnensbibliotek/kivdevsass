@@ -411,6 +411,20 @@ jQuery(function ($){
 
     });
 
+    //var menybalk = function () {
+
+    //   if (jQuery(".view-2015-produktioner").size();
+
+
+    //}();
+    
+    jQuery('.omossMenu2').on('click', function () {
+
+        jQuery('.artikelwrapper').toggle();
+
+    });
+
+
    ////handlebars test START
    // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
    // var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });

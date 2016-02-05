@@ -27,7 +27,7 @@
     <?php print $left; ?>
     </<?php print $left_wrapper ?>>
 
-    <<?php print $right_wrapper ?> class="medium-4 columns faktabox<?php print $right_classes; ?>">
+    <<?php print $right_wrapper ?> class="medium-4 columns<?php print $right_classes; ?>">
     <?php print $right; ?>
     </<?php print $right_wrapper ?>>
  
