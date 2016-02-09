@@ -354,8 +354,8 @@ jQuery(function ($){
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if (!$(value).html()) {
-                $(value).siblings().find('.showingresstext').hide();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstext').show();
             }
 
         });
@@ -366,8 +366,8 @@ jQuery(function ($){
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if (!$(value).html()) {
-                $(value).siblings().find('.showingresstext_list').hide();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstext_list').show();
             }
 
         });
@@ -382,8 +382,8 @@ jQuery(function ($){
 
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if (!$(value).html()) {
-                $(value).siblings().find('.showingresstextlist').hide();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstextlist').show();
             }
 
         });
@@ -555,5 +555,10 @@ jQuery(function ($){
     /*
     ! end sticky footer
     */
-   
+    //HELPER FOR LABEL PLACEHOLDER
+
+    $('.view-press-gallery #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    $('.view-2015-dokument #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    $('.view-2015-staff #edit-combine').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    
 });

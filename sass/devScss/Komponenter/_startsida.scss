@@ -72,12 +72,9 @@
     }
    
     .textboxcontainer{ 
-        position: absolute; 
-        
-        @media #{$small-up} {top: 6%; }
-        @media #{$medium-up} {top: 20%; }
-        @media #{$large-up} {top: 30%; }
-
+        position: absolute;         
+        top: 50%;
+        transform: translateY(-50%);
         left: 0; 
         width: 100%; 
         line-height:3.6rem;                

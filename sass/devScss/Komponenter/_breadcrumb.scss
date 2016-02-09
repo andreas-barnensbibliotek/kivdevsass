@@ -1,4 +1,8 @@
-﻿#breadcrumbval{
+﻿.filterbreadcrumbbox{
+    margin-top: 1.5rem;
+}
+
+#breadcrumbval{
     margin-top:0.5rem;
     margin-left:0px;
     margin-right:0px;
@@ -6,6 +10,7 @@
     font-size:0.85rem;
     font-style:400;
     color:$black;
+    float:left;
     li{
 	    display: inline;
 	    list-style-type: none;
@@ -18,4 +23,14 @@
         }
 
     }
+}
+.omradesnamn{
+    float:left;
+    @extend #breadcrumbval;
+
+}
+.visaallt{
+     float:left;
+    @extend #breadcrumbval;
+
 }

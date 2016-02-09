@@ -300,6 +300,11 @@
             
         });
        
+        $(document).on('click', '.resetbreadcrumb', function () {
+            ResetFilter();
+        })
+        
+
         $(document).on('click', '.removebreadcrumbval', function () {
             //Del from breadcrumb
             $('.loader').show();

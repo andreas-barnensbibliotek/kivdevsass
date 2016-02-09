@@ -56,7 +56,7 @@
         background-color:$darkgrey; 
     }
     .ingresstext{
-        display:hidden;
+        display:none;
         width:100%;        
          @media #{$medium-up} {
            padding-right:5rem;
@@ -68,7 +68,8 @@
         padding-top:0.2rem;
         background-color: $ingressbggrey;
     }
-    
+    .showingresstext{
+        display:none;}
 
     .kivlist {
         //background-color:$darkgrey; 
@@ -175,6 +176,9 @@
             }
         }
      }     
+      .showingresstext_list{
+          display:none;
+      }
   }
 
   .view-id-press_gallery.view-display-id-page_2 .view-filters{
@@ -193,5 +197,16 @@
           .listheight{
               min-height: 130px;
           }
+      }
+      .showingresstext_list{
+          display:none;
+      }
+  }
+
+  .view-2015-staff{
+
+      .showingresstext_list{
+          display:none;
+
       }
   }

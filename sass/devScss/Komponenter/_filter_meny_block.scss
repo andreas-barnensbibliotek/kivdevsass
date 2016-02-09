@@ -14,13 +14,39 @@
     }
 } 
 #contentfilterblock{
-    line-height:2.5rem;
-    margin-top: 1.5rem;
+    //line-height:2.5rem;
+    margin-top: 0.5rem;
+}
+
+.filterutanforomrade{
+     margin-top:1.0rem; 
 }
 #filtersortering{
-    margin-top: 1.5rem;
+    margin-top: 3.0rem;
     display:block;
 }
+
+.view-2015-evenemang{
+    #filtersortering{
+       @extend .filterutanforomrade;
+    }
+}
+.view-2015-produktioner{
+    #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+.view-2015-dokument{
+     #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+.view-press-gallery{
+     #filtersortering{
+         @extend .filterutanforomrade;        
+    }
+}
+
 
 .views-submit-button{
     margin-top:2rem; 
@@ -41,9 +67,10 @@
   height: 2em;
   padding: 0.05em;
   padding-left:0.25rem;
-  width: 108px;
+  min-width: 108px;
   color:$black;
   font-size:0.85rem;
+  margin-bottom:0.5rem;
 }
 #contentfilterblock select{
  @extend .baseformkomponenter;

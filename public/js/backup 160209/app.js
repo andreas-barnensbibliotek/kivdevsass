@@ -7925,8 +7925,8 @@ jQuery(function ($){
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstext').show();
+            if (!$(value).html()) {
+                $(value).siblings().find('.showingresstext').hide();
             }
 
         });
@@ -7937,8 +7937,8 @@ jQuery(function ($){
         var istextset = $('.ingresstext');
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstext_list').show();
+            if (!$(value).html()) {
+                $(value).siblings().find('.showingresstext_list').hide();
             }
 
         });
@@ -7953,8 +7953,8 @@ jQuery(function ($){
 
         istextset.each(function (index, value) {
             var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstextlist').show();
+            if (!$(value).html()) {
+                $(value).siblings().find('.showingresstextlist').hide();
             }
 
         });
@@ -7981,20 +7981,6 @@ jQuery(function ($){
         return false;
 
     });
-
-    //var menybalk = function () {
-
-    //   if (jQuery(".view-2015-produktioner").size();
-
-
-    //}();
-    
-    jQuery('.omossMenu2').on('click', function () {
-
-        jQuery('.artikelwrapper').toggle();
-
-    });
-
 
    ////handlebars test START
    // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
@@ -8126,12 +8112,7 @@ jQuery(function ($){
     /*
     ! end sticky footer
     */
-    //HELPER FOR LABEL PLACEHOLDER
-
-    $('.view-press-gallery #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    $('.view-2015-dokument #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    $('.view-2015-staff #edit-combine').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    
+   
 });
 //kapsla Start
 (function () {
@@ -8435,11 +8416,6 @@ jQuery(function ($){
             
         });
        
-        $(document).on('click', '.resetbreadcrumb', function () {
-            ResetFilter();
-        })
-        
-
         $(document).on('click', '.removebreadcrumbval', function () {
             //Del from breadcrumb
             $('.loader').show();
