@@ -74,7 +74,7 @@
         <?php print _zurb_foundation_add_reveals(); ?>
     </div>
     <div class="loader">
-        <img src="<?php print $base_path.$directory ?>/images/page-loader.gif" />
+        
     </div>
 </body>
 </html>

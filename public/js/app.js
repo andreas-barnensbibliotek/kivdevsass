@@ -8208,7 +8208,7 @@ jQuery(function ($){
                     return false;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert("Nått blev fel!"); // <-- skicka error json !!!!
+                   // alert("Nått blev fel!"); // <-- skicka error json !!!!
 
                 }
             });                     
@@ -8257,7 +8257,7 @@ jQuery(function ($){
                     
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert("Nått blev fel!"); // <-- skicka error json !!!!
+                    //alert("Nått blev fel!"); // <-- skicka error json !!!!
 
                 }
             });

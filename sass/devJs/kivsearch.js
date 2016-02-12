@@ -73,7 +73,7 @@
                     return false;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert("Nått blev fel!"); // <-- skicka error json !!!!
+                   // alert("Nått blev fel!"); // <-- skicka error json !!!!
 
                 }
             });                     
@@ -122,7 +122,7 @@
                     
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert("Nått blev fel!"); // <-- skicka error json !!!!
+                    //alert("Nått blev fel!"); // <-- skicka error json !!!!
 
                 }
             });
