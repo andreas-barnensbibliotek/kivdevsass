@@ -1,0 +1,481 @@
+/*Tmp*/
+.bef-checkboxes .form-item{
+	display: inline-block;
+}
+.bef-checkboxes .form-item input{
+	padding:  0 !important;
+	width: 20px !important;
+}
+
+/*Sökresultat ============================== >\*/
+/*Filterblocket*/
+.searchcolumn .block-title{
+	display: block;
+	font-size: 1.5rem;
+	color: #f77136;
+}
+/*.searchcolumn h3{
+	font-size: 1.5rem;
+	color: #f77136;
+}*/
+.searchcolumn .artsidecontainer li{
+	border-bottom: none;
+	margin: 0;
+}
+.searchcolumn .facetapi-checkbox{
+	margin-left: 0.4rem;
+}
+.searchcolumn .facetapi-checkbox{
+	margin-bottom: 0;
+}
+
+.searchcolumn{
+	padding-top: 2.5rem;
+}
+
+/*Special kulturkatalogen annons mozaik*/
+
+.underrubrik{
+	color: #fff;
+	padding-bottom: 0.5rem;
+}
+
+
+/*Overrides LIZTA bilder*/
+.view-2015-staff .kivlistview .imgplaceholder img, 
+.view-2015-dokument .kivlistview .imgplaceholder img{
+    max-width: 110px;
+    min-width: 110px;
+    width: 100%;
+}
+.view-2015-staff .kivlistview .kivlist .columns, 
+.view-2015-dokument .kivlistview .kivlist .columns{
+    /*float: left !important;*/
+    /*min-height: 165px;*/
+}
+.kivlistview .listheight{
+    /*background-color: none !important;*/
+    /*min-height: 88px;*/
+}
+.kivlistview .grey{
+    background-color: #5a5958;
+    /*min-height: 88px;*/
+}
+/*Overrides för ett marginalfel som jag inte kan hitta*/
+.view .zf-2col-bricks{
+	    padding-left: 0.9375rem;
+	    padding-right: 0.9375rem;
+}
+
+
+/*Fiterknappar vyer\*/
+.views-exposed-form .views-exposed-widget{
+	/*padding-bottom: 0;*/
+	/*padding-top: 0;*/
+}
+.views-submit-button, .views-reset-button, .views-widget-filter-title{
+	/*margin-top: 0.5rem;*/
+}
+
+/*Denna borde vara generell, formulärknapp */
+
+
+/*Tom balk\*/
+
+/*.tomBalk{
+	background: #000;
+	width: 100%;
+	height: 1.5rem;
+}*/
+/*Termsida för område*/
+/*Bakgrundsfärger\*/
+
+/* Andreas har flyttat dessa till sass filerna
+    
+    .color-top-1{
+	background: #000;
+}
+.color-top-2{
+	background: #333;
+}
+.color-top-3{
+	background: green;
+}*/
+
+.ajimage-omrade-nod{
+   
+    max-height: 400px;
+    min-height: 100%;
+    overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+}
+.ajimage-omrade-nod img{
+	/*min-width: 970px;*/
+	min-height: 200px;
+	    object-fit: none;
+	    object-position: center center;	
+}
+
+.top-bild-wrapper{
+	margin-bottom: -100px;
+}
+/*Calender*/
+
+/*Nytt*/
+.calendar-calendar .month-view .full tr.single-day .no-entry, 
+.calendar-calendar .month-view .full tr.single-day .no-entry .inner{
+	line-height: 0;
+	height:  0 !important;
+}
+.calendar-calendar .month-view .full td.date-box .inner, 
+.calendar-calendar .week-view .full td.date-box .inner {
+    
+    line-height: 40px;
+    
+}
+
+
+/*end nytt\*/
+
+/*Kollas vad som behövs här*/
+
+.mini-calendar{
+	/*Bredden*/
+	/*width: 80%;*/
+	/*text-align: center;*/
+}
+.mini-calendar table tr th, 
+.mini-calendar table tr td {
+	font-size: 1rem;
+}
+
+.mini-calendar .date-nav-wrapper .date-heading h3{
+	font-size: 1.8rem;
+}
+.mini-calendar h3::first-letter{
+	text-transform: uppercase;
+}
+.calendar-calendar .month-view table thead{
+	border: none;
+	text-transform: uppercase;	
+}
+.calendar-calendar .month-view table thead th.days{
+	border: none;
+	padding-top: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.calendar-calendar table tr.even, .calendar-calendar table tr.alt, .calendar-calendar table tr:nth-of-type(2n), .calendar-calendar tr, .calendar-calendar table.mini td.empty  {
+	background: #e8e8e8;
+}
+.calendar-calendar table.mini{
+	background: #e8e8e8;	
+}
+
+.calendar-calendar td{
+	text-align: center;
+}
+.calendar-calendar td.has-no-events,
+.calendar-calendar td.has-events {
+	padding: 0.5rem;
+}
+.calendar-calendar td.has-events.future{
+	/*color: #fbbda1;*/
+}
+.calendar-calendar td.has-events.past a{
+	color: #777;
+} 
+.calendar-calendar td.has-events.future a{
+	color: #f77136;
+}
+.calendar-calendar td.today{
+	background: none;
+}
+.calendar-calendar th.days{
+	background: none;
+}
+.calendar-calendar th.days .cal-days{
+	border-bottom: 1px solid #dadada;
+	width: 2rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+.calendar-calendar tr td.today, .calendar-calendar tr.odd td.today, .calendar-calendar tr.even td.today {
+    background: none;
+    color: #000;
+}
+.view .date-nav-wrapper .date-heading{
+	background-color: #dadada;
+	padding: 0.5rem;
+}
+.view .date-nav-wrapper .date-prev{
+	left: inherit;
+	text-align: left;
+	background: none;
+	right: inherit;
+	left: 0;
+	padding: 0;
+	margin: 1rem 0 0 1rem;
+}
+.view .date-nav-wrapper .date-next{
+	background: none;
+	padding: 0;
+	margin: 1rem 1rem 0 0;
+}
+.view .date-nav-wrapper .date-nav {
+	margin: 0;
+	padding: 0;
+}
+.view .date-nav-wrapper .date-nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+/*Kalender lizta*/
+.columns.datewrapper{
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.datewrapper .day{
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	/*text-align: center;*/
+	margin-top: 0.5rem;
+
+}
+.view-id-2015_kalender_lista h3 .date-display-single{
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+
+/*Produktioner*/
+/*.node-type-produktion .label-inline,
+.node-type-produktion .label-above{
+	font-weight: bold;
+}*/
+.artsidecontainer .label-inline{
+	float: left;
+	/*display: inline-block;*/
+	font-weight: bold;
+}
+.artsidecontainer p{
+	margin:  0;
+	padding: 0;
+}
+.artsidecontainer .field{
+	margin-bottom: 0.2rem;
+}
+.artsidecontainer .fields .label-inline,
+.artsidecontainer .fields .label-above{
+	font-weight: bold;
+	/*margin-top: 0.15rem;*/
+}
+
+.artsidecontainer .evenemang_wrapper{
+	margin-bottom: 1rem;
+}
+
+.node-type-produktion .artsidecontainer img{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.right_white_container{
+	margin-bottom: 2rem;
+}
+
+.right_white_container .button.expand{
+	margin: 0;
+}
+
+.artsidecontainer{
+	margin-bottom: 2rem;
+	font-size: 0.9rem;
+}
+
+/* Kulturkatalogen */
+
+
+/*.kulturkatalog-separator{
+	margin-bottom: 1.3rem;
+	font-size: 0.9rem;
+}
+.kulturkatalog-separator p{
+	margin-bottom: 0;
+}*/
+.kk-button a{
+	background-color: #43AC6A;
+	/*padding: 0.2rem 1rem;*/
+	/*color:  #fff;*/
+	margin: 0 !important;
+}
+kk-button a:hover{
+	background-color: #43AC6A;
+}
+/*Tillbakaknapp*/
+a.btn-back{
+	margin-left: 0 !important;
+}
+a.btn-back img{
+	width: 22px;
+}
+/*Paginering*/
+ul.pagination {
+	padding-top: 2rem;
+}
+/*Exponerat filter Kulturkatalogen\*/
+#views-exposed-form-2015-kulturkatalogen-annons-kulturkatalogen-annons-block .views-exposed-widgets{
+	padding: 1.4rem;
+	margin: 2rem 0;
+	background: #dcdbda;
+}
+#views-exposed-form-2015-kulturkatalogen-annons-kulturkatalogen-annons-block #contentfilterblock{
+	line-height: 1rem;
+	/*margin-right: 1rem;*/
+}
+
+
+/*Döljer anmälningsknappen i Mozaikvyn\*/
+.mozaikitems .form{
+	display: none;
+}
+
+/*Rubrik på noder*/ 
+
+.atikelMenuBlock #contentHeader h1 {
+    color: #f85014 !important;
+    text-transform: uppercase !important;
+}
+/*Webb TV*/
+
+.webbtv p{
+	margin: 0;
+	line-height: 0; 
+}
+.webbtv p iframe{}
+.page-webb-tv{
+	/*background: #1a1a1a;*/
+}
+
+.view-id-2015_webbtv .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.view-id-2015_webbtv .videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.kivisotope-webbtv .item{
+	width: 330px;
+}
+/*Frontpage*/
+.textcenter h1{
+	margin-top: 0;
+}
+.ajimage{
+	background: none !important;
+}
+.ajspalter{
+	text-align: left !important;
+}
+
+.view-frontpage .textcolor-1 h1{
+	color: black;
+}
+.view-frontpage .textcolor-2 h1{
+	color: white;
+}
+.view-frontpage .textcolor-3 h1{
+	color: orange;
+}
+.view-frontpage .textcolor-4 h1{
+	color: green;
+}
+/*.view-frontpage .bigImage-content .frontpagebody p{
+text-align: center;
+color: #fff;
+	
+}*/
+
+
+/*Listvyer*/
+/*.n0 a{
+	background-color: white;
+	padding: 4px;
+}
+.n1 a{
+	background-color: orange;
+	padding: 4px;
+}
+.n2 a{
+	background-color: cyan;
+	padding: 4px;
+}
+.n3 a{
+	background-color: green;
+	padding: 4px;
+}*/
+.listcontent .small-2{
+	/*display: block;*/
+	/*width: 180px;*/
+	max-width: 200px;
+}
+
+/*Personallistvy*/
+.working-title{
+	/*color: orange;*/
+}
+
+/*Kommentar
+
+Skulle vilja ta bort (position: relative) på kivisotope
+Då blir pagerna inte i sidfoten
+*/
+
+
+
+
+
+/* ==================================== Overrides =====================================*/
+
+
+
+/*DIverse för att få fram Titel på vissa sidor
+Dettta kan nog tas bort i template senare
+*/
+.l-main {
+    display: inherit !important;
+}
+.breadcrumbs{
+	/*display: none !important;*/
+}
+
+.footer .block-title {
+    display: inherit !important;
+}
+
+
+.columns.no-padding-left{
+	padding-left: 0;
+}
+
+/*Tillägg MOZAIK*/
+.evenemang_date span{
+	color: #fff;
+	line-height: 2.4rem;
+}
+.mozaikitems .evenemang_mozaik h5{
+	padding-top: 0;
+	margin-top: 0;
+}

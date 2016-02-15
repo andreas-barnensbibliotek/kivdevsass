@@ -9935,15 +9935,12 @@ img .flip {
     .menybreadcrumb .mbc_navlinklist li:first-child {
       border-left: 0px;
       padding-left: 0px; }
-    /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
-    .menybreadcrumb .mbc_navlinklist li:last-child {
-      padding-left: 3px; }
-    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+    /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
     .menybreadcrumb .mbc_navlinklist li a {
       color: #888888 !important;
       padding-right: 4px;
       padding-left: 2px; }
-      /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+      /* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
       .menybreadcrumb .mbc_navlinklist li a:hover {
         color: #222222 !important; }
 
@@ -10160,22 +10157,6 @@ img .flip {
       .kiv-media-cat .aj-carusel button:hover {
         background-color: #000000; }
 
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-black {
-  background-color: #000; }
-
-/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-white {
-  background-color: #fff; }
-
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-grey333 {
-  background-color: #333; }
-
-/* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-grey666 {
-  background-color: #666; }
-
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -10214,39 +10195,39 @@ img .flip {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 77, stdin */
+/* line 76, stdin */
 .row {
   max-width: 62.5rem !important; }
 
-/* line 81, stdin */
+/* line 80, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 84, stdin */
+/* line 83, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 88, stdin */
+/* line 87, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 93, stdin */
+/* line 92, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 98, stdin */
+/* line 97, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 103, stdin */
+/* line 102, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 110, stdin */
+  /* line 109, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -10259,7 +10240,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 115, stdin */
+  /* line 114, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -10270,7 +10251,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 118, stdin */
+  /* line 117, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -10289,26 +10270,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 138, stdin */
+/* line 137, stdin */
 .clear {
   clear: both; }
 
-/* line 143, stdin */
+/* line 142, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 148, stdin */
+/* line 147, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 152, stdin */
+/* line 151, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 155, stdin */
+/* line 154, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -10320,35 +10301,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 165, stdin */
+  /* line 164, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 171, stdin */
+  /* line 170, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 176, stdin */
+/* line 175, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 177, stdin */
+/* line 176, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 180, stdin */
+  /* line 179, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 184, stdin */
+/* line 183, stdin */
 .item img {
   width: 100%; }
 
-/* line 189, stdin */
+/* line 188, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -10362,78 +10343,78 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 204, stdin */
+/* line 203, stdin */
 .block-title {
   display: none; }
 
-/* line 206, stdin */
+/* line 205, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 209, stdin */
+/* line 208, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 212, stdin */
+/* line 211, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 213, stdin */
+/* line 212, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 214, stdin */
+/* line 213, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 215, stdin */
+/* line 214, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
 /*// Small screens
 @media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
-/* line 240, stdin */
+/* line 239, stdin */
 .mozaikitems .row {
   margin: 0 -0.9rem 0 -0.99rem; }
 
-/* line 243, stdin */
+/* line 242, stdin */
 .left-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 246, stdin */
+  /* line 245, stdin */
   .left-small span {
     font-size: 15px !important; }
 
-/* line 253, stdin */
+/* line 252, stdin */
 .right-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 256, stdin */
+  /* line 255, stdin */
   .right-small span {
     font-size: 15px !important; }
 
-/* line 262, stdin */
+/* line 261, stdin */
 .tab-bar {
   height: 65px; }
-  /* line 264, stdin */
+  /* line 263, stdin */
   .tab-bar img {
     width: 160px; }
 
-/* line 268, stdin */
+/* line 267, stdin */
 .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 273, stdin */
+/* line 272, stdin */
 .artikelwrapper a {
   color: #f77136; }
 
-/* line 277, stdin */
+/* line 276, stdin */
 .outeromrade {
   display: none; }
