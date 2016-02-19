@@ -8927,7 +8927,7 @@ ul.multiColumn {
 
 /* line 164, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossspace {
-  margin-top: 1rem; }
+  margin-top: 0.52rem; }
   /* line 168, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace h1 {
     text-transform: uppercase;
@@ -10040,8 +10040,7 @@ img .flip {
     background-color: #e2974a;
     color: #000000; }
 
-/* Absolute Center Spinner */
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loader.scss */
+/* Absolute Center Spinner 
 .loader {
   position: fixed;
   z-index: 999;
@@ -10052,10 +10051,10 @@ img .flip {
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0; }
-
-/* Transparent Overlay */
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loader.scss */
+  right: 0;
+}
+*/
+/* Transparent Overlay
 .loader:before {
   content: '';
   display: block;
@@ -10064,20 +10063,20 @@ img .flip {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); }
-
+  background-color: rgba(0,0,0,0.3);
+}
+ */
 /* :not(:required) hides these rules from IE9 and below */
 /* line 28, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loader.scss */
 .loader:not(:required) {
   /* hide "loading..." text */
-  font: 0/0 a;
+  /*font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
-  border: 0; }
+  border: 0;*/ }
 
-/* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loader.scss */
-.loader:not(:required):after {
+/*.loader:not(:required):after {
   content: '';
   display: block;
   font-size: 10px;
@@ -10085,96 +10084,415 @@ img .flip {
   height: 1em;
   margin-top: -0.5em;
   -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
   animation: spinner 1500ms infinite linear;
-  -webkit-border-radius: 0.5em;
-          border-radius: 0.5em;
+  border-radius: 0.5em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
-  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0; }
-
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}*/
 /* Animation */
-@-webkit-keyframes spinner {
+/*@-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 @keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}*/
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-.kiv-tv-wrapper h1, .kiv-tv-wrapper h2, .kiv-tv-wrapper h3, .kiv-tv-wrapper h4 {
+.section-webb-tv .menybreadcrumb {
+  display: none; }
+
+/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+.section-webb-tv .kiv-tv-wrapper h1, .section-webb-tv .kiv-tv-wrapper h2, .section-webb-tv .kiv-tv-wrapper h3, .section-webb-tv .kiv-tv-wrapper h4 {
   color: #FFFFFF; }
 
-/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-.kiv-tv-wrapper h5, .kiv-tv-wrapper p {
+/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+.section-webb-tv .kiv-tv-wrapper h5, .section-webb-tv .kiv-tv-wrapper p {
   color: #b2a16c; }
 
-/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-.kiv-tv-wrapper.top-tv {
+/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+.section-webb-tv .kiv-tv-wrapper .kiv-tv-size {
+  text-align: center; }
+
+/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+.section-webb-tv .kiv-tv-wrapper.top-tv {
   background-color: #111111;
   padding-top: 4rem;
   padding-bottom: 4rem; }
+  /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  .section-webb-tv .kiv-tv-wrapper.top-tv .video-filter {
+    width: 100%;
+    max-width: 640px; }
 
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-.kiv-media-cat {
+/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+.section-webb-tv .kiv-media-cat {
   background-color: #222222; }
-  /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-  .kiv-media-cat h2 {
+  /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  .section-webb-tv .kiv-media-cat h2 {
     padding-top: 4rem !important;
     color: #FFFFFF; }
-  /* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-  .kiv-media-cat .aj-carusel {
+  /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  .section-webb-tv .kiv-media-cat .aj-carusel {
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 0rem 0rem; }
-    /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-    .kiv-media-cat .aj-carusel h3 {
+    /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    .section-webb-tv .kiv-media-cat .aj-carusel h3 {
       font-size: 1.2rem;
       color: #FFFFFF; }
-    /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-    .kiv-media-cat .aj-carusel h4 {
+    /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    .section-webb-tv .kiv-media-cat .aj-carusel h4 {
       font-size: 1rem;
       color: #b2a16c; }
-    /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-    .kiv-media-cat .aj-carusel img {
+    /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    .section-webb-tv .kiv-media-cat .aj-carusel img {
       max-height: 250px; }
-    /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-    .kiv-media-cat .aj-carusel button {
+    /* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    .section-webb-tv .kiv-media-cat .aj-carusel button {
       z-index: 9999;
       background-color: #000000;
       height: 60px;
       width: 60px;
       margin-top: -4rem; }
-      /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
-      .kiv-media-cat .aj-carusel button:hover {
+      /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+      .section-webb-tv .kiv-media-cat .aj-carusel button:hover {
         background-color: #000000; }
 
 /* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-black {
+.top-bg-colors .color-top-black, .zf-2col-stacked .color-top-black, .zf-2col-bricks .color-top-black {
   background-color: #000; }
 
 /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-white {
+.top-bg-colors .color-top-white, .zf-2col-stacked .color-top-white, .zf-2col-bricks .color-top-white {
   background-color: #fff; }
 
 /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-grey333 {
+.top-bg-colors .color-top-grey333, .zf-2col-stacked .color-top-grey333, .zf-2col-bricks .color-top-grey333 {
   background-color: #333; }
 
 /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.zf-2col-stacked .color-top-grey666 {
+.top-bg-colors .color-top-grey666, .zf-2col-stacked .color-top-grey666, .zf-2col-bricks .color-top-grey666 {
   background-color: #666; }
+
+/* line 28, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term .ajimage-omrade-nod {
+  -o-object-fit: contain;
+     object-fit: contain; }
+
+/* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-980 .omossspace h1 {
+  color: transparent; }
+
+/* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-980 .breadcrumb-BG {
+  background-color: #FFFFFF; }
+
+/* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-980 .ajimage-omrade-nod img {
+  -o-object-fit: contain;
+     object-fit: contain; }
+
+/* Slider */
+/* line 3, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 17, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  /* line 24, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-list:focus {
+    outline: none; }
+  /* line 28, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+/* line 34, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* line 42, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  /* line 49, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-track:before,
+  .slick-track:after {
+    content: "";
+    display: table; }
+  /* line 54, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-track:after {
+    clear: both; }
+  /* line 58, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+/* line 62, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  /* line 69, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-slide img {
+    display: block; }
+  /* line 72, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-slide.slick-loading img {
+    display: none; }
+  /* line 78, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  /* line 82, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-initialized .slick-slide {
+    display: block; }
+  /* line 86, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  /* line 90, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+/* line 96, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* Slider */
+/* line 40, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("../fonts/slickfonts/slick.eot");
+  src: url("../fonts/slickfonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slickfonts/slick.woff") format("woff"), url("../fonts/slickfonts/slick.ttf") format("truetype"), url("../fonts/slickfonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Arrows */
+/* line 59, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  /* line 76, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover, .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent; }
+    /* line 80, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    .slick-prev:hover:before,
+    .slick-prev:focus:before,
+    .slick-next:hover:before, .slick-next:focus:before {
+      opacity: 1; }
+  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  /* line 87, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+/* line 98, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-prev {
+  left: -25px; }
+  /* line 100, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  /* line 104, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-prev:before {
+    content: "←"; }
+    /* line 106, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    [dir="rtl"] .slick-prev:before {
+      content: "→"; }
+
+/* line 112, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-next {
+  right: -25px; }
+  /* line 114, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  /* line 118, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-next:before {
+    content: "→"; }
+    /* line 120, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    [dir="rtl"] .slick-next:before {
+      content: "←"; }
+
+/* Dots */
+/* line 128, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+/* line 132, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  /* line 141, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    /* line 149, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      /* line 161, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        /* line 163, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      /* line 167, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    /* line 184, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
 
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
@@ -10214,39 +10532,39 @@ img .flip {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 77, stdin */
+/* line 79, stdin */
 .row {
   max-width: 62.5rem !important; }
 
-/* line 81, stdin */
+/* line 83, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 84, stdin */
+/* line 86, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 88, stdin */
+/* line 90, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 93, stdin */
+/* line 95, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 98, stdin */
+/* line 100, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 103, stdin */
+/* line 105, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 110, stdin */
+  /* line 112, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -10259,7 +10577,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 115, stdin */
+  /* line 117, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -10270,7 +10588,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 118, stdin */
+  /* line 120, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -10289,26 +10607,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 138, stdin */
+/* line 140, stdin */
 .clear {
   clear: both; }
 
-/* line 143, stdin */
+/* line 145, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 148, stdin */
+/* line 150, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 152, stdin */
+/* line 154, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 155, stdin */
+/* line 157, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -10320,35 +10638,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 165, stdin */
+  /* line 167, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 171, stdin */
+  /* line 173, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 176, stdin */
+/* line 178, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 177, stdin */
+/* line 179, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 180, stdin */
+  /* line 182, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 184, stdin */
+/* line 186, stdin */
 .item img {
   width: 100%; }
 
-/* line 189, stdin */
+/* line 191, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -10362,78 +10680,78 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 204, stdin */
+/* line 206, stdin */
 .block-title {
   display: none; }
 
-/* line 206, stdin */
+/* line 208, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 209, stdin */
+/* line 211, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 212, stdin */
+/* line 214, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 213, stdin */
+/* line 215, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 214, stdin */
+/* line 216, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 215, stdin */
+/* line 217, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
 /*// Small screens
 @media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
-/* line 240, stdin */
+/* line 242, stdin */
 .mozaikitems .row {
   margin: 0 -0.9rem 0 -0.99rem; }
 
-/* line 243, stdin */
+/* line 245, stdin */
 .left-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 246, stdin */
+  /* line 248, stdin */
   .left-small span {
     font-size: 15px !important; }
 
-/* line 253, stdin */
+/* line 255, stdin */
 .right-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 256, stdin */
+  /* line 258, stdin */
   .right-small span {
     font-size: 15px !important; }
 
-/* line 262, stdin */
+/* line 264, stdin */
 .tab-bar {
   height: 65px; }
-  /* line 264, stdin */
+  /* line 266, stdin */
   .tab-bar img {
     width: 160px; }
 
-/* line 268, stdin */
+/* line 270, stdin */
 .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 273, stdin */
+/* line 275, stdin */
 .artikelwrapper a {
   color: #f77136; }
 
-/* line 277, stdin */
+/* line 279, stdin */
 .outeromrade {
   display: none; }

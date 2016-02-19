@@ -1,0 +1,39 @@
+﻿
+
+@mixin fixed($width, $direction) {
+  position: absolute;
+  width: rem-calc($width) + $column-gutter;
+  top: 0;
+  @if $direction == left {
+    left: 0;
+  } @else {
+    right: 0;
+  }
+}
+@mixin fluid($width, $direction) {
+  @if $direction == left {
+    padding-right: rem-calc($width) + ($column-gutter * 1.5);
+  } @else {
+    padding-left: rem-calc($width) + ($column-gutter * 1.5);
+  }
+}
+@mixin min($width) {
+  width: $width + px;
+  float: left;
+  box-sizing: content-box;
+  + .column {
+    float: left;
+  }
+}
+
+// används för att lägga till ikoner i a:before bara att lägga till filnamnet ifrån mappen images
+@mixin arrowiconbefore($file) { 
+        content: "";
+        display: block;
+        background: url(#{$current-kiv-domain-url}/sites/all/themes/kivnew/images/#{$file}) no-repeat;
+ 		background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 2px 0.5rem 0 0;
+}

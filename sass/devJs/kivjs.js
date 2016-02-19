@@ -461,23 +461,52 @@ jQuery(function ($){
     removeListPagesPlussicon();
     
 
-    //$(document).swipe({
+    /*
+    //////////////////////////////////////////////////////////////////
+     Första sidan slider
+     andreas josefsson
+    */
 
-    //    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-            
-    //        if (direction == 'right'){
-    //            //$('.off-canvas-wrap').addClass('move-right');                
-    //                $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-    //                return false;
-    //            };               
-                       
-    //    },
-    //    //Default is 75px, set to 0 for demo so any distance triggers swipe
-    //    threshold:40
-    //});
+        $('.aj-carusel').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+              {
+                  breakpoint: 1200,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
 
-  
- 
+                  }
+              },
+              {
+                  breakpoint: 800,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                  }
+              },
+              {
+                  breakpoint: 600,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+        });
+    
+    /*
+    /////////////////////////////////////////////////////////////////////////////////
+    */
+
     /*!
      * jQuery Sticky Footer 1.1
      * Corey Snyder

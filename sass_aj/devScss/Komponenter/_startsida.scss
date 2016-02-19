@@ -1,0 +1,115 @@
+﻿/* Frontpage*/
+
+    .firstpagerow{
+        //margin-bottom:1rem; 
+    }
+
+    .textleft{text-align:left;}
+    .textcenter{text-align:center;}
+    .textright{text-align:right;}
+    .bgWhitetxtBlack{
+        h1,h2,h3,h4,p{
+            color: $black; 
+        }
+    }
+    .bgBlacktxtWhite{
+        h1,h2,h3,h4,p{
+            color: $white; 
+        }
+    }
+    .bgtransparenttxtWhite{
+        h1,h2,h3,h4,p{
+            color: $white;                 
+        }
+    }
+    .bgtxtTurkos{
+        h1,h2,h3,h4{
+            color: #476a8b;                 
+        }
+    }
+
+    .hovereffect{
+        &:hover{ opacity: .7;
+            filter: alpha(opacity=70); /* For IE8 and earlier */
+            transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        }
+        //
+    }
+
+
+    .ajspalter{
+         padding-top:3%;
+         padding-bottom:3%;
+         h1{
+             @media #{$small-up} {font-size:$h2-font-size-Startpage; }
+             @media #{$medium-up} {font-size:$h1-font-size-Startpage; }        
+             text-transform:uppercase;
+             margin-bottom:2rem;
+        }
+        article {         
+            @media #{$small-up} { columns: 1; }
+            @media #{$medium-up} { columns: 3 200px;}
+            text-align:left;
+            color:$black;
+        }
+     }
+  
+    .ajimage { 
+        position: relative; 
+        width: 100%; /* for IE 6 */
+        max-height:400px;
+       min-height:100%;
+        overflow:hidden;
+        //margin-bottom:1.0rem;
+        background:#000;
+        text-align: center;
+        img{       
+            object-fit: none; /* Do not scale the image */
+            object-position: center; /* Center the image within the element */  
+            min-height: 200px;
+        }
+   
+        .textboxcontainer{ 
+            position: absolute;         
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0; 
+            width: 100%; 
+            line-height:3.6rem;                
+            letter-spacing: -1px;            
+            padding: 10px; 
+
+            h1{
+                @media #{$small-up} {font-size:$h2-font-size-Startpage; }
+                @media #{$medium-up} {font-size:$h1-font-size-Startpage; }        
+                text-transform:uppercase;             
+            }
+        
+            &.hrub{font-size:2rem !important;}
+            &.urub{font-size:1.8rem !important;}
+            &.utxtrub{
+                font-size:1.0rem !important;line-height:2.2rem !important; margin-top:0.5rem;
+                .spacer {
+                    display:inline;
+                    padding:0 5px;
+                    line-height:2.2rem !important;
+                    background-color:transparent;
+                }         
+            }      
+        }  
+    } //.ajimage END
+  
+      .ajcolmargin{
+          @media #{$small-up} {display:none;}
+          @media #{$large-up} {display:block;}
+      }
+
+
+ 
+/*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
+<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
+<img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
+<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" />*/
