@@ -206,6 +206,7 @@
 
         var ResetFilter = function () {
             $("#breadcrumbval").empty();
+            $("#breadcrumbval").append("<li><a href=''class='removebreadcrumbval' rel=''>Se alla</a></li>");
             _drpFilter.empty();
             _breadcrumbindex = [];
             _breadcrumbval = [];
@@ -294,6 +295,10 @@
             if (valtid == _currentHuvudomradeID) {
                 ResetFilter();
             } else {
+                if (_breadcrumbval.length == 0) {
+                    $("#breadcrumbval").empty();
+                }
+
                 Addtobreadcrumbval(valtomr, valtid);
             }            
             $('.kivisotope').isotope("layout");

@@ -37,14 +37,11 @@
               <li>
                 <?php print t(drupal_get_title())?>
               </li>
+			
             </ul>
             <ul id="breadcrumbval">
             </ul>
-            <ul class="visaallt" >
-              <li class="removebreadcrumbval resetbreadcrumb">
-                <a href="">Visa allt</a>
-              </li>
-            </ul>
+            
         </div>
       </div>
     </div>

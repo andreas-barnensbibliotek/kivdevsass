@@ -8936,7 +8936,8 @@ ul.multiColumn {
     @media only screen and (max-width: 40em) {
       /* line 168, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossspace h1 {
-        font-size: 2.5rem; } }
+        font-size: 2.5rem;
+        margin-top: 1.8rem; } }
   /* line 177, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .omossMenu {
     text-transform: uppercase;
@@ -9279,6 +9280,12 @@ ul.multiColumn {
 /* line 135, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .element-invisible {
   display: none; }
+
+/* line 139, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.node-type-informationssida .ajimage-omrade-nod img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 200px; }
 
 /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
 .artikelsubmenuContent {

@@ -133,3 +133,12 @@
         @media #{$large-up} {padding-right: 10rem; }
     }
 .element-invisible{display:none;}
+
+.node-type-informationssida{
+    .ajimage-omrade-nod{
+         img {
+             object-fit:cover;
+             min-height:200px;
+             }
+         }
+}

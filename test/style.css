@@ -1,0 +1,52 @@
+body{
+	margin: 0;
+	padding: 0;
+	
+}
+
+
+.flex-slider{
+	max-height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.flex-slider img.flex-big-image{
+	min-height: 400px;
+	width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+.flex-slider .flex-moon{
+	position: absolute;
+	left: 20%;
+	top: 0;
+}
+.flex-slider .flex-text{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-size: 1rem;
+  font-weight: normal;
+  padding: 1rem;	
+}
+
+
+/* example media queries */
+@media only screen and (max-width : 450px) {
+  
+}
+
+
+@media only screen and (max-width : 768px) {
+  
+}
+
+@media only screen and (min-width : 1200px) {
+  
+}
