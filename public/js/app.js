@@ -8019,16 +8019,18 @@ jQuery(function ($){
         return false;
     });
 
+
     // scrollar ner från artikelmenyn till artikel ancor
-    $('.artikelsubmenuContent .field-content a').on('click', function (e) {
+    $('.omossContentBox2 .view-content a').on('click', function (e) {
         var href = $(e.currentTarget).attr('href');
         $("html, body").animate({
             scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
-        }, 800);       
+        }, 800);
         //alert("test");
-        
+
     });
     
+
     removeListPagesPlussicon();
     
 
@@ -8581,7 +8583,13 @@ jQuery(function ($) {
                 }
             });
             $('.kivisotope').isotope('reloadItems');
-            //alert("tee");
+            $('.pager-load-more li').html(function () {
+
+                if ($(this).html() == "&nbsp;") {
+
+                    $(this).hide();
+                }
+            });
 
             }, 700);
 

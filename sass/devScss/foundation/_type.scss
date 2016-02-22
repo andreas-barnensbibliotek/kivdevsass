@@ -9,7 +9,7 @@ $header-font-family:$kiv-header-font-family !default;
 $header-font-weight: $font-weight-normal !default;
 $header-font-style: normal !default;
 $header-font-color: $jet !default;
-$header-line-height: 1.4 !default;
+$header-line-height: 1.1 !default;
 $header-top-margin: .2rem !default;
 $header-bottom-margin: .5rem !default;
 $header-text-rendering: optimizeLegibility !default;
@@ -254,7 +254,7 @@ $align-class-breakpoints:
       color: $header-font-color;
       font-family: $header-font-family;
       font-style: $header-font-style;
-      font-weight: $header-font-weight;
+      font-weight: $kiv-header-font-weight_thin;
       line-height: $header-line-height;
       margin-bottom: $header-bottom-margin;
       margin-top: $header-top-margin;

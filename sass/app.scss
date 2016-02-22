@@ -76,6 +76,13 @@
   */
   @import 'devScss/foundation/_type';
 
+.h2{
+    color:$black !important;
+    font-weight:$kiv-header-font-weight_thin;
+
+}
+ h1, h2, h3, h4, h5, h6 { line-height: 1.1em!important; }
+
 .row {
 max-width: rem-calc(1000) !important;
 }
@@ -279,4 +286,10 @@ font-weight:100 !important;
  .outeromrade{
      display:none;
  }
-  
+
+
+
+ //marginanl ovanför linjen så att inte line-height på rubriken sjunker ner i balken
+ .artikelMenu{
+margin-top:0.7rem;
+}

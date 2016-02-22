@@ -42,11 +42,16 @@
 .ajspalter{
      padding-top:3%;
      padding-bottom:3%;
+     margin-bottom:3rem;
      h1{
          @media #{$small-up} {font-size:$h2-font-size-Startpage; }
          @media #{$medium-up} {font-size:$h1-font-size-Startpage; }        
          text-transform:uppercase;
          margin-bottom:2rem;
+    }
+    h2{
+         @media #{$small-up} {font-size: $h3-font-size-Spalter-Startpage; }
+         @media #{$medium-up} {font-size:$h2-font-size-Spalter-Startpage; }   
     }
     article {         
         @media #{$small-up} { columns: 1; }

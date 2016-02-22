@@ -54,7 +54,13 @@ jQuery(function ($) {
                 }
             });
             $('.kivisotope').isotope('reloadItems');
-            //alert("tee");
+            $('.pager-load-more li').html(function () {
+
+                if ($(this).html() == "&nbsp;") {
+
+                    $(this).hide();
+                }
+            });
 
             }, 700);
 

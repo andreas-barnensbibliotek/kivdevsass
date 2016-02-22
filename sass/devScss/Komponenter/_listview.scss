@@ -69,7 +69,9 @@
         background-color: $ingressbggrey;
     }
     .showingresstext{
-        display:none;}
+        display:none;      
+
+    }
 
     .kivlist {
         //background-color:$darkgrey; 
@@ -79,7 +81,11 @@
         &:hover{
             opacity:0.9;
         }
-        .showingresstext{float:right; margin-right: 0.3rem;}
+        .showingresstext{
+            float:right;
+            margin-right:-5px;
+            margin-top:-10px;
+        }
         .showingresstext_list{float:right; margin-right: 0.3rem;}
         .columns{
             float:left !important;

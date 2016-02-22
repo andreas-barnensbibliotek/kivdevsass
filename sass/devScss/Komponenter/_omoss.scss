@@ -166,7 +166,7 @@
     margin-top:0.52rem;//1rem;
     //margin-bottom:1.5rem;
     h1{
-        text-transform: uppercase;
+        //text-transform: uppercase;
         color:$orange; 
         margin-bottom:0px;  
          @media #{$small-only} {
@@ -200,9 +200,17 @@
         padding:0px 1.0rem 0px 0.5rem;  
         //margin-right:2rem;
         background-color:$black;
-        
+        margin-top:0.8rem;
        font-size:0.85rem;
        a{color:$white !important;}
+       
+         @media #{$small-up} {
+             margin-top:0.55rem;
+
+         }
+          @media #{$medium-up} { 
+       margin-top:0.8rem;
+       }
     }
     //-------------------------------------------------------------------
 
