@@ -26,6 +26,7 @@
     print $q;
   ?>
 <?php endif; ?>
+<div id="contentfilterblock">
 <div class="views-exposed-form">
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets as $id => $widget): ?>
@@ -78,4 +79,5 @@
       </div>
     <?php endif; ?>
   </div>
+</div>
 </div>

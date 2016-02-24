@@ -5,6 +5,8 @@
     jQuery(function ($){
         // VAR
         var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
+        var _omradesNamn = $('.omradesnamn li').html().trim();
+        var _valdSortering="";
         var _drpFilter = $('#drpFilter');
 
         var localOrServerURL = "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
@@ -43,7 +45,21 @@
 
         // WEBSERVICE START
         function kivSearchJsonData(searchstr, callback) {
-            var serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";
+            var serverrequest = "";
+            switch (_valdSortering) {
+                case "datum":
+                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-day/" + searchstr + "?callback=?";
+                    break;
+                case "titel":
+                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-title/" + searchstr + "?callback=?";
+                    break;
+                case "aktuellt":
+                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";
+                    break;
+                default :
+                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";                  
+            }
+            
             $.ajax({
                 type: "GET",
                 url: serverrequest,
@@ -69,7 +85,7 @@
                     _renderDOMList = currentdomitems;
 
                     callback(currentdomitems);
-                   
+                    removePlussicon();
                     return false;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -118,7 +134,7 @@
                         }
                        
                     };
-                    AddOmradenToDrp(_currentHuvudomradeID, "Se alla");//lägg till visa alla Sist;
+                    AddOmradenToDrp(_currentHuvudomradeID, "Visa alla");//lägg till visa alla Sist;
                     
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -156,10 +172,6 @@
                 
            return tmpstr;
         };
-
-
-
-
 
       
         // FUNKTIONER
@@ -206,7 +218,7 @@
 
         var ResetFilter = function () {
             $("#breadcrumbval").empty();
-            $("#breadcrumbval").append("<li><a href=''class='removebreadcrumbval' rel=''>Se alla</a></li>");
+            $("#breadcrumbval").append("<li><a href=''class='removebreadcrumbval' rel=''>Visa alla</a></li>");
             _drpFilter.empty();
             _breadcrumbindex = [];
             _breadcrumbval = [];
@@ -234,14 +246,14 @@
             _drpFilter.trigger("chosen:updated");
             return true;
         }
-        
+       
       
         /// BREADCRUMB START  (lägg över till helper js)
 
             // Lägger till breadrumb valt område från arrayerna med a-länkar och index OBS måste ha samma index!!!
         var Addtobreadcrumbval = function (valomr, valdid) {
             var addhref = "";
-            if (valomr != "Se alla") {
+            if (valomr != "Visa alla") {
                 addhref = "<li><a href=''class='removebreadcrumbval' rel='" + valdid + "'>" + valomr + "</a></li>";
             }
             
@@ -283,13 +295,30 @@
         }
         /// BREADCRUMB END
         
+
+        //HELPER Funktions
+        var showvisaalla = function () {
+            var isantal = $('#breadcrumbval li').size();
+
+            if (isantal == 0) {
+
+            }
+
+        }
+        
+
+
         // EVENTS START
         $('#drpFilter').change(function (e) {
-            $('.loader').show();
-
+            //$('.loader').show();
+            
             var currentdrp = $("#drpFilter option:selected");
+            
             var valtid = currentdrp.val();
             var valtomr = currentdrp.text();
+            if (valtid == "Avgränsa") {
+                return false;
+            }
 
             //add to breadcrumb
             if (valtid == _currentHuvudomradeID) {
@@ -302,9 +331,33 @@
                 Addtobreadcrumbval(valtomr, valtid);
             }            
             $('.kivisotope').isotope("layout");
-            
+            return false;
+        });
+
+       //
+        $('#drpSortering').change(function (e) {
+            //$('.loader').show();
+
+            var currentdrp = $("#drpSortering option:selected");
+
+            var valdid = currentdrp.val();
+            //var valdtyp = currentdrp.text();
+            if (valdid == "alla") {
+                return false;
+            }
+           
+            if (valdid == _omradesNamn) {
+                _valdSortering = "";
+                ResetFilter();
+            } else {
+                _valdSortering = valdid
+                FilterRender();
+            }
+            $('.kivisotope').isotope("layout");
+            return false;
         });
        
+
         $(document).on('click', '.resetbreadcrumb', function () {
             ResetFilter();
         })
@@ -320,11 +373,25 @@
         // EVENTS END
 
 
+        var removePlussicon = function (e) {
+            var istextset = $('.ingresstext');
+            istextset.each(function (index, value) {
+                var testar = $(value).html();
+                if ($(value).html()) {
+                    $(value).siblings().find('.showingresstext').show();
+                }
+
+            });
+
+        }
+
+
         // SETTINGS
         var init = function () {
             if (_currentHuvudomradeID) {
                 initomradesdrp(_currentHuvudomradeID);// lägger till alla kopplade länkar
             };
+
         };
         
         // INITIERING

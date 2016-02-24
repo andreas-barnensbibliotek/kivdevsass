@@ -9,13 +9,14 @@
  */
 	
 function kiv_sortering_views_pre_render(&$view) {
-	
+	//print($view->current_display);
 	//START---------------------------------------------------------------------------------------------------------
 	//---------------------------------------------------------------------------------------------------------	
 	// kollar så att vi ändrar i rätt vy
 	// if VY kategorier START
-	if ($view->name == 'kategorier'){ // if VY kategorier START
-	
+	if ($view->name == 'kategorier'){ 
+	 // if VY kategorier START
+	//	print('hit');
 		/// kör sortering endast om något finns att sortera i requested Category
 		if(isset($view->build_info['substitutions']['%1'])){
 			

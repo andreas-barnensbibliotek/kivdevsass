@@ -86,7 +86,7 @@
             margin-right:-5px;
             margin-top:-10px;
         }
-        .showingresstext_list{float:right; margin-right: 0.3rem;}
+        .showingresstext_list{float:right; margin-right: -5px; margin-top:-10px;}
         .columns{
             float:left !important;
         }
@@ -107,8 +107,19 @@
 	    /* needed? not sure */
 	    zoom: 1; 
     }     
-
-    
+    h5{
+        .date-display-single{
+            @extend .datumtemplate;
+        }
+    }
+    .evenemang_date{
+        .date-display-single{
+                @extend .datumtemplate;
+            }   
+    }
+   .date-display-single{
+       color:$white;
+   }
 }
 
     .listcontent{        
@@ -149,6 +160,7 @@
         .button.expand{
             font-size:0.8rem;
             font-weight:200;
+            margin-top:1.5rem;
         }     
     }
 
@@ -216,3 +228,5 @@
 
       }
   }
+
+  

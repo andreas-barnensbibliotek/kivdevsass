@@ -34,6 +34,7 @@
 @import 'devScss/Komponenter/_siteisite';
 @import 'devScss/vendor/_slick';
 @import 'devScss/vendor/_slick-theme';
+@import 'devScss/Komponenter/_loadmore';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -81,7 +82,7 @@
     font-weight:$kiv-header-font-weight_thin;
 
 }
- h1, h2, h3, h4, h5, h6 { line-height: 1.1em!important; }
+ h1 { line-height: 1.1em!important; }
 
 .row {
 max-width: rem-calc(1000) !important;
@@ -280,7 +281,7 @@ font-weight:100 !important;
  }
  .artikelwrapper{
      a{
-         color:$orange;
+         color:$gold;
      }
  }
  .outeromrade{
@@ -292,4 +293,10 @@ font-weight:100 !important;
  //marginanl ovanför linjen så att inte line-height på rubriken sjunker ner i balken
  .artikelMenu{
 margin-top:0.7rem;
+}
+
+ .datumtemplate{
+     //color: $iron;
+     font-size:0.9rem;
+     font-weight:600;
 }

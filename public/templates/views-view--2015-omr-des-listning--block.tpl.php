@@ -28,27 +28,43 @@
  */
 
 ?>
-
-<div class="row mosaikblockheader"><div class="small-12 columns">
-    <ul id="breadcrumbval"></ul>
-</div>
-    <div class="medium-9 small-6 columns">
+<div class="row mosaikblockheader">
+    <div class="small-8 medium-9 columns">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="filterbreadcrumbbox">
+            <ul class="omradesnamn" >
+              <li>
+                <?php print t(drupal_get_title())?>				
+              </li>
+			
+            </ul>
+            <ul id="breadcrumbval">
+            </ul>
+            
+        </div>
+      </div>
+    </div>
+    
+    
         <div id="contentfilterblock">
-            <select id="drpFilter" class=" custom dropdown small">
+            <select id="drpFilter" class=" custom dropdown small" name="Avgransa">
             </select>
-            <select id="drpSortering" class=" custom dropdown small">
-                <option>Nyast</option>
-                <option>Fallande</option>
+            <select id="drpSortering" class="custom dropdown small" name="Sortering" >
+				<option value="aktuellt">Aktuellt</option>
+                <option value="datum">Datum</option>
+                <option value="titel">Titel</option>
+				
             </select>
         </div>
     </div>
-    <div class="medium-3 small-6 columns text-right">
+    <div class="small-4 medium-3 columns text-right">
         <span id="filtersortering">
             <a id="kivmozaik" href="">
-                <img src="<?php print $base_path.$directory ?>/images/mosaikicon.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Mosaik44.png" alt="Visa mosaikvy"/>
             </a>
             <a id="kivlist" href="">
-                <img src="<?php print $base_path.$directory ?>/images/listicon.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Lista44.png" alt="Visa listvy" />
             </a>                                                      
         </span>
     </div>

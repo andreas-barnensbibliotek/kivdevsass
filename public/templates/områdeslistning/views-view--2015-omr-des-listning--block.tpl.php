@@ -29,7 +29,7 @@
 
 ?>
 <div class="row mosaikblockheader">
-    <div class="small-9 columns">
+    <div class="small-8 medium-9 columns">
     <div class="row">
       <div class="small-12 columns">
         <div class="filterbreadcrumbbox">
@@ -48,21 +48,22 @@
     
     
         <div id="contentfilterblock">
-            <select id="drpFilter" class=" custom dropdown small">
+            <select id="drpFilter" class=" custom dropdown small" name="Avgransa">
             </select>
-            <select id="drpSortering" class=" custom dropdown small">
-                <option>Nyast</option>
-                <option>Fallande</option>
+            <select id="drpSortering" class="custom dropdown small" name="Sortering" >
+				<option value="alla">Sortera</option>
+                <option value="datum">Datum</option>
+                <option value="titel">Titel</option>
             </select>
         </div>
     </div>
-    <div class="small-3 columns text-right">
+    <div class="small-4 medium-3 columns text-right">
         <span id="filtersortering">
             <a id="kivmozaik" href="">
-                <img src="/<?php print $base_path.$directory ?>/images/Mosaik44.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Mosaik44.png" alt="Visa mosaikvy"/>
             </a>
             <a id="kivlist" href="">
-                <img src="/<?php print $base_path.$directory ?>/images/Lista44.png" />
+                <img src="/<?php print $base_path.$directory ?>/images/Lista44.png" alt="Visa listvy" />
             </a>                                                      
         </span>
     </div>

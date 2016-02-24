@@ -1,7 +1,7 @@
 <div class="inner-wrap">
     <nav class="tab-bar">
         <section class="left-small">
-            <a class="left-off-canvas-toggle" href="#" title="Meny">
+            <a class="left-off-canvas-toggle" href="#">
                 <span>MENY</span>
             </a>
         </section>
@@ -11,7 +11,7 @@
         </section>
 
         <section class="right-small">
-            <a href="#" title="Sök">
+            <a href="#">
                 <span>SÖK</span>
             </a>
         </section>
@@ -172,7 +172,7 @@
     	<div class="row">
 	        <div class="small-12 medium-12 large-12 columns">
 	            <div class="vglogo">
-	                <a href="http://www.vgregion.se" target="_blank" >
+	                <a href="http://www.vgregion.se" target="_blank">
 	                    <img alt="Västra Götalandsregionen" src="/sites/all/themes/kivnew/images/vg_logo_white.png">
 	                </a>
 	            </div>
@@ -206,13 +206,13 @@
 				<div class="foot-social-container">
                     <ul class="socialiconlist">
                         <li>
-                            <a href="https://www.facebook.com/kulturivast/" target="_blank" ><img src="/sites/all/themes/kivnew/images/FACEBOOKlogga.png" alt="www.facebook.com/kulturivast/"></a>
+                            <a href="https://www.facebook.com/kulturivast/" target="_blank"><img src="/sites/all/themes/kivnew/images/FACEBOOKlogga.png"></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/kulturivast" target="_blank" ><img src="/sites/all/themes/kivnew/images/TWITTERlogga.png" alt="www.twitter.com/kulturivast"></a>
+                            <a href="https://twitter.com/kulturivast" target="_blank"><img src="/sites/all/themes/kivnew/images/TWITTERlogga.png"></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/kulturivast/" target="_blank" ><img src="/sites/all/themes/kivnew/images/INSTAGRAMlogga.png" alt="www.instagram.com/kulturivast"></a>
+                            <a href="https://www.instagram.com/kulturivast/" target="_blank"><img src="/sites/all/themes/kivnew/images/INSTAGRAMlogga.png"></a>
                         </li>
                     </ul>
                 </div>

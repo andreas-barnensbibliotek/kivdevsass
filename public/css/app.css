@@ -8398,21 +8398,21 @@ ul.off-canvas-list {
       max-width: 110px;
       margin-bottom: 0.7rem; }
 
-/* line 69, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 70, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstext {
   display: none;
   width: 220px; }
 
-/* line 73, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstextlist {
   display: none; }
 
-/* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 79, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   width: 250px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 100%;
@@ -8652,7 +8652,8 @@ ul.multiColumn {
     /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist .showingresstext_list, .evenemang .kivlist .showingresstext_list {
       float: right;
-      margin-right: 0.3rem; }
+      margin-right: -5px;
+      margin-top: -10px; }
     /* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist .columns, .evenemang .kivlist .columns {
       float: left !important; }
@@ -8674,97 +8675,101 @@ ul.multiColumn {
             transform: rotate(180deg);
     /* needed? not sure */
     zoom: 1; }
+  /* line 120, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .kivlistview .date-display-single, .evenemang .date-display-single {
+    color: #FFFFFF; }
 
-/* line 115, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .row {
   min-width: 245px;
   background-color: #5a5958; }
 
-/* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 127, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h5 {
   margin: 0px;
   margin-top: 0.5rem; }
 
-/* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 130, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h4 {
   margin: 0px; }
 
-/* line 121, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .listheight .rub {
   float: left;
   margin-left: -6px;
   max-width: 350px; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 127, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 138, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .listcontent .apsisbtnboxList {
     width: 35%; } }
 
-/* line 133, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 144, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .apsisbtnboxList .button {
   width: 100% !important;
   text-align: center;
   float: right; }
 
-/* line 140, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 151, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .apsisboxmain, .apsisbtnbox, .apsisbtnboxList {
   padding-top: 0.4rem;
   max-width: 110px; }
-  /* line 143, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 154, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisboxmain a, .apsisbtnbox a, .apsisbtnboxList a {
     margin-bottom: 0px; }
-    /* line 145, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 156, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .apsisboxmain a:empty, .apsisbtnbox a:empty, .apsisbtnboxList a:empty {
       display: none !important; }
-  /* line 149, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 160, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisboxmain .button.expand, .apsisbtnbox .button.expand, .apsisbtnboxList .button.expand {
     font-size: 0.8rem;
-    font-weight: 200; }
+    font-weight: 200;
+    margin-top: 1.5rem; }
 
 @media only screen {
-  /* line 159, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 171, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
     margin-bottom: 2px;
     margin-left: -6px; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 159, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 171, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
     position: absolute;
     right: 0px;
     top: 0rem; } }
 
-/* line 173, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 185, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .ingresstextlista {
   display: none; }
 
-/* line 179, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 191, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .kivlistview .imgplaceholder img, .view-press-gallery .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 185, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 197, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .showingresstext_list {
   display: none; }
 
-/* line 190, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 202, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-id-press_gallery.view-display-id-page_2 .view-filters {
   margin-bottom: 1rem; }
 
-/* line 198, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 210, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .imgplaceholder img, .view-2015-dokument .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 203, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 215, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .listheight, .view-2015-dokument .evenemang .listheight {
   min-height: 130px; }
 
-/* line 207, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 219, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .showingresstext_list {
   display: none; }
 
-/* line 214, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 226, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-staff .showingresstext_list {
   display: none; }
 
@@ -9148,149 +9153,176 @@ ul.multiColumn {
 
 /* ================== kalender tabellen =========================== */
 /*Overides för  .item*/
-/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
+/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
 .view-2015-kalender .item {
   width: 100%; }
 
+/* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
+.view-2015-kalender-lista .kivlistview h3 span, .view-2015-kalender-lista .evenemang h3 span {
+  color: #000000; }
+
+/*.view-id-2015_kalender_lista{
+    
+        .kalender-lista-date{
+            span{
+                @extend .datumtemplate;
+            }   
+        }
+
+}*/
 /* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer h1, .artikelMainContainer h2, .artikelMainContainer h3 {
   color: #f77136; }
 
-/* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .success {
   width: 100%; }
 
-/* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .row:first-child {
   margin-bottom: 0rem; }
 
-/* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikeltopImage {
   margin-bottom: -7.5rem;
   max-height: 300px;
   min-height: 150px;
   overflow: hidden; }
-  /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikeltopImage img {
     min-height: 150px; }
 
-/* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelwrapper {
   padding-top: 2.5rem;
   /*.medium-4 {       
             background-color:$beige;                  
         }*/ }
 
-/* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelbild {
   margin: 1.5rem 0rem; }
 
-/* line 39, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .faktabox {
   background-color: #dcdbda; }
-  /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .faktabox h1, .faktabox h2, .faktabox h3 {
     color: #f77136; }
 
-/* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelButton {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-/* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artsidecontainer {
   display: block;
   padding: 1rem 1.2rem 1rem 1.2rem;
   background-color: #dcdbda; }
   @media only screen and (min-width: 64.0625em) {
-    /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer {
       padding-bottom: 2rem;
       padding-left: 0.7rem;
       padding-right: 2rem;
       padding-top: 0.5rem; } }
-  /* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 61, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer ul {
     list-style: none;
     margin-left: 0px; }
-  /* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 65, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 71, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h2 {
     text-transform: uppercase; }
-  /* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h3 {
     font-size: 1.5rem;
     text-transform: uppercase; }
-  /* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer p {
     font-size: 0.9rem; }
-  /* line 83, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 80, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .kontaktkort {
     font-size: 0.9rem; }
-    /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 82, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 87, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .avd {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 92, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelkontatkort {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 100, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 97, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelFakta {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-  /* line 107, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 104, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .success {
     width: 100%; }
 
-/* line 110, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 107, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .standardbutton {
   text-align: center;
   padding-right: 0.7rem; }
 
-/* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 112, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .l-main {
   display: none; }
 
-/* line 118, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 114, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .view-2015-supporting-articles .level2, .view-2015-supporting-articles-suo .level2 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  /* line 121, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 117, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .view-2015-supporting-articles .level2:nth-child(odd), .view-2015-supporting-articles-suo .level2:nth-child(odd) {
     background-color: #dcdbda; }
-    /* line 123, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .view-2015-supporting-articles .level2:nth-child(odd) .artsidecontainer, .view-2015-supporting-articles-suo .level2:nth-child(odd) .artsidecontainer {
       background-color: #ebeae9; }
 
+/* line 127, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artmaincontent h1, .artmaincontent h2, .artmaincontent h3, .artmaincontent h4, .artmaincontent h5 {
+  color: #000000; }
+
+/* line 130, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artmaincontent h3 {
+  font-size: 1rem;
+  font-weight: 600; }
+
+/* line 134, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artmaincontent .filicons h3 {
+  font-size: 1.5rem;
+  font-weight: 200; }
+
 @media only screen and (min-width: 40.0625em) {
-  /* line 131, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 0.5rem; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 131, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 10rem; } }
 
-/* line 135, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .element-invisible {
   display: none; }
 
-/* line 139, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 145, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .node-type-informationssida .ajimage-omrade-nod img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -10048,6 +10080,10 @@ img .flip {
   margin-top: -4px;
   margin-bottom: -10px; }
 
+/* line 11, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-evenemang.scss */
+.view-2015-evenemang .listcontent h5:first-child {
+  margin-top: 0px; }
+
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
 .view-2015-staff .listheight {
   min-height: 165px; }
@@ -10519,6 +10555,27 @@ img .flip {
       color: black;
       opacity: 0.75; }
 
+/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+.item-list .pager-load-more {
+  margin-top: 1rem; }
+  /* line 4, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+  .item-list .pager-load-more li {
+    background-color: #ebeae9; }
+    /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+    .item-list .pager-load-more li a {
+      color: #000000; }
+    /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+    .item-list .pager-load-more li:hover {
+      background-color: #DDDDDD; }
+
+/* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+.item-list ul li {
+  margin-left: 0px; }
+
+/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+.item-list .pager-next {
+  border: 0px; }
+
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
@@ -10557,48 +10614,48 @@ img .flip {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 79, stdin */
+/* line 80, stdin */
 .h2 {
   color: #000000 !important;
   font-weight: 100; }
 
-/* line 84, stdin */
-h1, h2, h3, h4, h5, h6 {
+/* line 85, stdin */
+h1 {
   line-height: 1.1em !important; }
 
-/* line 86, stdin */
+/* line 87, stdin */
 .row {
   max-width: 62.5rem !important; }
 
-/* line 90, stdin */
+/* line 91, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 93, stdin */
+/* line 94, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 97, stdin */
+/* line 98, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 102, stdin */
+/* line 103, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 107, stdin */
+/* line 108, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 112, stdin */
+/* line 113, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 119, stdin */
+  /* line 120, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -10611,7 +10668,7 @@ body {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 124, stdin */
+  /* line 125, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -10622,7 +10679,7 @@ body {
     /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 127, stdin */
+  /* line 128, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -10641,26 +10698,26 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-/* line 147, stdin */
+/* line 148, stdin */
 .clear {
   clear: both; }
 
-/* line 152, stdin */
+/* line 153, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 157, stdin */
+/* line 158, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 161, stdin */
+/* line 162, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 164, stdin */
+/* line 165, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -10672,35 +10729,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 174, stdin */
+  /* line 175, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 180, stdin */
+  /* line 181, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 185, stdin */
+/* line 186, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 186, stdin */
+/* line 187, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 189, stdin */
+  /* line 190, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 193, stdin */
+/* line 194, stdin */
 .item img {
   width: 100%; }
 
-/* line 198, stdin */
+/* line 199, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -10714,82 +10771,87 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 213, stdin */
+/* line 214, stdin */
 .block-title {
   display: none; }
 
-/* line 215, stdin */
+/* line 216, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 218, stdin */
+/* line 219, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 221, stdin */
+/* line 222, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 222, stdin */
+/* line 223, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 223, stdin */
+/* line 224, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 224, stdin */
+/* line 225, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
 /*// Small screens
 @media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
-/* line 249, stdin */
+/* line 250, stdin */
 .mozaikitems .row {
   margin: 0 -0.9rem 0 -0.99rem; }
 
-/* line 252, stdin */
+/* line 253, stdin */
 .left-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 255, stdin */
+  /* line 256, stdin */
   .left-small span {
     font-size: 15px !important; }
 
-/* line 262, stdin */
+/* line 263, stdin */
 .right-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 265, stdin */
+  /* line 266, stdin */
   .right-small span {
     font-size: 15px !important; }
 
-/* line 271, stdin */
+/* line 272, stdin */
 .tab-bar {
   height: 65px; }
-  /* line 273, stdin */
+  /* line 274, stdin */
   .tab-bar img {
     width: 160px; }
 
-/* line 277, stdin */
+/* line 278, stdin */
 .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 282, stdin */
+/* line 283, stdin */
 .artikelwrapper a {
-  color: #f77136; }
+  color: #b2a16c; }
 
-/* line 286, stdin */
+/* line 287, stdin */
 .outeromrade {
   display: none; }
 
-/* line 293, stdin */
+/* line 294, stdin */
 .artikelMenu {
   margin-top: 0.7rem; }
+
+/* line 298, stdin */
+.datumtemplate, .kivlistview h5 .date-display-single, .evenemang h5 .date-display-single, .kivlistview .evenemang_date .date-display-single, .evenemang .evenemang_date .date-display-single {
+  font-size: 0.9rem;
+  font-weight: 600; }
