@@ -5,7 +5,8 @@
     jQuery(function ($){
         // VAR
         var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
-        var _omradesNamn = $('.omradesnamn li').html().trim();
+        var _tmpomradesNamn = $('.omradesnamn li').html();
+        var _omradesNamn = $.trim(_tmpomradesNamn);
         var _valdSortering="";
         var _drpFilter = $('#drpFilter');
 

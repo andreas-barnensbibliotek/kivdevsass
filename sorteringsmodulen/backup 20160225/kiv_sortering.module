@@ -9,13 +9,13 @@
  */
 	
 function kiv_sortering_views_pre_render(&$view) {
-	print("ute");
+	// print("pre");
 	//START---------------------------------------------------------------------------------------------------------
 	//---------------------------------------------------------------------------------------------------------	
 	// kollar så att vi ändrar i rätt vy
 	// if VY kategorier START
-	if($view->name == '2015_omr_des_listning'){// if VY kategorier START
-		print("inne");
+	if ($view->name == 'kategorier'){ // if VY kategorier START
+	// print("yey");
 		/// kör sortering endast om något finns att sortera i requested Category
 		if(isset($view->build_info['substitutions']['%1'])){
 			

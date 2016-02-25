@@ -10086,7 +10086,16 @@ img .flip {
 
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
 .view-2015-staff .listheight {
-  min-height: 165px; }
+  min-height: 160px; }
+
+/*Overrides LIZTA bilder*/
+/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
+.view-2015-staff .kivlistview .imgplaceholder img,
+.view-2015-staff .evenemang .imgplaceholder img,
+.view-2015-dokument .kivlistview .imgplaceholder img, .view-2015-dokument .evenemang .imgplaceholder img {
+  max-width: 160px;
+  min-width: 160px;
+  width: 100%; }
 
 /* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
 .pager-next {
