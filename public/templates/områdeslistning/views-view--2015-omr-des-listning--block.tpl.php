@@ -35,7 +35,7 @@
         <div class="filterbreadcrumbbox">
             <ul class="omradesnamn" >
               <li>
-                <?php print t(drupal_get_title())?>
+                <?php print t(drupal_get_title())?>				
               </li>
 			
             </ul>
@@ -50,10 +50,11 @@
         <div id="contentfilterblock">
             <select id="drpFilter" class=" custom dropdown small" name="Avgransa">
             </select>
-            <select id="drpSortering" class="custom dropdown small" name="Sortering" >
+            <select id="drpSortering" class="custom dropdown small" name="Sortering" style="display:none!important;" >
 				<option value="alla">Sortera</option>
                 <option value="datum">Datum</option>
                 <option value="titel">Titel</option>
+				<option value="aktuellt">Aktuellt</option>
             </select>
         </div>
     </div>

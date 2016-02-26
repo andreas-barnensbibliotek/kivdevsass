@@ -7574,7 +7574,7 @@ var _isotopecolumns = 250;
 // CENTER LANDING PAGE TEXT
 
 jQuery(function ($){
-    var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
+    var _base_server_url = "http://kivdev.monoclick-dev.se";
 
     $.fn.getSize = function () {
         var $wrap = $("<div />").appendTo($("body"));
@@ -8176,7 +8176,7 @@ jQuery(function ($){
         var _valdSortering="";
         var _drpFilter = $('#drpFilter');
 
-        var localOrServerURL = "http://kulturivast.se.preview.binero.se" ; "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
+        var localOrServerURL = "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
         //var mozaikItems = [];
         var _drphuvudomradenlista = [];
         var _drphuvudomradenvalue = [];        
@@ -8339,77 +8339,52 @@ jQuery(function ($){
                 var tmpcurrhuvudomr = osorteraddata.kivsearch[x].kivsearchitem.huvudomrade;
                 var isAktuell = osorteraddata.kivsearch[x].kivsearchitem.aktuellt;
 
-                var cur_valt_huvudomrade = _tmpomradesNamn.trim()
 
                 //kolla vilken array item ska hamna i
                 //om huvudområdet är samma som sidans område
-                if (tmpcurrhuvudomr == cur_valt_huvudomrade) {
+                if(tmpcurrhuvudomr ==  _tmpomradesNamn.trim()){
 					
                     //kolla om det är aktuellt och skall visas övers i huvudlistan eller inte
                     if (isAktuell=="1"){
-                        MainCategoryArray.unshift(osorteraddata.kivsearch[x]);
+                        MainCategoryArray.unshift(osorteraddata.kivsearch[x].kivsearchitem);
 						
                     }else{
-                        MainCategoryArray.push(osorteraddata.kivsearch[x]);
+                        MainCategoryArray.push(osorteraddata.kivsearch[x].kivsearchitem);
                     } 
 					
                 }else{		
                     
                     //kolla om det är aktuellt och skall visas övers i Relateradelistan eller inte
                     if (isAktuell=="1"){
-                        RelatedCategoryArray.unshift(osorteraddata.kivsearch[x]);
+                        RelatedCategoryArray.unshift(osorteraddata.kivsearch[x].kivsearchitem);
 						
                     }else{
-                        RelatedCategoryArray.push(osorteraddata.kivsearch[x]);
+                        RelatedCategoryArray.push(osorteraddata.kivsearch[x].kivsearchitem);
                     } 					
                 }	
             };
                 //Slå ihop arrayerna så att ordningen blir rätt
                 MainCategoryReturnArray = MainCategoryArray.concat(RelatedCategoryArray)
 
-                for (var item in MainCategoryReturnArray) {
-                  
-                    if (!MainCategoryReturnArray.hasOwnProperty(item)) continue;
+                for (var i = 0; i < MainCategoryReturnArray.length; i++) {  
+                    console.log("i Andra loopen (i) nr="+ i);
+                    _RenderOutputListObj.bild = osorteraddata.kivsearch[i].kivsearchitem.bild;
+                    _RenderOutputListObj.overrub = osorteraddata.kivsearch[i].kivsearchitem.overrub;
+                    _RenderOutputListObj.rubrk = osorteraddata.kivsearch[i].kivsearchitem.rubrik;
+                    _RenderOutputListObj.link = osorteraddata.kivsearch[i].kivsearchitem.link;
+                    _RenderOutputListObj.ingress = osorteraddata.kivsearch[i].kivsearchitem.ingress;
+                    _RenderOutputListObj.aktuellt = osorteraddata.kivsearch[i].kivsearchitem.aktuellt;
+                    _RenderOutputListObj.btntyp = osorteraddata.kivsearch[i].kivsearchitem.btntyp;
+                    _RenderOutputListObj.btntitle = osorteraddata.kivsearch[i].kivsearchitem.btntitle;
+                    _RenderOutputListObj.btnlink = osorteraddata.kivsearch[i].kivsearchitem.btnlink;
+                    currentdomitems += Renderdata(_RenderOutputListObj);
 
-                    var obj = MainCategoryReturnArray[item];
-                    for (var prop in obj) {
-                        // skip loop if the property is from prototype
-                        if (!obj.hasOwnProperty(prop)) continue;
+                };
 
-                        console.log("i Andra loopen");
-                        _RenderOutputListObj.bild = obj[prop].bild;
-                        _RenderOutputListObj.overrub = obj[prop].overrub;
-                        _RenderOutputListObj.rubrk = obj[prop].rubrik;
-                        _RenderOutputListObj.link = obj[prop].link;
-                        _RenderOutputListObj.ingress = obj[prop].ingress;
-                        _RenderOutputListObj.aktuellt = obj[prop].aktuellt;
-                        _RenderOutputListObj.btntyp = obj[prop].btntyp;
-                        _RenderOutputListObj.btntitle = obj[prop].btntitle;
-                        _RenderOutputListObj.btnlink = obj[prop].btnlink;
-                        currentdomitems += Renderdata(_RenderOutputListObj);
-                        console.log(prop + " = " + obj[prop].bild);
-
-                    }
-                }
+           
 
 
-
-                //for (var i = 0; i < MainCategoryReturnArray.length; i++) {  
-                //    console.log("i Andra loopen (i) nr="+ i);
-                //    _RenderOutputListObj.bild = MainCategoryReturnArray[i].object.bild;
-                //    _RenderOutputListObj.overrub = MainCategoryReturnArray[i].kivsearchitem.overrub;
-                //    _RenderOutputListObj.rubrk = MainCategoryReturnArray[i].kivsearchitem.rubrik;
-                //    _RenderOutputListObj.link = MainCategoryReturnArray[i].kivsearchitem.link;
-                //    _RenderOutputListObj.ingress = MainCategoryReturnArray[i].kivsearchitem.ingress;
-                //    _RenderOutputListObj.aktuellt = MainCategoryReturnArray[i].kivsearchitem.aktuellt;
-                //    _RenderOutputListObj.btntyp = MainCategoryReturnArray[i].kivsearchitem.btntyp;
-                //    _RenderOutputListObj.btntitle = MainCategoryReturnArray[i].kivsearchitem.btntitle;
-                //    _RenderOutputListObj.btnlink = MainCategoryReturnArray[i].kivsearchitem.btnlink;
-                //    currentdomitems += Renderdata(_RenderOutputListObj);
-
-                //};
-
-           return callback(currentdomitems);
+            return callback(currentdomitems);
 
         }
 

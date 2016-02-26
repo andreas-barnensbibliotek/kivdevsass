@@ -3,7 +3,7 @@
 // CENTER LANDING PAGE TEXT
 
 jQuery(function ($){
-    var _base_server_url = "http://kivdev.monoclick-dev.se";
+    var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
 
     $.fn.getSize = function () {
         var $wrap = $("<div />").appendTo($("body"));

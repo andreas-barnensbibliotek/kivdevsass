@@ -132,7 +132,7 @@ body {
 @media #{$large-up} {  
 }
 //$font-path: "/public/fonts/foundation-icons/foundation-icons";
-$font-path: "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
+$font-path: "http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
   src: url("#{$font-path}.eot");
@@ -143,7 +143,8 @@ $font-path: "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
   font-weight: normal;
   font-style: normal;
 }
-@import "/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+@import "http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+//@import "/public/fonts/foundation-icons/foundation-icons/foundation-icons.css";
 
 .clear {
   clear: both;

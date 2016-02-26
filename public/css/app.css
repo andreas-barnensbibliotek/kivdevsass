@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* version v0.0.2 */
-@import url(/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css);
+@import "http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 /* line 431, ./bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.3/"; }
@@ -10702,31 +10702,31 @@ body {
 
 @font-face {
   font-family: "foundation-icons";
-  src: url("/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot");
-  src: url("/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.woff") format("woff"), url("/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
+  src: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot");
+  src: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.woff") format("woff"), url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-/* line 148, stdin */
+/* line 149, stdin */
 .clear {
   clear: both; }
 
-/* line 153, stdin */
+/* line 154, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 158, stdin */
+/* line 159, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 162, stdin */
+/* line 163, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 165, stdin */
+/* line 166, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -10738,35 +10738,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 175, stdin */
+  /* line 176, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 181, stdin */
+  /* line 182, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 186, stdin */
+/* line 187, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 187, stdin */
+/* line 188, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 190, stdin */
+  /* line 191, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 194, stdin */
+/* line 195, stdin */
 .item img {
   width: 100%; }
 
-/* line 199, stdin */
+/* line 200, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -10780,87 +10780,87 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 214, stdin */
+/* line 215, stdin */
 .block-title {
   display: none; }
 
-/* line 216, stdin */
+/* line 217, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 219, stdin */
+/* line 220, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 222, stdin */
+/* line 223, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 223, stdin */
+/* line 224, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 224, stdin */
+/* line 225, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 225, stdin */
+/* line 226, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
 /*// Small screens
 @media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
-/* line 250, stdin */
+/* line 251, stdin */
 .mozaikitems .row {
   margin: 0 -0.9rem 0 -0.99rem; }
 
-/* line 253, stdin */
+/* line 254, stdin */
 .left-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 256, stdin */
+  /* line 257, stdin */
   .left-small span {
     font-size: 15px !important; }
 
-/* line 263, stdin */
+/* line 264, stdin */
 .right-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 266, stdin */
+  /* line 267, stdin */
   .right-small span {
     font-size: 15px !important; }
 
-/* line 272, stdin */
+/* line 273, stdin */
 .tab-bar {
   height: 65px; }
-  /* line 274, stdin */
+  /* line 275, stdin */
   .tab-bar img {
     width: 160px; }
 
-/* line 278, stdin */
+/* line 279, stdin */
 .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 283, stdin */
+/* line 284, stdin */
 .artikelwrapper a {
   color: #b2a16c; }
 
-/* line 287, stdin */
+/* line 288, stdin */
 .outeromrade {
   display: none; }
 
-/* line 294, stdin */
+/* line 295, stdin */
 .artikelMenu {
   margin-top: 0.7rem; }
 
-/* line 298, stdin */
+/* line 299, stdin */
 .datumtemplate, .kivlistview h5 .date-display-single, .evenemang h5 .date-display-single, .kivlistview .evenemang_date .date-display-single, .evenemang .evenemang_date .date-display-single {
   font-size: 0.9rem;
   font-weight: 600; }

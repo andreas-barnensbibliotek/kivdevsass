@@ -31,13 +31,21 @@ var gulp = require('gulp'),
 	}
 	
 	
+//gulp.task('SassToCssSrcPub', function() {
+//    gulp.src('sass/**/*.scss')
+//        .pipe(sass().on('error', sass.logError))
+//		.pipe(gulp.dest('./css/'))
+//		.pipe(rename({ suffix: '.min' }))
+//		.pipe(minifycss())
+//		.pipe(gulp.dest('./css/'))
+//});
 
-gulp.task('jsPub', function () {
-    return gulp.src(srcPath.publik +'/js/app.js')				
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(uglify())
-		.pipe(gulp.dest(srcPath.publik +'/js'));
-});
+//gulp.task('scripts', function () {
+//    return gulp.src('js/**/*.js')				
+//		.pipe(rename({ suffix: '-min' }))
+//		.pipe(uglify())
+//		.pipe(gulp.dest('js'));
+//});
 
 // lÃ¤gger till vendor js och concanterar dom till en vendorjs inkl min egen kivjs kÃ¶r modernizr som egen fil eftersom den mÃ¥ste ligga lÃ¤ngs upp
 gulp.task('foundationJS', function () {
@@ -85,30 +93,10 @@ gulp.task('SassToCssSrc', function() {
 		.pipe(jshint.reporter('default'));
 });
 
-gulp.task('SassToCssSrcPub', function () {
-    gulp.src('sass/**/*.scss')
-    .pipe(sass({
-        style: 'compressed',        
-        includePaths: [
-			srcPath.bower + '/foundation/scss' //importera alla sass filer från foundation. gör att alla komponenter går att använda direkt
-        ]
-    }).on('error', sass.logError))
-	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // pass the file through autoprefixer 
-	.pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
-	.pipe(gulp.dest(srcPath.publik + '/css/'))
-    .pipe(jshint())
-	.pipe(jshint.reporter('default'))
-});
-
 //Watch task
 gulp.task('default',function() {
     gulp.watch('sass/**/*.scss', ['SassToCssSrc', 'foundationJS']);
-    gulp.watch('sass/**/*.js', ['SassToCssSrc', 'foundationJS']);    
-});
-
-gulp.task('pub',['SassToCssSrcPub','jsPub'], function () {
-  
-    
+	
+	//gulp.watch('sass/**/*.scss', ['SassToCssSrcPub','scripts']);
 });
 
