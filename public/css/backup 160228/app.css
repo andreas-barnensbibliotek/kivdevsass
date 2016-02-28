@@ -9014,7 +9014,7 @@ ul.multiColumn {
 /* line 2, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
 .footer {
   background-color: #000000;
-  background-image: url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.jpg");
+  background-image: url("https://www.fusioncorpdesign.com/packages/fruitful/themes/fruitful/img/footerbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -9032,87 +9032,87 @@ ul.multiColumn {
     .footer {
       padding-left: 1rem;
       padding-right: 4rem; } }
-  /* line 22, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 21, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer a {
     color: #FFFFFF; }
-  /* line 26, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 25, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .vglogo {
     width: 10rem;
     text-align: left;
     margin-bottom: 2rem; }
-  /* line 33, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 32, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .annonsrow img {
     min-width: 224px;
     max-width: 224px;
     margin-bottom: 2rem; }
-  /* line 39, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 38, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .footdelare {
     margin-top: 10rem; }
     @media only screen {
-      /* line 42, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 41, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist {
         float: left;
         margin-top: 1.2rem;
         margin-left: 0px !important; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 42, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 41, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist {
         float: right; } }
-    /* line 53, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+    /* line 52, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist li {
       list-style: none;
       float: left; }
       @media only screen and (max-width: 40em) {
-        /* line 53, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+        /* line 52, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
         .footer .footdelare .socialiconlist li {
           margin-right: 0.5rem; } }
       @media only screen and (min-width: 40.0625em) {
-        /* line 53, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+        /* line 52, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
         .footer .footdelare .socialiconlist li {
           margin-left: 0.5rem; } }
       @media only screen and (min-width: 64.0625em) {
-        /* line 53, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+        /* line 52, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
         .footer .footdelare .socialiconlist li {
           margin-left: 0.96rem; } }
     @media only screen {
-      /* line 68, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 67, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist img {
         max-width: 51px; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 68, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 67, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist img {
         max-width: 50px; } }
     @media only screen and (min-width: 64.0625em) {
-      /* line 68, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 67, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist img {
         max-width: 63px; } }
-    /* line 82, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+    /* line 81, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .tab-bar-logosection {
       margin-right: 5em;
       margin-top: 0.31rem; }
-    /* line 86, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+    /* line 85, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .foot-kivlogo-container {
       display: table-cell;
       vertical-align: bottom;
       height: 60px; }
-      /* line 90, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+      /* line 89, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .foot-kivlogo-container img {
         width: 210px; }
-    /* line 94, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+    /* line 93, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .footdelarehrbox hr {
       margin-top: 0px;
       padding: 0px; }
-  /* line 101, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 100, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .adressrow div {
     text-align: left;
     font-size: 1rem;
     font-weight: 200;
     margin-bottom: 1rem; }
-  /* line 107, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 106, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .adressrow .tab-bar-logosection {
     margin-right: 5em;
     margin-top: 0.31rem; }
-  /* line 111, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
+  /* line 110, G:/webprojekt/kivdevsass/sass/devScss/Komponenter/_footer.scss */
   .footer .adressrow h3 {
     font-size: 1rem;
     font-weight: 600;

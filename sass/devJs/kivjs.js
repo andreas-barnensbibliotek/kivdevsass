@@ -5,6 +5,21 @@
 jQuery(function ($){
     var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
 
+    var changeFontColorArtikelsidor = function () {
+        var changeh1 = jQuery('.omossspace h1');
+
+        if ($('.term-top-image').css('background-color') == "transparent") {
+
+        } else {
+            if (changeh1.css('color') != "transparent") {
+                changeh1.css('color', '#fff');
+            }
+            
+        };
+
+    };
+    changeFontColorArtikelsidor();
+
     $.fn.getSize = function () {
         var $wrap = $("<div />").appendTo($("body"));
         $wrap.css({
