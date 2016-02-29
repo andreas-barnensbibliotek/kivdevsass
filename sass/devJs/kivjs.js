@@ -6,17 +6,34 @@ jQuery(function ($){
     var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
 
     var changeFontColorArtikelsidor = function () {
-        var changeh1 = jQuery('.omossspace h1');
+        var changeh1 = $('.omossspace h1');
 
         if ($('.term-top-image').css('background-color') == "transparent") {
 
         } else {
             if (changeh1.css('color') != "transparent") {
-                changeh1.css('color', '#fff');
+                //changeh1.css('color', '#fff');
+                console.log("inte transparent");
             }
             
         };
+        if ($('.ajimage-omrade-nod').find("img").length > 0) {
+            console.log("visar bild");
+            if (changeh1.css('color') != "transparent") {
+                changeh1.css('color', '#eee');
+                //changeh1.css('background-color', '#000');
+                //changeh1.css('padding-bottom', '0.9rem');
+                //changeh1.css('opacity', '0.9');
 
+               // changeh1.attr('style', 'color:#eee; background-color:#000;  opacity:0.9; display:inline;');
+                //$('.omossspace, .omossMenu2').css('margin-top', '-0.1rem');
+                console.log("inte transparent");
+            }
+        } else {
+            console.log("INGEN bild");
+        }        
+
+    
     };
     changeFontColorArtikelsidor();
 

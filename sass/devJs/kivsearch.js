@@ -190,7 +190,8 @@
                 }else{		
                     
                     //kolla om det är aktuellt och skall visas övers i Relateradelistan eller inte
-                    if (isAktuell=="1"){
+                    if (isAktuell == "1") {
+                        osorteraddata.kivsearch[x].kivsearchitem.aktuellt = 0;
                         RelatedCategoryArray.unshift(osorteraddata.kivsearch[x]);
 						
                     }else{
