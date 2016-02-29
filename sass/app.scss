@@ -131,8 +131,10 @@ body {
 }
 @media #{$large-up} {  
 }
+$font-path:"";
 //$font-path: "/public/fonts/foundation-icons/foundation-icons";
-$font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
+//$font-path: "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
+//$font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
   src: url("#{$font-path}.eot");
@@ -143,7 +145,8 @@ $font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fon
   font-weight: normal;
   font-style: normal;
 }
-@import "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+//@import "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+///@import "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 //@import "/public/fonts/foundation-icons/foundation-icons/foundation-icons.css";
 
 .clear {
@@ -301,3 +304,7 @@ margin-top:0.7rem;
      font-size:0.9rem;
      font-weight:600;
 }
+
+ /*.section-ljudmagasinet h1{
+color:transparent!important;
+}*/

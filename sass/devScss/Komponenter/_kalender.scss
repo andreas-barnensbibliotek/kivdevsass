@@ -7,6 +7,7 @@
     .item{
 	    width: 100%;
     }
+  
  }
 .view-2015-kalender-lista{
     .kivlistview{
@@ -16,16 +17,9 @@
             }
         }
     }
+    .card-label{
+	    display:none;
+    }
 }
 
 
-
-/*.view-id-2015_kalender_lista{
-    
-        .kalender-lista-date{
-            span{
-                @extend .datumtemplate;
-            }   
-        }
-
-}*/
