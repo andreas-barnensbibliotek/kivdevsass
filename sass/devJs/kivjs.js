@@ -3,7 +3,7 @@
 // CENTER LANDING PAGE TEXT
 
 jQuery(function ($){
-    var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
+    var _base_server_url = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
 
     var changeFontColorArtikelsidor = function () {
         var changeh1 = $('.omossspace h1');
@@ -298,7 +298,7 @@ jQuery(function ($){
 
 
     // TEST BLOCK om oss visa START
-    $('.omossmenycontainer a').on('click', function (e) {
+    $('.omossmenycontainer .lasMerOmOssLink ').on('click', function (e) {
         var that = $(this);
         var addOrRemove = that.hasClass("arrowhead2");
         var isAllreadyvisible= $('.omossContentBox2').is(':visible')
@@ -495,6 +495,15 @@ jQuery(function ($){
     removeListPagesPlussicon();
     
 
+    //var kulturikatalogeninlogg = "<a href='#' class='lasMerOmOssLink' >";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Så här arbetar vi</div>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Kontaktpersoner</div>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Snabblänkar</div></a>";
+    //kulturikatalogeninlogg += "<a href='http://kulturivast.se/kulturkatalogen-vast/logga-in-pa-kulturkatalogen-vast' class='lasMerOmOssLink'>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock kulturkatalogenloggainbutton'>Logga in</div></a>";
+
+    //$('.section-kulturkatalogen-vast .omossmenycontainer').removeClass('medium-9').addClass('medium-12');
+    //$('.section-kulturkatalogen-vast .omossmenycontainer').html(kulturikatalogeninlogg);
     /*
     //////////////////////////////////////////////////////////////////
      Första sidan slider

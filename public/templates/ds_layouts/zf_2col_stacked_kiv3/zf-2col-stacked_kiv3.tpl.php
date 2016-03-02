@@ -3,41 +3,99 @@
  * @file
  * Template for Zurb Foundation Two column stacked Display Suite layout.
  */
- 
- // Denna template använs till: Sida för taxonomitermer
- 
+ // Denna template använs till: Sida för taxonomitermer områsdessida omoss box
+
+$sokvag = url($_GET['q']); 
 ?>
+
+
+
+
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="zf-2col-stacked <?php print $classes;?>">
 
-  <?php if (isset($title_suffix['contextual_links'])): ?>
-    <?php print render($title_suffix['contextual_links']); ?>
-  <?php endif; ?>
+	<?php if (isset($title_suffix['contextual_links'])): ?>
+	<?php print render($title_suffix['contextual_links']); ?>
+	<?php endif; ?>
 
-  <div class="row r1">
+	<?php if (!empty($topimage)): ?>
+		<div class="top-bild-wrapper">
+			<div class="ajimage-omrade-nod">
+			<?php print $topimage; ?>
+		</div>
+		</div>
+	<?php endif; ?>
+	
+    <div class="small-12 xtra">
+    
+    
     <?php if (!empty($header)): ?>
-      <<?php print $header_wrapper ?> class="group-header<?php print $header_classes; ?>">
-      <?php print $header; ?>
-      </<?php print $header_wrapper ?>>
+      <div class="row">	
+      	<div class="medium-12 columns omossspace">
+      		<?php print $header; ?> 
+      		<div class="omossMenu2"></div>
+      		<div class="small-12 medium-12 columns omossmenycontainer ">
+			
+			<?php if($sokvag =='/kulturkatalogen-vast'): ?>
+				
+				<a class="lasMerOmOssLink" href="#">
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Så här arbetar vi
+				    </div>
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Kontaktpersoner
+				    </div>
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Snabblänkar
+				    </div>
+				</a>
+				<a href='http://leto.premium.se/vgr/webbkatalog/index.php' title="Logga in på kulturkatalogen väst" class='kulturkatalogLoggain'>
+					<div class='small-12 medium-3 columns omossmenyblock kulturkatalogenloggainbutton'>Logga in</div>
+				</a>
+				
+			<?php else: ?>	
+				<a class="lasMerOmOssLink" href="#">
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Så här arbetar vi
+				    </div>
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Kontaktpersoner
+				    </div>
+				    <div class="small-12 medium-3 columns omossmenyblock">
+				        Snabblänkar
+				    </div>
+				</a>
+				
+			<?php endif; ?>	
+			</div>
+      	</div>
+	  </div>
     <?php endif; ?>
-  </div>
+    
+  	</div>
 
-  <div class="row r2">
-    <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
-    <?php print $left; ?>
-    </<?php print $left_wrapper ?>>
+   	<div class="large-12 columns omossContentBox2">
+        <div class="row">    
+			<<?php print $left_wrapper ?> class="medium-8 columns">
+				<div id="omossContent">
+					<?php print $left; ?>
+				</div>
+			</<?php print $left_wrapper ?>>
 
-    <<?php print $right_wrapper ?> class="group-right<?php print $right_classes; ?>">
-    <?php print $right; ?>
-    </<?php print $right_wrapper ?>>
-  </div>
-
-  <div class="row r3">
-    <?php if (!empty($footer)): ?>
-      <<?php print $footer_wrapper ?> class="group-footer<?php print $footer_classes; ?>">
-      <?php print $footer; ?>
-      </<?php print $footer_wrapper ?>>
-    <?php endif; ?>
-  </div>
+			<<?php print $right_wrapper ?> class="medium-4 columns">
+				<div id="omossKontaktContent">
+					<h3>Kontakt</h3>
+					<?php print $right; ?>
+				</div>
+			</<?php print $right_wrapper ?>>	
+			
+			<?php if (!empty($footer)): ?>
+				<<?php print $footer_wrapper ?> class="medium-12 columns snabblinks">
+				<h3>Snabblänkar</h3>
+					<?php print $footer; ?>
+				</<?php print $footer_wrapper ?>>
+			<?php endif; ?>
+		</div>
+	</div>
 
 </<?php print $layout_wrapper ?>>
 

@@ -10,7 +10,7 @@
         var _valdSortering="";
         var _drpFilter = $('#drpFilter');
 
-        var localOrServerURL = "http://kulturivast.se.preview.binero.se" ; "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
+        var localOrServerURL = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se" ; "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att hämta data ifrån
         //var mozaikItems = [];
         var _drphuvudomradenlista = [];
         var _drphuvudomradenvalue = [];        

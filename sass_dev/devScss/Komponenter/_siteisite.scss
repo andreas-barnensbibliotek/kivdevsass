@@ -1,0 +1,46 @@
+﻿
+.top-bg-colors{
+    .color-top-black{
+	    background-color: #000;
+    }
+    .color-top-white{
+        background-color: #fff;
+    }
+    .color-top-grey333{
+        background-color: #333;
+    }
+     .color-top-grey666{
+        background-color: #666;
+    }
+
+}
+
+
+.zf-2col-stacked{
+  @extend .top-bg-colors;
+}
+
+.zf-2col-bricks{
+  @extend .top-bg-colors;
+}
+
+.page-taxonomy-term{
+    .ajimage-omrade-nod{
+        object-fit:contain;
+    }
+}
+
+//Frame ---s
+.page-taxonomy-term-980{
+    .omossspace h1{ 
+        color:transparent;
+    }
+    .breadcrumb-BG{
+        background-color:$white;
+    }
+    .ajimage-omrade-nod{
+        img{
+            object-fit:contain;
+        }
+    } 
+} 

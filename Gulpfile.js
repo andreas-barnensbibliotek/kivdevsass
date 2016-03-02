@@ -27,6 +27,8 @@ var gulp = require('gulp'),
 		'bower' : './bower_components',
 		'scss': './sass/devScss',
 		'js': './sass/devJs',
+		'scss_dev': './sass_dev/devScss',
+		'js_dev': './sass_dev/devJs',
 		'publik': './public'		
 	}
 	
@@ -106,6 +108,16 @@ gulp.task('default',function() {
     gulp.watch('sass/**/*.scss', ['SassToCssSrc', 'foundationJS']);
     gulp.watch('sass/**/*.js', ['SassToCssSrc', 'foundationJS']);    
 });
+
+
+// använd denna för att göra ändringar som inte påverkar orginalfilerna. OBS Skapar en app.js och en app.css i publikfoldern precis som den andra 
+// men använder sass_dev istället
+gulp.task('dev', function () {
+    gulp.watch('sass_dev/**/*.scss', ['SassToCssSrc', 'foundationJS']);
+    gulp.watch('sass_dev/**/*.js', ['SassToCssSrc', 'foundationJS']);
+});
+
+
 
 gulp.task('pub',['SassToCssSrcPub','jsPub'], function () {
   

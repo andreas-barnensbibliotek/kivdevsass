@@ -35,6 +35,7 @@
 @import 'devScss/vendor/_slick';
 @import 'devScss/vendor/_slick-theme';
 @import 'devScss/Komponenter/_loadmore';
+@import 'devScss/Komponenter/_kulturkatalogen';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -133,7 +134,7 @@ body {
 }
 $font-path:"";
 //$font-path: "/public/fonts/foundation-icons/foundation-icons";
-//$font-path: "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
+$font-path: "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 //$font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
@@ -145,7 +146,7 @@ $font-path:"";
   font-weight: normal;
   font-style: normal;
 }
-//@import "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+@import "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 ///@import "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 //@import "/public/fonts/foundation-icons/foundation-icons/foundation-icons.css";
 

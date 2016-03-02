@@ -1,0 +1,11 @@
+﻿//.section-kulturkatalogen-vast
+
+.kulturkatalogenloggainbutton{
+	border-left:1px solid #000;
+    background-color:$orange !important;
+    color:#fff;
+    &:hover{
+         background-color:$orangeLight !important;
+        
+    }
+}
