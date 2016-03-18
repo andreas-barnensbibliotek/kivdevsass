@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="public/css/app.css" rel="stylesheet" />
     <script src="public/js/modernizr.js"></script>
-    
+
+    <link href="public/css/vendors/jquery.animateSlider.css" rel="stylesheet" />
     
     
 </head>
@@ -75,6 +76,24 @@
             </aside>
             <a class="exit-off-canvas"></a>
             
+            <div class="large-12 columns">
+                <ul class="anim-slider">
+                    <li class="anim-slide">
+                        <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/jazzbanner.jpg" alt="Metoder " />
+                    </li>
+                    <li class="anim-slide">
+                        <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/minionbannar.jpg" alt="Metoder " />
+                    </li>
+                    <!-- arrows -->
+                    <nav class="anim-arrows">
+                        <span class="anim-arrows-prev"></span>
+                        <span class="anim-arrows-next"></span>
+                    </nav>
+                    <!-- dynamically created dots -->
+                </ul>
+            </div>
+
+
             <!-- Utfallande bild med rubrik START -->
             <div class="small-12 view-frontpage">
                 <div class="ajimage textcenter" style="background-color:#526442;">
@@ -271,15 +290,148 @@
                     <!-- </div> END BACKGROUND -->
                 </div><!-- END INNER WRAP -->
             </div><!-- END OFF CANVAS WRAP -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script src="public/js/app.js"></script>
             <script src="public/js/isotope.pkgd.min.js"></script>
     
     <script src="https://raw.githubusercontent.com/metafizzy/isotope-packery/master/packery-mode.pkgd.js"></script>
+    <script src="sass_dev/devJs/jquery.animateSlider.js"></script>
             <!--<script src="public/js/fit-columns.js"></script>-->
             <script type="text/javascript">
 
                 $(document).ready(function () {
-
+                    $(".anim-slider").animateSlider(
+		 	{
+		 	    autoplay: true,
+		 	    interval: 5000,
+		 	    animations:
+				{
+				    0: 	//Slide No1
+					{
+					    h1:
+						{
+						    show: "bounceIn",
+						    hide: "flipOutX",
+						    delayShow: "delay1s"
+						},
+					    h2:
+	 					{
+	 					    show: "fadeInUpBig",
+	 					    hide: "fadeOutDownBig",
+	 					    delayShow: "delay1-5s"
+	 					},
+					    h3:
+	 					{
+	 					    show: "bounceInRight",
+	 					    hide: "fadeOutRightBig",
+	 					    delayShow: "delay1-5s"
+	 					},
+					    h4:
+	 					{
+	 					    show: "bounceInUp",
+	 					    hide: "fadeOutLeftBig",
+	 					    delayShow: "delay2s"
+	 					}
+					},
+				    1: //Slide No2
+					{
+					    "#todo":
+						{
+						    show: "fadeIn",
+						    hide: "fadeOut",
+						    delayShow: "delay0-5s"
+						},
+					    "#bounce":
+						{
+						    show: "bounceIn",
+						    hide: "bounceOut",
+						    delayShow: "delay2s"
+						},
+					    "#bounceUp":
+						{
+						    show: "bounceInDown",
+						    hide: "bounceOutLeft",
+						    delayShow: "delay2-5s"
+						},
+					    "#bounceRight":
+						{
+						    show: "bounceInRight",
+						    hide: "bounceOutRight",
+						    delayShow: "delay3s"
+						},
+					    "#fade":
+						{
+						    show: "fadeInLeft",
+						    hide: "fadeOutLeft",
+						    delayShow: "delay3-5s"
+						},
+					    "#fadeUp":
+						{
+						    show: "fadeInUpBig",
+						    hide: "fadeOutUpBig",
+						    delayShow: "delay4s"
+						},
+					    "#fadeDown":
+						{
+						    show: "fadeInDownBig",
+						    hide: "fadeOutDownBig",
+						    delayShow: "delay4-5s"
+						},
+					    "#rotate":
+						{
+						    show: "rotateIn",
+						    hide: "rotateOut",
+						    delayShow: "delay5-5s"
+						},
+					    "#rotateRight":
+						{
+						    show: "rotateInUpRight",
+						    hide: "rotateOutDownRight",
+						    delayShow: "delay6s"
+						},
+					    "#rotateLeft":
+						{
+						    show: "rotateInUpLeft",
+						    hide: "rotateOutDownLeft",
+						    delayShow: "delay6-5s"
+						}
+					},
+				    2: //Slide No3
+					{
+					    "img#css3":
+						{
+						    show: "flipInY",
+						    hide: "flipOutY",
+						    delayShow: "delay0-5s"
+						},
+					    "img#html5":
+						{
+						    show: "flipInY",
+						    hide: "flipOutY",
+						    delayShow: "delay0-5s"
+						},
+					    "img#jquery":
+						{
+						    show: "bounceIn",
+						    hide: "flipOutY",
+						    delayShow: "delay1-5s"
+						},
+					    "img#modernizr":
+						{
+						    show: "rollIn",
+						    hide: "flipOutY",
+						    delayShow: "delay2s"
+						},
+					    "#animatecss":
+						{
+						    show: "lightSpeedIn",
+						    hide: "flipOutY",
+						    delayShow: "delay2-5s"
+						}
+					}
+				}
+		 	});
                     //$('#kivisotope').isotope({
                     //    layoutMode: 'fitColumns',
                     //    itemSelector: '.item'

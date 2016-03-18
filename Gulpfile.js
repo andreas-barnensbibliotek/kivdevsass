@@ -50,14 +50,15 @@ gulp.task('foundationJS', function () {
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 //srcPath.js + '/imagesloaded.pkgd.min.js',
                 //srcPath.js + '/handlebars-v4.0.5.js',
-                //srcPath.js + '/getHandlebarTemplate.js',
+                srcPath.js + '/jquery.animateSlider.js',
+                srcPath.js + '/slick.js',
 			    srcPath.js + '/iscroll-lite.js',
                 srcPath.js + '/kivglobalvars.js',
                 srcPath.js + '/kivjs.js',
                 srcPath.js + '/kivsearch.js',
                 srcPath.js + '/kivartikel.js',
-                srcPath.js + '/pagerfix.js',
-                srcPath.js + '/slick.js'
+                srcPath.js + '/pagerfix.js'               
+               
 			]
 		)			
 		.pipe(concat('app.js'))

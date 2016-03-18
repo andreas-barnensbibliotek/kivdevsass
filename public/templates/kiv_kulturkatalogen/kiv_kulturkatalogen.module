@@ -1,0 +1,603 @@
+<?php
+
+DEFINE('KULTURKATALOGEN', 661);
+
+/**
+ * Implements hook_init().
+ */
+function kiv_kulturkatalogen_init() {
+  drupal_add_css(drupal_get_path('module', 'kiv_kulturkatalogen') . '/kiv_kulturkatalogen.css');
+  drupal_add_js(drupal_get_path('module', 'kiv_kulturkatalogen') . '/kiv_kulturkatalogen.js');
+}
+
+/**
+ * Implements hook_menu().
+ */
+function kiv_kulturkatalogen_menu() {
+  $items = array();
+  $items['admin/config/system/kulturkatalogen'] = array(
+    'title' => 'Kulturkatalogen',
+    'description' => 'Settings for kulturkatalogen',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('_kiv_kulturkatalogen_settings'),
+    'access arguments' => array('administer feeds'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function _kiv_kulturkatalogen_settings() {
+  $form = array();
+  $form['feeds_process_limit'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Feeds proccess limit'),
+    '#default_value' => variable_get('feeds_process_limit', FEEDS_PROCESS_LIMIT),
+  );
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_cron().
+ */
+function kiv_kulturkatalogen_cron() {
+
+  // Last updated date.
+  $last_updated = variable_get('kiv_kulturkatalogen_last_updated', 0);
+
+  // If it hasn't been run today run it.
+  if (Date('Ymd', $last_updated) < Date('Ymd')) {
+    $hour = Date('H');
+    if ($hour >= 19 && $hour <= 22) {
+      watchdog('kiv_kulturkatalogen_import', 'Starting to import nodes');
+      variable_set('kiv_kulturkatalogen_last_updated', time());
+      _kiv_kulturkatalogen_import();
+    }
+  }
+}
+
+
+function _kiv_kulturkatalogen_import() {
+  $source = feeds_source('kulturkatalogen');
+
+  // Refresh feed if import on create is selected.
+  if ($source->importer->config['import_on_create']) {
+    $source->startImport();
+  }
+
+  // Add to schedule, make sure importer is scheduled, too.
+  $source->schedule();
+  $source->importer->schedule();
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function kiv_kulturkatalogen_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+
+  // Only apply this for "kulturkatalogen" view.
+//  if ($form['#id'] == 'views-exposed-form-kulturkatalog-panel-pane-1') {
+	//2015_kulturkatalogen_annons
+if ($form['#id'] == 'views-exposed-form-2015-kulturkatalogen-annons-kulturkatalogen-annons-block') {
+    // Set default value to empty instead of -- All --
+    $form['typ_av_arrangemang']['#options']['All'] = 'Arrangemangstyp';
+    $form['konstform']['#options']['All'] = 'Konstform';
+    $form['organisation']['#options']['All'] = 'Utövare';
+    $form['speltid']['#options']['All'] = 'Programlängd';
+    $form['morklaggning']['#options']['All'] = 'Mörkläggning';
+
+    // Change text for some fields.
+    $form['morklaggning']['#options'][665] = t('None');
+    $form['morklaggning']['#options'][688] = t('Preferably');
+    $form['morklaggning']['#options'][668] = t('Necessary');
+
+    // Hide fields that are replaced with new bellow.
+    unset($form['field_fran_alder_value']);
+    unset($form['#info']['filter-field_fran_alder_value']['label']);
+    unset($form['field_till_alder_value']);
+    unset($form['#info']['filter-field_till_alder_value']['label']);
+    $form['#info']['filter-field_till_alder_value']['value'] = 'age';
+
+    unset($form['field_bokningsbar_value']);
+    unset($form['#info']['filter-field_bokningsbar_value']['label']);
+    $form['#info']['filter-field_bokningsbar_value']['value'] = 'period';
+
+    unset($form['field_kostnad_gage_value']);
+    unset($form['#info']['filter-field_kostnad_gage_value']['label']);
+    unset($form['field_kostnad_gage_value_1']);
+    unset($form['#info']['filter-field_kostnad_gage_value_1']['label']);
+    $form['#info']['filter-field_kostnad_gage_value_1'] = array('value' => 'price');
+
+    unset($form['field_hojd_over_scen']);
+    unset($form['#info']['filter-field_hojd_over_scen_value']['label']);
+    $form['#info']['filter-field_hojd_over_scen_value'] = array('value' => 'roof');
+
+    // Hide sort order field and rename sort by title.
+    $form['sort_order']['#type'] = 'hidden';
+    $form['sort_by']['#title'] = t('Sort result by');
+    $form['sort_by']['#default_value'] = 'created_1';
+
+    $form['#info']['filter-sort_by'] = array(
+      'value' => 'sort_by',
+    );
+
+    // Put playtime last.
+    $playtime = $form['#info']['filter-field_speltid_tid'];
+    unset($form['#info']['filter-field_speltid_tid']);
+    $form['#info']['filter-field_speltid_tid'] = $playtime;
+
+    // Add "min" suffix to "speltid" options.
+    if (isset($form['speltid']['#options']) && is_array($form['speltid']['#options'])) {
+      foreach ($form['speltid']['#options'] as $key => $time) {
+        if ($key != 'All') {
+          $form['speltid']['#options'][$key] = $time . ' min';
+        }
+      }
+    }
+
+    // Add period dropdown with HT & VT.
+    $form['period'] = array(
+      '#type' => 'select',
+      '#weight' => -2,
+      '#title' => t('Available through'),
+      '#options' => _kiv_kulturkatalogen_get_periods(),
+      '#default_value' => 0,
+    );
+
+    // Add age dropdown with ages 1-19.
+    $form['age'] = array(
+      '#type' => 'select',
+      '#weight' => -1,
+      '#title' => t('Age'),
+      '#options' => _kiv_kulturkatalogen_get_ages(),
+      '#default_value' => 0,
+    );
+
+    // Add price dropdown
+    $form['price'] = array(
+      '#type' => 'select',
+      '#weight' => 0,
+      '#title' => t('Price'),
+      '#options' => _kiv_kulturkatalogen_get_prices(),
+      '#default_value' => 0,
+    );
+
+    // Add price dropdown
+    $form['roof'] = array(
+      '#type' => 'select',
+      '#weight' => 0,
+      '#title' => t('Roof height'),
+      '#options' => array(
+        0 => 'Takhöjd',
+        2 => t('Up to @count meters', array('@count' => 2)),
+        3 => t('Up to @count meters', array('@count' => 3)),
+        4 => t('Up to @count meters', array('@count' => 4)),
+        5 => t('Up to @count meters', array('@count' => 5)),
+      ),
+      '#default_value' => 0,
+    );
+
+    // Rename submit button
+    $form['submit']['#value'] = t('Search');
+
+    // Add our own submit function to handle field updates.
+    array_unshift($form['#submit'], 'kiv_kulturkatalogen_views_exposed_form_submit');
+
+    // Remove terms that that dont have published nodes
+    $filter_terms[13] = array('field' => 'field_typ_av_arrangemang', 'form_field' => 'typ_av_arrangemang');
+    $filter_terms[16] = array('field' => 'field_organisation', 'form_field' => 'organisation');
+    $filter_terms[14] = array('field' => 'field_konstform', 'form_field' => 'konstform');
+    $filter_terms[15] = array('field' => 'field_morklaggning_kravs', 'form_field' => 'morklaggning');
+    $filter_terms[17] = array('field' => 'field_speltid', 'form_field' => 'speltid');
+
+    foreach($filter_terms as $vid => $field) {
+      $terms = kiv_kulturkatalogen_get_terms_with_published_nodes($vid, $field['field']);
+      foreach($form[$field['form_field']]['#options'] as $key => $value) {
+        if(!array_key_exists($key, $terms) && is_numeric($key)) {
+          unset($form[$field['form_field']]['#options'][$key]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Get all terms that have a published node for a specific field
+ * @param unknown_type $vid
+ * @param unknown_type $field
+ * @return An
+ */
+function kiv_kulturkatalogen_get_terms_with_published_nodes($vid, $field) {
+  // Static cache
+  $data = &drupal_static(__FUNCTION__);
+  $key = $vid.$field;
+
+  if(!isset($data[$key])) {
+    $join_table = 'field_data_'.$field;
+    $join_field = 'fdfdoc.'.$field.'_tid';
+
+    $query = '
+    SELECT DISTINCT tid, name  FROM taxonomy_term_data ttd
+    INNER JOIN '.$join_table.' fdfdoc ON ttd.tid = '.$join_field.'
+    INNER JOIN node n on fdfdoc.entity_id = n.nid
+    WHERE ttd.vid = '.$vid.' AND n.status = 1 AND n.type = \'culture_catalog\'
+    ';
+
+    $result = db_query($query);
+    $items = $result->fetchAllAssoc('tid');
+
+    // Save to static cache
+    $data[$key] = $items;
+  }
+
+  return $data[$key];
+}
+
+/**
+ * Genereate an array of periods for this and next year.
+ */
+function _kiv_kulturkatalogen_get_periods() {
+  $periods = array('Bokningsbar t.o.m.');
+  $this_year = date('Y');
+  for ($i = 0; $i < 2; $i++) {
+    $year = $this_year + $i;
+    $periods['VT ' . $year] = 'VT ' . $year;
+    $periods['HT ' . $year] = 'HT ' . $year;
+  }
+  return $periods;
+}
+
+/**
+ * Translate period to period.
+ */
+function _kiv_kulturkatalogen_get_date_from_period($period) {
+
+  if (!isset($period) || empty($period)) return '';
+
+  $dates = array(
+    'VT' => '06-30',
+    'HT' => '12-31',
+  );
+
+  $date = '';
+  $period_array = explode(' ', $period);
+  if (array_key_exists($period_array[0], $dates)) {
+    $year = $period_array[1];
+    $period = $period_array[0];
+    $date = $year . '-' . $dates[$period];
+  }
+  return $date;
+}
+
+/**
+ * Genereate an array of ages 1-19.
+*/
+function _kiv_kulturkatalogen_get_ages() {
+  $ages = array('Ålder');
+  for ($i = 1; $i <= 19; $i++) {
+    $ages[$i] = $i;
+  }
+  return $ages;
+}
+
+/**
+ * Genereate an array of ages 1-19.
+*/
+function _kiv_kulturkatalogen_get_prices() {
+  $prices = array('Kostnad');
+  for ($i = 1; $i <= 10; $i++) {
+    $price = $i * 1000;
+    $prices[$price.'-'] = t('Up to @price kr', array('@price' => $price));
+  }
+  $prices[$price.'+'] = t('More than @price kr', array('@price' => 10000));
+  return $prices;
+}
+
+/**
+ * Submit function from submit function.
+ */
+function kiv_kulturkatalogen_views_exposed_form_submit($form, &$form_state) {
+
+  // Age
+  $age = $form_state['values']['age'] ? $form_state['values']['age'] : '';
+  $form_state['values']['field_fran_alder_value'] = $age;
+  $form_state['values']['field_till_alder_value'] = $age;
+
+  // Period
+  $period = $form_state['values']['period'] ? $form_state['values']['period'] : '';
+  $form_state['values']['field_bokningsbar_value']['value'] = _kiv_kulturkatalogen_get_date_from_period($period);
+
+  // Price
+  $price = $form_state['values']['price'] ? $form_state['values']['price'] : '';
+  if (strpos($price, '-') !== false) {
+    $price = str_replace('-', '', $price);
+    $form_state['values']['field_kostnad_gage_value_1'] = $price;
+    $form_state['values']['field_kostnad_gage_value'] = '';
+  }
+  else if (strpos($price, '+') !== false) {
+    $price = str_replace('+', '', $price);
+    $form_state['values']['field_kostnad_gage_value'] = $price;
+    $form_state['values']['field_kostnad_gage_value_1'] = '';
+  }
+  else {
+    $form_state['values']['field_kostnad_gage_value'] = '';
+    $form_state['values']['field_kostnad_gage_value_1'] = '';
+  }
+
+  // Roof height
+  $roof = $form_state['values']['roof'] ? $form_state['values']['roof'] : '';
+  $form_state['values']['field_hojd_over_scen'] = $roof;
+
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function kiv_kulturkatalogen_field_formatter_info() {
+  return array(
+    'kiv_kulturkatalogen_period' => array(
+      'label' => 'KIV: ' . t('Period'),
+      'field types' => array('text'),
+    ),
+    'kiv_kulturkatalogen_add_min' => array(
+      'label' => 'KIV: ' . t('Lägg till \'min\''),
+      'field types' => array('text'),
+    ),
+    'kiv_kulturkatalogen_add_meters' => array(
+      'label' => 'KIV: ' . t('Lägg till \'m(eter)\''),
+      'field types' => array('text', 'number_integer'),
+    ),
+    'kiv_kulturkatalogen_add_kr' => array(
+      'label' => 'KIV: ' . t('Lägg till \'kr\''),
+      'field types' => array('text', 'number_integer', 'text_long'),
+    ),
+    'kiv_kulturkatalogen_add_krmil' => array(
+      'label' => 'KIV: ' . t('Lägg till \'kr/mil\''),
+      'field types' => array('text', 'number_integer', 'text_long'),
+    ),
+    'kiv_kulturkatalogen_hide_if_dash' => array(
+      'label' => 'KIV: ' . t('Dölj när innehåll är  \'-\''),
+      'field types' => array('text', 'number_integer', 'text_long'),
+    ),
+    'kiv_kulturkatalogen_linked_email' => array(
+        'label' => 'KIV: Länkad e-post',
+        'field types' => array('text'),
+    )
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function kiv_kulturkatalogen_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+
+  $element = array();
+
+  switch ($display['type']) {
+    case 'kiv_kulturkatalogen_period':
+      $tour_schedule = field_get_items('node', $entity, 'field_period', $entity->language);
+      $tour_schedule_according = field_get_items('node', $entity, 'field_period_enligt_ok', $entity->language);
+
+      if (isset($tour_schedule[0]) && isset($tour_schedule_according[0])) {
+        $element[0] = array('#markup' => $tour_schedule[0]['safe_value'] . ' annars enligt överenskommelse.');
+      }
+      else if (isset($tour_schedule[0]) && !isset($tour_schedule_according[0])) {
+        $element[0] = array('#markup' => $tour_schedule[0]['safe_value']);
+      }
+      else if (!isset($tour_schedule[0]) && isset($tour_schedule_according[0])) {
+        $tour_schedule_value = $tour_schedule_according[0]['safe_value'] == "Enligt ok" ? "Enligt överenskommelse" : $tour_schedule_according[0]['safe_value'];
+        $element[0] = array('#markup' => $tour_schedule_value);
+      }
+      else {
+        if (isset($items[0]['safe_value'])) {
+          $element[0] = array('#markup' => $items[0]['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_add_min':
+      foreach ($items as $delta => $item) {
+        if ($item['value'] && strpos($item['safe_value'], 'min') === false) {
+          $element[$delta] = array('#markup' => $item['safe_value'] . ' min');
+        }
+        else {
+         $element[$delta] = array('#markup' => $item['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_add_meters':
+      foreach ($items as $delta => $item) {
+        if ($item['value'] && strpos($item['value'], 'm') === false) {
+          $element[$delta] = array('#markup' => $item['value'] . ' m');
+        }
+        else {
+         $element[$delta] = array('#markup' => $item['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_add_kr':
+      $tid = field_get_items('node', $entity, 'field_typ_av_arrangemang', $entity->language);
+      if (!isset($tid[0]['tid'])) { return $element; }
+      $arrangement = taxonomy_term_load($tid[0]['tid']);
+
+      foreach ($items as $delta => $item) {
+        if ($item['value'] && strpos($item['value'], 'kr') === false) {
+          $element[$delta] = array('#markup' => $item['value'] . ' kr');
+          if ($arrangement->name == 'Föreställning på fast scen') {
+            $element[$delta]['#markup'] = $element[$delta]['#markup'] . '/elev';
+          }
+        }
+        else {
+          $element[$delta] = array('#markup' => $item['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_add_krmil':
+      foreach ($items as $delta => $item) {
+        if ($item['value'] && strpos($item['value'], 'kr/mil') === false) {
+          $element[$delta] = array('#markup' => $item['value'] . ' kr/mil');
+        }
+        else {
+         $element[$delta] = array('#markup' => $item['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_hide_if_dash':
+      foreach ($items as $delta => $item) {
+        if ($item['value'] && strpos($item['value'], '-') !== false) {
+          $element[$delta] = array('#markup' => '');
+        }
+        else {
+         $element[$delta] = array('#markup' => $item['safe_value']);
+        }
+      }
+      break;
+    case 'kiv_kulturkatalogen_linked_email':
+      foreach ($items as $delta => $item) {
+        $element[$delta] = array('#markup' => '<a href="mailto:'.$item['value'].'">'.$item['value'].'</a>');
+      }
+      break;
+
+  }
+  return $element;
+}
+
+/**
+ * Implements template_kulturkatalogen_preprocess_panels_pane().
+ */
+function kiv_kulturkatalogen_preprocess_panels_pane(&$vars) {
+
+  if (arg(0) == 'node') {
+    $node = node_load(arg(1));
+
+    $typ_av_arrangemang = field_get_items('node', $node, 'field_typ_av_arrangemang', $node->language);
+    $typ_av_arrangemang = isset($typ_av_arrangemang[0]['tid']) ? taxonomy_term_load($typ_av_arrangemang[0]['tid'])->name : '';
+
+    $ovrigt = field_get_items('node', $node, 'field_ovrigt', $node->language);
+    $ovrigt = isset($ovrigt[0]['value']) ? $ovrigt[0]['value'] : '';
+
+    // Change title to Lokal.
+    if ($typ_av_arrangemang == 'Kulturpedagogiska projekt') {
+      if ($vars['pane']->subtype == 'kulturkatalog-panel_pane_5') {
+        $vars['title'] = 'Lokal';
+      }
+    }
+    // Hide panel.
+    if ($typ_av_arrangemang == 'Resmålsbesök' || $typ_av_arrangemang == 'Föreställning på fast scen') {
+      if ($vars['pane']->subtype == 'kulturkatalog-panel_pane_6') {
+        unset($vars['content']);
+        unset($vars['title']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_semanticviews_view_fields().
+ */
+function kiv_kulturkatalogen_preprocess_semanticviews_view_fields(&$variables) {
+  $fields = $variables['fields'];
+
+  if (arg(0) == 'node') {
+    $node = node_load(arg(1));
+
+    $typ_av_arrangemang = field_get_items('node', $node, 'field_typ_av_arrangemang', $node->language);
+    $typ_av_arrangemang = isset($typ_av_arrangemang[0]['tid']) ? taxonomy_term_load($typ_av_arrangemang[0]['tid'])->name : '';
+
+    if ($typ_av_arrangemang == 'Fortbildning' || $typ_av_arrangemang == 'Kulturpedagogiska projekt') {
+      if (isset($fields['field_max_publik'])) $fields['field_max_publik']->label = 'Max antal deltagare';
+      if (isset($fields['field_forestallningar_per_dag'])) $fields['field_forestallningar_per_dag']->label = 'Grupper per dag';
+      if (isset($fields['field_speltid'])) $fields['field_speltid']->label = 'Längd';
+    }
+
+    if ($typ_av_arrangemang == 'Fortbildning' || $typ_av_arrangemang == 'Kulturpedagogiska projekt') {
+      if (isset($fields['field_lokalkrav'])) $fields['field_lokalkrav']->label = 'Lokal/materialkrav';
+    }
+    if ($typ_av_arrangemang == 'Kulturpedagogiska projekt') {
+      if (isset($fields['field_kostnad_gage'])) $fields['field_kostnad_gage']->label = 'Kostnad per timme';
+      if (isset($fields['field_kostnad_arr_2'])) $fields['field_kostnad_arr_2']->label = 'Kostnad, halvdag';
+      if (isset($fields['field_kostnad_arr_3'])) $fields['field_kostnad_arr_3']->label = 'Kostnad, heldag';
+    }
+    if ($typ_av_arrangemang == 'Museilådor') {
+      if (isset($fields['field_kostnad_gage'])) $fields['field_kostnad_gage']->label = 'Kostnad, första veckan';
+      if (isset($fields['field_kostnad_arr_2'])) $fields['field_kostnad_arr_2']->label = 'Kostnad, andra veckan';
+      if (isset($fields['field_kostnad_arr_3'])) $fields['field_kostnad_arr_3']->label = 'Konstnad, tredje veckan';
+    }
+    if ($typ_av_arrangemang == 'Föreställning på fast scen') {
+      if (isset($fields['field_kostnad_gage'])) $fields['field_kostnad_gage']->label = 'Kostnad';
+    }
+    if ($typ_av_arrangemang == 'Resmålsbesök') {
+      if (isset($fields['field_traktamente'])) $fields['field_traktamente']->label = 'Övriga avgifter';
+      if (isset($fields['field_telefonnummer'])) unset($fields['field_telefonnummer']);
+    }
+    if ($typ_av_arrangemang == 'Föreställning på fast scen' || $typ_av_arrangemang == 'Resmålsbesök') {
+      if (isset($fields['field_epost_information'])) unset($fields['field_epost_information']);
+      if (isset($fields['field_e_post'])) unset($fields['field_e_post']);
+      if (isset($fields['field_organisation'])) unset($fields['field_organisation']);
+      if (isset($fields['field_producent'])) unset($fields['field_producent']);
+    }
+  }
+
+  $variables['fields'] = $fields;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function kiv_kulturkatalogen_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  $current_user_sections = workbench_access_get_user_tree($user); // Load user sections.
+
+  // Define which forms should be altered with available categories
+  $form_ids_with_workbench_access = array("event_node_form","nyhetsartikel_node_form", "informationssida_node_form", "blogg_node_form");
+  if (in_array($form_id, $form_ids_with_workbench_access)) {
+
+    // Remove related cateogires that i don't have access to and is "kulturkatalogen".
+    $related_categories = isset($form['field_related_categories']['und']['#options']) ? $form['field_related_categories']['und']['#options'] : array();
+    foreach($related_categories as $key => $value){
+      if(!isset($current_user_sections[$key]) && $key == KULTURKATALOGEN){
+        unset($form['field_related_categories']['und']['#options'][$key]);
+      }
+    }
+  }
+}
+
+/**
+ * Invoked after a feed source has been parsed, before it will be processed.
+ *
+ * @param $source
+ *  FeedsSource object that describes the source that has been imported.
+ * @param $result
+ *   FeedsParserResult object that has been parsed from the source.
+ */
+function kiv_kulturkatalogen_feeds_after_parse(FeedsSource $source, FeedsParserResult $result) {
+  if ($source->importer->id == 'kulturkatalogen') {
+
+    foreach ($result->items as $key => $item) {
+
+      // Remove nodes that exist in the XML.
+      if (isset($remove_nodes[$item['xpathparser:0']])) {
+        unset($remove_nodes[$item['xpathparser:0']]);
+      }
+
+      // Rewrite values for fields.
+      if ($result->items[$key]['xpathparser:33'] == "Ej godkänd för webbpublicering") {
+        $result->items[$key]['xpathparser:3'] = 0;
+      }
+      if ($result->items[$key]['xpathparser:4']) {
+        $result->items[$key]['xpathparser:4'] = strtotime($result->items[$key]['xpathparser:4']);
+      }
+      if ($result->items[$key]['xpathparser:5']) {
+        $result->items[$key]['xpathparser:5'] = strtotime($result->items[$key]['xpathparser:5']);
+      }
+      if ($result->items[$key]['xpathparser:67']) {
+        $result->items[$key]['xpathparser:67'] = $result->items[$key]['xpathparser:67'] . ' ';
+      }
+
+      // Remove unpublished content.
+      if ($result->items[$key]['xpathparser:3'] == 0) {
+        unset($result->items[$key]);
+      }
+    }
+
+  }
+}

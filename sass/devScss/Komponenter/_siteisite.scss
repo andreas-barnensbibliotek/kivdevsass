@@ -33,7 +33,7 @@
 //Frame ---s
 .page-taxonomy-term-980{
     .omossspace h1{ 
-        color:transparent;
+        color:transparent !important;
     }
     .breadcrumb-BG{
         background-color:$white;
@@ -43,4 +43,7 @@
             object-fit:contain;
         }
     } 
+    .top-bild-wrapper {
+        margin-bottom: -100px !important;
+    }
 } 

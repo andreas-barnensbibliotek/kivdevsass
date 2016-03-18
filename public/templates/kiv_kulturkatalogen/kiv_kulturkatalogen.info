@@ -1,0 +1,4 @@
+name = Kulturkatalogen
+description = Anpassningar gjorda till fördel av Kulturkatalogen.
+package = Kultur i väst
+core = 7.x

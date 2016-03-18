@@ -6624,2188 +6624,6 @@
   };
 }(jQuery, window, window.document));
 
-/*! iScroll v5.1.3 ~ (c) 2008-2014 Matteo Spinelli ~ http://cubiq.org/license */
-(function (window, document, Math) {
-var rAF = window.requestAnimationFrame	||
-	window.webkitRequestAnimationFrame	||
-	window.mozRequestAnimationFrame		||
-	window.oRequestAnimationFrame		||
-	window.msRequestAnimationFrame		||
-	function (callback) { window.setTimeout(callback, 1000 / 60); };
-
-var utils = (function () {
-	var me = {};
-
-	var _elementStyle = document.createElement('div').style;
-	var _vendor = (function () {
-		var vendors = ['t', 'webkitT', 'MozT', 'msT', 'OT'],
-			transform,
-			i = 0,
-			l = vendors.length;
-
-		for ( ; i < l; i++ ) {
-			transform = vendors[i] + 'ransform';
-			if ( transform in _elementStyle ) return vendors[i].substr(0, vendors[i].length-1);
-		}
-
-		return false;
-	})();
-
-	function _prefixStyle (style) {
-		if ( _vendor === false ) return false;
-		if ( _vendor === '' ) return style;
-		return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
-	}
-
-	me.getTime = Date.now || function getTime () { return new Date().getTime(); };
-
-	me.extend = function (target, obj) {
-		for ( var i in obj ) {
-			target[i] = obj[i];
-		}
-	};
-
-	me.addEvent = function (el, type, fn, capture) {
-		el.addEventListener(type, fn, !!capture);
-	};
-
-	me.removeEvent = function (el, type, fn, capture) {
-		el.removeEventListener(type, fn, !!capture);
-	};
-
-	me.prefixPointerEvent = function (pointerEvent) {
-		return window.MSPointerEvent ? 
-			'MSPointer' + pointerEvent.charAt(9).toUpperCase() + pointerEvent.substr(10):
-			pointerEvent;
-	};
-
-	me.momentum = function (current, start, time, lowerMargin, wrapperSize, deceleration) {
-		var distance = current - start,
-			speed = Math.abs(distance) / time,
-			destination,
-			duration;
-
-		deceleration = deceleration === undefined ? 0.0006 : deceleration;
-
-		destination = current + ( speed * speed ) / ( 2 * deceleration ) * ( distance < 0 ? -1 : 1 );
-		duration = speed / deceleration;
-
-		if ( destination < lowerMargin ) {
-			destination = wrapperSize ? lowerMargin - ( wrapperSize / 2.5 * ( speed / 8 ) ) : lowerMargin;
-			distance = Math.abs(destination - current);
-			duration = distance / speed;
-		} else if ( destination > 0 ) {
-			destination = wrapperSize ? wrapperSize / 2.5 * ( speed / 8 ) : 0;
-			distance = Math.abs(current) + destination;
-			duration = distance / speed;
-		}
-
-		return {
-			destination: Math.round(destination),
-			duration: duration
-		};
-	};
-
-	var _transform = _prefixStyle('transform');
-
-	me.extend(me, {
-		hasTransform: _transform !== false,
-		hasPerspective: _prefixStyle('perspective') in _elementStyle,
-		hasTouch: 'ontouchstart' in window,
-		hasPointer: window.PointerEvent || window.MSPointerEvent, // IE10 is prefixed
-		hasTransition: _prefixStyle('transition') in _elementStyle
-	});
-
-	// This should find all Android browsers lower than build 535.19 (both stock browser and webview)
-	me.isBadAndroid = /Android /.test(window.navigator.appVersion) && !(/Chrome\/\d/.test(window.navigator.appVersion));
-
-	me.extend(me.style = {}, {
-		transform: _transform,
-		transitionTimingFunction: _prefixStyle('transitionTimingFunction'),
-		transitionDuration: _prefixStyle('transitionDuration'),
-		transitionDelay: _prefixStyle('transitionDelay'),
-		transformOrigin: _prefixStyle('transformOrigin')
-	});
-
-	me.hasClass = function (e, c) {
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)");
-		return re.test(e.className);
-	};
-
-	me.addClass = function (e, c) {
-		if ( me.hasClass(e, c) ) {
-			return;
-		}
-
-		var newclass = e.className.split(' ');
-		newclass.push(c);
-		e.className = newclass.join(' ');
-	};
-
-	me.removeClass = function (e, c) {
-		if ( !me.hasClass(e, c) ) {
-			return;
-		}
-
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)", 'g');
-		e.className = e.className.replace(re, ' ');
-	};
-
-	me.offset = function (el) {
-		var left = -el.offsetLeft,
-			top = -el.offsetTop;
-
-		// jshint -W084
-		while (el = el.offsetParent) {
-			left -= el.offsetLeft;
-			top -= el.offsetTop;
-		}
-		// jshint +W084
-
-		return {
-			left: left,
-			top: top
-		};
-	};
-
-	me.preventDefaultException = function (el, exceptions) {
-		for ( var i in exceptions ) {
-			if ( exceptions[i].test(el[i]) ) {
-				return true;
-			}
-		}
-
-		return false;
-	};
-
-	me.extend(me.eventType = {}, {
-		touchstart: 1,
-		touchmove: 1,
-		touchend: 1,
-
-		mousedown: 2,
-		mousemove: 2,
-		mouseup: 2,
-
-		pointerdown: 3,
-		pointermove: 3,
-		pointerup: 3,
-
-		MSPointerDown: 3,
-		MSPointerMove: 3,
-		MSPointerUp: 3
-	});
-
-	me.extend(me.ease = {}, {
-		quadratic: {
-			style: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-			fn: function (k) {
-				return k * ( 2 - k );
-			}
-		},
-		circular: {
-			style: 'cubic-bezier(0.1, 0.57, 0.1, 1)',	// Not properly "circular" but this looks better, it should be (0.075, 0.82, 0.165, 1)
-			fn: function (k) {
-				return Math.sqrt( 1 - ( --k * k ) );
-			}
-		},
-		back: {
-			style: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-			fn: function (k) {
-				var b = 4;
-				return ( k = k - 1 ) * k * ( ( b + 1 ) * k + b ) + 1;
-			}
-		},
-		bounce: {
-			style: '',
-			fn: function (k) {
-				if ( ( k /= 1 ) < ( 1 / 2.75 ) ) {
-					return 7.5625 * k * k;
-				} else if ( k < ( 2 / 2.75 ) ) {
-					return 7.5625 * ( k -= ( 1.5 / 2.75 ) ) * k + 0.75;
-				} else if ( k < ( 2.5 / 2.75 ) ) {
-					return 7.5625 * ( k -= ( 2.25 / 2.75 ) ) * k + 0.9375;
-				} else {
-					return 7.5625 * ( k -= ( 2.625 / 2.75 ) ) * k + 0.984375;
-				}
-			}
-		},
-		elastic: {
-			style: '',
-			fn: function (k) {
-				var f = 0.22,
-					e = 0.4;
-
-				if ( k === 0 ) { return 0; }
-				if ( k == 1 ) { return 1; }
-
-				return ( e * Math.pow( 2, - 10 * k ) * Math.sin( ( k - f / 4 ) * ( 2 * Math.PI ) / f ) + 1 );
-			}
-		}
-	});
-
-	me.tap = function (e, eventName) {
-		var ev = document.createEvent('Event');
-		ev.initEvent(eventName, true, true);
-		ev.pageX = e.pageX;
-		ev.pageY = e.pageY;
-		e.target.dispatchEvent(ev);
-	};
-
-	me.click = function (e) {
-		var target = e.target,
-			ev;
-
-		if ( !(/(SELECT|INPUT|TEXTAREA)/i).test(target.tagName) ) {
-			ev = document.createEvent('MouseEvents');
-			ev.initMouseEvent('click', true, true, e.view, 1,
-				target.screenX, target.screenY, target.clientX, target.clientY,
-				e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
-				0, null);
-
-			ev._constructed = true;
-			target.dispatchEvent(ev);
-		}
-	};
-
-	return me;
-})();
-
-function IScroll (el, options) {
-	this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
-	this.scroller = this.wrapper.children[0];
-	this.scrollerStyle = this.scroller.style;		// cache style for better performance
-
-	this.options = {
-
-// INSERT POINT: OPTIONS 
-
-		startX: 0,
-		startY: 0,
-		scrollY: true,
-		directionLockThreshold: 5,
-		momentum: true,
-
-		bounce: true,
-		bounceTime: 600,
-		bounceEasing: '',
-
-		preventDefault: true,
-		preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT)$/ },
-
-		HWCompositing: true,
-		useTransition: true,
-		useTransform: true
-	};
-
-	for ( var i in options ) {
-		this.options[i] = options[i];
-	}
-
-	// Normalize options
-	this.translateZ = this.options.HWCompositing && utils.hasPerspective ? ' translateZ(0)' : '';
-
-	this.options.useTransition = utils.hasTransition && this.options.useTransition;
-	this.options.useTransform = utils.hasTransform && this.options.useTransform;
-
-	this.options.eventPassthrough = this.options.eventPassthrough === true ? 'vertical' : this.options.eventPassthrough;
-	this.options.preventDefault = !this.options.eventPassthrough && this.options.preventDefault;
-
-	// If you want eventPassthrough I have to lock one of the axes
-	this.options.scrollY = this.options.eventPassthrough == 'vertical' ? false : this.options.scrollY;
-	this.options.scrollX = this.options.eventPassthrough == 'horizontal' ? false : this.options.scrollX;
-
-	// With eventPassthrough we also need lockDirection mechanism
-	this.options.freeScroll = this.options.freeScroll && !this.options.eventPassthrough;
-	this.options.directionLockThreshold = this.options.eventPassthrough ? 0 : this.options.directionLockThreshold;
-
-	this.options.bounceEasing = typeof this.options.bounceEasing == 'string' ? utils.ease[this.options.bounceEasing] || utils.ease.circular : this.options.bounceEasing;
-
-	this.options.resizePolling = this.options.resizePolling === undefined ? 60 : this.options.resizePolling;
-
-	if ( this.options.tap === true ) {
-		this.options.tap = 'tap';
-	}
-
-// INSERT POINT: NORMALIZATION
-
-	// Some defaults	
-	this.x = 0;
-	this.y = 0;
-	this.directionX = 0;
-	this.directionY = 0;
-	this._events = {};
-
-// INSERT POINT: DEFAULTS
-
-	this._init();
-	this.refresh();
-
-	this.scrollTo(this.options.startX, this.options.startY);
-	this.enable();
-}
-
-IScroll.prototype = {
-	version: '5.1.3',
-
-	_init: function () {
-		this._initEvents();
-
-// INSERT POINT: _init
-
-	},
-
-	destroy: function () {
-		this._initEvents(true);
-
-		this._execEvent('destroy');
-	},
-
-	_transitionEnd: function (e) {
-		if ( e.target != this.scroller || !this.isInTransition ) {
-			return;
-		}
-
-		this._transitionTime();
-		if ( !this.resetPosition(this.options.bounceTime) ) {
-			this.isInTransition = false;
-			this._execEvent('scrollEnd');
-		}
-	},
-
-	_start: function (e) {
-		// React to left mouse button only
-		if ( utils.eventType[e.type] != 1 ) {
-			if ( e.button !== 0 ) {
-				return;
-			}
-		}
-
-		if ( !this.enabled || (this.initiated && utils.eventType[e.type] !== this.initiated) ) {
-			return;
-		}
-
-		if ( this.options.preventDefault && !utils.isBadAndroid && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
-		}
-
-		var point = e.touches ? e.touches[0] : e,
-			pos;
-
-		this.initiated	= utils.eventType[e.type];
-		this.moved		= false;
-		this.distX		= 0;
-		this.distY		= 0;
-		this.directionX = 0;
-		this.directionY = 0;
-		this.directionLocked = 0;
-
-		this._transitionTime();
-
-		this.startTime = utils.getTime();
-
-		if ( this.options.useTransition && this.isInTransition ) {
-			this.isInTransition = false;
-			pos = this.getComputedPosition();
-			this._translate(Math.round(pos.x), Math.round(pos.y));
-			this._execEvent('scrollEnd');
-		} else if ( !this.options.useTransition && this.isAnimating ) {
-			this.isAnimating = false;
-			this._execEvent('scrollEnd');
-		}
-
-		this.startX    = this.x;
-		this.startY    = this.y;
-		this.absStartX = this.x;
-		this.absStartY = this.y;
-		this.pointX    = point.pageX;
-		this.pointY    = point.pageY;
-
-		this._execEvent('beforeScrollStart');
-	},
-
-	_move: function (e) {
-		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
-			return;
-		}
-
-		if ( this.options.preventDefault ) {	// increases performance on Android? TODO: check!
-			e.preventDefault();
-		}
-
-		var point		= e.touches ? e.touches[0] : e,
-			deltaX		= point.pageX - this.pointX,
-			deltaY		= point.pageY - this.pointY,
-			timestamp	= utils.getTime(),
-			newX, newY,
-			absDistX, absDistY;
-
-		this.pointX		= point.pageX;
-		this.pointY		= point.pageY;
-
-		this.distX		+= deltaX;
-		this.distY		+= deltaY;
-		absDistX		= Math.abs(this.distX);
-		absDistY		= Math.abs(this.distY);
-
-		// We need to move at least 10 pixels for the scrolling to initiate
-		if ( timestamp - this.endTime > 300 && (absDistX < 10 && absDistY < 10) ) {
-			return;
-		}
-
-		// If you are scrolling in one direction lock the other
-		if ( !this.directionLocked && !this.options.freeScroll ) {
-			if ( absDistX > absDistY + this.options.directionLockThreshold ) {
-				this.directionLocked = 'h';		// lock horizontally
-			} else if ( absDistY >= absDistX + this.options.directionLockThreshold ) {
-				this.directionLocked = 'v';		// lock vertically
-			} else {
-				this.directionLocked = 'n';		// no lock
-			}
-		}
-
-		if ( this.directionLocked == 'h' ) {
-			if ( this.options.eventPassthrough == 'vertical' ) {
-				e.preventDefault();
-			} else if ( this.options.eventPassthrough == 'horizontal' ) {
-				this.initiated = false;
-				return;
-			}
-
-			deltaY = 0;
-		} else if ( this.directionLocked == 'v' ) {
-			if ( this.options.eventPassthrough == 'horizontal' ) {
-				e.preventDefault();
-			} else if ( this.options.eventPassthrough == 'vertical' ) {
-				this.initiated = false;
-				return;
-			}
-
-			deltaX = 0;
-		}
-
-		deltaX = this.hasHorizontalScroll ? deltaX : 0;
-		deltaY = this.hasVerticalScroll ? deltaY : 0;
-
-		newX = this.x + deltaX;
-		newY = this.y + deltaY;
-
-		// Slow down if outside of the boundaries
-		if ( newX > 0 || newX < this.maxScrollX ) {
-			newX = this.options.bounce ? this.x + deltaX / 3 : newX > 0 ? 0 : this.maxScrollX;
-		}
-		if ( newY > 0 || newY < this.maxScrollY ) {
-			newY = this.options.bounce ? this.y + deltaY / 3 : newY > 0 ? 0 : this.maxScrollY;
-		}
-
-		this.directionX = deltaX > 0 ? -1 : deltaX < 0 ? 1 : 0;
-		this.directionY = deltaY > 0 ? -1 : deltaY < 0 ? 1 : 0;
-
-		if ( !this.moved ) {
-			this._execEvent('scrollStart');
-		}
-
-		this.moved = true;
-
-		this._translate(newX, newY);
-
-/* REPLACE START: _move */
-
-		if ( timestamp - this.startTime > 300 ) {
-			this.startTime = timestamp;
-			this.startX = this.x;
-			this.startY = this.y;
-		}
-
-/* REPLACE END: _move */
-
-	},
-
-	_end: function (e) {
-		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
-			return;
-		}
-
-		if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
-			e.preventDefault();
-		}
-
-		var point = e.changedTouches ? e.changedTouches[0] : e,
-			momentumX,
-			momentumY,
-			duration = utils.getTime() - this.startTime,
-			newX = Math.round(this.x),
-			newY = Math.round(this.y),
-			distanceX = Math.abs(newX - this.startX),
-			distanceY = Math.abs(newY - this.startY),
-			time = 0,
-			easing = '';
-
-		this.isInTransition = 0;
-		this.initiated = 0;
-		this.endTime = utils.getTime();
-
-		// reset if we are outside of the boundaries
-		if ( this.resetPosition(this.options.bounceTime) ) {
-			return;
-		}
-
-		this.scrollTo(newX, newY);	// ensures that the last position is rounded
-
-		// we scrolled less than 10 pixels
-		if ( !this.moved ) {
-			if ( this.options.tap ) {
-				utils.tap(e, this.options.tap);
-			}
-
-			if ( this.options.click ) {
-				utils.click(e);
-			}
-
-			this._execEvent('scrollCancel');
-			return;
-		}
-
-		if ( this._events.flick && duration < 200 && distanceX < 100 && distanceY < 100 ) {
-			this._execEvent('flick');
-			return;
-		}
-
-		// start momentum animation if needed
-		if ( this.options.momentum && duration < 300 ) {
-			momentumX = this.hasHorizontalScroll ? utils.momentum(this.x, this.startX, duration, this.maxScrollX, this.options.bounce ? this.wrapperWidth : 0, this.options.deceleration) : { destination: newX, duration: 0 };
-			momentumY = this.hasVerticalScroll ? utils.momentum(this.y, this.startY, duration, this.maxScrollY, this.options.bounce ? this.wrapperHeight : 0, this.options.deceleration) : { destination: newY, duration: 0 };
-			newX = momentumX.destination;
-			newY = momentumY.destination;
-			time = Math.max(momentumX.duration, momentumY.duration);
-			this.isInTransition = 1;
-		}
-
-// INSERT POINT: _end
-
-		if ( newX != this.x || newY != this.y ) {
-			// change easing function when scroller goes out of the boundaries
-			if ( newX > 0 || newX < this.maxScrollX || newY > 0 || newY < this.maxScrollY ) {
-				easing = utils.ease.quadratic;
-			}
-
-			this.scrollTo(newX, newY, time, easing);
-			return;
-		}
-
-		this._execEvent('scrollEnd');
-	},
-
-	_resize: function () {
-		var that = this;
-
-		clearTimeout(this.resizeTimeout);
-
-		this.resizeTimeout = setTimeout(function () {
-			that.refresh();
-		}, this.options.resizePolling);
-	},
-
-	resetPosition: function (time) {
-		var x = this.x,
-			y = this.y;
-
-		time = time || 0;
-
-		if ( !this.hasHorizontalScroll || this.x > 0 ) {
-			x = 0;
-		} else if ( this.x < this.maxScrollX ) {
-			x = this.maxScrollX;
-		}
-
-		if ( !this.hasVerticalScroll || this.y > 0 ) {
-			y = 0;
-		} else if ( this.y < this.maxScrollY ) {
-			y = this.maxScrollY;
-		}
-
-		if ( x == this.x && y == this.y ) {
-			return false;
-		}
-
-		this.scrollTo(x, y, time, this.options.bounceEasing);
-
-		return true;
-	},
-
-	disable: function () {
-		this.enabled = false;
-	},
-
-	enable: function () {
-		this.enabled = true;
-	},
-
-	refresh: function () {
-		var rf = this.wrapper.offsetHeight;		// Force reflow
-
-		this.wrapperWidth	= this.wrapper.clientWidth;
-		this.wrapperHeight	= this.wrapper.clientHeight;
-
-/* REPLACE START: refresh */
-
-		this.scrollerWidth	= this.scroller.offsetWidth;
-		this.scrollerHeight	= this.scroller.offsetHeight;
-
-		this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
-		this.maxScrollY		= this.wrapperHeight - this.scrollerHeight;
-
-/* REPLACE END: refresh */
-
-		this.hasHorizontalScroll	= this.options.scrollX && this.maxScrollX < 0;
-		this.hasVerticalScroll		= this.options.scrollY && this.maxScrollY < 0;
-
-		if ( !this.hasHorizontalScroll ) {
-			this.maxScrollX = 0;
-			this.scrollerWidth = this.wrapperWidth;
-		}
-
-		if ( !this.hasVerticalScroll ) {
-			this.maxScrollY = 0;
-			this.scrollerHeight = this.wrapperHeight;
-		}
-
-		this.endTime = 0;
-		this.directionX = 0;
-		this.directionY = 0;
-
-		this.wrapperOffset = utils.offset(this.wrapper);
-
-		this._execEvent('refresh');
-
-		this.resetPosition();
-
-// INSERT POINT: _refresh
-
-	},
-
-	on: function (type, fn) {
-		if ( !this._events[type] ) {
-			this._events[type] = [];
-		}
-
-		this._events[type].push(fn);
-	},
-
-	off: function (type, fn) {
-		if ( !this._events[type] ) {
-			return;
-		}
-
-		var index = this._events[type].indexOf(fn);
-
-		if ( index > -1 ) {
-			this._events[type].splice(index, 1);
-		}
-	},
-
-	_execEvent: function (type) {
-		if ( !this._events[type] ) {
-			return;
-		}
-
-		var i = 0,
-			l = this._events[type].length;
-
-		if ( !l ) {
-			return;
-		}
-
-		for ( ; i < l; i++ ) {
-			this._events[type][i].apply(this, [].slice.call(arguments, 1));
-		}
-	},
-
-	scrollBy: function (x, y, time, easing) {
-		x = this.x + x;
-		y = this.y + y;
-		time = time || 0;
-
-		this.scrollTo(x, y, time, easing);
-	},
-
-	scrollTo: function (x, y, time, easing) {
-		easing = easing || utils.ease.circular;
-
-		this.isInTransition = this.options.useTransition && time > 0;
-
-		if ( !time || (this.options.useTransition && easing.style) ) {
-			this._transitionTimingFunction(easing.style);
-			this._transitionTime(time);
-			this._translate(x, y);
-		} else {
-			this._animate(x, y, time, easing.fn);
-		}
-	},
-
-	scrollToElement: function (el, time, offsetX, offsetY, easing) {
-		el = el.nodeType ? el : this.scroller.querySelector(el);
-
-		if ( !el ) {
-			return;
-		}
-
-		var pos = utils.offset(el);
-
-		pos.left -= this.wrapperOffset.left;
-		pos.top  -= this.wrapperOffset.top;
-
-		// if offsetX/Y are true we center the element to the screen
-		if ( offsetX === true ) {
-			offsetX = Math.round(el.offsetWidth / 2 - this.wrapper.offsetWidth / 2);
-		}
-		if ( offsetY === true ) {
-			offsetY = Math.round(el.offsetHeight / 2 - this.wrapper.offsetHeight / 2);
-		}
-
-		pos.left -= offsetX || 0;
-		pos.top  -= offsetY || 0;
-
-		pos.left = pos.left > 0 ? 0 : pos.left < this.maxScrollX ? this.maxScrollX : pos.left;
-		pos.top  = pos.top  > 0 ? 0 : pos.top  < this.maxScrollY ? this.maxScrollY : pos.top;
-
-		time = time === undefined || time === null || time === 'auto' ? Math.max(Math.abs(this.x-pos.left), Math.abs(this.y-pos.top)) : time;
-
-		this.scrollTo(pos.left, pos.top, time, easing);
-	},
-
-	_transitionTime: function (time) {
-		time = time || 0;
-
-		this.scrollerStyle[utils.style.transitionDuration] = time + 'ms';
-
-		if ( !time && utils.isBadAndroid ) {
-			this.scrollerStyle[utils.style.transitionDuration] = '0.001s';
-		}
-
-// INSERT POINT: _transitionTime
-
-	},
-
-	_transitionTimingFunction: function (easing) {
-		this.scrollerStyle[utils.style.transitionTimingFunction] = easing;
-
-// INSERT POINT: _transitionTimingFunction
-
-	},
-
-	_translate: function (x, y) {
-		if ( this.options.useTransform ) {
-
-/* REPLACE START: _translate */
-
-			this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
-
-/* REPLACE END: _translate */
-
-		} else {
-			x = Math.round(x);
-			y = Math.round(y);
-			this.scrollerStyle.left = x + 'px';
-			this.scrollerStyle.top = y + 'px';
-		}
-
-		this.x = x;
-		this.y = y;
-
-// INSERT POINT: _translate
-
-	},
-
-	_initEvents: function (remove) {
-		var eventType = remove ? utils.removeEvent : utils.addEvent,
-			target = this.options.bindToWrapper ? this.wrapper : window;
-
-		eventType(window, 'orientationchange', this);
-		eventType(window, 'resize', this);
-
-		if ( this.options.click ) {
-			eventType(this.wrapper, 'click', this, true);
-		}
-
-		if ( !this.options.disableMouse ) {
-			eventType(this.wrapper, 'mousedown', this);
-			eventType(target, 'mousemove', this);
-			eventType(target, 'mousecancel', this);
-			eventType(target, 'mouseup', this);
-		}
-
-		if ( utils.hasPointer && !this.options.disablePointer ) {
-			eventType(this.wrapper, utils.prefixPointerEvent('pointerdown'), this);
-			eventType(target, utils.prefixPointerEvent('pointermove'), this);
-			eventType(target, utils.prefixPointerEvent('pointercancel'), this);
-			eventType(target, utils.prefixPointerEvent('pointerup'), this);
-		}
-
-		if ( utils.hasTouch && !this.options.disableTouch ) {
-			eventType(this.wrapper, 'touchstart', this);
-			eventType(target, 'touchmove', this);
-			eventType(target, 'touchcancel', this);
-			eventType(target, 'touchend', this);
-		}
-
-		eventType(this.scroller, 'transitionend', this);
-		eventType(this.scroller, 'webkitTransitionEnd', this);
-		eventType(this.scroller, 'oTransitionEnd', this);
-		eventType(this.scroller, 'MSTransitionEnd', this);
-	},
-
-	getComputedPosition: function () {
-		var matrix = window.getComputedStyle(this.scroller, null),
-			x, y;
-
-		if ( this.options.useTransform ) {
-			matrix = matrix[utils.style.transform].split(')')[0].split(', ');
-			x = +(matrix[12] || matrix[4]);
-			y = +(matrix[13] || matrix[5]);
-		} else {
-			x = +matrix.left.replace(/[^-\d.]/g, '');
-			y = +matrix.top.replace(/[^-\d.]/g, '');
-		}
-
-		return { x: x, y: y };
-	},
-
-	_animate: function (destX, destY, duration, easingFn) {
-		var that = this,
-			startX = this.x,
-			startY = this.y,
-			startTime = utils.getTime(),
-			destTime = startTime + duration;
-
-		function step () {
-			var now = utils.getTime(),
-				newX, newY,
-				easing;
-
-			if ( now >= destTime ) {
-				that.isAnimating = false;
-				that._translate(destX, destY);
-
-				if ( !that.resetPosition(that.options.bounceTime) ) {
-					that._execEvent('scrollEnd');
-				}
-
-				return;
-			}
-
-			now = ( now - startTime ) / duration;
-			easing = easingFn(now);
-			newX = ( destX - startX ) * easing + startX;
-			newY = ( destY - startY ) * easing + startY;
-			that._translate(newX, newY);
-
-			if ( that.isAnimating ) {
-				rAF(step);
-			}
-		}
-
-		this.isAnimating = true;
-		step();
-	},
-	handleEvent: function (e) {
-		switch ( e.type ) {
-			case 'touchstart':
-			case 'pointerdown':
-			case 'MSPointerDown':
-			case 'mousedown':
-				this._start(e);
-				break;
-			case 'touchmove':
-			case 'pointermove':
-			case 'MSPointerMove':
-			case 'mousemove':
-				this._move(e);
-				break;
-			case 'touchend':
-			case 'pointerup':
-			case 'MSPointerUp':
-			case 'mouseup':
-			case 'touchcancel':
-			case 'pointercancel':
-			case 'MSPointerCancel':
-			case 'mousecancel':
-				this._end(e);
-				break;
-			case 'orientationchange':
-			case 'resize':
-				this._resize();
-				break;
-			case 'transitionend':
-			case 'webkitTransitionEnd':
-			case 'oTransitionEnd':
-			case 'MSTransitionEnd':
-				this._transitionEnd(e);
-				break;
-			case 'wheel':
-			case 'DOMMouseScroll':
-			case 'mousewheel':
-				this._wheel(e);
-				break;
-			case 'keydown':
-				this._key(e);
-				break;
-			case 'click':
-				if ( !e._constructed ) {
-					e.preventDefault();
-					e.stopPropagation();
-				}
-				break;
-		}
-	}
-};
-IScroll.utils = utils;
-
-if ( typeof module != 'undefined' && module.exports ) {
-	module.exports = IScroll;
-} else {
-	window.IScroll = IScroll;
-}
-
-})(window, document, Math);
-var _isotopecolumns = 250;
-
-
-// CENTER LANDING PAGE TEXT
-
-jQuery(function ($){
-    var _base_server_url = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
-
-    var changeFontColorArtikelsidor = function () {
-        var changeh1 = $('.omossspace h1');
-
-        if ($('.term-top-image').css('background-color') == "transparent") {
-
-        } else {
-            if (changeh1.css('color') != "transparent") {
-                //changeh1.css('color', '#fff');
-                console.log("inte transparent");
-            }
-            
-        };
-        if ($('.ajimage-omrade-nod').find("img").length > 0) {
-            console.log("visar bild");
-            if (changeh1.css('color') != "transparent") {
-                changeh1.css('color', '#eee');
-                //changeh1.css('background-color', '#000');
-                //changeh1.css('padding-bottom', '0.9rem');
-                //changeh1.css('opacity', '0.9');
-
-               // changeh1.attr('style', 'color:#eee; background-color:#000;  opacity:0.9; display:inline;');
-                //$('.omossspace, .omossMenu2').css('margin-top', '-0.1rem');
-                console.log("inte transparent");
-            }
-        } else {
-            console.log("INGEN bild");
-        }        
-
-    
-    };
-    changeFontColorArtikelsidor();
-
-    $.fn.getSize = function () {
-        var $wrap = $("<div />").appendTo($("body"));
-        $wrap.css({
-            "position": "absolute !important",
-            "visibility": "hidden !important",
-            "display": "block !important"
-        });
-
-        $clone = $(this).clone().appendTo($wrap);
-
-        sizes = {
-            "width": this.width(),
-            "height": this.height()
-        };
-
-        $wrap.remove();
-
-        return sizes;
-    };
-
-
-    $(document).foundation({
-        orbit: {
-            stack_on_small: false,
-            navigation_arrows: false,
-            slide_number: false,
-            pause_on_hover: false,
-            resume_on_mouseout: false,
-            bullets: false,
-            timer: false,
-            variable_height: false,
-        }
-    });
-   
-    
-    // Menu offcanvas show hide START
-   
-    $('.left-small').on('click', function (e) {
-        $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-        return false;
-    });
-    $('.left-off-canvas-toggle').on('click', function (e) {
-        $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
-        return false;
-    });
-
-    $('.exit-off-canvas').on('click', function (e) {
-        $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-    });
-    // Menu offcanvas show hide END
-
-    $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
-
-    ////$('.ingresstextlista').hide();
-    //// fixa listningar pÂ listsidor utan mosaik 
-    //$(document).on('click', '.showingresstextlista', function (e) {
-    //    var valdclass = $(this).find('i');
-    //    var addOrRemove = valdclass.hasClass("closed");
-    //    var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlista");
-
-    //    if (addOrRemove) {
-    //        valdclass.removeClass("closed");
-    //        valdclass.addClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
-    //        thatobj.show();
-
-    //    } else {
-    //        valdclass.addClass("closed");
-    //        valdclass.removeClass("open");
-    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-    //        thatobj.hide();
-    //    }
-
-    //    return false;
-
-
-    //});
-
-
-
-
-    $(document).on('click', '.showingresstext', function (e) {
-        //var valdclass = $(this).find('i');
-        var valdclass = $(e.currentTarget).find('i');
-        var addOrRemove = valdclass.hasClass("closed");
-        var st = $(this).attr("style");
-        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-
-        
-        var itembottommargin = 0;
-
-
-        if (thatobj.length <= 0) {           
-            thatobj = $(e.currentTarget).parent().siblings().find('.ingresstext');
-        } else {
-            //h‰mta clickat item
-            var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
-           
-            //rensa bort absolut v‰rdet frÂn stringen
-            cur_clicked_Item = cur_clicked_Item.replace('position: absolute;', '').trim();
-
-            ////h‰mta clickatitem leftv‰rde:                
-            var start_pos = cur_clicked_Item.indexOf('left:') + 5;
-            //console.log("start_pos " + start_pos);
-            var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
-            //console.log("end_pos " + end_pos);
-            //h‰mta clickatitem topv‰rde
-            var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
-            //console.log("clickeditmTop_start " + clickeditmTop_start);
-            var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
-            //console.log("clicked_item_height " + clicked_item_height);
-
-            // h‰mta fˆrsta delen av style fˆr sˆkning senare
-            var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
-            var Maincontainerheight = $(this).closest('.kivisotope').attr("style");
-            //console.log("Maincontainerheight " + Maincontainerheight);
-
-            //rensa bort position: relative; v‰rdet frÂn stringen
-            Maincontainerheight = Maincontainerheight.replace('position: relative;', '').trim();
-                       
-            var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
-            var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
-            Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
-            //console.log("Maincontainerheight2 " + Maincontainerheight);
-            var ny_cont_height = cont_height;
-            //console.log("ny_cont_height " + ny_cont_height);
-            var valdheight = thatobj.height();
-            var debugg = thatobj.getSize();
-            //console.log("thatobj.height() " + thatobj.height());
-
-            if (addOrRemove) {
-                thatobj.attr("rel", valdheight);
-                itembottommargin += parseFloat(valdheight)
-                ny_cont_height = parseFloat(ny_cont_height) + itembottommargin;
-
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
-            } else {
-                valdheight = thatobj.attr("rel");
-                itembottommargin += parseFloat(valdheight)
-
-                ny_cont_height = parseFloat(ny_cont_height) - itembottommargin;
-                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
-                thatobj.attr("rel", "");
-            }
-            $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
-            var curid = $(this).closest('.kivisotope').attr('id');
-            var rakna = 0;
-            var loopdom = $('#' + curid + ' div[style*="' + itemSelectStyleValue + '"]');
-
-            loopdom.each(function (index, value) {
-                //h‰mta clickatitem topv‰rde
-                var currentItem = $(value).attr('style');
-                //rensa bort absolut v‰rdet frÂn stringen
-                currentItem = currentItem.replace('position: absolute;', '').trim();
-
-                var curitmTop_start = currentItem.indexOf('top:') + 4;
-                var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
-                // console.log("domloop current_item_height " + current_item_height);
-                var nyposition = current_item_height;
-                // console.log("domloop nyposition " + nyposition);
-                if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
-                    var addedheight = itembottommargin + 0;
-                    if (addOrRemove) {
-                        nyposition = parseInt(current_item_height) + addedheight;
-                    } else {
-                        nyposition = parseInt(current_item_height) - addedheight;
-                    }
-                    var updatedStyleToAdd =" position: absolute; " + itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
-                    $(value).attr('style', updatedStyleToAdd);
-                }               
-            });
-        }
-          
-        if (addOrRemove) {
-            valdclass.removeClass("closed");
-            valdclass.addClass("open");
-            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
-            
-        } else {
-            valdclass.addClass("closed");
-            valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-        }
-
-         thatobj.slideToggle(100, function () {
-             if (!$('i').hasClass("open")) {
-                 $(this).closest('.kivisotope').isotope("layout", {
-                     transitionDuration: 0
-                 });
-                 //console.log(" isotope run-----------------");
-             }
-             return false;
-         });
-
-         return false;
-    });
-
-    // kˆrs pÂ alla sidor som har en egen drupal listsida  dvs ingen css v‰xling mellan mosaik och lista
-    $(document).on('click', '.showingresstextlist', function (e) {
-        var valdclass = $(this).find('i');
-        var addOrRemove = valdclass.hasClass("closed");       
-        var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlist");
-             
-        if (addOrRemove) {
-            valdclass.removeClass("closed");
-            valdclass.addClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
-            thatobj.show();
-
-        } else {
-            valdclass.addClass("closed");
-            valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-            thatobj.hide();
-        }
-
-        return false;
-    });
-
-    //old
-    $('.showsnabblink').click(function (e) {
-        var valdclass = $(this).find('i');
-       
-        //alert(cur_clicked_Item + "-->" + $(this).height());
-        $(this).parent().siblings(".snabblink").slideToggle("fast", function () {
-            $('#kivisotope2').isotope("layout", {
-                transitionDuration: 0
-            });
-            var addOrRemove = valdclass.hasClass("fi-plus");
-            var valdheight = $(this).height();
-            if (addOrRemove) {
-                valdclass.addClass("fi-x");
-                valdclass.removeClass("fi-plus");
-            } else {
-                valdclass.addClass("fi-plus");
-                valdclass.removeClass("fi-x");              
-            }                       
-        });
-
-        return false;
-    });
-
-    $('#lasMerOmOssLink').on('click', function (e) {
-        var addOrRemove = $('.omossMenu').hasClass("arrowhead");
-      
-        $('.omossContentBox2').slideToggle("slow", function () {            ///‰ndrat till 2
-            $('.kivisotope').isotope("layout");            
-            if (addOrRemove) {
-                $('.omossMenu2').removeClass("arrowhead2");  // ‰ndrat till 2
-            };
-        });
-        
-        if (!addOrRemove) {
-            $('.omossMenu2').addClass("arrowhead2");
-        }
-        
-        return false;
-    });
-
-
-    // TEST BLOCK om oss visa START
-    $('.omossmenycontainer .lasMerOmOssLink ').on('click', function (e) {
-        var that = $(this);
-        var addOrRemove = that.hasClass("arrowhead2");
-        var isAllreadyvisible= $('.omossContentBox2').is(':visible')
-        $('.omossContentBox2').slideToggle("slow", function () {
-            $('.kivisotope').isotope("layout");
-            if (addOrRemove) {
-                $('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
-                
-            };
-        });
-
-        if (!addOrRemove) {
-            //$('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
-            if (!isAllreadyvisible) {
-                that.addClass("arrowhead2");
-            }
-            
-        }
-
-        return false;
-    });
-    // TEST BLOCK om oss visa END
-
-
-
-    $('#kivlist').on('click', function (e) {
-        $('.kivisotope').isotope('destroy');
-        //$('.mozaikitems .small-10').removeClass('small-10').addClass('small-11');
-        //$('.mozaikitems .small-2').removeClass('small-2').addClass('small-1');        
-        $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
-        $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder  listheight crop-height");
-        $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
-        $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
-        
-        return false;
-    });
-
-    $('#kivmozaik').on('click', function (e) {
-//$('.kivlistview .small-11').removeClass('small-11').addClass('small-10');
-//        $('.kivlistview .small-1').removeClass('small-1').addClass('small-2');
-        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
-        $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
-        $('.listcontent').attr('class', "").addClass('mozaikitems');               
-        $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
-        
- 
-        $('.kivisotope').isotope({
-            itemSelector: '.item',
-            //containerStyle: null,
-            masonry: {
-                // use element for option
-                columnWidth: 250
-            }
-        });
-       
-        return false;
-    })
-
-    //evenemang
-    // kˆrs pÂ alla sidor som har en egen drupal listsida  dvs ingen css v‰xling mellan mosaik och lista
-    $(document).on('click', '.showingresstext_list', function (e) {
-        var valdclass = $(this).find('i');
-        var addOrRemove = valdclass.hasClass("closed");
-        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
-
-        if (addOrRemove) {
-            valdclass.removeClass("closed");
-            valdclass.addClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
-            thatobj.show();
-
-        } else {
-            valdclass.addClass("closed");
-            valdclass.removeClass("open");
-            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
-            thatobj.hide();
-        }
-
-        return false;
-    });
-
-
-
-    var removePlussicon = function (e) {
-        var istextset = $('.ingresstext');
-        istextset.each(function (index, value) {
-            var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstext').show();
-            }
-
-        });
-
-    }();
-
-    var removelistPlussicon = function (e) {
-        var istextset = $('.ingresstext');
-        istextset.each(function (index, value) {
-            var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstext_list').show();
-            }
-
-        });
-
-    }();
-
-    var removeListPagesPlussicon = function (e) {
-        var istextset = $('.ingresstextlist');
-        if (istextset.length <=0) {
-            return function () { return false; };
-        }
-
-        istextset.each(function (index, value) {
-            var testar = $(value).html();
-            if ($(value).html()) {
-                $(value).siblings().find('.showingresstextlist').show();
-            }
-
-        });
-        
-    }();
-
-    $('.searchMainWrapper').hide();
-    $('.right-small').on('click', function (e) {
-        $('.searchMainWrapper').slideToggle('600', function () {           
-        });
-    });
-
-    $(".menu-mlid-7255 a").first().addClass('togglebgimagehide');
-    //$('.multiColumn').hide();
-    $(".menu-mlid-7255 a").first().on('click', function (e) {
-        var toggle_switch = $(this);
-        $('.multiColumn').slideToggle("slow", function () {
-            if ($(this).css('display') == 'none') {
-                toggle_switch.addClass('togglebgimageshow').removeClass('togglebgimagehide')               
-            } else {
-                toggle_switch.addClass('togglebgimagehide').removeClass('togglebgimageshow')
-            }
-        });
-        return false;
-
-    });
-
-    //var menybalk = function () {
-
-    //   if (jQuery(".view-2015-produktioner").size();
-
-
-    //}();
-    
-    jQuery('.omossMenu2').on('click', function () {
-
-        jQuery('.artikelwrapper').toggle();
-
-    });
-
-
-   ////handlebars test START
-   // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
-   // var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });
-   // console.log("start: " + tmphtml);
-   //// handlebars test END 
-
-
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-top').fadeIn();
-        } else {
-            $('.scroll-top').fadeOut();
-        }
-    });
-
-    $('.scroll-top').click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600);
-        return false;
-    });
-
-
-    // scrollar ner frÂn artikelmenyn till artikel ancor
-    $('.omossContentBox2 .view-content a').on('click', function (e) {
-        var href = $(e.currentTarget).attr('href');
-        $("html, body").animate({
-            scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
-        }, 800);
-        //alert("test");
-
-    });
-    
-
-    removeListPagesPlussicon();
-    
-
-    //var kulturikatalogeninlogg = "<a href='#' class='lasMerOmOssLink' >";
-    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>SÂ h‰r arbetar vi</div>";
-    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Kontaktpersoner</div>";
-    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Snabbl‰nkar</div></a>";
-    //kulturikatalogeninlogg += "<a href='http://kulturivast.se/kulturkatalogen-vast/logga-in-pa-kulturkatalogen-vast' class='lasMerOmOssLink'>";
-    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock kulturkatalogenloggainbutton'>Logga in</div></a>";
-
-    //$('.section-kulturkatalogen-vast .omossmenycontainer').removeClass('medium-9').addClass('medium-12');
-    //$('.section-kulturkatalogen-vast .omossmenycontainer').html(kulturikatalogeninlogg);
-    /*
-    //////////////////////////////////////////////////////////////////
-     Fˆrsta sidan slider
-     andreas josefsson
-    */
-
-        $('.aj-carusel').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-              {
-                  breakpoint: 1200,
-                  settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 3,
-                      infinite: true,
-
-                  }
-              },
-              {
-                  breakpoint: 800,
-                  settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 2
-                  }
-              },
-              {
-                  breakpoint: 600,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                  }
-              }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
-            ]
-        });
-    
-    /*
-    /////////////////////////////////////////////////////////////////////////////////
-    */
-
-    /*!
-     * jQuery Sticky Footer 1.1
-     * Corey Snyder
-     * http://tangerineindustries.com
-     *
-     * Released under the MIT license
-     *
-     * Copyright 2013 Corey Snyder.
-     *
-     * Date: Thu Jan 22 2013 13:34:00 GMT-0630 (Eastern Daylight Time)
-     * Modification for jquery 1.9+ Tue May 7 2013
-     * Modification for non-jquery, removed all, now classic JS Wed Jun 12 2013
-     */
-
-    window.onload = function () {
-        stickyFooter();
-
-        //you can either uncomment and allow the setInterval to auto correct the footer
-        //or call stickyFooter() if you have major DOM changes
-        //setInterval(checkForDOMChange, 1000);
-    };
-
-    //check for changes to the DOM
-    function checkForDOMChange() {
-        stickyFooter();
-    }
-
-    //check for resize event if not IE 9 or greater
-    window.onresize = function () {
-        stickyFooter();
-        $('#kivisotope').isotope("layout");
-    }
-
-    //lets get the marginTop for the <footer>
-    function getCSS(element, property) {
-
-        var elem = document.getElementsByTagName(element)[0];
-        var css = null;
-
-        if (elem.currentStyle) {
-            css = elem.currentStyle[property];
-
-        } else if (window.getComputedStyle) {
-            css = document.defaultView.getComputedStyle(elem, null).
-            getPropertyValue(property);
-        }
-
-        return css;
-
-    }
-
-    function stickyFooter() {
-
-        if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
-            document.getElementsByTagName("footer")[0].removeAttribute("style");
-        }
-
-        if (window.innerHeight != document.body.offsetHeight) {
-            var offset = window.innerHeight - document.body.offsetHeight;
-            var current = getCSS("footer", "margin-top");
-
-            if (isNaN(current) == true) {
-                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:2rem;");
-                current = 0;
-            } else {
-                current = parseInt(current);
-            }
-
-            if (current + offset > parseInt(getCSS("footer", "margin-top"))) {
-                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:" + (current + offset) + "px;");
-            }
-        }
-    }
-
-    /*
-    ! end sticky footer
-    */
-    //HELPER FOR LABEL PLACEHOLDER
-
-    $('.view-press-gallery #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    $('.view-2015-dokument #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    $('.view-2015-staff #edit-combine').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
-    
-});
-//kapsla Start
-(function () {
-
-    
-    jQuery(function ($){
-        // VAR
-        var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
-        var _tmpomradesNamn = $('.omradesnamn li').html();
-        var _omradesNamn = $.trim(_tmpomradesNamn);
-        var _valdSortering="";
-        var _drpFilter = $('#drpFilter');
-
-        var localOrServerURL = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se" ; "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att h√§mta data ifr√•n
-        //var mozaikItems = [];
-        var _drphuvudomradenlista = [];
-        var _drphuvudomradenvalue = [];        
-        var _breadcrumbval = [];
-        var _breadcrumbindex = [];
-
-        var _renderDOMList = "";
-        var _renderDrpList = "";
-        var _filtreranamn = "Avgr√§nsa";
-        
-
-        // OBJECT LITERALS
-        var _RenderOutputListObj = {
-            rubrik: "",
-            overrub: "",
-            ingress: "",
-            huvudomrade: "",
-            kategoritaggning: "",
-            datum: "",
-            link: "",
-            bild: "",
-            extra: "",
-            btntyp: "", 
-            btntitle: "", 
-            btnlink: "",
-            anktuellt:""
-        }
-
-        var _RenderOutputdrpObj = {
-            namn: "",
-            value: ""   
-        }
-
-        // WEBSERVICE START
-        function kivSearchJsonData(searchstr, callback) {
-            var serverrequest = "";
-            switch (_valdSortering) {
-                case "datum":
-                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-day/" + searchstr + "?callback=?";
-                    break;
-                case "titel":
-                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-title/" + searchstr + "?callback=?";
-                    break;
-                case "aktuellt":
-                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";
-                    break;
-                default :
-                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";                  
-            }
-            
-            $.ajax({
-                type: "GET",
-                url: serverrequest,
-                dataType: "jsonp",
-                success: function (data) {
-                    //var currentdomitems = "";
-                    
-                    //for (var x = 0; x < data.kivsearch.length; x++) {
-
-                    //    _RenderOutputListObj.bild = data.kivsearch[x].kivsearchitem.bild;
-                    //    _RenderOutputListObj.overrub = data.kivsearch[x].kivsearchitem.overrub;
-                    //    _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrik;
-                    //    _RenderOutputListObj.link = data.kivsearch[x].kivsearchitem.link;
-                    //    _RenderOutputListObj.ingress = data.kivsearch[x].kivsearchitem.ingress;
-                    //    _RenderOutputListObj.aktuellt = data.kivsearch[x].kivsearchitem.aktuellt;
-                    //    _RenderOutputListObj.btntyp = data.kivsearch[x].kivsearchitem.btntyp;
-                    //    _RenderOutputListObj.btntitle = data.kivsearch[x].kivsearchitem.btntitle;
-                    //    _RenderOutputListObj.btnlink = data.kivsearch[x].kivsearchitem.btnlink;
-                    //    currentdomitems += Renderdata(_RenderOutputListObj);
-
-                    //};
-                   
-                    //_renderDOMList = currentdomitems;
-                    var currentdomitems = PrioriteringsSortera(data, function (sorteradlista) {
-
-                        return sorteradlista;
-                    });
-
-                    callback(currentdomitems);
-                    removePlussicon();
-                    return false;
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                   // alert("N√•tt blev fel!"); // <-- skicka error json !!!!
-
-                }
-            });                     
-            
-        };
-
-        // listar alla huvudomr√•dena i en dropdown lista
-        var initomradesdrp = function (omradesid) {
-            var serverrequest = localOrServerURL + "/json-kivsearch-cat/" + omradesid + "?callback=?";
-            
-            $.ajax({
-                type: "GET",
-                url: serverrequest,
-                dataType: "jsonp",
-                success: function (data) {
-
-                    var currentdomitems = "";
-                    var removedubbletter=[];
-                    
-                    AddFilterdrpInit();
-
-                    for (var x = 0; x < data.kivsearch.length; x++) {
-                        var tid = data.kivsearch[x].kivomraden.tid;
-                        if (removedubbletter.length > 0) {
-                            if (removedubbletter.indexOf(tid) == -1) {
-                                _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
-                                _RenderOutputdrpObj.value = tid;
-                                removedubbletter.push(tid);
-
-                                if (_breadcrumbindex.indexOf(tid) == -1) {
-                                    AddOmradenToDrp(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
-                                };                                
-                            }
-
-                        } else {
-                            _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
-                            _RenderOutputdrpObj.value = tid;
-                            removedubbletter.push(tid);
-                            if (_breadcrumbindex.indexOf(tid) == -1) {
-                                AddOmradenToDrp(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
-                            };
-                        }
-                       
-                    };
-                    AddOmradenToDrp(_currentHuvudomradeID, "Visa alla");//l√§gg till visa alla Sist;
-                    
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    //alert("N√•tt blev fel!"); // <-- skicka error json !!!!
-
-                }
-            });
-
-            return false;
-
-        }
-        // WEBSERVICE END
-
-        // SORTERINGS HELPER FUNCTIONS --START
-        //Sortera efter prioriterings 
-        var PrioriteringsSortera = function(osorteraddata, callback){
-
-            //returv√§rde
-            var currentdomitems = "";
-            
-            // temp Arrayer
-            var MainCategoryReturnArray = [];
-            var MainCategoryArray = [];
-            var RelatedCategoryArray = [];
-
-           
-        // loopa igenom alla items i inkommande osorteratdata
-            for (var x = 0; x < osorteraddata.kivsearch.length; x++) {
-                console.log("i f√∂rsta loopen nr=" + x);
-                //f√∂r varje item tmp lagra testv√§rden
-                var tmpcurrhuvudomr = osorteraddata.kivsearch[x].kivsearchitem.huvudomrade;
-                var isAktuell = osorteraddata.kivsearch[x].kivsearchitem.aktuellt;
-
-                var cur_valt_huvudomrade = _tmpomradesNamn.trim()
-
-                //kolla vilken array item ska hamna i
-                //om huvudomr√•det √§r samma som sidans omr√•de
-                if (tmpcurrhuvudomr == cur_valt_huvudomrade) {
-					
-                    //kolla om det √§r aktuellt och skall visas √∂vers i huvudlistan eller inte
-                    if (isAktuell=="1"){
-                        MainCategoryArray.unshift(osorteraddata.kivsearch[x]);
-						
-                    }else{
-                        MainCategoryArray.push(osorteraddata.kivsearch[x]);
-                    } 
-					
-                }else{		
-                    
-                    //kolla om det √§r aktuellt och skall visas √∂vers i Relateradelistan eller inte
-                    if (isAktuell == "1") {
-                        osorteraddata.kivsearch[x].kivsearchitem.aktuellt = 0;
-                        RelatedCategoryArray.unshift(osorteraddata.kivsearch[x]);
-						
-                    }else{
-                        RelatedCategoryArray.push(osorteraddata.kivsearch[x]);
-                    } 					
-                }	
-            };
-                //Sl√• ihop arrayerna s√• att ordningen blir r√§tt
-                MainCategoryReturnArray = MainCategoryArray.concat(RelatedCategoryArray)
-
-                for (var item in MainCategoryReturnArray) {
-                  
-                    if (!MainCategoryReturnArray.hasOwnProperty(item)) continue;
-
-                    var obj = MainCategoryReturnArray[item];
-                    for (var prop in obj) {
-                        // skip loop if the property is from prototype
-                        if (!obj.hasOwnProperty(prop)) continue;
-
-                        console.log("i Andra loopen");
-                        _RenderOutputListObj.bild = obj[prop].bild;
-                        _RenderOutputListObj.overrub = obj[prop].overrub;
-                        _RenderOutputListObj.rubrk = obj[prop].rubrik;
-                        _RenderOutputListObj.link = obj[prop].link;
-                        _RenderOutputListObj.ingress = obj[prop].ingress;
-                        _RenderOutputListObj.aktuellt = obj[prop].aktuellt;
-                        _RenderOutputListObj.btntyp = obj[prop].btntyp;
-                        _RenderOutputListObj.btntitle = obj[prop].btntitle;
-                        _RenderOutputListObj.btnlink = obj[prop].btnlink;
-                        currentdomitems += Renderdata(_RenderOutputListObj);
-                        console.log(prop + " = " + obj[prop].bild);
-
-                    }
-                }
-
-
-
-                //for (var i = 0; i < MainCategoryReturnArray.length; i++) {  
-                //    console.log("i Andra loopen (i) nr="+ i);
-                //    _RenderOutputListObj.bild = MainCategoryReturnArray[i].object.bild;
-                //    _RenderOutputListObj.overrub = MainCategoryReturnArray[i].kivsearchitem.overrub;
-                //    _RenderOutputListObj.rubrk = MainCategoryReturnArray[i].kivsearchitem.rubrik;
-                //    _RenderOutputListObj.link = MainCategoryReturnArray[i].kivsearchitem.link;
-                //    _RenderOutputListObj.ingress = MainCategoryReturnArray[i].kivsearchitem.ingress;
-                //    _RenderOutputListObj.aktuellt = MainCategoryReturnArray[i].kivsearchitem.aktuellt;
-                //    _RenderOutputListObj.btntyp = MainCategoryReturnArray[i].kivsearchitem.btntyp;
-                //    _RenderOutputListObj.btntitle = MainCategoryReturnArray[i].kivsearchitem.btntitle;
-                //    _RenderOutputListObj.btnlink = MainCategoryReturnArray[i].kivsearchitem.btnlink;
-                //    currentdomitems += Renderdata(_RenderOutputListObj);
-
-                //};
-
-           return callback(currentdomitems);
-
-        }
-
-        //SORTERINGS HELPER FUNCTIONS --- END
-
-
-        var Renderdata = function (incRenderOutputObj) {
-            var tmpstr ="";
-            
-                tmpstr += "<div class='large-4 medium-6 small-12 columns item callout-card aktuellt'>";
-                if (incRenderOutputObj.aktuellt) {
-                    if (incRenderOutputObj.aktuellt > 0) {
-                        tmpstr += "<div class='card-label'><div class='label-text'>Aktuellt</div></div>";
-                    }
-                }
-                tmpstr += "<div class='mozaikimg listheight'>";
-                tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
-                tmpstr += "<div class='mozaikitems'><div class='row'>";
-                tmpstr += "<div class='small-10 columns listheight'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a>";
-                tmpstr += "<div class='apsisbtnbox'><a href='" + incRenderOutputObj.btnlink + "' class='button expand success " + incRenderOutputObj.btntyp + "'>" + incRenderOutputObj.btntitle + "</a></div></div>";
-                tmpstr += "<div class='small-2 columns listheight'><a href='' class='showingresstext'>";
-                if (incRenderOutputObj.ingress) {
-                    tmpstr += "<i class='closed'><img alt='Visa' src='" + localOrServerURL + "/sites/all/themes/kivnew/images/MosaikPlus28.png'></i>";
-                }                
-                tmpstr += "</a></div>";
-                tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
-
-                
-           return tmpstr;
-        };
-
-      
-        // FUNKTIONER
-        var RenderDomItem = function (renderitem) {
-            $('#kivisotope .wrapper').html(""); //remove all child nodes   
-            $('#kivisotope .wrapper').html(renderitem);
-           
-            $('.kivisotope').isotope("destroy");
-            $('.kivisotope').isotope({
-                itemSelector: '.item',                
-                masonry: {
-                    // use element for option
-                    columnWidth: 250
-                }
-            });
-            $('.loader').hide();
-            return false;
-        }
-
-        var FilterRender = function () {
-            // g√∂r filtrering
-            var tmpstrlist = "";
-            for (index = 0; index < _breadcrumbindex.length; ++index) {
-                if (index == 0) {
-                    tmpstrlist += _breadcrumbindex[index];
-                } else {
-                    tmpstrlist += "," + _breadcrumbindex[index];
-                }
-            }
-            var getomrviaAjax = "";
-
-            if (tmpstrlist) {
-                getomrviaAjax = _currentHuvudomradeID + "," + tmpstrlist;
-            } else {
-                getomrviaAjax = _currentHuvudomradeID;
-            };
-            
-            kivSearchJsonData(getomrviaAjax, function (datat) {
-                
-                initomradesdrp(getomrviaAjax);// l√§gger till alla kopplade l√§nkar                
-                RenderDomItem(datat);
-            });            
-        };
-
-        var ResetFilter = function () {
-            $("#breadcrumbval").empty();
-            $("#breadcrumbval").append("<li><a href=''class='removebreadcrumbval' rel=''>Visa alla</a></li>");
-            _drpFilter.empty();
-            _breadcrumbindex = [];
-            _breadcrumbval = [];
-            _drphuvudomradenlista = [];
-            _drphuvudomradenvalue = [];
-            _RenderOutputdrpObj = [];
-            _renderDOMList = "";
-            _renderDrpList = "";            
-                       
-            initomradesdrp(_currentHuvudomradeID);// l√§gger till alla kopplade l√§nkar
-
-            FilterRender();
-        };
-        
-            //l√§gger till options f√∂rst i filterdropdownen
-        var AddFilterdrpInit = function () {
-            _drpFilter.empty();
-            var newOption = $('<option>' + _filtreranamn + '</option>'); // l√§gg alltid till option √∂verst i listan
-            _drpFilter.append(newOption);
-        }
-        var AddOmradenToDrp = function (value, name) {            
-            var newOption = $('<option value="' + value + '">' + name + '</option>');
-            _drpFilter.append(newOption);
-
-            _drpFilter.trigger("chosen:updated");
-            return true;
-        }
-       
-      
-        /// BREADCRUMB START  (l√§gg √∂ver till helper js)
-
-            // L√§gger till breadrumb valt omr√•de fr√•n arrayerna med a-l√§nkar och index OBS m√•ste ha samma index!!!
-        var Addtobreadcrumbval = function (valomr, valdid) {
-            var addhref = "";
-            if (valomr != "Visa alla") {
-                addhref = "<li><a href=''class='removebreadcrumbval' rel='" + valdid + "'>" + valomr + "</a></li>";
-            }
-            
-            // L√§gger tillendast h√§r ifr√•n annars blir det osynk
-            _breadcrumbval.push(addhref);
-            _breadcrumbindex.push(valdid);
-
-            FilterRender();
-          
-            $("#breadcrumbval").append(addhref);
-            return false;
-        }
-
-        // tabort valt breadrumb omr√•de fr√•n arrayerna med a-l√§nkar och index OBS m√•ste ha samma index!!!
-        var Delbreadcrumval = function (valid) {
-            var rerender="";
-            var i = _breadcrumbindex.indexOf(valid);
-            if (i != -1) {
-                // tar bort endast h√§r ifr√•n annars blir det osynk
-                _breadcrumbindex.splice(i, 1);
-                _breadcrumbval.splice(i, 1);
-            }
-
-            $.each(_breadcrumbval,function(item, val){
-                rerender += val;
-            });
-
-            FilterRender();
-
-            $("#breadcrumbval").html(rerender);
-            return false;
-
-        }
-
-        //initera breadcrumblistan
-        var initbreadcrumb = function () {
-
-
-        }
-        /// BREADCRUMB END
-        
-
-        //HELPER Funktions
-        var showvisaalla = function () {
-            var isantal = $('#breadcrumbval li').size();
-
-            if (isantal == 0) {
-
-            }
-
-        }
-        
-
-
-        // EVENTS START
-        $('#drpFilter').change(function (e) {
-            //$('.loader').show();
-            
-            var currentdrp = $("#drpFilter option:selected");
-            
-            var valtid = currentdrp.val();
-            var valtomr = currentdrp.text();
-            if (valtid == "Avgr√§nsa") {
-                return false;
-            }
-
-            //add to breadcrumb
-            if (valtid == _currentHuvudomradeID) {
-                ResetFilter();
-            } else {
-                if (_breadcrumbval.length == 0) {
-                    $("#breadcrumbval").empty();
-                }
-
-                Addtobreadcrumbval(valtomr, valtid);
-            }            
-            $('.kivisotope').isotope("layout");
-            return false;
-        });
-
-       //
-        $('#drpSortering').change(function (e) {
-            //$('.loader').show();
-
-            var currentdrp = $("#drpSortering option:selected");
-
-            var valdid = currentdrp.val();
-            //var valdtyp = currentdrp.text();
-            if (valdid == "alla") {
-                return false;
-            }
-           
-            if (valdid == _omradesNamn) {
-                _valdSortering = "";
-                ResetFilter();
-            } else {
-                _valdSortering = valdid
-                FilterRender();
-            }
-            $('.kivisotope').isotope("layout");
-            return false;
-        });
-       
-
-        $(document).on('click', '.resetbreadcrumb', function () {
-            ResetFilter();
-        })
-        
-
-        $(document).on('click', '.removebreadcrumbval', function () {
-            //Del from breadcrumb
-            $('.loader').show();
-            var relval = $(this).attr('rel'); // h√§mta omr√•sdesid
-            Delbreadcrumval(relval);            
-            return false;
-        });
-        // EVENTS END
-
-
-        var removePlussicon = function (e) {
-            var istextset = $('.ingresstext');
-            istextset.each(function (index, value) {
-                var testar = $(value).html();
-                if ($(value).html()) {
-                    $(value).siblings().find('.showingresstext').show();
-                }
-
-            });
-
-        }
-
-
-        // SETTINGS
-        var init = function () {
-            if (_currentHuvudomradeID) {
-                initomradesdrp(_currentHuvudomradeID);// l√§gger till alla kopplade l√§nkar
-            };
-
-        };
-        
-        // INITIERING
-        init();
-       
-        
-
-});//Jqueryready end
-
-
-})();//kapsla END
-// kappsla START
-(function () {
-    jQuery(function ($) {// Jquery START
-
-        $('.artikelMenu .lasMerOmOssLink').on('click', function (e) {
-            var addOrRemove = $('.artikelMenu').hasClass("arrowhead");
-            $('.artikelsubmenuContent').slideToggle("slow", function () {
-              
-                if (addOrRemove) {
-                    $('.artikelMenu').removeClass("arrowhead");
-                };
-            });
-
-            if (!addOrRemove) {
-                $('.artikelMenu').addClass("arrowhead");
-            }
-
-
-            return false;
-        });       
-        
-
-    });// Jquery END
-})();// kappsla och exeute END
-
-
-jQuery(function ($) {
-
-    //$('.kivisotope').imagesLoaded(function () {
-
-    //    alert("loaded");
-    //    $(this).isotope('reloadItems');
-    //    $(this).isotope({
-    //        itemSelector: '.item',
-    //        //containerStyle: null,
-    //        masonry: {
-    //            // use element for option
-    //            columnWidth: 250
-    //        }
-    //    });
-    //    $(this).isotope('reloadItems');
-    //});
-
-
-        jQuery(document).ajaxComplete(function (event, request, settings) {
-           
-           
-            //alert("complete");
-            //setTimeout(function () {
-                //jQuery('.kivisotope').isotope('destroy');
-                $('.kivisotope').isotope('reloadItems');
-                $('.kivisotope').isotope({
-                    itemSelector: '.item',
-                    //containerStyle: null,
-                    masonry: {
-                        // use element for option
-                        columnWidth: 250
-                    }
-                });
-                $('.kivisotope').isotope('reloadItems');
-                //alert("tee");
-
-            //}, 3500);
-       
-        });
-        jQuery(document).ajaxStop(function (event, request, settings) {
-
-
-            //alert("stop");
-            setTimeout(function () {
-            //jQuery('.kivisotope').isotope('destroy');
-            $('.kivisotope').isotope('reloadItems');
-            $('.kivisotope').isotope({
-                itemSelector: '.item',
-                //containerStyle: null,
-                masonry: {
-                    // use element for option
-                    columnWidth: 250
-                }
-            });
-            $('.kivisotope').isotope('reloadItems');
-            $('.pager-load-more li').html(function () {
-
-                if ($(this).html() == "&nbsp;") {
-
-                    $(this).hide();
-                }
-            });
-
-            }, 700);
-
-        });
-    });
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -11607,3 +9425,2262 @@ jQuery(function ($) {
     };
 
 }));
+
+/*! iScroll v5.1.3 ~ (c) 2008-2014 Matteo Spinelli ~ http://cubiq.org/license */
+(function (window, document, Math) {
+var rAF = window.requestAnimationFrame	||
+	window.webkitRequestAnimationFrame	||
+	window.mozRequestAnimationFrame		||
+	window.oRequestAnimationFrame		||
+	window.msRequestAnimationFrame		||
+	function (callback) { window.setTimeout(callback, 1000 / 60); };
+
+var utils = (function () {
+	var me = {};
+
+	var _elementStyle = document.createElement('div').style;
+	var _vendor = (function () {
+		var vendors = ['t', 'webkitT', 'MozT', 'msT', 'OT'],
+			transform,
+			i = 0,
+			l = vendors.length;
+
+		for ( ; i < l; i++ ) {
+			transform = vendors[i] + 'ransform';
+			if ( transform in _elementStyle ) return vendors[i].substr(0, vendors[i].length-1);
+		}
+
+		return false;
+	})();
+
+	function _prefixStyle (style) {
+		if ( _vendor === false ) return false;
+		if ( _vendor === '' ) return style;
+		return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
+	}
+
+	me.getTime = Date.now || function getTime () { return new Date().getTime(); };
+
+	me.extend = function (target, obj) {
+		for ( var i in obj ) {
+			target[i] = obj[i];
+		}
+	};
+
+	me.addEvent = function (el, type, fn, capture) {
+		el.addEventListener(type, fn, !!capture);
+	};
+
+	me.removeEvent = function (el, type, fn, capture) {
+		el.removeEventListener(type, fn, !!capture);
+	};
+
+	me.prefixPointerEvent = function (pointerEvent) {
+		return window.MSPointerEvent ? 
+			'MSPointer' + pointerEvent.charAt(9).toUpperCase() + pointerEvent.substr(10):
+			pointerEvent;
+	};
+
+	me.momentum = function (current, start, time, lowerMargin, wrapperSize, deceleration) {
+		var distance = current - start,
+			speed = Math.abs(distance) / time,
+			destination,
+			duration;
+
+		deceleration = deceleration === undefined ? 0.0006 : deceleration;
+
+		destination = current + ( speed * speed ) / ( 2 * deceleration ) * ( distance < 0 ? -1 : 1 );
+		duration = speed / deceleration;
+
+		if ( destination < lowerMargin ) {
+			destination = wrapperSize ? lowerMargin - ( wrapperSize / 2.5 * ( speed / 8 ) ) : lowerMargin;
+			distance = Math.abs(destination - current);
+			duration = distance / speed;
+		} else if ( destination > 0 ) {
+			destination = wrapperSize ? wrapperSize / 2.5 * ( speed / 8 ) : 0;
+			distance = Math.abs(current) + destination;
+			duration = distance / speed;
+		}
+
+		return {
+			destination: Math.round(destination),
+			duration: duration
+		};
+	};
+
+	var _transform = _prefixStyle('transform');
+
+	me.extend(me, {
+		hasTransform: _transform !== false,
+		hasPerspective: _prefixStyle('perspective') in _elementStyle,
+		hasTouch: 'ontouchstart' in window,
+		hasPointer: window.PointerEvent || window.MSPointerEvent, // IE10 is prefixed
+		hasTransition: _prefixStyle('transition') in _elementStyle
+	});
+
+	// This should find all Android browsers lower than build 535.19 (both stock browser and webview)
+	me.isBadAndroid = /Android /.test(window.navigator.appVersion) && !(/Chrome\/\d/.test(window.navigator.appVersion));
+
+	me.extend(me.style = {}, {
+		transform: _transform,
+		transitionTimingFunction: _prefixStyle('transitionTimingFunction'),
+		transitionDuration: _prefixStyle('transitionDuration'),
+		transitionDelay: _prefixStyle('transitionDelay'),
+		transformOrigin: _prefixStyle('transformOrigin')
+	});
+
+	me.hasClass = function (e, c) {
+		var re = new RegExp("(^|\\s)" + c + "(\\s|$)");
+		return re.test(e.className);
+	};
+
+	me.addClass = function (e, c) {
+		if ( me.hasClass(e, c) ) {
+			return;
+		}
+
+		var newclass = e.className.split(' ');
+		newclass.push(c);
+		e.className = newclass.join(' ');
+	};
+
+	me.removeClass = function (e, c) {
+		if ( !me.hasClass(e, c) ) {
+			return;
+		}
+
+		var re = new RegExp("(^|\\s)" + c + "(\\s|$)", 'g');
+		e.className = e.className.replace(re, ' ');
+	};
+
+	me.offset = function (el) {
+		var left = -el.offsetLeft,
+			top = -el.offsetTop;
+
+		// jshint -W084
+		while (el = el.offsetParent) {
+			left -= el.offsetLeft;
+			top -= el.offsetTop;
+		}
+		// jshint +W084
+
+		return {
+			left: left,
+			top: top
+		};
+	};
+
+	me.preventDefaultException = function (el, exceptions) {
+		for ( var i in exceptions ) {
+			if ( exceptions[i].test(el[i]) ) {
+				return true;
+			}
+		}
+
+		return false;
+	};
+
+	me.extend(me.eventType = {}, {
+		touchstart: 1,
+		touchmove: 1,
+		touchend: 1,
+
+		mousedown: 2,
+		mousemove: 2,
+		mouseup: 2,
+
+		pointerdown: 3,
+		pointermove: 3,
+		pointerup: 3,
+
+		MSPointerDown: 3,
+		MSPointerMove: 3,
+		MSPointerUp: 3
+	});
+
+	me.extend(me.ease = {}, {
+		quadratic: {
+			style: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+			fn: function (k) {
+				return k * ( 2 - k );
+			}
+		},
+		circular: {
+			style: 'cubic-bezier(0.1, 0.57, 0.1, 1)',	// Not properly "circular" but this looks better, it should be (0.075, 0.82, 0.165, 1)
+			fn: function (k) {
+				return Math.sqrt( 1 - ( --k * k ) );
+			}
+		},
+		back: {
+			style: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+			fn: function (k) {
+				var b = 4;
+				return ( k = k - 1 ) * k * ( ( b + 1 ) * k + b ) + 1;
+			}
+		},
+		bounce: {
+			style: '',
+			fn: function (k) {
+				if ( ( k /= 1 ) < ( 1 / 2.75 ) ) {
+					return 7.5625 * k * k;
+				} else if ( k < ( 2 / 2.75 ) ) {
+					return 7.5625 * ( k -= ( 1.5 / 2.75 ) ) * k + 0.75;
+				} else if ( k < ( 2.5 / 2.75 ) ) {
+					return 7.5625 * ( k -= ( 2.25 / 2.75 ) ) * k + 0.9375;
+				} else {
+					return 7.5625 * ( k -= ( 2.625 / 2.75 ) ) * k + 0.984375;
+				}
+			}
+		},
+		elastic: {
+			style: '',
+			fn: function (k) {
+				var f = 0.22,
+					e = 0.4;
+
+				if ( k === 0 ) { return 0; }
+				if ( k == 1 ) { return 1; }
+
+				return ( e * Math.pow( 2, - 10 * k ) * Math.sin( ( k - f / 4 ) * ( 2 * Math.PI ) / f ) + 1 );
+			}
+		}
+	});
+
+	me.tap = function (e, eventName) {
+		var ev = document.createEvent('Event');
+		ev.initEvent(eventName, true, true);
+		ev.pageX = e.pageX;
+		ev.pageY = e.pageY;
+		e.target.dispatchEvent(ev);
+	};
+
+	me.click = function (e) {
+		var target = e.target,
+			ev;
+
+		if ( !(/(SELECT|INPUT|TEXTAREA)/i).test(target.tagName) ) {
+			ev = document.createEvent('MouseEvents');
+			ev.initMouseEvent('click', true, true, e.view, 1,
+				target.screenX, target.screenY, target.clientX, target.clientY,
+				e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
+				0, null);
+
+			ev._constructed = true;
+			target.dispatchEvent(ev);
+		}
+	};
+
+	return me;
+})();
+
+function IScroll (el, options) {
+	this.wrapper = typeof el == 'string' ? document.querySelector(el) : el;
+	this.scroller = this.wrapper.children[0];
+	this.scrollerStyle = this.scroller.style;		// cache style for better performance
+
+	this.options = {
+
+// INSERT POINT: OPTIONS 
+
+		startX: 0,
+		startY: 0,
+		scrollY: true,
+		directionLockThreshold: 5,
+		momentum: true,
+
+		bounce: true,
+		bounceTime: 600,
+		bounceEasing: '',
+
+		preventDefault: true,
+		preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT)$/ },
+
+		HWCompositing: true,
+		useTransition: true,
+		useTransform: true
+	};
+
+	for ( var i in options ) {
+		this.options[i] = options[i];
+	}
+
+	// Normalize options
+	this.translateZ = this.options.HWCompositing && utils.hasPerspective ? ' translateZ(0)' : '';
+
+	this.options.useTransition = utils.hasTransition && this.options.useTransition;
+	this.options.useTransform = utils.hasTransform && this.options.useTransform;
+
+	this.options.eventPassthrough = this.options.eventPassthrough === true ? 'vertical' : this.options.eventPassthrough;
+	this.options.preventDefault = !this.options.eventPassthrough && this.options.preventDefault;
+
+	// If you want eventPassthrough I have to lock one of the axes
+	this.options.scrollY = this.options.eventPassthrough == 'vertical' ? false : this.options.scrollY;
+	this.options.scrollX = this.options.eventPassthrough == 'horizontal' ? false : this.options.scrollX;
+
+	// With eventPassthrough we also need lockDirection mechanism
+	this.options.freeScroll = this.options.freeScroll && !this.options.eventPassthrough;
+	this.options.directionLockThreshold = this.options.eventPassthrough ? 0 : this.options.directionLockThreshold;
+
+	this.options.bounceEasing = typeof this.options.bounceEasing == 'string' ? utils.ease[this.options.bounceEasing] || utils.ease.circular : this.options.bounceEasing;
+
+	this.options.resizePolling = this.options.resizePolling === undefined ? 60 : this.options.resizePolling;
+
+	if ( this.options.tap === true ) {
+		this.options.tap = 'tap';
+	}
+
+// INSERT POINT: NORMALIZATION
+
+	// Some defaults	
+	this.x = 0;
+	this.y = 0;
+	this.directionX = 0;
+	this.directionY = 0;
+	this._events = {};
+
+// INSERT POINT: DEFAULTS
+
+	this._init();
+	this.refresh();
+
+	this.scrollTo(this.options.startX, this.options.startY);
+	this.enable();
+}
+
+IScroll.prototype = {
+	version: '5.1.3',
+
+	_init: function () {
+		this._initEvents();
+
+// INSERT POINT: _init
+
+	},
+
+	destroy: function () {
+		this._initEvents(true);
+
+		this._execEvent('destroy');
+	},
+
+	_transitionEnd: function (e) {
+		if ( e.target != this.scroller || !this.isInTransition ) {
+			return;
+		}
+
+		this._transitionTime();
+		if ( !this.resetPosition(this.options.bounceTime) ) {
+			this.isInTransition = false;
+			this._execEvent('scrollEnd');
+		}
+	},
+
+	_start: function (e) {
+		// React to left mouse button only
+		if ( utils.eventType[e.type] != 1 ) {
+			if ( e.button !== 0 ) {
+				return;
+			}
+		}
+
+		if ( !this.enabled || (this.initiated && utils.eventType[e.type] !== this.initiated) ) {
+			return;
+		}
+
+		if ( this.options.preventDefault && !utils.isBadAndroid && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
+			e.preventDefault();
+		}
+
+		var point = e.touches ? e.touches[0] : e,
+			pos;
+
+		this.initiated	= utils.eventType[e.type];
+		this.moved		= false;
+		this.distX		= 0;
+		this.distY		= 0;
+		this.directionX = 0;
+		this.directionY = 0;
+		this.directionLocked = 0;
+
+		this._transitionTime();
+
+		this.startTime = utils.getTime();
+
+		if ( this.options.useTransition && this.isInTransition ) {
+			this.isInTransition = false;
+			pos = this.getComputedPosition();
+			this._translate(Math.round(pos.x), Math.round(pos.y));
+			this._execEvent('scrollEnd');
+		} else if ( !this.options.useTransition && this.isAnimating ) {
+			this.isAnimating = false;
+			this._execEvent('scrollEnd');
+		}
+
+		this.startX    = this.x;
+		this.startY    = this.y;
+		this.absStartX = this.x;
+		this.absStartY = this.y;
+		this.pointX    = point.pageX;
+		this.pointY    = point.pageY;
+
+		this._execEvent('beforeScrollStart');
+	},
+
+	_move: function (e) {
+		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
+			return;
+		}
+
+		if ( this.options.preventDefault ) {	// increases performance on Android? TODO: check!
+			e.preventDefault();
+		}
+
+		var point		= e.touches ? e.touches[0] : e,
+			deltaX		= point.pageX - this.pointX,
+			deltaY		= point.pageY - this.pointY,
+			timestamp	= utils.getTime(),
+			newX, newY,
+			absDistX, absDistY;
+
+		this.pointX		= point.pageX;
+		this.pointY		= point.pageY;
+
+		this.distX		+= deltaX;
+		this.distY		+= deltaY;
+		absDistX		= Math.abs(this.distX);
+		absDistY		= Math.abs(this.distY);
+
+		// We need to move at least 10 pixels for the scrolling to initiate
+		if ( timestamp - this.endTime > 300 && (absDistX < 10 && absDistY < 10) ) {
+			return;
+		}
+
+		// If you are scrolling in one direction lock the other
+		if ( !this.directionLocked && !this.options.freeScroll ) {
+			if ( absDistX > absDistY + this.options.directionLockThreshold ) {
+				this.directionLocked = 'h';		// lock horizontally
+			} else if ( absDistY >= absDistX + this.options.directionLockThreshold ) {
+				this.directionLocked = 'v';		// lock vertically
+			} else {
+				this.directionLocked = 'n';		// no lock
+			}
+		}
+
+		if ( this.directionLocked == 'h' ) {
+			if ( this.options.eventPassthrough == 'vertical' ) {
+				e.preventDefault();
+			} else if ( this.options.eventPassthrough == 'horizontal' ) {
+				this.initiated = false;
+				return;
+			}
+
+			deltaY = 0;
+		} else if ( this.directionLocked == 'v' ) {
+			if ( this.options.eventPassthrough == 'horizontal' ) {
+				e.preventDefault();
+			} else if ( this.options.eventPassthrough == 'vertical' ) {
+				this.initiated = false;
+				return;
+			}
+
+			deltaX = 0;
+		}
+
+		deltaX = this.hasHorizontalScroll ? deltaX : 0;
+		deltaY = this.hasVerticalScroll ? deltaY : 0;
+
+		newX = this.x + deltaX;
+		newY = this.y + deltaY;
+
+		// Slow down if outside of the boundaries
+		if ( newX > 0 || newX < this.maxScrollX ) {
+			newX = this.options.bounce ? this.x + deltaX / 3 : newX > 0 ? 0 : this.maxScrollX;
+		}
+		if ( newY > 0 || newY < this.maxScrollY ) {
+			newY = this.options.bounce ? this.y + deltaY / 3 : newY > 0 ? 0 : this.maxScrollY;
+		}
+
+		this.directionX = deltaX > 0 ? -1 : deltaX < 0 ? 1 : 0;
+		this.directionY = deltaY > 0 ? -1 : deltaY < 0 ? 1 : 0;
+
+		if ( !this.moved ) {
+			this._execEvent('scrollStart');
+		}
+
+		this.moved = true;
+
+		this._translate(newX, newY);
+
+/* REPLACE START: _move */
+
+		if ( timestamp - this.startTime > 300 ) {
+			this.startTime = timestamp;
+			this.startX = this.x;
+			this.startY = this.y;
+		}
+
+/* REPLACE END: _move */
+
+	},
+
+	_end: function (e) {
+		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
+			return;
+		}
+
+		if ( this.options.preventDefault && !utils.preventDefaultException(e.target, this.options.preventDefaultException) ) {
+			e.preventDefault();
+		}
+
+		var point = e.changedTouches ? e.changedTouches[0] : e,
+			momentumX,
+			momentumY,
+			duration = utils.getTime() - this.startTime,
+			newX = Math.round(this.x),
+			newY = Math.round(this.y),
+			distanceX = Math.abs(newX - this.startX),
+			distanceY = Math.abs(newY - this.startY),
+			time = 0,
+			easing = '';
+
+		this.isInTransition = 0;
+		this.initiated = 0;
+		this.endTime = utils.getTime();
+
+		// reset if we are outside of the boundaries
+		if ( this.resetPosition(this.options.bounceTime) ) {
+			return;
+		}
+
+		this.scrollTo(newX, newY);	// ensures that the last position is rounded
+
+		// we scrolled less than 10 pixels
+		if ( !this.moved ) {
+			if ( this.options.tap ) {
+				utils.tap(e, this.options.tap);
+			}
+
+			if ( this.options.click ) {
+				utils.click(e);
+			}
+
+			this._execEvent('scrollCancel');
+			return;
+		}
+
+		if ( this._events.flick && duration < 200 && distanceX < 100 && distanceY < 100 ) {
+			this._execEvent('flick');
+			return;
+		}
+
+		// start momentum animation if needed
+		if ( this.options.momentum && duration < 300 ) {
+			momentumX = this.hasHorizontalScroll ? utils.momentum(this.x, this.startX, duration, this.maxScrollX, this.options.bounce ? this.wrapperWidth : 0, this.options.deceleration) : { destination: newX, duration: 0 };
+			momentumY = this.hasVerticalScroll ? utils.momentum(this.y, this.startY, duration, this.maxScrollY, this.options.bounce ? this.wrapperHeight : 0, this.options.deceleration) : { destination: newY, duration: 0 };
+			newX = momentumX.destination;
+			newY = momentumY.destination;
+			time = Math.max(momentumX.duration, momentumY.duration);
+			this.isInTransition = 1;
+		}
+
+// INSERT POINT: _end
+
+		if ( newX != this.x || newY != this.y ) {
+			// change easing function when scroller goes out of the boundaries
+			if ( newX > 0 || newX < this.maxScrollX || newY > 0 || newY < this.maxScrollY ) {
+				easing = utils.ease.quadratic;
+			}
+
+			this.scrollTo(newX, newY, time, easing);
+			return;
+		}
+
+		this._execEvent('scrollEnd');
+	},
+
+	_resize: function () {
+		var that = this;
+
+		clearTimeout(this.resizeTimeout);
+
+		this.resizeTimeout = setTimeout(function () {
+			that.refresh();
+		}, this.options.resizePolling);
+	},
+
+	resetPosition: function (time) {
+		var x = this.x,
+			y = this.y;
+
+		time = time || 0;
+
+		if ( !this.hasHorizontalScroll || this.x > 0 ) {
+			x = 0;
+		} else if ( this.x < this.maxScrollX ) {
+			x = this.maxScrollX;
+		}
+
+		if ( !this.hasVerticalScroll || this.y > 0 ) {
+			y = 0;
+		} else if ( this.y < this.maxScrollY ) {
+			y = this.maxScrollY;
+		}
+
+		if ( x == this.x && y == this.y ) {
+			return false;
+		}
+
+		this.scrollTo(x, y, time, this.options.bounceEasing);
+
+		return true;
+	},
+
+	disable: function () {
+		this.enabled = false;
+	},
+
+	enable: function () {
+		this.enabled = true;
+	},
+
+	refresh: function () {
+		var rf = this.wrapper.offsetHeight;		// Force reflow
+
+		this.wrapperWidth	= this.wrapper.clientWidth;
+		this.wrapperHeight	= this.wrapper.clientHeight;
+
+/* REPLACE START: refresh */
+
+		this.scrollerWidth	= this.scroller.offsetWidth;
+		this.scrollerHeight	= this.scroller.offsetHeight;
+
+		this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
+		this.maxScrollY		= this.wrapperHeight - this.scrollerHeight;
+
+/* REPLACE END: refresh */
+
+		this.hasHorizontalScroll	= this.options.scrollX && this.maxScrollX < 0;
+		this.hasVerticalScroll		= this.options.scrollY && this.maxScrollY < 0;
+
+		if ( !this.hasHorizontalScroll ) {
+			this.maxScrollX = 0;
+			this.scrollerWidth = this.wrapperWidth;
+		}
+
+		if ( !this.hasVerticalScroll ) {
+			this.maxScrollY = 0;
+			this.scrollerHeight = this.wrapperHeight;
+		}
+
+		this.endTime = 0;
+		this.directionX = 0;
+		this.directionY = 0;
+
+		this.wrapperOffset = utils.offset(this.wrapper);
+
+		this._execEvent('refresh');
+
+		this.resetPosition();
+
+// INSERT POINT: _refresh
+
+	},
+
+	on: function (type, fn) {
+		if ( !this._events[type] ) {
+			this._events[type] = [];
+		}
+
+		this._events[type].push(fn);
+	},
+
+	off: function (type, fn) {
+		if ( !this._events[type] ) {
+			return;
+		}
+
+		var index = this._events[type].indexOf(fn);
+
+		if ( index > -1 ) {
+			this._events[type].splice(index, 1);
+		}
+	},
+
+	_execEvent: function (type) {
+		if ( !this._events[type] ) {
+			return;
+		}
+
+		var i = 0,
+			l = this._events[type].length;
+
+		if ( !l ) {
+			return;
+		}
+
+		for ( ; i < l; i++ ) {
+			this._events[type][i].apply(this, [].slice.call(arguments, 1));
+		}
+	},
+
+	scrollBy: function (x, y, time, easing) {
+		x = this.x + x;
+		y = this.y + y;
+		time = time || 0;
+
+		this.scrollTo(x, y, time, easing);
+	},
+
+	scrollTo: function (x, y, time, easing) {
+		easing = easing || utils.ease.circular;
+
+		this.isInTransition = this.options.useTransition && time > 0;
+
+		if ( !time || (this.options.useTransition && easing.style) ) {
+			this._transitionTimingFunction(easing.style);
+			this._transitionTime(time);
+			this._translate(x, y);
+		} else {
+			this._animate(x, y, time, easing.fn);
+		}
+	},
+
+	scrollToElement: function (el, time, offsetX, offsetY, easing) {
+		el = el.nodeType ? el : this.scroller.querySelector(el);
+
+		if ( !el ) {
+			return;
+		}
+
+		var pos = utils.offset(el);
+
+		pos.left -= this.wrapperOffset.left;
+		pos.top  -= this.wrapperOffset.top;
+
+		// if offsetX/Y are true we center the element to the screen
+		if ( offsetX === true ) {
+			offsetX = Math.round(el.offsetWidth / 2 - this.wrapper.offsetWidth / 2);
+		}
+		if ( offsetY === true ) {
+			offsetY = Math.round(el.offsetHeight / 2 - this.wrapper.offsetHeight / 2);
+		}
+
+		pos.left -= offsetX || 0;
+		pos.top  -= offsetY || 0;
+
+		pos.left = pos.left > 0 ? 0 : pos.left < this.maxScrollX ? this.maxScrollX : pos.left;
+		pos.top  = pos.top  > 0 ? 0 : pos.top  < this.maxScrollY ? this.maxScrollY : pos.top;
+
+		time = time === undefined || time === null || time === 'auto' ? Math.max(Math.abs(this.x-pos.left), Math.abs(this.y-pos.top)) : time;
+
+		this.scrollTo(pos.left, pos.top, time, easing);
+	},
+
+	_transitionTime: function (time) {
+		time = time || 0;
+
+		this.scrollerStyle[utils.style.transitionDuration] = time + 'ms';
+
+		if ( !time && utils.isBadAndroid ) {
+			this.scrollerStyle[utils.style.transitionDuration] = '0.001s';
+		}
+
+// INSERT POINT: _transitionTime
+
+	},
+
+	_transitionTimingFunction: function (easing) {
+		this.scrollerStyle[utils.style.transitionTimingFunction] = easing;
+
+// INSERT POINT: _transitionTimingFunction
+
+	},
+
+	_translate: function (x, y) {
+		if ( this.options.useTransform ) {
+
+/* REPLACE START: _translate */
+
+			this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
+
+/* REPLACE END: _translate */
+
+		} else {
+			x = Math.round(x);
+			y = Math.round(y);
+			this.scrollerStyle.left = x + 'px';
+			this.scrollerStyle.top = y + 'px';
+		}
+
+		this.x = x;
+		this.y = y;
+
+// INSERT POINT: _translate
+
+	},
+
+	_initEvents: function (remove) {
+		var eventType = remove ? utils.removeEvent : utils.addEvent,
+			target = this.options.bindToWrapper ? this.wrapper : window;
+
+		eventType(window, 'orientationchange', this);
+		eventType(window, 'resize', this);
+
+		if ( this.options.click ) {
+			eventType(this.wrapper, 'click', this, true);
+		}
+
+		if ( !this.options.disableMouse ) {
+			eventType(this.wrapper, 'mousedown', this);
+			eventType(target, 'mousemove', this);
+			eventType(target, 'mousecancel', this);
+			eventType(target, 'mouseup', this);
+		}
+
+		if ( utils.hasPointer && !this.options.disablePointer ) {
+			eventType(this.wrapper, utils.prefixPointerEvent('pointerdown'), this);
+			eventType(target, utils.prefixPointerEvent('pointermove'), this);
+			eventType(target, utils.prefixPointerEvent('pointercancel'), this);
+			eventType(target, utils.prefixPointerEvent('pointerup'), this);
+		}
+
+		if ( utils.hasTouch && !this.options.disableTouch ) {
+			eventType(this.wrapper, 'touchstart', this);
+			eventType(target, 'touchmove', this);
+			eventType(target, 'touchcancel', this);
+			eventType(target, 'touchend', this);
+		}
+
+		eventType(this.scroller, 'transitionend', this);
+		eventType(this.scroller, 'webkitTransitionEnd', this);
+		eventType(this.scroller, 'oTransitionEnd', this);
+		eventType(this.scroller, 'MSTransitionEnd', this);
+	},
+
+	getComputedPosition: function () {
+		var matrix = window.getComputedStyle(this.scroller, null),
+			x, y;
+
+		if ( this.options.useTransform ) {
+			matrix = matrix[utils.style.transform].split(')')[0].split(', ');
+			x = +(matrix[12] || matrix[4]);
+			y = +(matrix[13] || matrix[5]);
+		} else {
+			x = +matrix.left.replace(/[^-\d.]/g, '');
+			y = +matrix.top.replace(/[^-\d.]/g, '');
+		}
+
+		return { x: x, y: y };
+	},
+
+	_animate: function (destX, destY, duration, easingFn) {
+		var that = this,
+			startX = this.x,
+			startY = this.y,
+			startTime = utils.getTime(),
+			destTime = startTime + duration;
+
+		function step () {
+			var now = utils.getTime(),
+				newX, newY,
+				easing;
+
+			if ( now >= destTime ) {
+				that.isAnimating = false;
+				that._translate(destX, destY);
+
+				if ( !that.resetPosition(that.options.bounceTime) ) {
+					that._execEvent('scrollEnd');
+				}
+
+				return;
+			}
+
+			now = ( now - startTime ) / duration;
+			easing = easingFn(now);
+			newX = ( destX - startX ) * easing + startX;
+			newY = ( destY - startY ) * easing + startY;
+			that._translate(newX, newY);
+
+			if ( that.isAnimating ) {
+				rAF(step);
+			}
+		}
+
+		this.isAnimating = true;
+		step();
+	},
+	handleEvent: function (e) {
+		switch ( e.type ) {
+			case 'touchstart':
+			case 'pointerdown':
+			case 'MSPointerDown':
+			case 'mousedown':
+				this._start(e);
+				break;
+			case 'touchmove':
+			case 'pointermove':
+			case 'MSPointerMove':
+			case 'mousemove':
+				this._move(e);
+				break;
+			case 'touchend':
+			case 'pointerup':
+			case 'MSPointerUp':
+			case 'mouseup':
+			case 'touchcancel':
+			case 'pointercancel':
+			case 'MSPointerCancel':
+			case 'mousecancel':
+				this._end(e);
+				break;
+			case 'orientationchange':
+			case 'resize':
+				this._resize();
+				break;
+			case 'transitionend':
+			case 'webkitTransitionEnd':
+			case 'oTransitionEnd':
+			case 'MSTransitionEnd':
+				this._transitionEnd(e);
+				break;
+			case 'wheel':
+			case 'DOMMouseScroll':
+			case 'mousewheel':
+				this._wheel(e);
+				break;
+			case 'keydown':
+				this._key(e);
+				break;
+			case 'click':
+				if ( !e._constructed ) {
+					e.preventDefault();
+					e.stopPropagation();
+				}
+				break;
+		}
+	}
+};
+IScroll.utils = utils;
+
+if ( typeof module != 'undefined' && module.exports ) {
+	module.exports = IScroll;
+} else {
+	window.IScroll = IScroll;
+}
+
+})(window, document, Math);
+var _isotopecolumns = 250;
+
+
+// CENTER LANDING PAGE TEXT
+
+jQuery(function ($){
+    var _base_server_url = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
+
+    var changeFontColorArtikelsidor = function () {
+        var changeh1 = $('.omossspace h1');
+
+        if ($('.term-top-image').css('background-color') == "transparent") {
+
+        } else {
+            if (changeh1.css('color') != "transparent") {
+                //changeh1.css('color', '#fff');
+                console.log("inte transparent");
+            }
+            
+        };
+        if ($('.ajimage-omrade-nod').find("img").length > 0) {
+            console.log("visar bild");
+            if (changeh1.css('color') != "transparent") {
+               // changeh1.css('color', '#eee');
+                //changeh1.css('background-color', '#000');
+                //changeh1.css('padding-bottom', '0.9rem');
+                //changeh1.css('opacity', '0.9');
+
+               // changeh1.attr('style', 'color:#eee; background-color:#000;  opacity:0.9; display:inline;');
+                //$('.omossspace, .omossMenu2').css('margin-top', '-0.1rem');
+                console.log("inte transparent");
+            }
+        } else {
+            console.log("INGEN bild");
+        }        
+
+    
+    };
+    changeFontColorArtikelsidor();
+
+    $.fn.getSize = function () {
+        var $wrap = $("<div />").appendTo($("body"));
+        $wrap.css({
+            "position": "absolute !important",
+            "visibility": "hidden !important",
+            "display": "block !important"
+        });
+
+        $clone = $(this).clone().appendTo($wrap);
+
+        sizes = {
+            "width": this.width(),
+            "height": this.height()
+        };
+
+        $wrap.remove();
+
+        return sizes;
+    };
+
+
+    $(document).foundation({
+        orbit: {
+            stack_on_small: false,
+            navigation_arrows: false,
+            slide_number: false,
+            pause_on_hover: false,
+            resume_on_mouseout: false,
+            bullets: false,
+            timer: false,
+            variable_height: false,
+        }
+    });
+   
+    
+    // Menu offcanvas show hide START
+   
+    $('.left-small').on('click', function (e) {
+        $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+        return false;
+    });
+    $('.left-off-canvas-toggle').on('click', function (e) {
+        $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+        return false;
+    });
+
+    $('.exit-off-canvas').on('click', function (e) {
+        $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
+    });
+    // Menu offcanvas show hide END
+
+    $(".y-center").css("top", $(".y-center").parent().height() / 3.5);
+
+    ////$('.ingresstextlista').hide();
+    //// fixa listningar pÂ listsidor utan mosaik 
+    //$(document).on('click', '.showingresstextlista', function (e) {
+    //    var valdclass = $(this).find('i');
+    //    var addOrRemove = valdclass.hasClass("closed");
+    //    var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlista");
+
+    //    if (addOrRemove) {
+    //        valdclass.removeClass("closed");
+    //        valdclass.addClass("open");
+    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
+    //        thatobj.show();
+
+    //    } else {
+    //        valdclass.addClass("closed");
+    //        valdclass.removeClass("open");
+    //        valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+    //        thatobj.hide();
+    //    }
+
+    //    return false;
+
+
+    //});
+   
+
+
+
+    $(document).on('click', '.showingresstext', function (e) {
+        //var valdclass = $(this).find('i');
+        var valdclass = $(e.currentTarget).find('i');
+        var addOrRemove = valdclass.hasClass("closed");
+        var st = $(this).attr("style");
+        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
+
+        
+        var itembottommargin = 0;
+
+
+        if (thatobj.length <= 0) {           
+            thatobj = $(e.currentTarget).parent().siblings().find('.ingresstext');
+        } else {
+            //h‰mta clickat item
+            var cur_clicked_Item = $(e.currentTarget).parent().parent().parent().parent().attr("style");
+           
+            //rensa bort absolut v‰rdet frÂn stringen
+            cur_clicked_Item = cur_clicked_Item.replace('position: absolute;', '').trim();
+
+            ////h‰mta clickatitem leftv‰rde:                
+            var start_pos = cur_clicked_Item.indexOf('left:') + 5;
+            //console.log("start_pos " + start_pos);
+            var end_pos = cur_clicked_Item.indexOf('top:', start_pos);
+            //console.log("end_pos " + end_pos);
+            //h‰mta clickatitem topv‰rde
+            var clickeditmTop_start = cur_clicked_Item.indexOf('top:') + 4;
+            //console.log("clickeditmTop_start " + clickeditmTop_start);
+            var clicked_item_height = cur_clicked_Item.substring(clickeditmTop_start, cur_clicked_Item.length - 3).trim();
+            //console.log("clicked_item_height " + clicked_item_height);
+
+            // h‰mta fˆrsta delen av style fˆr sˆkning senare
+            var itemSelectStyleValue = cur_clicked_Item.substring(0, end_pos).trim();
+            var Maincontainerheight = $(this).closest('.kivisotope').attr("style");
+            //console.log("Maincontainerheight " + Maincontainerheight);
+
+            //rensa bort position: relative; v‰rdet frÂn stringen
+            Maincontainerheight = Maincontainerheight.replace('position: relative;', '').trim();
+                       
+            var cont_start_pos = Maincontainerheight.indexOf('height:') + 7;
+            var cont_height = Maincontainerheight.substring(cont_start_pos, Maincontainerheight.length - 3).trim();
+            Maincontainerheight = Maincontainerheight.substring(0, cont_start_pos).trim();
+            //console.log("Maincontainerheight2 " + Maincontainerheight);
+            var ny_cont_height = cont_height;
+            //console.log("ny_cont_height " + ny_cont_height);
+            var valdheight = thatobj.height();
+            var debugg = thatobj.getSize();
+            //console.log("thatobj.height() " + thatobj.height());
+
+            if (addOrRemove) {
+                thatobj.attr("rel", valdheight);
+                itembottommargin += parseFloat(valdheight)
+                ny_cont_height = parseFloat(ny_cont_height) + itembottommargin;
+
+                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
+            } else {
+                valdheight = thatobj.attr("rel");
+                itembottommargin += parseFloat(valdheight)
+
+                ny_cont_height = parseFloat(ny_cont_height) - itembottommargin;
+                Maincontainerheight = Maincontainerheight + " " + ny_cont_height.toString();
+                thatobj.attr("rel", "");
+            }
+            $(this).closest('.kivisotope').attr('style', "position: relative; "+ Maincontainerheight + "px;");
+            var curid = $(this).closest('.kivisotope').attr('id');
+            var rakna = 0;
+            var loopdom = $('#' + curid + ' div[style*="' + itemSelectStyleValue + '"]');
+
+            loopdom.each(function (index, value) {
+                //h‰mta clickatitem topv‰rde
+                var currentItem = $(value).attr('style');
+                //rensa bort absolut v‰rdet frÂn stringen
+                currentItem = currentItem.replace('position: absolute;', '').trim();
+
+                var curitmTop_start = currentItem.indexOf('top:') + 4;
+                var current_item_height = currentItem.substring(curitmTop_start, currentItem.length - 3).trim();
+                // console.log("domloop current_item_height " + current_item_height);
+                var nyposition = current_item_height;
+                // console.log("domloop nyposition " + nyposition);
+                if (parseInt(clicked_item_height) < parseInt(current_item_height)) {
+                    var addedheight = itembottommargin + 0;
+                    if (addOrRemove) {
+                        nyposition = parseInt(current_item_height) + addedheight;
+                    } else {
+                        nyposition = parseInt(current_item_height) - addedheight;
+                    }
+                    var updatedStyleToAdd =" position: absolute; " + itemSelectStyleValue + ' top:' + nyposition.toString() + 'px;';
+                    $(value).attr('style', updatedStyleToAdd);
+                }               
+            });
+        }
+          
+        if (addOrRemove) {
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('<img src="'+_base_server_url +'/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
+            
+        } else {
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+        }
+
+         thatobj.slideToggle(100, function () {
+             if (!$('i').hasClass("open")) {
+                 $(this).closest('.kivisotope').isotope("layout", {
+                     transitionDuration: 0
+                 });
+                 //console.log(" isotope run-----------------");
+             }
+             return false;
+         });
+
+         return false;
+    });
+
+    // kˆrs pÂ alla sidor som har en egen drupal listsida  dvs ingen css v‰xling mellan mosaik och lista
+    $(document).on('click', '.showingresstextlist', function (e) {
+        var valdclass = $(this).find('i');
+        var addOrRemove = valdclass.hasClass("closed");       
+        var thatobj = $(e.currentTarget).parent().siblings(".ingresstextlist");
+             
+        if (addOrRemove) {
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
+            thatobj.show();
+
+        } else {
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+            thatobj.hide();
+        }
+
+        return false;
+    });
+
+    //old
+    $('.showsnabblink').click(function (e) {
+        var valdclass = $(this).find('i');
+       
+        //alert(cur_clicked_Item + "-->" + $(this).height());
+        $(this).parent().siblings(".snabblink").slideToggle("fast", function () {
+            $('#kivisotope2').isotope("layout", {
+                transitionDuration: 0
+            });
+            var addOrRemove = valdclass.hasClass("fi-plus");
+            var valdheight = $(this).height();
+            if (addOrRemove) {
+                valdclass.addClass("fi-x");
+                valdclass.removeClass("fi-plus");
+            } else {
+                valdclass.addClass("fi-plus");
+                valdclass.removeClass("fi-x");              
+            }                       
+        });
+
+        return false;
+    });
+
+    $('#lasMerOmOssLink').on('click', function (e) {
+        var addOrRemove = $('.omossMenu').hasClass("arrowhead");
+      
+        $('.omossContentBox2').slideToggle("slow", function () {            ///‰ndrat till 2
+            $('.kivisotope').isotope("layout");            
+            if (addOrRemove) {
+                $('.omossMenu2').removeClass("arrowhead2");  // ‰ndrat till 2
+            };
+        });
+        
+        if (!addOrRemove) {
+            $('.omossMenu2').addClass("arrowhead2");
+        }
+        
+        return false;
+    });
+
+
+    // TEST BLOCK om oss visa START
+    $('.omossmenycontainer .lasMerOmOssLink ').on('click', function (e) {
+        var that = $(this);
+        var addOrRemove = that.hasClass("arrowhead2");
+        var isAllreadyvisible= $('.omossContentBox2').is(':visible')
+        $('.omossContentBox2').slideToggle("slow", function () {
+            $('.kivisotope').isotope("layout");
+            if (addOrRemove) {
+                $('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
+                
+            };
+        });
+
+        if (!addOrRemove) {
+            //$('.omossmenycontainer a').removeClass("arrowhead2");//rensa alla
+            if (!isAllreadyvisible) {
+                that.addClass("arrowhead2");
+            }
+            
+        }
+
+        return false;
+    });
+    // TEST BLOCK om oss visa END
+
+
+
+    $('#kivlist').on('click', function (e) {
+        $('.kivisotope').isotope('destroy');
+        //$('.mozaikitems .small-10').removeClass('small-10').addClass('small-11');
+        //$('.mozaikitems .small-2').removeClass('small-2').addClass('small-1');        
+        $('.kivlistview').children().attr('class', "kivlist row callout-card aktuellt").attr('style', "");
+        $('.mozaikimg').attr('class', "large-3 medium-3 small-3 columns imgplaceholder  listheight crop-height");
+        $('.mozaikitems').attr('class', "large-9 medium-9 small-12 columns listcontent ").removeClass('mozaikitems');        
+        $('.apsisbtnbox').removeClass('apsisbtnbox').addClass('apsisbtnboxList');
+        
+        return false;
+    });
+
+    $('#kivmozaik').on('click', function (e) {
+//$('.kivlistview .small-11').removeClass('small-11').addClass('small-10');
+//        $('.kivlistview .small-1').removeClass('small-1').addClass('small-2');
+        $('.kivlist').attr('class', "large-3 medium-6 small-12 columns item callout-card aktuellt");
+        $('.imgplaceholder').attr('class', "").addClass('mozaikimg');
+        $('.listcontent').attr('class', "").addClass('mozaikitems');               
+        $('.apsisbtnboxList').removeClass('apsisbtnboxList').addClass('apsisbtnbox');
+        
+ 
+        $('.kivisotope').isotope({
+            itemSelector: '.item',
+            //containerStyle: null,
+            masonry: {
+                // use element for option
+                columnWidth: 250
+            }
+        });
+       
+        return false;
+    })
+
+    //evenemang
+    // kˆrs pÂ alla sidor som har en egen drupal listsida  dvs ingen css v‰xling mellan mosaik och lista
+    $(document).on('click', '.showingresstext_list', function (e) {
+        var valdclass = $(this).find('i');
+        var addOrRemove = valdclass.hasClass("closed");
+        var thatobj = $(e.currentTarget).parent().siblings(".ingresstext");
+
+        if (addOrRemove) {
+            valdclass.removeClass("closed");
+            valdclass.addClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikStang28.png" alt="Dˆlj" />');
+            thatobj.show();
+
+        } else {
+            valdclass.addClass("closed");
+            valdclass.removeClass("open");
+            valdclass.html('<img src="' + _base_server_url + '/sites/all/themes/kivnew/images/MosaikPlus28.png" alt="Visa" />');
+            thatobj.hide();
+        }
+
+        return false;
+    });
+
+
+
+    var removePlussicon = function (e) {
+        var istextset = $('.ingresstext');
+        istextset.each(function (index, value) {
+            var testar = $(value).html();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstext').show();
+            }
+
+        });
+
+    }();
+
+    var removelistPlussicon = function (e) {
+        var istextset = $('.ingresstext');
+        istextset.each(function (index, value) {
+            var testar = $(value).html();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstext_list').show();
+            }
+
+        });
+
+    }();
+
+    var removeListPagesPlussicon = function (e) {
+        var istextset = $('.ingresstextlist');
+        if (istextset.length <=0) {
+            return function () { return false; };
+        }
+
+        istextset.each(function (index, value) {
+            var testar = $(value).html();
+            if ($(value).html()) {
+                $(value).siblings().find('.showingresstextlist').show();
+            }
+
+        });
+        
+    }();
+
+    $('.searchMainWrapper').hide();
+    $('.right-small').on('click', function (e) {
+        $('.searchMainWrapper').slideToggle('600', function () {           
+        });
+    });
+
+    $(".menu-mlid-7255 a").first().addClass('togglebgimagehide');
+    //$('.multiColumn').hide();
+    $(".menu-mlid-7255 a").first().on('click', function (e) {
+        var toggle_switch = $(this);
+        $('.multiColumn').slideToggle("slow", function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.addClass('togglebgimageshow').removeClass('togglebgimagehide')               
+            } else {
+                toggle_switch.addClass('togglebgimagehide').removeClass('togglebgimageshow')
+            }
+        });
+        return false;
+
+    });
+
+    //var menybalk = function () {
+
+    //   if (jQuery(".view-2015-produktioner").size();
+
+
+    //}();
+    
+    jQuery('.omossMenu2').on('click', function () {
+
+        jQuery('.artikelwrapper').toggle();
+
+    });
+
+
+   ////handlebars test START
+   // var compiledTemplate = Handlebars.getTemplate('listviewtemplate');
+   // var tmphtml = compiledTemplate({ testarvalue: 'detta funkar' });
+   // console.log("start: " + tmphtml);
+   //// handlebars test END 
+
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scroll-top').fadeIn();
+        } else {
+            $('.scroll-top').fadeOut();
+        }
+    });
+
+    $('.scroll-top').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+
+    // scrollar ner frÂn artikelmenyn till artikel ancor
+    $('.omossContentBox2 .view-content a').on('click', function (e) {
+        var href = $(e.currentTarget).attr('href');
+        $("html, body").animate({
+            scrollTop: $('a[name="' + href.substring(1, href.length) + '"]').offset().top
+        }, 800);
+        //alert("test");
+
+    });
+    
+
+    removeListPagesPlussicon();
+    
+
+    //var kulturikatalogeninlogg = "<a href='#' class='lasMerOmOssLink' >";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>SÂ h‰r arbetar vi</div>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Kontaktpersoner</div>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock'>Snabbl‰nkar</div></a>";
+    //kulturikatalogeninlogg += "<a href='http://kulturivast.se/kulturkatalogen-vast/logga-in-pa-kulturkatalogen-vast' class='lasMerOmOssLink'>";
+    //kulturikatalogeninlogg += "<div class='small-12 medium-3 columns omossmenyblock kulturkatalogenloggainbutton'>Logga in</div></a>";
+
+    //$('.section-kulturkatalogen-vast .omossmenycontainer').removeClass('medium-9').addClass('medium-12');
+    //$('.section-kulturkatalogen-vast .omossmenycontainer').html(kulturikatalogeninlogg);
+    /*
+    //////////////////////////////////////////////////////////////////
+     Fˆrsta sidan slider
+     andreas josefsson
+    */
+
+        $('.aj-carusel').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+              {
+                  breakpoint: 1200,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+
+                  }
+              },
+              {
+                  breakpoint: 800,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                  }
+              },
+              {
+                  breakpoint: 600,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+        });
+      
+        $('.startcarusel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            autoplay: true,
+            autoplaySpeed: 2000
+            
+        });
+
+      
+
+    /*
+    /////////////////////////////////////////////////////////////////////////////////
+    */
+
+    /*!
+     * jQuery Sticky Footer 1.1
+     * Corey Snyder
+     * http://tangerineindustries.com
+     *
+     * Released under the MIT license
+     *
+     * Copyright 2013 Corey Snyder.
+     *
+     * Date: Thu Jan 22 2013 13:34:00 GMT-0630 (Eastern Daylight Time)
+     * Modification for jquery 1.9+ Tue May 7 2013
+     * Modification for non-jquery, removed all, now classic JS Wed Jun 12 2013
+     */
+
+    window.onload = function () {
+        stickyFooter();
+
+        //you can either uncomment and allow the setInterval to auto correct the footer
+        //or call stickyFooter() if you have major DOM changes
+        //setInterval(checkForDOMChange, 1000);
+    };
+
+    //check for changes to the DOM
+    function checkForDOMChange() {
+        stickyFooter();
+    }
+
+    //check for resize event if not IE 9 or greater
+    window.onresize = function () {
+        stickyFooter();
+        $('#kivisotope').isotope("layout");
+    }
+
+    //lets get the marginTop for the <footer>
+    function getCSS(element, property) {
+
+        var elem = document.getElementsByTagName(element)[0];
+        var css = null;
+
+        if (elem.currentStyle) {
+            css = elem.currentStyle[property];
+
+        } else if (window.getComputedStyle) {
+            css = document.defaultView.getComputedStyle(elem, null).
+            getPropertyValue(property);
+        }
+
+        return css;
+
+    }
+
+    function stickyFooter() {
+
+        if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
+            document.getElementsByTagName("footer")[0].removeAttribute("style");
+        }
+
+        if (window.innerHeight != document.body.offsetHeight) {
+            var offset = window.innerHeight - document.body.offsetHeight;
+            var current = getCSS("footer", "margin-top");
+
+            if (isNaN(current) == true) {
+                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:2rem;");
+                current = 0;
+            } else {
+                current = parseInt(current);
+            }
+
+            if (current + offset > parseInt(getCSS("footer", "margin-top"))) {
+                document.getElementsByTagName("footer")[0].setAttribute("style", "margin-top:" + (current + offset) + "px;");
+            }
+        }
+    }
+
+    /*
+    ! end sticky footer
+    */
+    //HELPER FOR LABEL PLACEHOLDER
+
+    $('.view-press-gallery #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    $('.view-2015-dokument #edit-title').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    $('.view-2015-staff #edit-combine').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
+    
+});
+
+
+//fˆrsta sidan slider
+
+$(function () {
+    $(".anim-slider").animateSlider(
+         {
+             autoplay: true,   //starts the autoplay 
+             interval: 5000,   //time between slides if autoplay is true
+             animations:           //specify the animations for each element of the slide
+             {
+                 0:   //Slide No1
+                 {
+                     "h1":
+                     {
+                         show: "fadeIn,",
+                         hide: "bounceOut"
+
+                     },
+                     "h2":
+                     {
+                         show: "rotateIn",
+                         hide: "rotateOut",
+                         delayShow: "delay2s"
+                     }
+                 },
+                 1:   //Slide No2
+                 {
+                     ".slidetest":   //tagName or id or class name of the element  
+                    {
+                        show: "fadeIn",   //class to add when the element appears
+                        hide: "fadeOut",  //class to add when the element disappears
+                        delayShow: "delay1s"   //class to add to delay show effect
+                    },
+                     "h1":
+                     {
+                         show: "fadeIn,",
+                         hide: "bounceOut"
+
+                     },
+                     "h2":
+                     {
+                         show: "rotateIn",
+                         hide: "rotateOut",
+                         delayShow: "delay2s"
+                     }
+                 },
+                 2:   //Slide No2
+                 {
+                     ".slidetest":   //tagName or id or class name of the element  
+                     {
+                         show: "fadeIn",   //class to add when the element appears
+                         hide: "fadeOut",  //class to add when the element disappears
+                         delayShow: "delay1s"   //class to add to delay show effect
+                     }
+
+                 }
+             }
+         }
+     );
+
+}); //// jquery end
+
+//kapsla Start
+(function () {
+
+    
+    jQuery(function ($){
+        // VAR
+        var _currentHuvudomradeID = $('#currentTID').html(); // div id= currentTID
+        var _tmpomradesNamn = $('.omradesnamn li').html();
+        var _omradesNamn = $.trim(_tmpomradesNamn);
+        var _valdSortering="";
+        var _drpFilter = $('#drpFilter');
+
+        var localOrServerURL = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se" ; "http://kivdev.monoclick-dev.se"; //"http://dev.kulturivast.se.www359.your-server.de";  webservern att h√§mta data ifr√•n
+        //var mozaikItems = [];
+        var _drphuvudomradenlista = [];
+        var _drphuvudomradenvalue = [];        
+        var _breadcrumbval = [];
+        var _breadcrumbindex = [];
+
+        var _renderDOMList = "";
+        var _renderDrpList = "";
+        var _filtreranamn = "Avgr√§nsa";
+        
+
+        // OBJECT LITERALS
+        var _RenderOutputListObj = {
+            rubrik: "",
+            overrub: "",
+            ingress: "",
+            huvudomrade: "",
+            kategoritaggning: "",
+            datum: "",
+            link: "",
+            bild: "",
+            extra: "",
+            btntyp: "", 
+            btntitle: "", 
+            btnlink: "",
+            anktuellt:""
+        }
+
+        var _RenderOutputdrpObj = {
+            namn: "",
+            value: ""   
+        }
+
+        // WEBSERVICE START
+        function kivSearchJsonData(searchstr, callback) {
+            var serverrequest = "";
+            switch (_valdSortering) {
+                case "datum":
+                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-day/" + searchstr + "?callback=?";
+                    break;
+                case "titel":
+                    serverrequest = localOrServerURL + "/json-kivsearch_sort-by-title/" + searchstr + "?callback=?";
+                    break;
+                case "aktuellt":
+                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";
+                    break;
+                default :
+                    serverrequest = localOrServerURL + "/json-kivsearch/" + searchstr + "?callback=?";                  
+            }
+            
+            $.ajax({
+                type: "GET",
+                url: serverrequest,
+                dataType: "jsonp",
+                success: function (data) {
+                    //var currentdomitems = "";
+                    
+                    //for (var x = 0; x < data.kivsearch.length; x++) {
+
+                    //    _RenderOutputListObj.bild = data.kivsearch[x].kivsearchitem.bild;
+                    //    _RenderOutputListObj.overrub = data.kivsearch[x].kivsearchitem.overrub;
+                    //    _RenderOutputListObj.rubrk = data.kivsearch[x].kivsearchitem.rubrik;
+                    //    _RenderOutputListObj.link = data.kivsearch[x].kivsearchitem.link;
+                    //    _RenderOutputListObj.ingress = data.kivsearch[x].kivsearchitem.ingress;
+                    //    _RenderOutputListObj.aktuellt = data.kivsearch[x].kivsearchitem.aktuellt;
+                    //    _RenderOutputListObj.btntyp = data.kivsearch[x].kivsearchitem.btntyp;
+                    //    _RenderOutputListObj.btntitle = data.kivsearch[x].kivsearchitem.btntitle;
+                    //    _RenderOutputListObj.btnlink = data.kivsearch[x].kivsearchitem.btnlink;
+                    //    currentdomitems += Renderdata(_RenderOutputListObj);
+
+                    //};
+                   
+                    //_renderDOMList = currentdomitems;
+                    var currentdomitems = PrioriteringsSortera(data, function (sorteradlista) {
+
+                        return sorteradlista;
+                    });
+
+                    callback(currentdomitems);
+                    removePlussicon();
+                    return false;
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                   // alert("N√•tt blev fel!"); // <-- skicka error json !!!!
+
+                }
+            });                     
+            
+        };
+
+        // listar alla huvudomr√•dena i en dropdown lista
+        var initomradesdrp = function (omradesid) {
+            var serverrequest = localOrServerURL + "/json-kivsearch-cat/" + omradesid + "?callback=?";
+            
+            $.ajax({
+                type: "GET",
+                url: serverrequest,
+                dataType: "jsonp",
+                success: function (data) {
+
+                    var currentdomitems = "";
+                    var removedubbletter=[];
+                    
+                    AddFilterdrpInit();
+
+                    for (var x = 0; x < data.kivsearch.length; x++) {
+                        var tid = data.kivsearch[x].kivomraden.tid;
+                        if (removedubbletter.length > 0) {
+                            if (removedubbletter.indexOf(tid) == -1) {
+                                _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
+                                _RenderOutputdrpObj.value = tid;
+                                removedubbletter.push(tid);
+
+                                if (_breadcrumbindex.indexOf(tid) == -1) {
+                                    AddOmradenToDrp(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
+                                };                                
+                            }
+
+                        } else {
+                            _RenderOutputdrpObj.namn = data.kivsearch[x].kivomraden.kategoritaggning;
+                            _RenderOutputdrpObj.value = tid;
+                            removedubbletter.push(tid);
+                            if (_breadcrumbindex.indexOf(tid) == -1) {
+                                AddOmradenToDrp(_RenderOutputdrpObj.value, _RenderOutputdrpObj.namn);
+                            };
+                        }
+                       
+                    };
+                    AddOmradenToDrp(_currentHuvudomradeID, "Visa alla");//l√§gg till visa alla Sist;
+                    
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert("N√•tt blev fel!"); // <-- skicka error json !!!!
+
+                }
+            });
+
+            return false;
+
+        }
+        // WEBSERVICE END
+
+        // SORTERINGS HELPER FUNCTIONS --START
+        //Sortera efter prioriterings 
+        var PrioriteringsSortera = function(osorteraddata, callback){
+
+            //returv√§rde
+            var currentdomitems = "";
+            
+            // temp Arrayer
+            var MainCategoryReturnArray = [];
+            var MainCategoryArray = [];
+            var RelatedCategoryArray = [];
+
+           
+        // loopa igenom alla items i inkommande osorteratdata
+            for (var x = 0; x < osorteraddata.kivsearch.length; x++) {
+                console.log("i f√∂rsta loopen nr=" + x);
+                //f√∂r varje item tmp lagra testv√§rden
+                var tmpcurrhuvudomr = osorteraddata.kivsearch[x].kivsearchitem.huvudomrade;
+                var isAktuell = osorteraddata.kivsearch[x].kivsearchitem.aktuellt;
+
+                var cur_valt_huvudomrade = _tmpomradesNamn.trim()
+
+                //kolla vilken array item ska hamna i
+                //om huvudomr√•det √§r samma som sidans omr√•de
+                if (tmpcurrhuvudomr == cur_valt_huvudomrade) {
+					
+                    //kolla om det √§r aktuellt och skall visas √∂vers i huvudlistan eller inte
+                    if (isAktuell=="1"){
+                        MainCategoryArray.unshift(osorteraddata.kivsearch[x]);
+						
+                    }else{
+                        MainCategoryArray.push(osorteraddata.kivsearch[x]);
+                    } 
+					
+                }else{		
+                    
+                    //kolla om det √§r aktuellt och skall visas √∂vers i Relateradelistan eller inte
+                    if (isAktuell == "1") {
+                        osorteraddata.kivsearch[x].kivsearchitem.aktuellt = 0;
+                        RelatedCategoryArray.unshift(osorteraddata.kivsearch[x]);
+						
+                    }else{
+                        RelatedCategoryArray.push(osorteraddata.kivsearch[x]);
+                    } 					
+                }	
+            };
+                //Sl√• ihop arrayerna s√• att ordningen blir r√§tt
+                MainCategoryReturnArray = MainCategoryArray.concat(RelatedCategoryArray)
+
+                for (var item in MainCategoryReturnArray) {
+                  
+                    if (!MainCategoryReturnArray.hasOwnProperty(item)) continue;
+
+                    var obj = MainCategoryReturnArray[item];
+                    for (var prop in obj) {
+                        // skip loop if the property is from prototype
+                        if (!obj.hasOwnProperty(prop)) continue;
+
+                        console.log("i Andra loopen");
+                        _RenderOutputListObj.bild = obj[prop].bild;
+                        _RenderOutputListObj.overrub = obj[prop].overrub;
+                        _RenderOutputListObj.rubrk = obj[prop].rubrik;
+                        _RenderOutputListObj.link = obj[prop].link;
+                        _RenderOutputListObj.ingress = obj[prop].ingress;
+                        _RenderOutputListObj.aktuellt = obj[prop].aktuellt;
+                        _RenderOutputListObj.btntyp = obj[prop].btntyp;
+                        _RenderOutputListObj.btntitle = obj[prop].btntitle;
+                        _RenderOutputListObj.btnlink = obj[prop].btnlink;
+                        currentdomitems += Renderdata(_RenderOutputListObj);
+                        console.log(prop + " = " + obj[prop].bild);
+
+                    }
+                }
+
+
+
+                //for (var i = 0; i < MainCategoryReturnArray.length; i++) {  
+                //    console.log("i Andra loopen (i) nr="+ i);
+                //    _RenderOutputListObj.bild = MainCategoryReturnArray[i].object.bild;
+                //    _RenderOutputListObj.overrub = MainCategoryReturnArray[i].kivsearchitem.overrub;
+                //    _RenderOutputListObj.rubrk = MainCategoryReturnArray[i].kivsearchitem.rubrik;
+                //    _RenderOutputListObj.link = MainCategoryReturnArray[i].kivsearchitem.link;
+                //    _RenderOutputListObj.ingress = MainCategoryReturnArray[i].kivsearchitem.ingress;
+                //    _RenderOutputListObj.aktuellt = MainCategoryReturnArray[i].kivsearchitem.aktuellt;
+                //    _RenderOutputListObj.btntyp = MainCategoryReturnArray[i].kivsearchitem.btntyp;
+                //    _RenderOutputListObj.btntitle = MainCategoryReturnArray[i].kivsearchitem.btntitle;
+                //    _RenderOutputListObj.btnlink = MainCategoryReturnArray[i].kivsearchitem.btnlink;
+                //    currentdomitems += Renderdata(_RenderOutputListObj);
+
+                //};
+
+           return callback(currentdomitems);
+
+        }
+
+        //SORTERINGS HELPER FUNCTIONS --- END
+
+
+        var Renderdata = function (incRenderOutputObj) {
+            var tmpstr ="";
+            
+                tmpstr += "<div class='large-4 medium-6 small-12 columns item callout-card aktuellt'>";
+                if (incRenderOutputObj.aktuellt) {
+                    if (incRenderOutputObj.aktuellt > 0) {
+                        tmpstr += "<div class='card-label'><div class='label-text'>Aktuellt</div></div>";
+                    }
+                }
+                tmpstr += "<div class='mozaikimg listheight'>";
+                tmpstr += "<a href='" + incRenderOutputObj.link + "'><img src='" + incRenderOutputObj.bild + "' /></a></div>";
+                tmpstr += "<div class='mozaikitems'><div class='row'>";
+                tmpstr += "<div class='small-10 columns listheight'><a href='" + incRenderOutputObj.link + "'><h5>" + incRenderOutputObj.overrub + "</h5><h4>" + incRenderOutputObj.rubrk + "</h4></a>";
+                tmpstr += "<div class='apsisbtnbox'><a href='" + incRenderOutputObj.btnlink + "' class='button expand success " + incRenderOutputObj.btntyp + "'>" + incRenderOutputObj.btntitle + "</a></div></div>";
+                tmpstr += "<div class='small-2 columns listheight'><a href='' class='showingresstext'>";
+                if (incRenderOutputObj.ingress) {
+                    tmpstr += "<i class='closed'><img alt='Visa' src='" + localOrServerURL + "/sites/all/themes/kivnew/images/MosaikPlus28.png'></i>";
+                }                
+                tmpstr += "</a></div>";
+                tmpstr += "<div class='medium-12 columns ingresstext'>" + incRenderOutputObj.ingress + "</div></div></div></div>";
+
+                
+           return tmpstr;
+        };
+
+      
+        // FUNKTIONER
+        var RenderDomItem = function (renderitem) {
+            $('#kivisotope .wrapper').html(""); //remove all child nodes   
+            $('#kivisotope .wrapper').html(renderitem);
+           
+            $('.kivisotope').isotope("destroy");
+            $('.kivisotope').isotope({
+                itemSelector: '.item',                
+                masonry: {
+                    // use element for option
+                    columnWidth: 250
+                }
+            });
+            $('.loader').hide();
+            return false;
+        }
+
+        var FilterRender = function () {
+            // g√∂r filtrering
+            var tmpstrlist = "";
+            for (index = 0; index < _breadcrumbindex.length; ++index) {
+                if (index == 0) {
+                    tmpstrlist += _breadcrumbindex[index];
+                } else {
+                    tmpstrlist += "," + _breadcrumbindex[index];
+                }
+            }
+            var getomrviaAjax = "";
+
+            if (tmpstrlist) {
+                getomrviaAjax = _currentHuvudomradeID + "," + tmpstrlist;
+            } else {
+                getomrviaAjax = _currentHuvudomradeID;
+            };
+            
+            kivSearchJsonData(getomrviaAjax, function (datat) {
+                
+                initomradesdrp(getomrviaAjax);// l√§gger till alla kopplade l√§nkar                
+                RenderDomItem(datat);
+            });            
+        };
+
+        var ResetFilter = function () {
+            $("#breadcrumbval").empty();
+            $("#breadcrumbval").append("<li><a href=''class='removebreadcrumbval' rel=''>Visa alla</a></li>");
+            _drpFilter.empty();
+            _breadcrumbindex = [];
+            _breadcrumbval = [];
+            _drphuvudomradenlista = [];
+            _drphuvudomradenvalue = [];
+            _RenderOutputdrpObj = [];
+            _renderDOMList = "";
+            _renderDrpList = "";            
+                       
+            initomradesdrp(_currentHuvudomradeID);// l√§gger till alla kopplade l√§nkar
+
+            FilterRender();
+        };
+        
+            //l√§gger till options f√∂rst i filterdropdownen
+        var AddFilterdrpInit = function () {
+            _drpFilter.empty();
+            var newOption = $('<option>' + _filtreranamn + '</option>'); // l√§gg alltid till option √∂verst i listan
+            _drpFilter.append(newOption);
+        }
+        var AddOmradenToDrp = function (value, name) {            
+            var newOption = $('<option value="' + value + '">' + name + '</option>');
+            _drpFilter.append(newOption);
+
+            _drpFilter.trigger("chosen:updated");
+            return true;
+        }
+       
+      
+        /// BREADCRUMB START  (l√§gg √∂ver till helper js)
+
+            // L√§gger till breadrumb valt omr√•de fr√•n arrayerna med a-l√§nkar och index OBS m√•ste ha samma index!!!
+        var Addtobreadcrumbval = function (valomr, valdid) {
+            var addhref = "";
+            if (valomr != "Visa alla") {
+                addhref = "<li><a href=''class='removebreadcrumbval' rel='" + valdid + "'>" + valomr + "</a></li>";
+            }
+            
+            // L√§gger tillendast h√§r ifr√•n annars blir det osynk
+            _breadcrumbval.push(addhref);
+            _breadcrumbindex.push(valdid);
+
+            FilterRender();
+          
+            $("#breadcrumbval").append(addhref);
+            return false;
+        }
+
+        // tabort valt breadrumb omr√•de fr√•n arrayerna med a-l√§nkar och index OBS m√•ste ha samma index!!!
+        var Delbreadcrumval = function (valid) {
+            var rerender="";
+            var i = _breadcrumbindex.indexOf(valid);
+            if (i != -1) {
+                // tar bort endast h√§r ifr√•n annars blir det osynk
+                _breadcrumbindex.splice(i, 1);
+                _breadcrumbval.splice(i, 1);
+            }
+
+            $.each(_breadcrumbval,function(item, val){
+                rerender += val;
+            });
+
+            FilterRender();
+
+            $("#breadcrumbval").html(rerender);
+            return false;
+
+        }
+
+        //initera breadcrumblistan
+        var initbreadcrumb = function () {
+
+
+        }
+        /// BREADCRUMB END
+        
+
+        //HELPER Funktions
+        var showvisaalla = function () {
+            var isantal = $('#breadcrumbval li').size();
+
+            if (isantal == 0) {
+
+            }
+
+        }
+        
+
+
+        // EVENTS START
+        $('#drpFilter').change(function (e) {
+            //$('.loader').show();
+            
+            var currentdrp = $("#drpFilter option:selected");
+            
+            var valtid = currentdrp.val();
+            var valtomr = currentdrp.text();
+            if (valtid == "Avgr√§nsa") {
+                return false;
+            }
+
+            //add to breadcrumb
+            if (valtid == _currentHuvudomradeID) {
+                ResetFilter();
+            } else {
+                if (_breadcrumbval.length == 0) {
+                    $("#breadcrumbval").empty();
+                }
+
+                Addtobreadcrumbval(valtomr, valtid);
+            }            
+            $('.kivisotope').isotope("layout");
+            return false;
+        });
+
+       //
+        $('#drpSortering').change(function (e) {
+            //$('.loader').show();
+
+            var currentdrp = $("#drpSortering option:selected");
+
+            var valdid = currentdrp.val();
+            //var valdtyp = currentdrp.text();
+            if (valdid == "alla") {
+                return false;
+            }
+           
+            if (valdid == _omradesNamn) {
+                _valdSortering = "";
+                ResetFilter();
+            } else {
+                _valdSortering = valdid
+                FilterRender();
+            }
+            $('.kivisotope').isotope("layout");
+            return false;
+        });
+       
+
+        $(document).on('click', '.resetbreadcrumb', function () {
+            ResetFilter();
+        })
+        
+
+        $(document).on('click', '.removebreadcrumbval', function () {
+            //Del from breadcrumb
+            $('.loader').show();
+            var relval = $(this).attr('rel'); // h√§mta omr√•sdesid
+            Delbreadcrumval(relval);            
+            return false;
+        });
+        // EVENTS END
+
+
+        var removePlussicon = function (e) {
+            var istextset = $('.ingresstext');
+            istextset.each(function (index, value) {
+                var testar = $(value).html();
+                if ($(value).html()) {
+                    $(value).siblings().find('.showingresstext').show();
+                }
+
+            });
+
+        }
+
+
+        // SETTINGS
+        var init = function () {
+            if (_currentHuvudomradeID) {
+                initomradesdrp(_currentHuvudomradeID);// l√§gger till alla kopplade l√§nkar
+            };
+
+        };
+        
+        // INITIERING
+        init();
+       
+        
+
+});//Jqueryready end
+
+
+})();//kapsla END
+// kappsla START
+(function () {
+    jQuery(function ($) {// Jquery START
+
+        $('.artikelMenu .lasMerOmOssLink').on('click', function (e) {
+            var addOrRemove = $('.artikelMenu').hasClass("arrowhead");
+            $('.artikelsubmenuContent').slideToggle("slow", function () {
+              
+                if (addOrRemove) {
+                    $('.artikelMenu').removeClass("arrowhead");
+                };
+            });
+
+            if (!addOrRemove) {
+                $('.artikelMenu').addClass("arrowhead");
+            }
+
+
+            return false;
+        });       
+        
+
+    });// Jquery END
+})();// kappsla och exeute END
+
+
+jQuery(function ($) {
+
+    //$('.kivisotope').imagesLoaded(function () {
+
+    //    alert("loaded");
+    //    $(this).isotope('reloadItems');
+    //    $(this).isotope({
+    //        itemSelector: '.item',
+    //        //containerStyle: null,
+    //        masonry: {
+    //            // use element for option
+    //            columnWidth: 250
+    //        }
+    //    });
+    //    $(this).isotope('reloadItems');
+    //});
+
+
+        jQuery(document).ajaxComplete(function (event, request, settings) {
+           
+           
+            //alert("complete");
+            //setTimeout(function () {
+                //jQuery('.kivisotope').isotope('destroy');
+                $('.kivisotope').isotope('reloadItems');
+                $('.kivisotope').isotope({
+                    itemSelector: '.item',
+                    //containerStyle: null,
+                    masonry: {
+                        // use element for option
+                        columnWidth: 250
+                    }
+                });
+                $('.kivisotope').isotope('reloadItems');
+                //alert("tee");
+
+            //}, 3500);
+       
+        });
+        jQuery(document).ajaxStop(function (event, request, settings) {
+
+
+            //alert("stop");
+            setTimeout(function () {
+            //jQuery('.kivisotope').isotope('destroy');
+            $('.kivisotope').isotope('reloadItems');
+            $('.kivisotope').isotope({
+                itemSelector: '.item',
+                //containerStyle: null,
+                masonry: {
+                    // use element for option
+                    columnWidth: 250
+                }
+            });
+            $('.kivisotope').isotope('reloadItems');
+            $('.pager-load-more li').html(function () {
+
+                if ($(this).html() == "&nbsp;") {
+
+                    $(this).hide();
+                }
+            });
+
+            }, 700);
+
+        });
+    });
