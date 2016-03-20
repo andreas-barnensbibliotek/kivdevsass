@@ -651,7 +651,7 @@ jQuery(function ($){
 
 //första sidan slider
 
-$(function () {
+jQuery(function ($) {
     $(".anim-slider").animateSlider(
          {
              autoplay: true,   //starts the autoplay 
