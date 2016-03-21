@@ -662,8 +662,9 @@ jQuery(function ($) {
                  {
                      "h1":
                      {
-                         show: "fadeIn,",
-                         hide: "bounceOut"
+                         show: "bounceIn",
+                         hide: "flipOutX",
+                         delayShow: "delay1s"
 
                      },
                      "h2":
@@ -684,7 +685,8 @@ jQuery(function ($) {
                      "h1":
                      {
                          show: "fadeIn,",
-                         hide: "bounceOut"
+                         hide: "bounceOut",
+                         delayShow: "delay2s"
 
                      },
                      "h2":
