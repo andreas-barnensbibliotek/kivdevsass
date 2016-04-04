@@ -3,7 +3,7 @@
 // CENTER LANDING PAGE TEXT
 
 jQuery(function ($){
-    var _base_server_url = "http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
+    var _base_server_url = "http://www.kulturivast.se"; //"http://kulturivast.se.preview.binero.se"; //"http://kivdev.monoclick-dev.se";
 
     var changeFontColorArtikelsidor = function () {
         var changeh1 = $('.omossspace h1');
@@ -20,7 +20,7 @@ jQuery(function ($){
         if ($('.ajimage-omrade-nod').find("img").length > 0) {
             console.log("visar bild");
             if (changeh1.css('color') != "transparent") {
-                changeh1.css('color', '#eee');
+               // changeh1.css('color', '#eee');
                 //changeh1.css('background-color', '#000');
                 //changeh1.css('padding-bottom', '0.9rem');
                 //changeh1.css('opacity', '0.9');
@@ -114,7 +114,7 @@ jQuery(function ($){
 
 
     //});
-
+   
 
 
 
@@ -298,7 +298,7 @@ jQuery(function ($){
 
 
     // TEST BLOCK om oss visa START
-    $('.omossmenycontainer a').on('click', function (e) {
+    $('.omossmenycontainer .lasMerOmOssLink ').on('click', function (e) {
         var that = $(this);
         var addOrRemove = that.hasClass("arrowhead2");
         var isAllreadyvisible= $('.omossContentBox2').is(':visible')
@@ -545,7 +545,20 @@ jQuery(function ($){
               // instead of a settings object
             ]
         });
-    
+      
+        $('.startcarusel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            autoplay: true,
+            autoplaySpeed: 2000
+            
+        });
+
+      
+
     /*
     /////////////////////////////////////////////////////////////////////////////////
     */
@@ -634,3 +647,67 @@ jQuery(function ($){
     $('.view-2015-staff #edit-combine').attr("placeholder", decodeURI("Fritexts%C3%B6k"));
     
 });
+
+
+//första sidan slider
+
+jQuery(function ($) {
+    $(".anim-slider").animateSlider(
+         {
+             autoplay: true,   //starts the autoplay 
+             interval: 5000,   //time between slides if autoplay is true
+             animations:           //specify the animations for each element of the slide
+             {
+                 0:   //Slide No1
+                 {
+                     "h1":
+                     {
+                         show: "bounceIn",
+                         hide: "flipOutX",
+                         delayShow: "delay1s"
+
+                     },
+                     "h2":
+                     {
+                         show: "rotateIn",
+                         hide: "rotateOut",
+                         delayShow: "delay2s"
+                     }
+                 },
+                 1:   //Slide No2
+                 {
+                     ".slidetest":   //tagName or id or class name of the element  
+                    {
+                        show: "fadeIn",   //class to add when the element appears
+                        hide: "fadeOut",  //class to add when the element disappears
+                        delayShow: "delay1s"   //class to add to delay show effect
+                    },
+                     "h1":
+                     {
+                         show: "fadeIn,",
+                         hide: "bounceOut",
+                         delayShow: "delay2s"
+
+                     },
+                     "h2":
+                     {
+                         show: "rotateIn",
+                         hide: "rotateOut",
+                         delayShow: "delay2s"
+                     }
+                 },
+                 2:   //Slide No2
+                 {
+                     ".slidetest":   //tagName or id or class name of the element  
+                     {
+                         show: "fadeIn",   //class to add when the element appears
+                         hide: "fadeOut",  //class to add when the element disappears
+                         delayShow: "delay1s"   //class to add to delay show effect
+                     }
+
+                 }
+             }
+         }
+     );
+
+}); //// jquery end

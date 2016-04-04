@@ -7,6 +7,7 @@
 @import 'devScss/Komponenter/_tab-bar';
 @import 'devScss/foundation/_offcanvas';
 @import 'devScss/foundation/_forms';
+
 @import 'devScss/Komponenter/_mozaikitem';
 @import 'devScss/base/_submenubase';
 @import 'devScss/Komponenter/_mainMenu';
@@ -36,6 +37,7 @@
 @import 'devScss/vendor/_slick-theme';
 @import 'devScss/Komponenter/_loadmore';
 @import 'devScss/Komponenter/_kulturkatalogen';
+@import 'devScss/vendors/_animateSlider';
 // Behold, here are all the Foundation components.
 
 /*@import 'foundation/components/grid';
@@ -133,8 +135,9 @@ body {
 @media #{$large-up} {  
 }
 $font-path:"";
+$font-path: "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons";
 //$font-path: "/public/fonts/foundation-icons/foundation-icons";
-//$font-path: "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
+//$font-path: "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons";
 //$font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";
@@ -146,7 +149,9 @@ $font-path:"";
   font-weight: normal;
   font-style: normal;
 }
-//@import "http://kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+
+@import "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+//@import "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 ///@import "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 //@import "/public/fonts/foundation-icons/foundation-icons/foundation-icons.css";
 
@@ -309,3 +314,6 @@ margin-top:0.7rem;
  /*.section-ljudmagasinet h1{
 color:transparent!important;
 }*/
+
+
+ 

@@ -30,6 +30,11 @@ $font-color: #333;
            background-color: $orange;
        }
 }
+.success.n4{
+    background:$aluminum!important;
+    cursor: default;
+    pointer-events: none;    
+}  
   
 .callout-card {
 	
