@@ -71,7 +71,8 @@
     background:#000;
     text-align: center;
     img{       
-        object-fit: scale-down; /* Do not scale the image */
+        //object-fit: scale-down; /* Do not scale the image */
+        object-fit: none; /* Do not scale the image */
         object-position: center; /* Center the image within the element */  
         min-height: 200px;
     }
@@ -110,66 +111,7 @@
       @media #{$small-up} {display:none;}
       @media #{$large-up} {display:block;}
   }
-  .anim-slider {
-
-   .anim-slide {
-      background:#000; 
-      background-repeat:no-repeat !important;
-      background-position:center;
-      background-size:cover !important;
-      a {
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-        }
-
-    }     
-    .slide1{
-        a{
-            padding-left:10%;
-        }
-         h1{
-            color:$white !important;
-            top: 8rem;
-            text-align:left;
-            
-            width: 100%;
-        }
-        h2{
-            color:$white !important;
-            top:5rem;
-            width: 100%;
-             text-align:left;
-        }
-    }
-    .slide2{
-       
-        h1{
-            color:$white !important;
-            top: 8rem;
-            width: 100%;
-        }
-        h2{
-            color:$white !important;
-            top:5rem;
-            width: 100%;
-        }
-         
-    }
-    .slide3{
-         h1{
-            color:$white !important;
-            top: 8rem;
-            width: 100%;
-        }
-        h2{
-            color:$white !important;
-            top:5rem;
-            width: 100%;
-        }
-    }
-  }
+ 
  
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>

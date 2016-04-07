@@ -50,7 +50,7 @@ gulp.task('foundationJS', function () {
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 //srcPath.js + '/imagesloaded.pkgd.min.js',
                 //srcPath.js + '/handlebars-v4.0.5.js',
-                srcPath.js + '/jquery.animateSlider.js',
+                //srcPath.js + '/jquery.animateSlider.js',
                 srcPath.js + '/slick.js',
 			    srcPath.js + '/iscroll-lite.js',
                 srcPath.js + '/kivglobalvars.js',
@@ -115,7 +115,7 @@ gulp.task('foundationJSDEV', function () {
 				srcPath.bower + '/foundation/js/foundation/foundation.alert.js',
                 //srcPath.js + '/imagesloaded.pkgd.min.js',
                 //srcPath.js + '/handlebars-v4.0.5.js',
-                srcPath.js_dev + '/jquery.animateSlider.js',
+                //srcPath.js_dev + '/jquery.animateSlider.js',
                 srcPath.js_dev + '/slick.js',
 			    srcPath.js_dev + '/iscroll-lite.js',
                 srcPath.js_dev + '/kivglobalvars.js',
@@ -126,7 +126,7 @@ gulp.task('foundationJSDEV', function () {
 
 			]
 		)
-		.pipe(concat('app.js'))
+		.pipe(concat('app-dev.js'))
 		.pipe(gulp.dest(srcPath.publik + '/js'));
 
     return gulp.src([
@@ -147,6 +147,7 @@ gulp.task('SassToCssSrcDEV', function () {
             ]
         }).on('error', sass.logError))
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // pass the file through autoprefixer 
+        .pipe(rename({ suffix: '.dev' }))
 		.pipe(sourcemaps.write())
         .pipe(gulp.dest(srcPath.publik + '/css/'))
 		.pipe(jshint())

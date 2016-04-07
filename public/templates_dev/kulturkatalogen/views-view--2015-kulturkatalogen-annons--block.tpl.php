@@ -55,22 +55,7 @@
       <?php print $attachment_before; ?>
     </div>
   <?php endif; ?>
-  <!-- Här startar listblocket -->
-  <div class="row mosaikblockheader kulturkat">
-    <div class="small-8 medium-9 columns">    
-    </div>
-    <div class="small-4 medium-3 columns text-right ">
-        <span id="filtersortering">
-            <a id="kivmozaik" href="">
-                <img src="/<?php print $base_path.$directory ?>/images/Mosaik44.png" alt="Visa mosaikvy"/>
-            </a>
-            <a id="kivlist" href="">
-                <img src="/<?php print $base_path.$directory ?>/images/Lista44.png" alt="Visa listvy" />
-            </a>                                                      
-        </span>
-    </div>
- </div>
- <!-- Här Slutar listblocket -->
+  
 
 <div class="row">
  <div id="kivisotope" class="kivisotope clearfix">

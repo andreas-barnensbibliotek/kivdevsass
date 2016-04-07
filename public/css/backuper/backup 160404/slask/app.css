@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* version v0.0.2 */
-@import "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+@import "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 /* line 431, ./bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.3/"; }
@@ -9672,14 +9672,14 @@ ul.multiColumn {
   text-align: center; }
   /* line 73, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajimage img {
-    -o-object-fit: none;
-       object-fit: none;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     /* Do not scale the image */
     -o-object-position: center;
        object-position: center;
     /* Center the image within the element */
     min-height: 200px; }
-  /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 79, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajimage .textboxcontainer {
     position: absolute;
     top: 50%;
@@ -9691,29 +9691,29 @@ ul.multiColumn {
     line-height: 3.6rem;
     letter-spacing: -1px;
     padding: 10px; }
-    /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer h1 {
       text-transform: uppercase; }
       @media only screen {
-        /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
         .ajimage .textboxcontainer h1 {
           font-size: 2.5rem; } }
       @media only screen and (min-width: 40.0625em) {
-        /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
         .ajimage .textboxcontainer h1 {
           font-size: 3rem; } }
-    /* line 96, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.hrub {
       font-size: 2rem !important; }
-    /* line 97, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 96, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.urub {
       font-size: 1.8rem !important; }
-    /* line 98, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 97, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.utxtrub {
       font-size: 1.0rem !important;
       line-height: 2.2rem !important;
       margin-top: 0.5rem; }
-      /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 99, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajimage .textboxcontainer.utxtrub .spacer {
         display: inline;
         padding: 0 5px;
@@ -9721,14 +9721,69 @@ ul.multiColumn {
         background-color: transparent; }
 
 @media only screen {
-  /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 109, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajcolmargin {
     display: none; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 109, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajcolmargin {
     display: block; } }
+
+/* line 115, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .anim-slide {
+  background: #000;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  background-size: cover !important; }
+  /* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .anim-slider .anim-slide a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
+/* line 129, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide1 a {
+  padding-left: 10%; }
+
+/* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide1 h1 {
+  color: #FFFFFF !important;
+  top: 8rem;
+  text-align: left;
+  width: 100%; }
+
+/* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide1 h2 {
+  color: #FFFFFF !important;
+  top: 5rem;
+  width: 100%;
+  text-align: left; }
+
+/* line 148, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide2 h1 {
+  color: #FFFFFF !important;
+  top: 8rem;
+  width: 100%; }
+
+/* line 153, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide2 h2 {
+  color: #FFFFFF !important;
+  top: 5rem;
+  width: 100%; }
+
+/* line 161, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide3 h1 {
+  color: #FFFFFF !important;
+  top: 8rem;
+  width: 100%; }
+
+/* line 166, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.anim-slider .slide3 h2 {
+  color: #FFFFFF !important;
+  top: 5rem;
+  width: 100%; }
 
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
@@ -10710,11 +10765,6 @@ img .flip {
     display: inline;
     list-style-type: none;
     padding: 0.5em; }
-
-/* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
-.node-culture-catalog .artmaincontent h5 {
-  font-size: 1.8rem;
-  color: #f77136 !important; }
 
 @font-face {
   font-family: "controls";
