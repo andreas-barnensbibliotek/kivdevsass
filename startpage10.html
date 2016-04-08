@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
     <!--<link href="public/css/vendors/jquery.animateSlider.css" rel="stylesheet" />-->
-    <!--<link href="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/css/app.css" rel="stylesheet" />-->
-    <link href="public/css/app.dev.css" rel="stylesheet" />
+    <link href="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/css/app.css" rel="stylesheet" />
+    <!--<link href="public/css/app.dev.css" rel="stylesheet" />-->
     <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/modernizr.js"></script>
     <!--http://develop-v1.kulturivast.se/sites/all/themes/kivnew/-->
     <script src="https://use.typekit.net/abv3rxk.js"></script>
@@ -123,10 +123,44 @@
                             <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/artsrub.png" alt>
                         </div>
                         <div>
-                            <h2></h2>
+                            <h3>Save the date</h3>
+                            <h2>November 7-8</h2>
                         </div>
                         <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
                     </div>
+                </div>
+            </div>
+
+            <div class="itemcontainer gradientYellow" style="">
+                <div class="itembox">
+                    <div class="imgbox">
+                        <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/framefirstside.png" alt>
+                    </div>
+                    <div class="textbox">
+                        <h3>
+                            Bio Roy</br>
+                            22-23 april 2016
+                        </h3>
+                        <h2>Frame filmfestival</h2>
+                    </div>
+                    <div>
+                    </div>
+                    <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
+                </div>
+            </div>
+
+            <div class="itemcontainer gradientgreen" style="">
+                <div class="itembox">
+                    <div class="textbox" style="text-align:right;">
+                        <h3>28 april</h3>
+                        <h2>Årets första författardag</h2>
+                    </div>
+                    <div class="imgbox">
+                        <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/forfattstartsida.png" alt>
+                    </div>
+                    <div>
+                    </div>
+                    <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
                 </div>
             </div>
                 <!-- testar slut-->
@@ -274,13 +308,17 @@
 
     <script src="public/js/app.js"></script>
     <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/isotope.pkgd.min.js"></script>
-    <script type="text/javascript">
-
-
-
-
-
-    </script>
+    <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/viewport-units-buggyfill.js"></script>
+    <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/viewport-units-buggyfill.hacks.js"></script>
+    <script>
+window.viewportUnitsBuggyfill.init({
+    // ignore browser capability, run this puppy everywhere
+    force: true,
+    // milliseconds to delay between updates of viewport-units
+    // caused by orientationchange, pageshow, resize events
+    refreshDebounceWait: 250,
+    hacks: window.viewportUnitsBuggyfillHacks
+  });</script>
 
     <div class="loader">
         <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/page-loader.gif" />

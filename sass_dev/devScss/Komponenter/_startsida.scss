@@ -209,8 +209,11 @@
   margin: .5vw; 
 }
 .itemcontainer div img { 
-  width: 100%; 
-  height: 30vw; 
+    
+   
+  height: 20vw; 
+  _max-height:400px;
+  transform: scale(1.0,1.0); 
   object-fit: scale-down;
 }
 .itembox div{
@@ -229,18 +232,37 @@
   font-size:3vw!important;
 }
 .gradientgreen .textbox{
-  padding-top:4vw !important;
+  padding-top:1vw !important;
   padding-right:4vw !important;
   
 }
 .gradientgreen h2{
-    font-size:7vw;
+    font-size:6vw;
     color:#fff !important;
      line-height:7.2vw;
 }
 .gradientgreen h3{
-    font-size:4vw;
+    font-size:3vw;
     color:#fff !important;
+}
+
+.gradientYellow{
+   background: linear-gradient(to right, #d0b75d, #e8dcb2); /* Standard syntax */
+  font-size:3vw;
+}
+.gradientYellow .textbox{
+  padding-top:2vw;
+  padding-left:0;
+  color:#000;
+}
+.gradientYellow .imgbox{
+    text-align:right;
+}
+.gradientYellow h2{
+    font-size:4vw;
+}
+.gradientYellow h3{
+    font-size:2vw;
 }
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
