@@ -9785,12 +9785,42 @@ ul.multiColumn {
   top: 5rem;
   width: 100%; }
 
-/* line 175, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/*$h3startfont:1.8vw;
+  $h2startfont:3.1vw;*/
+@media only screen {
+  /* line 183, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .gradientgreen h2, .gradientWhite h2, .gradientYellow h2, .gradientPink h2 {
+    line-height: 5vw;
+    /*font-size:$h2startfontsmall;
+         }
+         @media only screen and (min-width:40.0625em){*/
+    font-size: 4.1vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 183, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .gradientgreen h2, .gradientWhite h2, .gradientYellow h2, .gradientPink h2 {
+    line-height: 3.6rem;
+    font-size: 4rem; } }
+
+@media only screen {
+  /* line 197, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .gradientgreen h3, .gradientWhite h3, .gradientYellow h3, .gradientPink h3 {
+    /*font-size:$h3startfontsmall;
+         }
+        @media only screen and (min-width:40.0625em){*/
+    font-size: 2vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 197, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .gradientgreen h3, .gradientWhite h3, .gradientYellow h3, .gradientPink h3 {
+    font-size: 2rem; } }
+
+/* line 212, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 body {
   margin: 0;
   font-family: Helvetica, Roboto, Arial, sans-serif; }
 
-/* line 178, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 215, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .itemcontainer {
   padding: .5vw;
   font-size: 5vw;
@@ -9805,115 +9835,123 @@ body {
   display: flex;
   background-size: cover;
   background-repeat: no-repeat; }
-
-/* line 193, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itembox {
-  width: 100px !important;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: center;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex; }
-
-/* line 204, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer div {
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  -webkit-flex: auto;
-          flex: auto;
-  width: 200px;
-  margin: .5vw; }
-
-/* line 211, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer div img {
-  height: 20vw;
-  _max-height: 400px;
-  -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -o-object-fit: scale-down;
-     object-fit: scale-down; }
-
-/* line 219, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itembox div {
-  width: 40vw; }
-
-@media screen and (max-width: 400px) {
-  /* line 223, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  /* line 228, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .itemcontainer .itembox {
+    width: 100px !important;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: center;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+  /* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
   .itemcontainer div {
-    margin: 0; }
-  /* line 224, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-  .itemcontainer {
-    padding: 0; } }
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    -webkit-flex: auto;
+            flex: auto;
+    width: 200px;
+    margin: .5vw;
+    font-size: 3vw !important; }
+    @media only screen and (max-width: 40em) {
+      /* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+      .itemcontainer div {
+        /*width:100%;
+            text-align:center!important;
+            font-size:2vw;
+        }
+        @media only screen and (min-width:40.0625em) {*/
+        width: 40%; } }
+    /* line 254, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h2 {
+      padding: 0;
+      margin: 0; }
+    /* line 257, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h3 {
+      padding: 0;
+      margin: 0; }
+    /* line 260, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div img {
+      height: 20vw;
+      _max-height: 300px;
+      -webkit-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+              transform: scale(1, 1);
+      -o-object-fit: scale-down;
+         object-fit: scale-down; }
+      @media only screen and (min-width: 120.0625em) {
+        /* line 260, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+        .itemcontainer div img {
+          height: 12vw; } }
 
-/* line 227, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer h2 {
-  padding: 0;
-  margin: 0; }
-
-/* line 228, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer h3 {
-  padding: 0;
-  margin: 0; }
-
-/* line 230, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 272, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .gradientgreen {
   background: -webkit-gradient(linear, left top, right top, from(#63674e), to(#7c805d));
   background: -webkit-linear-gradient(left, #63674e, #7c805d);
   background: linear-gradient(to right, #63674e, #7c805d);
-  /* Standard syntax */
-  font-size: 3vw !important; }
+  /* Standard syntax */ }
+  /* line 276, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen .textbox {
+    padding-top: 2vw !important;
+    padding-right: 4vw !important; }
+  /* line 280, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen h2 {
+    color: #fff !important; }
+  /* line 285, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen h3 {
+    color: #fff !important; }
 
-/* line 234, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen .textbox {
-  padding-top: 1vw !important;
-  padding-right: 4vw !important; }
-
-/* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen h2 {
-  font-size: 6vw;
-  color: #fff !important;
-  line-height: 7.2vw; }
-
-/* line 244, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen h3 {
-  font-size: 3vw;
-  color: #fff !important; }
-
-/* line 249, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 294, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .gradientYellow {
   background: -webkit-gradient(linear, left top, right top, from(#d0b75d), to(#e8dcb2));
   background: -webkit-linear-gradient(left, #d0b75d, #e8dcb2);
   background: linear-gradient(to right, #d0b75d, #e8dcb2);
   /* Standard syntax */
-  font-size: 3vw; }
+  /*font-size:3vw!important;*/ }
+  /* line 298, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientYellow .textbox {
+    padding-top: 0vw;
+    padding-left: 0;
+    color: #000; }
+  /* line 303, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientYellow .imgbox {
+    text-align: right; }
 
-/* line 253, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow .textbox {
-  padding-top: 2vw;
-  padding-left: 0;
-  color: #000; }
-
-/* line 258, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow .imgbox {
-  text-align: right; }
-
-/* line 261, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow h2 {
-  font-size: 4vw; }
-
-/* line 264, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow h3 {
-  font-size: 2vw; }
+/* line 315, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+.gradientPink {
+  background: -webkit-gradient(linear, left top, right top, from(#83224b), to(#83224b));
+  background: -webkit-linear-gradient(left, #83224b, #83224b);
+  background: linear-gradient(to right, #83224b, #83224b);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 319, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink .textbox {
+    padding-top: 5vw;
+    padding-left: 0; }
+  /* line 323, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink .imgbox {
+    text-align: right; }
+  /* line 326, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink h2 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(144, 86, 117, 0.6)), to(rgba(128, 56, 94, 0.5)));
+    background: -webkit-linear-gradient(left, rgba(144, 86, 117, 0.6), rgba(128, 56, 94, 0.5));
+    background: linear-gradient(to right, rgba(144, 86, 117, 0.6), rgba(128, 56, 94, 0.5));
+    color: #fff !important; }
+  /* line 331, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink h3 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, #83224b), color-stop(20%, #83224b));
+    background: -webkit-linear-gradient(left, #83224b 20%, #83224b 20%);
+    background: linear-gradient(to right, #83224b 20%, #83224b 20%);
+    /* Standard syntax */
+    color: #fff !important; }
 
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
-<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" />*/
+<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" /> */
 @media only screen and (min-width: 40.0625em) {
   /* line 5, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_filter_meny_block.scss */
   #filtersortering a img {
@@ -18013,12 +18051,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   top: 5rem;
   width: 100%; }
 
-/* line 175, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/*$h3startfont:1.8vw;
+  $h2startfont:3.1vw;*/
+@media only screen {
+  /* line 183, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .gradientgreen h2, .gradientWhite h2, .gradientYellow h2, .gradientPink h2 {
+    line-height: 5vw;
+    /*font-size:$h2startfontsmall;
+         }
+         @media only screen and (min-width:40.0625em){*/
+    font-size: 4.1vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 183, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .gradientgreen h2, .gradientWhite h2, .gradientYellow h2, .gradientPink h2 {
+    line-height: 3.6rem;
+    font-size: 4rem; } }
+
+@media only screen {
+  /* line 197, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .gradientgreen h3, .gradientWhite h3, .gradientYellow h3, .gradientPink h3 {
+    /*font-size:$h3startfontsmall;
+         }
+        @media only screen and (min-width:40.0625em){*/
+    font-size: 2vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 197, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .gradientgreen h3, .gradientWhite h3, .gradientYellow h3, .gradientPink h3 {
+    font-size: 2rem; } }
+
+/* line 212, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 body {
   margin: 0;
   font-family: Helvetica, Roboto, Arial, sans-serif; }
 
-/* line 178, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 215, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .itemcontainer {
   padding: .5vw;
   font-size: 5vw;
@@ -18033,115 +18101,123 @@ body {
   display: flex;
   background-size: cover;
   background-repeat: no-repeat; }
-
-/* line 193, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itembox {
-  width: 100px !important;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: center;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex; }
-
-/* line 204, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer div {
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  -webkit-flex: auto;
-          flex: auto;
-  width: 200px;
-  margin: .5vw; }
-
-/* line 211, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer div img {
-  height: 20vw;
-  _max-height: 400px;
-  -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-          transform: scale(1, 1);
-  -o-object-fit: scale-down;
-     object-fit: scale-down; }
-
-/* line 219, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itembox div {
-  width: 40vw; }
-
-@media screen and (max-width: 400px) {
-  /* line 223, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  /* line 228, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .itemcontainer .itembox {
+    width: 100px !important;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: center;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+  /* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
   .itemcontainer div {
-    margin: 0; }
-  /* line 224, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-  .itemcontainer {
-    padding: 0; } }
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    -webkit-flex: auto;
+            flex: auto;
+    width: 200px;
+    margin: .5vw;
+    font-size: 3vw !important; }
+    @media only screen and (max-width: 40em) {
+      /* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+      .itemcontainer div {
+        /*width:100%;
+            text-align:center!important;
+            font-size:2vw;
+        }
+        @media only screen and (min-width:40.0625em) {*/
+        width: 40%; } }
+    /* line 254, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h2 {
+      padding: 0;
+      margin: 0; }
+    /* line 257, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h3 {
+      padding: 0;
+      margin: 0; }
+    /* line 260, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div img {
+      height: 20vw;
+      _max-height: 300px;
+      -webkit-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+              transform: scale(1, 1);
+      -o-object-fit: scale-down;
+         object-fit: scale-down; }
+      @media only screen and (min-width: 120.0625em) {
+        /* line 260, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+        .itemcontainer div img {
+          height: 12vw; } }
 
-/* line 227, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer h2 {
-  padding: 0;
-  margin: 0; }
-
-/* line 228, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.itemcontainer h3 {
-  padding: 0;
-  margin: 0; }
-
-/* line 230, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 272, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .gradientgreen {
   background: -webkit-gradient(linear, left top, right top, from(#63674e), to(#7c805d));
   background: -webkit-linear-gradient(left, #63674e, #7c805d);
   background: linear-gradient(to right, #63674e, #7c805d);
-  /* Standard syntax */
-  font-size: 3vw !important; }
+  /* Standard syntax */ }
+  /* line 276, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen .textbox {
+    padding-top: 2vw !important;
+    padding-right: 4vw !important; }
+  /* line 280, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen h2 {
+    color: #fff !important; }
+  /* line 285, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientgreen h3 {
+    color: #fff !important; }
 
-/* line 234, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen .textbox {
-  padding-top: 1vw !important;
-  padding-right: 4vw !important; }
-
-/* line 239, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen h2 {
-  font-size: 6vw;
-  color: #fff !important;
-  line-height: 7.2vw; }
-
-/* line 244, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientgreen h3 {
-  font-size: 3vw;
-  color: #fff !important; }
-
-/* line 249, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+/* line 294, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
 .gradientYellow {
   background: -webkit-gradient(linear, left top, right top, from(#d0b75d), to(#e8dcb2));
   background: -webkit-linear-gradient(left, #d0b75d, #e8dcb2);
   background: linear-gradient(to right, #d0b75d, #e8dcb2);
   /* Standard syntax */
-  font-size: 3vw; }
+  /*font-size:3vw!important;*/ }
+  /* line 298, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientYellow .textbox {
+    padding-top: 0vw;
+    padding-left: 0;
+    color: #000; }
+  /* line 303, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientYellow .imgbox {
+    text-align: right; }
 
-/* line 253, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow .textbox {
-  padding-top: 2vw;
-  padding-left: 0;
-  color: #000; }
-
-/* line 258, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow .imgbox {
-  text-align: right; }
-
-/* line 261, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow h2 {
-  font-size: 4vw; }
-
-/* line 264, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
-.gradientYellow h3 {
-  font-size: 2vw; }
+/* line 315, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+.gradientPink {
+  background: -webkit-gradient(linear, left top, right top, from(#83224b), to(#83224b));
+  background: -webkit-linear-gradient(left, #83224b, #83224b);
+  background: linear-gradient(to right, #83224b, #83224b);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 319, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink .textbox {
+    padding-top: 5vw;
+    padding-left: 0; }
+  /* line 323, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink .imgbox {
+    text-align: right; }
+  /* line 326, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink h2 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(144, 86, 117, 0.6)), to(rgba(128, 56, 94, 0.5)));
+    background: -webkit-linear-gradient(left, rgba(144, 86, 117, 0.6), rgba(128, 56, 94, 0.5));
+    background: linear-gradient(to right, rgba(144, 86, 117, 0.6), rgba(128, 56, 94, 0.5));
+    color: #fff !important; }
+  /* line 331, E:/kulturivastdev/kivsassproj/sass_dev/devScss/Komponenter/_startsida.scss */
+  .gradientPink h3 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, #83224b), color-stop(20%, #83224b));
+    background: -webkit-linear-gradient(left, #83224b 20%, #83224b 20%);
+    background: linear-gradient(to right, #83224b 20%, #83224b 20%);
+    /* Standard syntax */
+    color: #fff !important; }
 
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
-<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" />*/
+<img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" /> */
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
 @import 'foundation/components/alert-boxes';
