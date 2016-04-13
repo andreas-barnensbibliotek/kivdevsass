@@ -26,7 +26,15 @@
         /*.medium-4 {       
             background-color:$beige;                  
         }*/ 
-        
+         a{
+            color:$lightorange;
+            text-decoration:underline;
+         }
+         li{
+            a{  
+                text-decoration:none;
+            }
+        }
        
     }
     .artikelbild{
@@ -186,5 +194,4 @@
 .top-bild-wrapper {
     margin-bottom: 3rem !important;
 }
-
 
