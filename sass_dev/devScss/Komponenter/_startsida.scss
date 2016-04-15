@@ -193,6 +193,7 @@
              line-height:3.6rem;
             font-size:4rem;
          }
+        
     }
     h3{        
         @media #{$small-up} {
@@ -332,8 +333,62 @@
             background: linear-gradient(to right, #83224b 20%, #83224b 20%); /* Standard syntax */
             color:#fff !important;
            
-            }
-        
+            }        
+    }
+
+    .gradientbeige{
+        @extend .startfontExtend;
+        background: linear-gradient(to right, #e2ce79, #e2ce79); /* Standard syntax */   
+         /*font-size:3vw!important;*/
+        .textbox{
+            padding-top:3vw;
+            padding-bottom:3vw;
+            padding-left:0;
+            color:#000;
+           
+        }
+        .imgbox{
+            text-align:right;
+        }
+        h2{
+            font-size:2.23vw;
+            font-weight:800; 
+            line-height:2.8vw;         
+        }
+        h3{
+             font-size:2.23vw;     
+             font-weight:300;  
+             line-height:2.8vw;     
+        }
+        h4{
+             font-size:1.25vw;      
+             font-weight:300; 
+             line-height:2.3vw;     
+        }
+    }
+
+    .forfattardag{
+         @extend .startfontExtend;
+       
+         /*font-size:3vw!important;*/
+
+        .textbox{
+             padding-top:2.5vw;
+           
+            margin-left:5vw;
+        }
+        .imgbox {
+            text-align:left;
+        }
+        h2{
+           @include responsive-lineheight(4vw, 24px, 66px);
+           @include responsive-font(4vw, 24px, 54px);
+            
+        }
+        h3{             
+           @include responsive-lineheight(3.3vw, 24px, 70px);
+           @include responsive-font(3vw, 18px, 40px);
+        }        
     }
 
 
