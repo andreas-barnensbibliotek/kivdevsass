@@ -113,6 +113,320 @@
   }
  
  
+  /*$h3startfont:1.8vw;
+  $h2startfont:3.1vw;*/
+   $h3startfont:2.0vw;
+  $h2startfont:4.1vw;
+   $h3startfontsmall:4.8vw;
+  $h2startfontsmall:6.1vw;
+  $startlineheight:5vw;
+
+.startfontExtend{
+    h2{
+        
+         @media #{$small-up} {
+             line-height:$startlineheight;
+            /*font-size:$h2startfontsmall;
+         }
+         @media #{$medium-up}{*/
+            font-size:$h2startfont;
+         }
+         @media #{$xxlarge-up} { 
+             line-height:3.6rem;
+            font-size:4rem;
+         }
+        
+    }
+    h3{        
+        @media #{$small-up} {
+            /*font-size:$h3startfontsmall;
+         }
+        @media #{$medium-up}{*/
+            font-size:$h3startfont;
+         }   
+        @media #{$xxlarge-up} { 
+            font-size:2rem;
+         }    
+    }   
+}
+
+
+
+.itemcontainer { //flexcontainer
+     
+    padding: .5vw;  
+    font-size:5vw;       
+    display: flex;  
+    flex-flow: row wrap; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .itembox{
+      width:100px!important;
+      display: flex;     
+      flex-flow: row wrap; 
+      /*display: -webkit-box;*/
+      
+
+    }
+    div { 
+        -webkit-box-flex: auto;
+        -ms-flex: auto;
+        flex: auto; 
+        width: 200px; 
+        margin: .5vw;  
+        font-size:3vw!important;
+        @media #{$small-only} {
+            /*width:100%;
+            text-align:center!important;
+            font-size:2vw;
+        }
+        @media #{$medium-up} {*/
+            width:40%;
+        }
+        h2{
+            padding:0; margin:0;
+        } 
+        h3{ 
+            padding:0; margin:0;
+        }
+        img { 
+            height: 20vw; 
+             @media #{$xxlarge-up} { 
+            height: 12vw; 
+         }    
+            _max-height:300px;
+            transform: scale(1.0,1.0); 
+            object-fit: scale-down;
+        }
+        
+    }
+}
+
+
+    .themegradientgreen{
+        @extend .startfontExtend;
+        background: linear-gradient(to right, #63674e, #7c805d); /* Standard syntax */
+        
+        .textbox{
+            padding-top:2vw !important;
+            padding-right:4vw !important;
+        }
+        h2{   
+            color:#fff !important;
+           
+        
+        }
+        h3{
+            color:#fff !important;        
+       
+        }  
+    }
+    
+
+    .themegradientWhite{
+        @extend .startfontExtend;
+     }
+
+
+    .themegradientYellow{
+        @extend .startfontExtend;
+        background: linear-gradient(to right, #d0b75d, #e8dcb2); /* Standard syntax */   
+         /*font-size:3vw!important;*/
+        .textbox{
+            padding-top:0vw;
+            padding-left:0;
+            color:#000;
+        }
+        .imgbox{
+            text-align:right;
+        }
+        h2{
+           
+        }
+        h3{
+           
+        }
+
+    }
+
+    .themegradientPink{
+         @extend .startfontExtend;
+        background: linear-gradient(to right, #83224b, #83224b); /* Standard syntax */
+         /*font-size:3vw!important;*/
+        .textbox{
+            padding-top:5vw;
+            padding-left:0;
+        }
+        .imgbox{
+            text-align:right;
+        }
+        h2{
+            background: linear-gradient(to right,rgba(144,86,117,0.6), rgba(128,56,94,0.5) );
+            color:#fff !important;
+            
+        }
+        h3{
+            background: linear-gradient(to right, #83224b 20%, #83224b 20%); /* Standard syntax */
+            color:#fff !important;
+           
+            }        
+    }
+
+    .themegradientbeige{
+        @extend .startfontExtend;
+        background: linear-gradient(to right, #e2ce79, #e2ce79); /* Standard syntax */   
+         /*font-size:3vw!important;*/
+        .textbox{
+            padding-top:3vw;
+            padding-bottom:3vw;
+            padding-left:0;
+            color:#000;
+           
+        }
+        .imgbox{
+            text-align:right;
+        }
+        h2{
+            font-size:2.23vw;            
+            line-height:2.8vw;
+            font-weight:800;          
+        }
+        h3{
+             font-size:2.23vw;     
+             line-height:2.8vw;
+             font-weight:300;     
+        }
+        h4{
+             font-size:1.25vw;      
+             font-weight:300; 
+             line-height:2.3vw;     
+        }
+       
+
+    }
+
+    .themeforfattardag{
+         @extend .startfontExtend;
+       
+         /*font-size:3vw!important;*/
+
+        .textbox{
+             padding-top:2.5vw;
+           
+            margin-left:5vw;
+        }
+        .imgbox {
+            text-align:left;
+        }
+        h2{
+           @include responsive-lineheight(4vw, 24px, 66px);
+           @include responsive-font(4vw, 24px, 54px);
+            
+        }
+        h3{             
+           @include responsive-lineheight(3.3vw, 24px, 70px);
+           @include responsive-font(3vw, 18px, 40px);
+        }        
+    }
+
+    
+    .themearrangorstraff{
+        @extend .startfontExtend;
+       
+        /*font-size:3vw!important;*/
+
+        .itemcontainer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }                     
+        .itembox{                
+            text-align: center;             
+            width:50vw;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width:100%;
+                height:30vw;
+            }
+        }
+        .imgblock{
+            position: relative; 
+        }
+        .textblock{
+            position: absolute; 
+            top: 5.5vw;
+            left: 0;
+            text-align: center; 
+            width: 100%; 
+            font-size:4vw;  
+        }
+        h2{
+            @include responsive-lineheight(4vw, 24px, 66px);
+            @include responsive-font(4vw, 24px, 54px);
+            font-weight:800;
+            color:#d3b2ff;            
+        }
+        h3{             
+            @include responsive-lineheight(3.3vw, 24px, 70px);
+            @include responsive-font(3vw, 18px, 40px);
+            font-weight:300;
+            color:$white;
+            line-height:2vw
+        }    
+    }
+    
+    .themearmkroksresor{
+         @extend .startfontExtend;
+       
+        .itembox{   
+            .textbox{
+                 padding-top:2.5vw;
+               vertical-align:middle;
+                margin-left:5vw;
+            }
+        
+            .imgbox {
+                text-align:left;
+            }
+            h2{
+               @include responsive-lineheight(4vw, 24px, 66px);
+               @include responsive-font(4vw, 24px, 54px);
+            
+            }
+            h3{             
+               @include responsive-lineheight(3.3vw, 24px, 70px);
+               @include responsive-font(3vw, 18px, 40px);
+            }
+        }        
+    }
+
+     .themeFrame{
+        @extend .startfontExtend;
+        background: linear-gradient(to right, #63674e, #7c805d); /* Standard syntax */
+        .itembox{  
+            .textbox{
+                 text-align:right;
+                padding-top:2vw !important;
+                padding-right:4vw !important;
+            }
+            h2{   
+                color:#fff !important;
+           
+        
+            }
+            h3{
+                color:#fff !important;        
+       
+            }
+        }  
+    }
+    
+
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
