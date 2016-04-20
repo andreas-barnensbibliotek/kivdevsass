@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* version v0.0.2 */
-@import "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
+@import "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.css";
 /* line 431, ./bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.3/"; }
@@ -7470,62 +7470,62 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
 .top-nav-main, .left-small, .right-small {
   text-align: center;
   line-height: 38px; }
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .top-nav-main:hover, .left-small:hover, .right-small:hover {
     opacity: 0.5; }
 
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+/* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
 .top-nav-main-text, .left-small a span, .right-small a span {
   font-size: x-small;
   color: #FFFFFF;
   font-weight: bold; }
 
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+/* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
 .logo {
   color: #fff;
   font-size: 1.5rem; }
-  /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .logo i {
     margin-right: 0.5rem; }
 
 @media only screen {
-  /* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 25, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .tab-bar-logosection {
     margin-left: 4em; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 25, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .tab-bar-logosection {
     margin-left: 5em; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 25, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .tab-bar-logosection {
     margin-left: 6em; } }
 
-/* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+/* line 37, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
 .left-small {
   background-color: #f77136; }
 
-/* line 47, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+/* line 47, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
 .right-small {
   background-color: #444444;
   border-left: 0px; }
-  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
+  /* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_tab-bar.scss */
   .right-small a {
     text-align: center; }
 
-/* line 411, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 411, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
   position: relative;
   width: 100%;
   overflow: hidden; }
-  /* line 149, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 149, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .off-canvas-wrap.move-right,
   .off-canvas-wrap.move-left,
   .off-canvas-wrap.move-bottom,
@@ -7533,7 +7533,7 @@ th.hide-for-touch {
     min-height: 100%;
     -webkit-overflow-scrolling: touch; }
 
-/* line 412, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 412, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .inner-wrap {
   position: relative;
   width: 100%;
@@ -7547,7 +7547,7 @@ th.hide-for-touch {
   .inner-wrap:after {
     clear: both; }
 
-/* line 414, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 414, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .tab-bar {
   -webkit-backface-visibility: hidden;
   background: #000000;
@@ -7555,17 +7555,17 @@ th.hide-for-touch {
   height: 2.8125rem;
   line-height: 2.8125rem;
   position: relative; }
-  /* line 182, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 182, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
     color: #FFFFFF;
     font-weight: bold;
     line-height: 2.8125rem;
     margin: 0; }
-  /* line 188, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 188, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
     font-size: 0.875rem; }
 
-/* line 416, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 416, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .left-small {
   height: 2.8125rem;
   position: absolute;
@@ -7574,7 +7574,7 @@ th.hide-for-touch {
   border-right: solid 1px black;
   left: 0; }
 
-/* line 417, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 417, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .right-small {
   height: 2.8125rem;
   position: absolute;
@@ -7583,33 +7583,33 @@ th.hide-for-touch {
   border-left: solid 1px black;
   right: 0; }
 
-/* line 419, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 419, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .tab-bar-section {
   height: 2.8125rem;
   padding: 0 0.625rem;
   position: absolute;
   text-align: center;
   top: 0; }
-  /* line 216, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 216, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar-section.left {
     text-align: left; }
-  /* line 217, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 217, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar-section.right {
     text-align: right; }
-  /* line 221, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 221, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar-section.left {
     left: 0;
     right: 2.8125rem; }
-  /* line 225, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 225, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar-section.right {
     left: 2.8125rem;
     right: 0; }
-  /* line 229, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 229, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .tab-bar-section.middle {
     left: 2.8125rem;
     right: 2.8125rem; }
 
-/* line 423, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 423, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .tab-bar .menu-icon {
   color: #FFFFFF;
   display: block;
@@ -7637,7 +7637,7 @@ th.hide-for-touch {
     -webkit-box-shadow: 0 0 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3;
             box-shadow: 0 0 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
 
-/* line 447, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 447, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .left-off-canvas-menu {
   -webkit-backface-visibility: hidden;
   background: #5a5958;
@@ -7660,11 +7660,11 @@ th.hide-for-touch {
   transform: translate3d(-100%, 0, 0);
   left: 0;
   top: 0; }
-  /* line 102, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 102, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .left-off-canvas-menu * {
     -webkit-backface-visibility: hidden; }
 
-/* line 448, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 448, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .right-off-canvas-menu {
   -webkit-backface-visibility: hidden;
   background: #5a5958;
@@ -7687,11 +7687,11 @@ th.hide-for-touch {
   transform: translate3d(100%, 0, 0);
   right: 0;
   top: 0; }
-  /* line 102, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 102, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .right-off-canvas-menu * {
     -webkit-backface-visibility: hidden; }
 
-/* line 449, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 449, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .top-off-canvas-menu {
   -webkit-backface-visibility: hidden;
   background: #5a5958;
@@ -7715,11 +7715,11 @@ th.hide-for-touch {
   top: 0;
   width: 100%;
   height: 18.75rem; }
-  /* line 102, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 102, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .top-off-canvas-menu * {
     -webkit-backface-visibility: hidden; }
 
-/* line 450, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 450, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .bottom-off-canvas-menu {
   -webkit-backface-visibility: hidden;
   background: #5a5958;
@@ -7743,16 +7743,16 @@ th.hide-for-touch {
   bottom: 0;
   width: 100%;
   height: 18.75rem; }
-  /* line 102, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 102, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .bottom-off-canvas-menu * {
     -webkit-backface-visibility: hidden; }
 
-/* line 452, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 452, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 ul.off-canvas-list {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  /* line 243, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 243, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   ul.off-canvas-list li label {
     background: #5a5958;
     border-bottom: none;
@@ -7765,7 +7765,7 @@ ul.off-canvas-list {
     padding: 0.3rem 0.9375rem;
     text-transform: uppercase;
     min-height: 3.85em; }
-  /* line 256, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 256, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   ul.off-canvas-list li a {
     border-top: 1px solid #000000;
     color: #FFFFFF;
@@ -7773,20 +7773,20 @@ ul.off-canvas-list {
     padding: 0.5rem;
     -webkit-transition: background 300ms ease;
             transition: background 300ms ease; }
-    /* line 262, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 262, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     ul.off-canvas-list li a:hover {
       background: #3f3e3e; }
-    /* line 265, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 265, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     ul.off-canvas-list li a:active {
       background: black; }
 
-/* line 458, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 458, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-right > .inner-wrap {
   -webkit-transform: translate3d(18.125rem, 0, 0);
   -ms-transform: translate(18.125rem, 0);
   transform: translate3d(18.125rem, 0, 0); }
 
-/* line 461, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 461, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-right .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7801,17 +7801,17 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .move-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 465, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 465, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-left > .inner-wrap {
   -webkit-transform: translate3d(-18.125rem, 0, 0);
   -ms-transform: translate(-18.125rem, 0);
   transform: translate3d(-18.125rem, 0, 0); }
 
-/* line 469, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-left .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7826,17 +7826,17 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .move-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 472, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 472, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-top > .inner-wrap {
   -webkit-transform: translate3d(0, -18.75rem, 0);
   -ms-transform: translate(0, -18.75rem);
   transform: translate3d(0, -18.75rem, 0); }
 
-/* line 476, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 476, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-top .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7851,17 +7851,17 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .move-top .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 479, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 479, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-bottom > .inner-wrap {
   -webkit-transform: translate3d(0, 18.75rem, 0);
   -ms-transform: translate(0, 18.75rem);
   transform: translate3d(0, 18.75rem, 0); }
 
-/* line 483, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 483, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .move-bottom .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7876,11 +7876,11 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .move-bottom .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 487, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 487, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap .left-off-canvas-menu, .offcanvas-overlap .right-off-canvas-menu,
 .offcanvas-overlap .top-off-canvas-menu, .offcanvas-overlap .bottom-off-canvas-menu {
   -ms-transform: none;
@@ -7888,7 +7888,7 @@ ul.off-canvas-list {
   transform: none;
   z-index: 1003; }
 
-/* line 495, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 495, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7903,18 +7903,18 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .offcanvas-overlap .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 498, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 498, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-left .right-off-canvas-menu {
   -ms-transform: none;
   -webkit-transform: none;
   transform: none;
   z-index: 1003; }
 
-/* line 506, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 506, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-left .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7929,18 +7929,18 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .offcanvas-overlap-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 509, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 509, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-right .left-off-canvas-menu {
   -ms-transform: none;
   -webkit-transform: none;
   transform: none;
   z-index: 1003; }
 
-/* line 517, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 517, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-right .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7955,18 +7955,18 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .offcanvas-overlap-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 520, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 520, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-top .bottom-off-canvas-menu {
   -ms-transform: none;
   -webkit-transform: none;
   transform: none;
   z-index: 1003; }
 
-/* line 528, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 528, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-top .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -7981,18 +7981,18 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .offcanvas-overlap-top .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 531, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 531, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-bottom .top-off-canvas-menu {
   -ms-transform: none;
   -webkit-transform: none;
   transform: none;
   z-index: 1003; }
 
-/* line 539, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 539, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .offcanvas-overlap-bottom .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   cursor: pointer;
@@ -8007,43 +8007,43 @@ ul.off-canvas-list {
   top: 0;
   z-index: 1002; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 294, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 294, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .offcanvas-overlap-bottom .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
-/* line 544, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 544, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .left-off-canvas-menu {
   left: -18.125rem; }
 
-/* line 545, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 545, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .right-off-canvas-menu {
   right: -18.125rem; }
 
-/* line 546, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 546, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .top-off-canvas-menu {
   top: -18.75rem; }
 
-/* line 547, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 547, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .bottom-off-canvas-menu {
   bottom: -18.75rem; }
 
-/* line 549, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 549, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .move-left > .inner-wrap {
   right: 18.125rem; }
 
-/* line 550, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 550, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .move-right > .inner-wrap {
   left: 18.125rem; }
 
-/* line 551, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 551, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .move-top > .inner-wrap {
   right: 18.75rem; }
 
-/* line 552, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 552, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .no-csstransforms .move-bottom > .inner-wrap {
   left: 18.75rem; }
 
-/* line 557, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 557, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .left-submenu {
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
@@ -8067,10 +8067,10 @@ ul.off-canvas-list {
   left: 0;
   -webkit-transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease; }
-  /* line 305, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 305, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .left-submenu * {
     -webkit-backface-visibility: hidden; }
-  /* line 344, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 344, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .left-submenu .back > a {
     background: #5a5958;
     border-bottom: none;
@@ -8080,23 +8080,23 @@ ul.off-canvas-list {
     padding: 0.3rem 0.9375rem;
     text-transform: uppercase;
     margin: 0; }
-    /* line 353, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 353, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .left-submenu .back > a:hover {
       background: #3f3e3e;
       border-bottom: none;
       border-top: 1px solid #72706f; }
-    /* line 377, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 377, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .left-submenu .back > a:before {
       content: "\AB";
       margin-right: .5rem;
       display: inline; }
-  /* line 559, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 559, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .left-submenu.move-right, .left-submenu.offcanvas-overlap-right, .left-submenu.offcanvas-overlap {
     -webkit-transform: translate3d(0%, 0, 0);
     -ms-transform: translate(0%, 0);
     transform: translate3d(0%, 0, 0); }
 
-/* line 564, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 564, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .right-submenu {
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
@@ -8120,10 +8120,10 @@ ul.off-canvas-list {
   right: 0;
   -webkit-transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease; }
-  /* line 305, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 305, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .right-submenu * {
     -webkit-backface-visibility: hidden; }
-  /* line 344, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 344, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .right-submenu .back > a {
     background: #5a5958;
     border-bottom: none;
@@ -8133,23 +8133,23 @@ ul.off-canvas-list {
     padding: 0.3rem 0.9375rem;
     text-transform: uppercase;
     margin: 0; }
-    /* line 353, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 353, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .right-submenu .back > a:hover {
       background: #3f3e3e;
       border-bottom: none;
       border-top: 1px solid #72706f; }
-    /* line 366, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 366, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .right-submenu .back > a:after {
       content: "\BB";
       margin-left: .5rem;
       display: inline; }
-  /* line 566, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 566, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .right-submenu.move-left, .right-submenu.offcanvas-overlap-left, .right-submenu.offcanvas-overlap {
     -webkit-transform: translate3d(0%, 0, 0);
     -ms-transform: translate(0%, 0);
     transform: translate3d(0%, 0, 0); }
 
-/* line 571, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 571, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .top-submenu {
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
@@ -8174,10 +8174,10 @@ ul.off-canvas-list {
   width: 100%;
   -webkit-transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease; }
-  /* line 305, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 305, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .top-submenu * {
     -webkit-backface-visibility: hidden; }
-  /* line 344, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 344, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .top-submenu .back > a {
     background: #5a5958;
     border-bottom: none;
@@ -8187,18 +8187,18 @@ ul.off-canvas-list {
     padding: 0.3rem 0.9375rem;
     text-transform: uppercase;
     margin: 0; }
-    /* line 353, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 353, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .top-submenu .back > a:hover {
       background: #3f3e3e;
       border-bottom: none;
       border-top: 1px solid #72706f; }
-  /* line 573, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 573, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .top-submenu.move-bottom, .top-submenu.offcanvas-overlap-bottom, .top-submenu.offcanvas-overlap {
     -webkit-transform: translate3d(0, 0%, 0);
     -ms-transform: translate(0, 0%);
     transform: translate3d(0, 0%, 0); }
 
-/* line 578, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 578, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .bottom-submenu {
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
@@ -8223,10 +8223,10 @@ ul.off-canvas-list {
   width: 100%;
   -webkit-transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease; }
-  /* line 305, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 305, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .bottom-submenu * {
     -webkit-backface-visibility: hidden; }
-  /* line 344, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 344, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .bottom-submenu .back > a {
     background: #5a5958;
     border-bottom: none;
@@ -8236,41 +8236,41 @@ ul.off-canvas-list {
     padding: 0.3rem 0.9375rem;
     text-transform: uppercase;
     margin: 0; }
-    /* line 353, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+    /* line 353, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
     .bottom-submenu .back > a:hover {
       background: #3f3e3e;
       border-bottom: none;
       border-top: 1px solid #72706f; }
-  /* line 580, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+  /* line 580, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
   .bottom-submenu.move-top, .bottom-submenu.offcanvas-overlap-top, .bottom-submenu.offcanvas-overlap {
     -webkit-transform: translate3d(0, 0%, 0);
     -ms-transform: translate(0, 0%);
     transform: translate3d(0, 0%, 0); }
 
-/* line 593, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 593, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .left-off-canvas-menu ul.off-canvas-list li.has-submenu > a:after {
   content: "\BB";
   margin-left: .5rem;
   display: inline; }
 
-/* line 596, C:/andreas/web/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
+/* line 596, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_offcanvas.scss */
 .right-off-canvas-menu ul.off-canvas-list li.has-submenu > a:before {
   content: "\AB";
   margin-right: .5rem;
   display: inline; }
 
-/* line 603, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 603, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 #contentfilterblock {
   line-height: 1.1em; }
-  /* line 606, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 606, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock label {
     color: #000000; }
-  /* line 609, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 609, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock label:first-child {
     padding-top: 6px;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem; }
-  /* line 614, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 614, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock span {
     display: block;
     float: left;
@@ -8278,35 +8278,35 @@ ul.off-canvas-list {
     padding-left: 0.4rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem; }
-  /* line 622, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 622, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock input {
     margin: 0rem; }
-  /* line 625, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 625, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #contentfilterblock .active {
     background-color: #0c6d4c; }
-    /* line 627, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+    /* line 627, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
     #contentfilterblock .active label {
       color: #FFFFFF; }
-    /* line 630, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+    /* line 630, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
     #contentfilterblock .active:hover {
       opacity: 0.7; }
 
-/* line 638, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 638, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 #filtersortering a {
   margin-right: 0rem;
   padding-bottom: 0.2rem;
   padding-left: 0rem;
   padding-right: 0rem;
   padding-top: 0.2rem; }
-  /* line 644, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+  /* line 644, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
   #filtersortering a:hover {
     opacity: 0.7; }
 
-/* line 646, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 646, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 #filtersortering img {
   height: 1.8rem; }
 
-/* line 652, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 652, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown {
   height: 1.8em;
   padding: 0.05em;
@@ -8318,44 +8318,44 @@ ul.off-canvas-list {
         padding-top: 0.2em;
     */ }
 
-/* line 664, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 664, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.small {
   max-width: 134px; }
 
-/* line 667, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 667, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.medium {
   max-width: 254px; }
 
-/* line 670, C:/andreas/web/kivsassproj/sass/devScss/foundation/_forms.scss */
+/* line 670, E:/kulturivastdev/kivsassproj/sass/devScss/foundation/_forms.scss */
 .custom.dropdown.large {
   max-width: 434px; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .mosaikblockheader {
   margin-top: 1.5rem; }
 
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .mozaikitems {
   padding: 0px 1em;
   padding-right: 0.9rem;
   padding-bottom: 0rem;
   margin-bottom: 1.5rem;
   color: #000000; }
-  /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems i {
     font-size: 2.3rem;
     color: #b2a16c; }
-  /* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 13, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h4 {
     color: #FFFFFF;
     margin-top: 0px;
     font-size: 1.3rem;
     font-weight: 200;
     text-transform: none; }
-  /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems a {
     color: #FFFFFF; }
-  /* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 23, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems h5 {
     font-size: 1.3rem;
     margin-bottom: 0px;
@@ -8363,56 +8363,56 @@ ul.off-canvas-list {
     font-weight: 200;
     padding-top: 6px !important;
     text-transform: none; }
-  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 31, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .showingresstext {
     width: 24px !important;
     height: 24px;
     float: right;
     margin-right: -0.5rem; }
-    /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    /* line 37, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
     .mozaikitems .showingresstext i img {
       margin-top: -1.3rem !important; }
-  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .ingresstext {
     display: none;
     width: 220px !important;
     padding-right: 0rem !important; }
-    /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
     .mozaikitems .ingresstext p {
       margin-left: -5px;
       margin-top: 5px;
       margin-right: 2px; }
-  /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 52, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .row {
     background-color: #5a5958; }
-  /* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 53, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .listheight {
     padding-left: 10px;
     min-height: 5rem !important; }
-  /* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 57, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .mozaikitems .apsisbtnbox {
     padding-top: 0px; }
-    /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+    /* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
     .mozaikitems .apsisbtnbox .button.expand {
       margin-left: 0px;
       max-width: 110px;
       margin-bottom: 0.7rem; }
 
-/* line 70, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 70, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstext {
   display: none;
   width: 220px; }
 
-/* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 74, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .ingresstextlist {
   display: none; }
 
-/* line 79, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+/* line 79, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
 .item {
   width: 250px; }
 
 @media only screen and (min-width: 50.063em) and (max-width: 64em) {
-  /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
+  /* line 85, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mozaikitem.scss */
   .wrapper {
     position: relative;
     width: 100%;
@@ -8437,18 +8437,18 @@ ul.off-canvas-list {
 @media only screen and (min-width:120.0625em) and (max-width:6249999.9375em) { background-color:#334455; }
 
 }*/
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/base/_submenubase.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/base/_submenubase.scss */
 .artikelcontainer .columns {
   padding: 0px; }
 
-/* line 10, C:/andreas/web/kivsassproj/sass/devScss/base/_submenubase.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/base/_submenubase.scss */
 .submenubase {
   text-transform: uppercase;
   height: 3rem;
   line-height: 3rem;
   padding: 0px 1rem; }
 
-/* line 17, C:/andreas/web/kivsassproj/sass/devScss/base/_submenubase.scss */
+/* line 17, E:/kulturivastdev/kivsassproj/sass/devScss/base/_submenubase.scss */
 .arrowbase {
   content: "";
   position: absolute;
@@ -8460,38 +8460,38 @@ ul.off-canvas-list {
   width: 0;
   z-index: 1; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .off-canvas-list {
   font-size: 0.85rem; }
 
-/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 7, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 ul.off-canvas-list {
   margin: 0rem 1rem;
   text-transform: uppercase;
   font-stretch: condensed;
   font-size: 0.9rem; }
-  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   ul.off-canvas-list .nolink {
     color: #FFFFFF;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
     display: block; }
-  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   ul.off-canvas-list li {
     line-height: 1.4; }
-    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+    /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
     ul.off-canvas-list li a {
       border: 0px;
       border-color: #444444; }
-      /* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+      /* line 23, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
       ul.off-canvas-list li a:first-letter {
         text-transform: capitalize; }
-      /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+      /* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
       ul.off-canvas-list li a:hover {
         background-color: transparent;
         color: #f77136; }
 
-/* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .toggleimageBaseEXTEND, ul.multiColumn a::before, .togglebgimageshow::after, .togglebgimagehide::after, .row-node-top-menu ul a::before {
   background-attachment: scroll;
   background-clip: border-box;
@@ -8509,32 +8509,32 @@ ul.off-canvas-list {
   margin-top: 2px;
   width: 20px; }
 
-/* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 54, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 ul.multiColumn {
   /*column-count: 2;
     column-gap:0.5rem;
     margin-left:0.5rem;
     margin-right:0.5rem;*/
   margin-left: 0px; }
-  /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   ul.multiColumn li {
     line-height: 1.4; }
-  /* line 65, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 65, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   ul.multiColumn a::before {
     background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/PilMeny28.png");
     float: left; }
 
-/* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 74, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .menu-mlid-7255 {
   cursor: pointer;
   cursor: hand; }
 
-/* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 81, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .togglebgimageshow::after {
   background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikPlus28.png");
   float: right; }
 
-/* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .togglebgimagehide::after {
   background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/MosaikStang28.png");
   float: right; }
@@ -8548,7 +8548,7 @@ ul.multiColumn {
         }
     }
 }*/
-/* line 108, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+/* line 108, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .off-canvas-submenu.multiColumn {
   list-style: none;
   font-size: 0.8rem;
@@ -8563,108 +8563,108 @@ ul.multiColumn {
         font-size:0.8rem;
         
     }*/ }
-  /* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 116, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   .off-canvas-submenu.multiColumn li {
     border-top: 0px; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .kivlistview, .evenemang {
   padding: 0px 1em;
   margin-bottom: 0.5rem;
   color: #000000; }
-  /* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 7, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview i, .evenemang i {
     font-size: 2.3rem;
     color: #b2a16c; }
-  /* line 11, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 11, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview h4, .evenemang h4 {
     margin-top: 0px;
     font-size: 1.1rem;
     text-transform: none; }
-    /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview h4 a, .evenemang h4 a {
       color: #FFFFFF; }
-  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview h5, .evenemang h5 {
     font-size: 1.2rem;
     margin-bottom: 0px;
     color: #b4b3b2;
     text-transform: none; }
-  /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 27, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .pluss, .evenemang .pluss {
     padding-top: 0.6rem;
     padding-bottom: 0rem;
     text-align: right; }
-  /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 33, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .open img, .evenemang .open img {
     max-height: 24px; }
-  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 38, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .closed img, .evenemang .closed img {
     max-height: 24px; }
-  /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .titlebox, .evenemang .titlebox {
     padding-top: 0.6rem;
     padding-bottom: 0rem; }
-  /* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 43, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .imgplaceholder, .evenemang .imgplaceholder {
     padding-right: 0px;
     padding-left: 0px;
     background-color: #5a5958; }
-    /* line 49, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 49, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .imgplaceholder img, .evenemang .imgplaceholder img {
       width: 100%;
       min-width: 245px;
       max-width: 230px; }
-  /* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 54, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .listheight, .evenemang .listheight {
     min-height: 88px;
     background-color: #5a5958; }
-  /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .ingresstext, .evenemang .ingresstext {
     display: none;
     width: 100%;
     padding-top: 0.2rem;
     background-color: #ebeae9; }
     @media only screen and (min-width: 40.0625em) {
-      /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+      /* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
       .kivlistview .ingresstext, .evenemang .ingresstext {
         padding-right: 5rem; } }
     @media only screen and (min-width: 64.0625em) {
-      /* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+      /* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
       .kivlistview .ingresstext, .evenemang .ingresstext {
         padding-right: 10rem; } }
-  /* line 71, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 71, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .showingresstext, .evenemang .showingresstext {
     display: none; }
-  /* line 76, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 76, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .kivlist, .evenemang .kivlist {
     margin-bottom: 0.5rem;
     margin-left: 0px;
     margin-right: 0px; }
-    /* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 81, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist:hover, .evenemang .kivlist:hover {
       opacity: 0.9; }
-    /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 84, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist .showingresstext, .evenemang .kivlist .showingresstext {
       float: right;
       margin-right: -5px;
       margin-top: -10px; }
-    /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist .showingresstext_list, .evenemang .kivlist .showingresstext_list {
       float: right;
       margin-right: -5px;
       margin-top: -10px; }
-    /* line 90, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist .columns, .evenemang .kivlist .columns {
       float: left !important; }
-    /* line 93, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 93, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .kivlistview .kivlist h4, .evenemang .kivlist h4 {
       color: #FFFFFF; }
     @media only screen and (max-width: 40em) {
-      /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+      /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
       .kivlistview .kivlist .imgplaceholder, .evenemang .kivlist .imgplaceholder {
         display: none; } }
-  /* line 101, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 101, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .flip, .evenemang .flip {
     /*-webkit-transform: rotate(180deg);
 	    -moz-transform:    rotate(180deg);
@@ -8675,105 +8675,111 @@ ul.multiColumn {
             transform: rotate(180deg);
     /* needed? not sure */
     zoom: 1; }
-  /* line 120, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .date-display-single, .evenemang .date-display-single {
     color: #FFFFFF; }
 
-/* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 126, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .row {
   min-width: 245px;
   background-color: #5a5958; }
 
-/* line 127, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 127, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h5 {
   margin: 0px;
   margin-top: 0.5rem; }
 
-/* line 130, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 130, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent h4 {
   margin: 0px; }
 
-/* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
-.listcontent .listheight .rub {
-  float: left;
-  margin-left: -6px;
-  max-width: 350px; }
+/* line 131, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+.listcontent .listheight {
+  color: #FFFFFF; }
+  /* line 133, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .listcontent .listheight a {
+    color: #FFFFFF; }
+  /* line 134, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .listcontent .listheight .rub {
+    float: left;
+    margin-left: -6px;
+    max-width: 350px; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 138, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 140, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .listcontent .apsisbtnboxList {
     width: 35%; } }
 
-/* line 144, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 146, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .listcontent .apsisbtnboxList .button {
   width: 100% !important;
   text-align: center;
   float: right; }
 
-/* line 151, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 153, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .apsisboxmain, .apsisbtnbox, .apsisbtnboxList {
   padding-top: 0.4rem;
   max-width: 110px; }
-  /* line 154, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 156, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisboxmain a, .apsisbtnbox a, .apsisbtnboxList a {
     margin-bottom: 0px; }
-    /* line 156, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+    /* line 158, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
     .apsisboxmain a:empty, .apsisbtnbox a:empty, .apsisbtnboxList a:empty {
       display: none !important; }
-  /* line 160, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 162, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisboxmain .button.expand, .apsisbtnbox .button.expand, .apsisbtnboxList .button.expand {
     font-size: 0.8rem;
     font-weight: 200;
     margin-top: 1.5rem; }
 
 @media only screen {
-  /* line 171, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 173, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
     margin-bottom: 2px;
     margin-left: -6px; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 171, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  /* line 173, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .apsisbtnboxList {
     position: absolute;
     right: 0px;
     top: 0rem; } }
 
-/* line 185, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 187, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .ingresstextlista {
   display: none; }
 
-/* line 191, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .kivlistview .imgplaceholder img, .view-press-gallery .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 197, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 199, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .showingresstext_list {
   display: none; }
 
-/* line 202, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 204, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-id-press_gallery.view-display-id-page_2 .view-filters {
   margin-bottom: 1rem; }
 
-/* line 210, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 212, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .imgplaceholder img, .view-2015-dokument .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 215, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 217, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .listheight, .view-2015-dokument .evenemang .listheight {
   min-height: 130px; }
 
-/* line 219, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 221, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .showingresstext_list {
   display: none; }
 
-/* line 226, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 228, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-staff .showingresstext_list {
   display: none; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossContentBox {
   display: none;
   background-color: #6e6d6c;
@@ -8781,11 +8787,11 @@ ul.multiColumn {
   padding-top: 4rem;
   margin-bottom: 1.5rem;
   color: #FFFFFF; }
-  /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox h3 {
     color: #FFFFFF;
     text-transform: uppercase; }
-  /* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox h2 {
     color: #FFFFFF;
     border-top: 1px solid #FFFFFF;
@@ -8793,41 +8799,44 @@ ul.multiColumn {
     font-size: 2.4rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-  /* line 23, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 23, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .omoss_snabblink {
     margin-top: 1.5rem;
     padding-top: 0rem; }
-  /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 27, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .snabblinks h2 {
     border-top: 1px solid #fff;
     margin-top: 2.0rem;
     padding-top: 0rem;
     padding-bottom: 1rem;
     color: #fff; }
-  /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox .medium-8 {
     color: #FFFFFF; }
-    /* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 36, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossContentBox .medium-8 a {
       color: inherit; }
 
-/* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 41, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossContentBox2 {
   display: none;
   background-color: #6e6d6c;
   padding: 0rem;
   padding-top: 4rem;
   margin-bottom: 1.5rem;
+  color: #FFFFFF;
   /*@media only screen and (min-width:40.0625em) {
         margin-top:-30px;
-    }*/
-  color: #FFFFFF; }
-  /* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    }*/ }
+  /* line 53, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  .omossContentBox2 a {
+    color: #FFFFFF; }
+  /* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox2 h3 {
     color: #FFFFFF;
     text-transform: uppercase;
     font-size: 1.5rem; }
-  /* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox2 h2 {
     color: #FFFFFF;
     border-top: 1px solid #FFFFFF;
@@ -8835,29 +8844,29 @@ ul.multiColumn {
     font-size: 2.4rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem; }
-  /* line 68, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 70, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox2 .omoss_snabblink {
     margin-top: 1.5rem;
     padding-top: 0rem; }
-  /* line 72, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 74, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox2 .snabblinks h3 {
     border-top: 1px solid #fff;
     margin-top: 2.0rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
     color: #fff; }
-  /* line 79, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 81, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossContentBox2 .medium-8 {
     color: #FFFFFF; }
-    /* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 83, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossContentBox2 .medium-8 a {
       color: inherit; }
 
-/* line 86, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 88, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossmenycontainer {
   padding-left: 0px;
   padding-right: 0px; }
-  /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossmenycontainer .omossmenyblock {
     min-height: 30px;
     background: #ebeae9;
@@ -8865,29 +8874,30 @@ ul.multiColumn {
     padding-left: 10px;
     padding-top: 2px; }
     @media only screen and (max-width: 40em) {
-      /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+      /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossmenycontainer .omossmenyblock {
         border-right: 0px solid #000;
         border-bottom: 1px solid #000; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+      /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossmenycontainer .omossmenyblock {
         border-right: 1px solid #000;
         border-bottom: 0px solid #000; } }
-    /* line 104, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossmenycontainer .omossmenyblock:last-child {
       border-right: 0px solid #000;
-      border-bottom: 0px solid #000; }
+      border-bottom: 0px solid #000;
+      float: left; }
   @media only screen and (max-width: 40em) {
-    /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 112, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossmenycontainer .omossextraspace {
       display: none; } }
 
-/* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 119, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossContent {
   padding: 0px 10% 0px 0px; }
 
-/* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 122, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 #omossKontaktContent {
   display: block;
   padding-bottom: 2rem;
@@ -8896,53 +8906,53 @@ ul.multiColumn {
   padding-top: 0.5rem;
   background-color: #828180;
   margin-bottom: 1rem; }
-  /* line 129, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent ul {
     list-style: none; }
-  /* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 135, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 138, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 141, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent h2 {
     border-bottom: 2px solid #EEEEEE; }
-  /* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 144, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   #omossKontaktContent .kontaktkort {
     margin-bottom: 1rem;
     padding-top: 0.5rem; }
-    /* line 145, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 148, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 150, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 153, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .avd {
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 154, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 157, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .ftn {
       font-size: 0.8rem;
       line-height: 1.0rem; }
-    /* line 159, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 162, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     #omossKontaktContent .kontaktkort .epost {
       line-height: 1.0rem;
       word-break: break-all; }
 
-/* line 166, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+/* line 169, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
 .omossspace {
   margin-top: 0.52rem; }
-  /* line 170, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 174, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace h1 {
     color: #f77136;
     margin-bottom: 0px; }
     @media only screen and (max-width: 40em) {
-      /* line 170, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+      /* line 174, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossspace h1 {
         font-size: 2.5rem;
         margin-top: 1.8rem; } }
-  /* line 179, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 183, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .omossMenu {
     text-transform: uppercase;
     height: 26px;
@@ -8950,16 +8960,16 @@ ul.multiColumn {
     padding: 0px 1rem 0px 0.5rem;
     background-color: #000000;
     font-size: 0.85rem; }
-    /* line 188, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 192, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossspace .omossMenu a {
       color: #FFFFFF !important; }
-  /* line 190, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 194, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .lasMerOmOssLink {
     /*@media only screen and (max-width: 40em) {
             font-size:0.7em;
             line-height:12px;
         }*/ }
-  /* line 198, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 202, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .omossMenu2 {
     text-transform: uppercase;
     height: 10px;
@@ -8968,18 +8978,18 @@ ul.multiColumn {
     background-color: #000000;
     margin-top: 0.8rem;
     font-size: 0.85rem; }
-    /* line 207, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 211, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossspace .omossMenu2 a {
       color: #FFFFFF !important; }
     @media only screen {
-      /* line 198, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+      /* line 202, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossspace .omossMenu2 {
         margin-top: 0.55rem; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 198, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+      /* line 202, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
       .omossspace .omossMenu2 {
         margin-top: 0.8rem; } }
-  /* line 221, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+  /* line 225, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
   .omossspace .arrowhead:after {
     content: "";
     position: absolute;
@@ -8992,7 +9002,7 @@ ul.multiColumn {
     z-index: 1;
     border-color: #000000 transparent; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 237, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
+    /* line 241, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_omoss.scss */
     .omossspace .arrowhead2:after {
       content: "";
       position: absolute;
@@ -9005,10 +9015,10 @@ ul.multiColumn {
       z-index: 1;
       border-color: #ebeae9 transparent; } }
 
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .thomasbackground, .footer {
   background-color: #000000;
-  background-image: url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png");
+  background-image: url("http://kulturivast.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -9017,20 +9027,20 @@ ul.multiColumn {
   padding-top: 2rem;
   color: #FFFFFF; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .thomasbackground, .footer {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media only screen and (max-width: 40em) {
-    /* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .thomasbackground, .footer {
       padding-left: 1rem;
       padding-right: 4rem; } }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .ajbackground {
   background-color: #000000;
-  background-image: url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png");
+  background-image: url("http://kulturivast.se/sites/all/themes/kivnew/images/Bakgrund-fot-karta.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -9040,121 +9050,121 @@ ul.multiColumn {
   padding-top: 2rem;
   color: #FFFFFF; }
   @media only screen and (min-width: 40.0625em) {
-    /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .ajbackground {
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media only screen and (max-width: 40em) {
-    /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .ajbackground {
       padding-left: 1rem;
       padding-right: 4rem;
       background-attachment: fixed;
       background-size: cover; } }
 
-/* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 54, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footencol {
   padding-left: 0px;
   padding-right: 0px; }
 
-/* line 60, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer a {
   color: #FFFFFF; }
 
-/* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 64, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .vglogo {
   width: 10rem;
   text-align: left;
   margin-bottom: 2rem; }
 
-/* line 71, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 71, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .annonsrow img {
   min-width: 224px;
   max-width: 224px;
   margin-bottom: 2rem; }
 
-/* line 77, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 77, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .footdelare {
   margin-top: 10rem; }
   @media only screen {
-    /* line 80, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist {
       float: left;
       margin-top: 1.2rem;
       margin-left: 0px !important; } }
   @media only screen and (min-width: 40.0625em) {
-    /* line 80, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist {
       float: right; } }
-  /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+  /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
   .footer .footdelare .socialiconlist li {
     list-style: none;
     float: left; }
     @media only screen and (max-width: 40em) {
-      /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+      /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist li {
         margin-right: 0.5rem; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+      /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist li {
         margin-left: 0.5rem; } }
     @media only screen and (min-width: 64.0625em) {
-      /* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+      /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
       .footer .footdelare .socialiconlist li {
         margin-left: 0.96rem; } }
   @media only screen {
-    /* line 106, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist img {
       max-width: 51px; } }
   @media only screen and (min-width: 40.0625em) {
-    /* line 106, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist img {
       max-width: 50px; } }
   @media only screen and (min-width: 64.0625em) {
-    /* line 106, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .socialiconlist img {
       max-width: 63px; } }
-  /* line 120, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+  /* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
   .footer .footdelare .tab-bar-logosection {
     margin-right: 5em;
     margin-top: 0.31rem; }
-  /* line 124, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+  /* line 124, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
   .footer .footdelare .foot-kivlogo-container {
     display: table-cell;
     vertical-align: bottom;
     height: 60px; }
-    /* line 128, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+    /* line 128, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
     .footer .footdelare .foot-kivlogo-container img {
       width: 210px; }
-  /* line 132, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+  /* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
   .footer .footdelare .footdelarehrbox hr {
     margin-top: 0px;
     padding: 0px; }
 
-/* line 139, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .adressrow div {
   text-align: left;
   font-size: 1rem;
   font-weight: 200;
   margin-bottom: 1rem; }
 
-/* line 145, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 145, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .adressrow .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 149, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_footer.scss */
+/* line 149, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_footer.scss */
 .footer .adressrow h3 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0px;
   color: #FFFFFF; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
 .filterbreadcrumbbox {
   margin-top: 1.5rem; }
 
-/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+/* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
 #breadcrumbval, .omradesnamn, .visaallt {
   margin-top: 0.5rem;
   margin-left: 0px;
@@ -9164,215 +9174,247 @@ ul.multiColumn {
   font-style: 400;
   color: #000000;
   float: left; }
-  /* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+  /* line 14, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
   #breadcrumbval li, .omradesnamn li, .visaallt li {
     display: inline;
     list-style-type: none;
     padding-right: 0.5rem; }
-    /* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+    /* line 19, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
     #breadcrumbval li a, .omradesnamn li a, .visaallt li a {
       border-left: 1px solid #222222;
       margin-right: 4px;
       padding-left: 4px; }
 
-/* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+/* line 27, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
 .omradesnamn {
   float: left; }
 
-/* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
+/* line 32, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_breadcrumb.scss */
 .visaallt {
   float: left; }
 
 /* ================== kalender tabellen =========================== */
 /*Overides för  .item*/
-/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
+/* line 7, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
 .view-2015-kalender .item {
   width: 100%; }
 
-/* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
+/* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
 .view-2015-kalender-lista .kivlistview h3 span, .view-2015-kalender-lista .evenemang h3 span {
   color: #000000; }
 
-/*.view-id-2015_kalender_lista{
-    
-        .kalender-lista-date{
-            span{
-                @extend .datumtemplate;
-            }   
-        }
+/* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kalender.scss */
+.view-2015-kalender-lista .card-label {
+  display: none; }
 
-}*/
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer h1, .artikelMainContainer h2, .artikelMainContainer h3 {
   color: #f77136; }
 
-/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .success {
   width: 100%; }
 
-/* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .row:first-child {
   margin-bottom: 0rem; }
 
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikeltopImage {
   margin-bottom: -7.5rem;
   max-height: 300px;
   min-height: 150px;
   overflow: hidden; }
-  /* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 22, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikeltopImage img {
     min-height: 150px; }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelwrapper {
   padding-top: 2.5rem;
   /*.medium-4 {       
             background-color:$beige;                  
         }*/ }
+  /* line 29, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  .artikelMainContainer .artikelwrapper a {
+    color: #666666;
+    text-decoration: underline; }
+  /* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  .artikelMainContainer .artikelwrapper li a {
+    text-decoration: none; }
 
-/* line 32, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 40, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelbild {
   margin: 1.5rem 0rem; }
 
-/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 44, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .faktabox {
   background-color: #dcdbda; }
-  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .faktabox h1, .faktabox h2, .faktabox h3 {
     color: #f77136; }
 
-/* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelButton {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-/* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artsidecontainer {
   display: block;
   padding: 1rem 1.2rem 1rem 1.2rem;
   background-color: #dcdbda; }
   @media only screen and (min-width: 64.0625em) {
-    /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer {
       padding-bottom: 2rem;
       padding-left: 0.7rem;
       padding-right: 2rem;
       padding-top: 0.5rem; } }
-  /* line 61, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 69, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer ul {
     list-style: none;
     margin-left: 0px; }
-  /* line 65, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 73, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 71, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 79, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h2 {
     text-transform: uppercase; }
-  /* line 74, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 82, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h3 {
     font-size: 1.5rem;
     text-transform: uppercase; }
-  /* line 78, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 86, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer p {
     font-size: 0.9rem; }
-  /* line 80, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 88, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .kontaktkort {
     font-size: 0.9rem; }
-    /* line 82, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 87, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .avd {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 92, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelkontatkort {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 97, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 105, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelFakta {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-  /* line 104, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 112, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .success {
     width: 100%; }
 
-/* line 107, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 115, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .standardbutton {
   text-align: center;
   padding-right: 0.7rem; }
 
-/* line 112, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .l-main {
   display: none; }
 
-/* line 114, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 122, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .view-2015-supporting-articles .level2, .view-2015-supporting-articles-suo .level2 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  /* line 117, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .view-2015-supporting-articles .level2:nth-child(odd), .view-2015-supporting-articles-suo .level2:nth-child(odd) {
     background-color: #dcdbda; }
-    /* line 119, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 127, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .view-2015-supporting-articles .level2:nth-child(odd) .artsidecontainer, .view-2015-supporting-articles-suo .level2:nth-child(odd) .artsidecontainer {
       background-color: #ebeae9; }
 
-/* line 127, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 135, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h1, .artmaincontent h2, .artmaincontent h3, .artmaincontent h4, .artmaincontent h5 {
   color: #000000; }
 
-/* line 130, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 138, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h3 {
   font-size: 1rem;
   font-weight: 600; }
 
-/* line 134, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 142, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .filicons h3 {
   font-size: 1.5rem;
   font-weight: 200; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 134, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 0.5rem; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 126, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 134, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 10rem; } }
 
-/* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 152, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artmaincontent blockquote {
+  border-left: 10px solid #EEEEEE;
+  padding: 0 0 0 2.0875rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  quotes: "”" "“" "‘" "’"; }
+  /* line 162, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  .artmaincontent blockquote p:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.05em;
+    vertical-align: -0.4em;
+    font-family: "bodoni-urw";
+    font-weight: 800; }
+
+/* line 175, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.artmaincontent .citatblock, .artmaincontent blockquote, .artmaincontent blockquote p {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.4;
+  margin-left: 0px; }
+
+/* line 184, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .element-invisible {
   display: none; }
 
-/* line 145, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 188, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .node-type-informationssida .ajimage-omrade-nod img {
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 200px; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+/* line 194, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+.top-bild-wrapper {
+  margin-bottom: 3rem !important; }
+
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
 .artikelsubmenuContent {
   display: none;
   background-color: #6e6d6c;
   color: #FFFFFF; }
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .artikelsubmenuContent ul {
     list-style: none;
     padding: 1.5rem;
     padding-left: 0rem;
     margin-left: 0rem;
     margin-right: 2.5rem; }
-  /* line 14, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 14, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .artikelsubmenuContent li {
     zoom: 1;
     *display: inline;
@@ -9385,28 +9427,28 @@ ul.multiColumn {
     text-transform: lowercase;
     min-width: 20%; }
   @media only screen {
-    /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .artikelsubmenuContent .menucolumns {
       -webkit-column-count: 1;
          -moz-column-count: 1;
               column-count: 1; } }
   @media only screen and (min-width: 40.0625em) {
-    /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .artikelsubmenuContent .menucolumns {
       -webkit-column-count: 2;
          -moz-column-count: 2;
               column-count: 2; } }
   @media only screen and (min-width: 64.0625em) {
-    /* line 26, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .artikelsubmenuContent .menucolumns {
       -webkit-column-count: 4;
          -moz-column-count: 4;
               column-count: 4; } }
-  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 31, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .artikelsubmenuContent a {
     margin-right: 0.4rem;
     margin-top: 4px; }
-    /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .artikelsubmenuContent a:before {
       content: "";
       display: block;
@@ -9416,36 +9458,37 @@ ul.multiColumn {
       height: 20px;
       float: left;
       margin: 2px 0.5rem 0 0; }
-  /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 38, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .artikelsubmenuContent .row:first-child {
     margin-bottom: 1.5rem; }
-  /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 41, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .artikelsubmenuContent .item-list {
     color: #000000; }
 
-/* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+/* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
 .atikelMenuBlock {
   margin-top: 2.5rem; }
   @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-    /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .atikelMenuBlock {
       margin-top: 3.5rem; } }
-  /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .artikelMenu {
     text-transform: uppercase;
     height: 2rem;
     line-height: 2.1rem;
-    background-color: #000000; }
-  /* line 59, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    background-color: #000000;
+    margin-top: 0.7rem; }
+  /* line 59, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock a {
     margin-left: 1rem; }
-  /* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 63, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .lasMerOmOssLink {
     color: #FFFFFF; }
-    /* line 65, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+    /* line 65, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
     .atikelMenuBlock .lasMerOmOssLink:hover {
       color: #999999; }
-  /* line 70, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 70, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock .arrowhead:after {
     content: "";
     position: absolute;
@@ -9457,41 +9500,41 @@ ul.multiColumn {
     width: 0;
     z-index: 1;
     border-color: #000000 transparent; }
-  /* line 85, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
+  /* line 85, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmenu.scss */
   .atikelMenuBlock #contentHeader h1 {
     color: #000000;
     text-transform: none; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filicons a {
   color: #000000 !important; }
 
-/* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filicons ul {
   list-style: none;
   margin-left: 0px; }
 
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filicons li {
   margin-bottom: 2px;
   padding: 0.3rem 0px 0.3rem 0.5rem; }
-  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+  /* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
   .filicons li:nth-child(even) {
     background-color: #ebeae9; }
-  /* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+  /* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
   .filicons li:nth-child(odd) {
     background-color: #F9F9F9; }
 
-/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 19, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filicons h3 {
   margin-bottom: 0.5rem; }
 
-/* line 22, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 22, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filicons h1, .filicons h2, .filicons h3 {
   color: #f77136;
   text-transform: uppercase; }
 
-/* line 29, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 29, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .filer a:before {
   content: "";
   display: block;
@@ -9502,7 +9545,7 @@ ul.multiColumn {
   float: left;
   margin: 2px 0.5rem 0 0; }
 
-/* line 36, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 36, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .externalinks a:before {
   content: "";
   display: block;
@@ -9513,7 +9556,7 @@ ul.multiColumn {
   float: left;
   margin: 2px 0.5rem 0 0; }
 
-/* line 43, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 43, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .ljudfiler a:before {
   content: "";
   display: block;
@@ -9524,7 +9567,7 @@ ul.multiColumn {
   float: left;
   margin: 2px 0.5rem 0 0; }
 
-/* line 50, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 50, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .readlink a:before {
   content: "";
   display: block;
@@ -9535,7 +9578,7 @@ ul.multiColumn {
   float: left;
   margin: 2px 0.5rem 0 0; }
 
-/* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
+/* line 57, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelextra.scss */
 .undersida a:before {
   content: "";
   display: block;
@@ -9547,35 +9590,35 @@ ul.multiColumn {
   margin: 2px 0.5rem 0 0; }
 
 /* Frontpage*/
-/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 6, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .textleft {
   text-align: left; }
 
-/* line 7, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 7, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .textcenter {
   text-align: center; }
 
-/* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 8, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .textright {
   text-align: right; }
 
-/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .bgWhitetxtBlack h1, .bgWhitetxtBlack h2, .bgWhitetxtBlack h3, .bgWhitetxtBlack h4, .bgWhitetxtBlack p {
   color: #000000; }
 
-/* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .bgBlacktxtWhite h1, .bgBlacktxtWhite h2, .bgBlacktxtWhite h3, .bgBlacktxtWhite h4, .bgBlacktxtWhite p {
   color: #FFFFFF; }
 
-/* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .bgtransparenttxtWhite h1, .bgtransparenttxtWhite h2, .bgtransparenttxtWhite h3, .bgtransparenttxtWhite h4, .bgtransparenttxtWhite p {
   color: #FFFFFF; }
 
-/* line 25, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 25, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .bgtxtTurkos h1, .bgtxtTurkos h2, .bgtxtTurkos h3, .bgtxtTurkos h4 {
   color: #476a8b; }
 
-/* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 31, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .hovereffect:hover {
   opacity: .7;
   filter: alpha(opacity=70);
@@ -9585,58 +9628,57 @@ ul.multiColumn {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s; }
 
-/* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .ajspalter {
   padding-top: 3%;
   padding-bottom: 3%;
   margin-bottom: 3rem; }
-  /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajspalter h1 {
     text-transform: uppercase;
     margin-bottom: 2rem; }
     @media only screen {
-      /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajspalter h1 {
         font-size: 2.5rem; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 46, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajspalter h1 {
         font-size: 3rem; } }
   @media only screen {
-    /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 52, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajspalter h2 {
       font-size: 1.75rem; } }
   @media only screen and (min-width: 40.0625em) {
-    /* line 52, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 52, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajspalter h2 {
       font-size: 2rem; } }
-  /* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajspalter article {
     text-align: left;
     color: #000000; }
     @media only screen {
-      /* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajspalter article {
         -webkit-columns: 1;
            -moz-columns: 1;
                 columns: 1; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 56, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajspalter article {
         -webkit-columns: 3 200px;
            -moz-columns: 3 200px;
                 columns: 3 200px; } }
 
-/* line 64, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+/* line 64, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .ajimage {
   position: relative;
   width: 100%;
   /* for IE 6 */
   min-height: 100%;
-  overflow: hidden;
   background: #000;
   text-align: center; }
-  /* line 73, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 73, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajimage img {
     -o-object-fit: none;
        object-fit: none;
@@ -9645,7 +9687,7 @@ ul.multiColumn {
        object-position: center;
     /* Center the image within the element */
     min-height: 200px; }
-  /* line 79, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajimage .textboxcontainer {
     position: absolute;
     top: 50%;
@@ -9657,29 +9699,29 @@ ul.multiColumn {
     line-height: 3.6rem;
     letter-spacing: -1px;
     padding: 10px; }
-    /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer h1 {
       text-transform: uppercase; }
       @media only screen {
-        /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
         .ajimage .textboxcontainer h1 {
           font-size: 2.5rem; } }
       @media only screen and (min-width: 40.0625em) {
-        /* line 89, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
         .ajimage .textboxcontainer h1 {
           font-size: 3rem; } }
-    /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 96, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.hrub {
       font-size: 2rem !important; }
-    /* line 96, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 97, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.urub {
       font-size: 1.8rem !important; }
-    /* line 97, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    /* line 98, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
     .ajimage .textboxcontainer.utxtrub {
       font-size: 1.0rem !important;
       line-height: 2.2rem !important;
       margin-top: 0.5rem; }
-      /* line 99, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .ajimage .textboxcontainer.utxtrub .spacer {
         display: inline;
         padding: 0 5px;
@@ -9687,60 +9729,779 @@ ul.multiColumn {
         background-color: transparent; }
 
 @media only screen {
-  /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajcolmargin {
     display: none; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 109, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .ajcolmargin {
     display: block; } }
+
+/*$h3startfont:1.8vw;
+  $h2startfont:3.1vw;*/
+@media only screen {
+  /* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .themegradientgreen h2, .themegradientWhite h2, .themegradientYellow h2, .themegradientPink h2, .themegradientbeige h2, .themeforfattardag h2, .themearrangorstraff2 h2, .themearrangorstraff h2, .themearmkroksresor h2, .themeFrame h2, .themefilmcloud h2, .themegranslandet h2 {
+    line-height: 5vw;
+    /*font-size:$h2startfontsmall;
+         }
+         @media only screen and (min-width:40.0625em){*/
+    font-size: 4.1vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h2, .themegradientgreen h2, .themegradientWhite h2, .themegradientYellow h2, .themegradientPink h2, .themegradientbeige h2, .themeforfattardag h2, .themearrangorstraff2 h2, .themearrangorstraff h2, .themearmkroksresor h2, .themeFrame h2, .themefilmcloud h2, .themegranslandet h2 {
+    line-height: 3.6rem;
+    font-size: 4rem; } }
+
+@media only screen {
+  /* line 140, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .themegradientgreen h3, .themegradientWhite h3, .themegradientYellow h3, .themegradientPink h3, .themegradientbeige h3, .themeforfattardag h3, .themearrangorstraff2 h3, .themearrangorstraff h3, .themearmkroksresor h3, .themeFrame h3, .themefilmcloud h3, .themegranslandet h3 {
+    /*font-size:$h3startfontsmall;
+         }
+        @media only screen and (min-width:40.0625em){*/
+    font-size: 2vw; } }
+
+@media only screen and (min-width: 120.0625em) {
+  /* line 140, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .startfontExtend h3, .themegradientgreen h3, .themegradientWhite h3, .themegradientYellow h3, .themegradientPink h3, .themegradientbeige h3, .themeforfattardag h3, .themearrangorstraff2 h3, .themearrangorstraff h3, .themearmkroksresor h3, .themeFrame h3, .themefilmcloud h3, .themegranslandet h3 {
+    font-size: 2rem; } }
+
+/* line 155, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.itemcontainer {
+  padding: .5vw;
+  font-size: 5vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  /* line 164, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .itemcontainer .itembox {
+    width: 100px !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    /*display: -webkit-box;*/ }
+  /* line 172, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .itemcontainer div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    -webkit-flex: auto;
+            flex: auto;
+    width: 200px;
+    margin: .5vw;
+    font-size: 3vw !important; }
+    @media only screen and (max-width: 40em) {
+      /* line 172, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .itemcontainer div {
+        /*width:100%;
+            text-align:center!important;
+            font-size:2vw;
+        }
+        @media only screen and (min-width:40.0625em) {*/
+        width: 40%; } }
+    /* line 187, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h2 {
+      padding: 0;
+      margin: 0; }
+    /* line 190, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div h3 {
+      padding: 0;
+      margin: 0; }
+    /* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .itemcontainer div img {
+      height: 20vw;
+      _max-height: 300px;
+      -webkit-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+              transform: scale(1, 1);
+      -o-object-fit: scale-down;
+         object-fit: scale-down; }
+      @media only screen and (min-width: 120.0625em) {
+        /* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+        .itemcontainer div img {
+          height: 12vw; } }
+
+/* line 207, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themegradientgreen {
+  background: -webkit-gradient(linear, left top, right top, from(#63674e), to(#7c805d));
+  background: -webkit-linear-gradient(left, #63674e, #7c805d);
+  background: linear-gradient(to right, #63674e, #7c805d);
+  /* Standard syntax */ }
+  /* line 211, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientgreen .textbox {
+    padding-top: 2vw !important;
+    padding-right: 4vw !important; }
+  /* line 215, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientgreen h2 {
+    color: #fff !important; }
+  /* line 220, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientgreen h3 {
+    color: #fff !important; }
+
+/* line 232, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themegradientYellow {
+  background: -webkit-gradient(linear, left top, right top, from(#d0b75d), to(#e8dcb2));
+  background: -webkit-linear-gradient(left, #d0b75d, #e8dcb2);
+  background: linear-gradient(to right, #d0b75d, #e8dcb2);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 236, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientYellow .textbox {
+    padding-top: 0vw;
+    padding-left: 0;
+    color: #000; }
+  /* line 241, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientYellow .imgbox {
+    text-align: right; }
+
+/* line 253, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themegradientPink {
+  background: -webkit-gradient(linear, left top, right top, from(#83224b), to(#83224b));
+  background: -webkit-linear-gradient(left, #83224b, #83224b);
+  background: linear-gradient(to right, #83224b, #83224b);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 257, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientPink .textbox {
+    padding-top: 5vw;
+    padding-left: 0; }
+  /* line 261, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientPink .imgbox {
+    text-align: right; }
+  /* line 264, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientPink h2 {
+    text-align: left;
+    color: #fff !important;
+    line-height: 4vw;
+    font-size: 4vw; }
+    @media (max-width: 600px) {
+      /* line 264, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegradientPink h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 264, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegradientPink h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 264, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegradientPink h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 264, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegradientPink h2 {
+        font-size: 54px; } }
+  /* line 270, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientPink h3 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, #83224b), color-stop(20%, #83224b));
+    background: -webkit-linear-gradient(left, #83224b 20%, #83224b 20%);
+    background: linear-gradient(to right, #83224b 20%, #83224b 20%);
+    /* Standard syntax */
+    color: #fff !important; }
+
+/* line 277, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themegradientbeige {
+  background: -webkit-gradient(linear, left top, right top, from(#e2ce79), to(#e2ce79));
+  background: -webkit-linear-gradient(left, #e2ce79, #e2ce79);
+  background: linear-gradient(to right, #e2ce79, #e2ce79);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 281, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientbeige .textbox {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 0;
+    color: #000; }
+  /* line 288, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientbeige .imgbox {
+    text-align: right; }
+  /* line 291, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientbeige h2 {
+    font-size: 2.23vw;
+    line-height: 2.8vw;
+    font-weight: 800; }
+  /* line 296, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientbeige h3 {
+    font-size: 2.23vw;
+    line-height: 2.8vw;
+    font-weight: 300; }
+  /* line 301, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegradientbeige h4 {
+    font-size: 1.25vw;
+    font-weight: 300;
+    line-height: 2.3vw; }
+
+/* line 309, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themeforfattardag {
+  /*font-size:3vw!important;*/ }
+  /* line 314, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themeforfattardag .textbox {
+    padding-top: 2.5vw;
+    margin-left: 5vw; }
+  /* line 319, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themeforfattardag .imgbox {
+    text-align: left; }
+  /* line 322, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themeforfattardag h2 {
+    line-height: 4vw;
+    font-size: 4vw; }
+    @media (max-width: 600px) {
+      /* line 322, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 322, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 322, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 322, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h2 {
+        font-size: 54px; } }
+  /* line 327, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themeforfattardag h3 {
+    line-height: 3.3vw;
+    font-size: 3vw; }
+    @media (max-width: 727.27273px) {
+      /* line 327, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h3 {
+        line-height: 24px; } }
+    @media (min-width: 2121.21212px) {
+      /* line 327, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h3 {
+        line-height: 70px; } }
+    @media (max-width: 600px) {
+      /* line 327, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h3 {
+        font-size: 18px; } }
+    @media (min-width: 1333.33333px) {
+      /* line 327, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themeforfattardag h3 {
+        font-size: 40px; } }
+
+/* line 333, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themearrangorstraff2 {
+  /*font-size:3vw!important;*/ }
+  /* line 338, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 .itemcontainer {
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    /* line 343, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themearrangorstraff2 .itemcontainer div {
+      margin: 0; }
+  /* line 349, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 .itembox {
+    text-align: center;
+    width: 50vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    /* line 355, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themearrangorstraff2 .itembox img {
+      width: 100%;
+      height: 30vw; }
+  /* line 360, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 .imgblock {
+    position: relative; }
+  /* line 363, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 .textblock {
+    position: absolute;
+    top: 5.5vw;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 4vw; }
+  /* line 372, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 h2 {
+    line-height: 4vw;
+    font-size: 4vw;
+    font-weight: 800;
+    color: #d3b2ff; }
+    @media (max-width: 600px) {
+      /* line 372, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 372, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 372, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 372, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h2 {
+        font-size: 54px; } }
+  /* line 379, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff2 h3 {
+    line-height: 3.3vw;
+    font-size: 3vw;
+    font-weight: 300;
+    color: #FFFFFF;
+    line-height: 2vw; }
+    @media (max-width: 727.27273px) {
+      /* line 379, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h3 {
+        line-height: 24px; } }
+    @media (min-width: 2121.21212px) {
+      /* line 379, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h3 {
+        line-height: 70px; } }
+    @media (max-width: 600px) {
+      /* line 379, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h3 {
+        font-size: 18px; } }
+    @media (min-width: 1333.33333px) {
+      /* line 379, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff2 h3 {
+        font-size: 40px; } }
+
+/* line 388, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themearrangorstraff {
+  /*font-size:3vw!important;*/
+  background: #000; }
+  /* line 394, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff .itemcontainer {
+    padding: 0 3rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url("http://www.kulturivast.se/sites/default/files/PUFF97Arrangorstraff.jpg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    min-height: 20rem; }
+  /* line 408, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff h2 {
+    line-height: 4vw;
+    font-size: 4vw;
+    font-weight: 800;
+    color: #d3b2ff; }
+    @media (max-width: 600px) {
+      /* line 408, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 408, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 408, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 408, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h2 {
+        font-size: 54px; } }
+  /* line 415, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearrangorstraff h3 {
+    line-height: 3.3vw;
+    font-size: 3vw;
+    font-weight: 300;
+    color: #FFFFFF;
+    line-height: 2vw; }
+    @media (max-width: 727.27273px) {
+      /* line 415, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h3 {
+        line-height: 24px; } }
+    @media (min-width: 2121.21212px) {
+      /* line 415, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h3 {
+        line-height: 70px; } }
+    @media (max-width: 600px) {
+      /* line 415, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h3 {
+        font-size: 18px; } }
+    @media (min-width: 1333.33333px) {
+      /* line 415, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearrangorstraff h3 {
+        font-size: 40px; } }
+
+/* line 425, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themearmkroksresor {
+  background: #188a66;
+  /*font-size:3vw!important;*/ }
+  /* line 429, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearmkroksresor .itemcontainer {
+    vertical-align: middle; }
+  /* line 436, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearmkroksresor .textbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    vertical-align: middle; }
+  /* line 443, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearmkroksresor .imgbox {
+    text-align: left; }
+  /* line 446, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearmkroksresor h2 {
+    line-height: 3vw;
+    font-size: 3vw;
+    font-weight: 800;
+    color: #c6ffb2; }
+    @media (max-width: 733.33333px) {
+      /* line 446, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h2 {
+        line-height: 22px; } }
+    @media (min-width: 2200px) {
+      /* line 446, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h2 {
+        line-height: 66px; } }
+    @media (max-width: 733.33333px) {
+      /* line 446, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h2 {
+        font-size: 22px; } }
+    @media (min-width: 1800px) {
+      /* line 446, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h2 {
+        font-size: 54px; } }
+  /* line 453, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themearmkroksresor h3 {
+    line-height: 2vw;
+    font-size: 2vw;
+    font-weight: 300;
+    color: #FFFFFF; }
+    @media (max-width: 1100px) {
+      /* line 453, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h3 {
+        line-height: 22px; } }
+    @media (min-width: 3500px) {
+      /* line 453, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h3 {
+        line-height: 70px; } }
+    @media (max-width: 800px) {
+      /* line 453, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h3 {
+        font-size: 16px; } }
+    @media (min-width: 2000px) {
+      /* line 453, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themearmkroksresor h3 {
+        font-size: 40px; } }
+
+/* line 464, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themeFrame .itembox .textbox {
+  text-align: right;
+  padding-top: 2vw !important;
+  padding-right: 4vw !important; }
+
+/* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themeFrame .itembox h2 {
+  color: #000 !important;
+  line-height: 3vw;
+  font-size: 3vw;
+  font-weight: 800; }
+  @media (max-width: 733.33333px) {
+    /* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h2 {
+      line-height: 22px; } }
+  @media (min-width: 2200px) {
+    /* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h2 {
+      line-height: 66px; } }
+  @media (max-width: 733.33333px) {
+    /* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h2 {
+      font-size: 22px; } }
+  @media (min-width: 1800px) {
+    /* line 469, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h2 {
+      font-size: 54px; } }
+
+/* line 475, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themeFrame .itembox h3 {
+  color: #000 !important;
+  line-height: 2vw;
+  font-size: 2vw; }
+  @media (max-width: 1100px) {
+    /* line 475, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h3 {
+      line-height: 22px; } }
+  @media (min-width: 3500px) {
+    /* line 475, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h3 {
+      line-height: 70px; } }
+  @media (max-width: 800px) {
+    /* line 475, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h3 {
+      font-size: 16px; } }
+  @media (min-width: 2000px) {
+    /* line 475, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    .themeFrame .itembox h3 {
+      font-size: 40px; } }
+
+/* line 482, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themefilmcloud {
+  background: #97c121;
+  /*font-size:3vw!important;*/ }
+  /* line 490, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themefilmcloud .textbox {
+    padding-top: 2.5vw;
+    text-align: right;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  /* line 501, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themefilmcloud h2 {
+    line-height: 4vw;
+    font-size: 4vw;
+    color: #FFFFFF;
+    font-weight: 300; }
+    @media (max-width: 600px) {
+      /* line 501, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 501, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 501, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 501, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h2 {
+        font-size: 54px; } }
+  /* line 508, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themefilmcloud h3 {
+    line-height: 3.3vw;
+    font-size: 3vw; }
+    @media (max-width: 727.27273px) {
+      /* line 508, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h3 {
+        line-height: 24px; } }
+    @media (min-width: 2121.21212px) {
+      /* line 508, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h3 {
+        line-height: 70px; } }
+    @media (max-width: 600px) {
+      /* line 508, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h3 {
+        font-size: 18px; } }
+    @media (min-width: 1333.33333px) {
+      /* line 508, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themefilmcloud h3 {
+        font-size: 40px; } }
+
+/* line 514, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themegranslandet {
+  background: #000;
+  /*font-size:3vw!important;*/ }
+  /* line 518, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegranslandet .textbox {
+    padding-top: 3vw;
+    padding-left: 0; }
+  /* line 522, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegranslandet .imgbox {
+    text-align: right; }
+  /* line 525, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegranslandet h2 {
+    text-align: left;
+    color: #fff !important;
+    line-height: 4vw;
+    font-size: 4vw; }
+    @media (max-width: 600px) {
+      /* line 525, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegranslandet h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 525, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegranslandet h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 525, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegranslandet h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 525, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themegranslandet h2 {
+        font-size: 54px; } }
+  /* line 531, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themegranslandet h3 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, #83224b), color-stop(20%, #83224b));
+    background: -webkit-linear-gradient(left, #83224b 20%, #83224b 20%);
+    background: linear-gradient(to right, #83224b 20%, #83224b 20%);
+    /* Standard syntax */
+    color: #fff !important; }
+
+/* line 537, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+.themesommarboken {
+  background: -webkit-radial-gradient(#8c523d, #3b1d11);
+  background: radial-gradient(#8c523d, #3b1d11);
+  /* Standard syntax */
+  /*font-size:3vw!important;*/ }
+  /* line 544, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themesommarboken .textbox {
+    padding-top: 2.5vw;
+    text-align: right;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  /* line 555, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themesommarboken h2 {
+    line-height: 4vw;
+    font-size: 4vw;
+    color: #FFFFFF;
+    font-weight: 300; }
+    @media (max-width: 600px) {
+      /* line 555, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h2 {
+        line-height: 24px; } }
+    @media (min-width: 1650px) {
+      /* line 555, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h2 {
+        line-height: 66px; } }
+    @media (max-width: 600px) {
+      /* line 555, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h2 {
+        font-size: 24px; } }
+    @media (min-width: 1350px) {
+      /* line 555, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h2 {
+        font-size: 54px; } }
+  /* line 562, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  .themesommarboken h3 {
+    line-height: 3.3vw;
+    font-size: 3vw; }
+    @media (max-width: 727.27273px) {
+      /* line 562, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h3 {
+        line-height: 24px; } }
+    @media (min-width: 2121.21212px) {
+      /* line 562, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h3 {
+        line-height: 70px; } }
+    @media (max-width: 600px) {
+      /* line 562, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h3 {
+        font-size: 18px; } }
+    @media (min-width: 1333.33333px) {
+      /* line 562, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      .themesommarboken h3 {
+        font-size: 40px; } }
 
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
 <img src="http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/jazz.jpg" />*/
 @media only screen and (min-width: 40.0625em) {
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+  /* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
   #filtersortering a img {
     width: 36px;
     height: 36px; } }
 
 @media only screen and (max-width: 40em) {
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+  /* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
   #filtersortering a img {
     width: 25px;
     height: 25px; } }
 
-/* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 #contentfilterblock {
   margin-top: 0.5rem; }
 
-/* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 21, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .filterutanforomrade, .view-2015-evenemang #filtersortering, .view-2015-produktioner #filtersortering, .view-2015-dokument #filtersortering, .view-press-gallery #filtersortering {
   margin-top: 1.0rem; }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 #filtersortering {
   margin-top: 3.0rem;
   display: block; }
 
-/* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .views-submit-button {
   margin-top: 2rem; }
-  /* line 53, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+  /* line 53, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
   .views-submit-button button {
     margin-left: 0px !important; }
 
-/* line 58, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 #edit-field-production-tid {
   margin-right: 0.5rem; }
 
-/* line 62, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .form-item.form-type-select {
   line-height: 2.5rem; }
 
-/* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 66, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .baseformkomponenter, #contentfilterblock select, #contentfilterblock input {
   height: 2em;
   padding: 0.05em;
@@ -9750,19 +10511,19 @@ ul.multiColumn {
   font-size: 0.85rem;
   margin-bottom: 0.5rem; }
 
-/* line 87, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 87, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .views-submit-button {
   padding: 0px !important; }
 
-/* line 91, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .views-exposed-widgets {
   padding: 0px;
   margin-bottom: 0px !important; }
-  /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+  /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
   .views-exposed-widgets label {
     display: none; }
 
-/* line 98, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
+/* line 98, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_filter_meny_block.scss */
 .views-exposed-form .views-exposed-widget .form-submit {
   margin: 0rem !important;
   padding: 0.1rem;
@@ -9790,64 +10551,64 @@ a{
     }
 } 
 #contentfilterblock{line-height:2.5rem;}*/
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
 .evenemang {
   position: relative;
   height: 100%;
   -webkit-overflow-scrolling: touch; }
-  /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  /* line 8, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
   .evenemang .imgplaceholder {
     padding-right: 0px;
     padding-left: 0px; }
-  /* line 16, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  /* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
   .evenemang .kivlist .showingresstext {
     margin-right: 0.3rem; }
-  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  /* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
   .evenemang .kivlist .imgplaceholder img {
     min-width: 100%; }
   @media only screen {
-    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
     .evenemang .kivlist .crop-height {
       max-height: 100%; } }
   @media only screen and (min-width: 40.0625em) {
-    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
     .evenemang .kivlist .crop-height {
       max-height: 4.3rem;
       overflow: hidden; } }
-  /* line 31, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  /* line 31, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
   .evenemang .apsisbtnbox {
     padding-top: 0.2rem; }
-    /* line 33, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+    /* line 33, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
     .evenemang .apsisbtnbox a {
       margin-bottom: 0px; }
-  /* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
+  /* line 37, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_evenemang.scss */
   .evenemang .button.expand, .evenemang .button.expand {
     padding: 1.1rem; }
 
 @media only screen {
-  /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+  /* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
   .crop-height {
     max-height: 100%; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+  /* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
   .crop-height {
     max-height: 70px;
     overflow: hidden; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+  /* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
   .crop-height {
     max-height: 4.3rem;
     overflow: hidden; } }
 
-/* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+/* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
 .noimage {
   background-color: #b2a16c;
   width: 100%;
   height: 5rem; }
 
-/* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+/* line 17, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
 img .scale {
   /* corrects small inline gap at bottom of containing div */
   display: block;
@@ -9868,7 +10629,7 @@ img .scale {
   /* max-height: 50px;  max-height of .crop-height */
   /* min-width: 480px; /* proportional to above */ }
 
-/* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
+/* line 35, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_imagecrop.scss */
 img .flip {
   /* actually, aligns left within .cropheight */
   float: right;
@@ -9876,68 +10637,74 @@ img .flip {
   /* clearfix after? */ }
 
 /*anmälnings button färger */
-/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 13, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .success.n0 {
   display: none; }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .success.n2 {
   background-color: #f77136; }
 
-/* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 27, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .success.n3 {
   background-color: #f77136; }
-  /* line 29, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 29, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .success.n3:hover {
     background-color: #f77136; }
 
-/* line 37, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 33, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+.success.n4 {
+  background: #999999 !important;
+  cursor: default;
+  pointer-events: none; }
+
+/* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .card-label {
   border-color: #EEEEEE;
   /* använd denna för att få snedställd aktuellruta
             border-color: transparent #333 transparent transparent;
 	    border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 50, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.primary {
   border-color: #446CB3; }
-  /* line 48, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 53, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.primary .card-label {
     border-color: #446CB3;
     /*border-color: transparent $primary transparent transparent;
 	    border-color: rgba(255,255,255,0) $primary rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 54, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 59, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.secondary {
   border-color: #ADB2BD; }
-  /* line 57, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.secondary .card-label {
     border-color: #ADB2BD;
     /*border-color: transparent $secondary transparent transparent;
 	    border-color: rgba(255,255,255,0) $secondary rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 63, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 68, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.info {
   border-color: #89c4f4; }
-  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 71, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.info .card-label {
     border-color: #89c4f4;
     /*border-color: transparent $info transparent transparent;
 	    border-color: rgba(255,255,255,0) $info rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 72, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 77, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.alert {
   border-color: #F22613; }
-  /* line 75, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.alert .card-label {
     border-color: #F22613;
     /*border-color: transparent $alert transparent transparent;
 	    border-color: rgba(255,255,255,0) $alert rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 81, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 86, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.aktuellt {
   border-color: #b2a16c; }
-  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.aktuellt .card-label {
     border-color: #b2a16c;
     position: absolute;
@@ -9945,31 +10712,31 @@ img .flip {
     /*border-color: transparent $gold transparent transparent;
 	    border-color: rgba(255,255,255,0) $gold rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 92, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 97, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.warning {
   border-color: #F89406; }
-  /* line 95, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+  /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
   .callout-card.warning .card-label {
     /*border-color: transparent $warning transparent transparent;
 	    border-color: rgba(255,255,255,0) $warning rgba(255,255,255,0) rgba(255,255,255,0);*/ }
 
-/* line 101, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .card-label {
   float: right;
   height: 0px;
   width: 80px;
   margin-bottom: -2px; }
 
-/* line 112, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 117, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .callout-card-content {
   padding: 0.5rem 1.5rem 0.875rem; }
 
-/* line 116, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 121, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card.radius {
   -webkit-border-radius: 0.6rem;
           border-radius: 0.6rem; }
 
-/* line 120, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .callout-card .label-text {
   color: #fff;
   font-size: 0.85rem;
@@ -9994,7 +10761,7 @@ img .flip {
           align-items: center;
   padding-left: 0.5rem; }
 
-/* line 141, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 146, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .button.expand, .button.expand {
   padding: 0.2rem;
   width: 204px;
@@ -10004,14 +10771,14 @@ img .flip {
   text-transform: uppercase;
   font-size: 0.9rem; }
 
-/* line 150, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
+/* line 155, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_buttons.scss */
 .n0 {
   display: none; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
 .menybreadcrumb {
   height: 26px; }
-  /* line 4, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+  /* line 4, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
   .menybreadcrumb .mbc_navlinklist li {
     display: inline;
     list-style-type: none;
@@ -10020,23 +10787,23 @@ img .flip {
     font-size: 0.8125rem;
     padding-right: 2px;
     color: #888888 !important; }
-    /* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+    /* line 13, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
     .menybreadcrumb .mbc_navlinklist li:first-child {
       border-left: 0px;
       padding-left: 0px; }
-    /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+    /* line 17, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
     .menybreadcrumb .mbc_navlinklist li:last-child {
       padding-left: 3px; }
-    /* line 20, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+    /* line 20, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
     .menybreadcrumb .mbc_navlinklist li a {
       color: #888888 !important;
       padding-right: 4px;
       padding-left: 2px; }
-      /* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
+      /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_menybreadcrumb.scss */
       .menybreadcrumb .mbc_navlinklist li a:hover {
         color: #222222 !important; }
 
-/* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+/* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
 .searchMainWrapper {
   background-color: #ebeae9;
   display: -webkit-box;
@@ -10050,36 +10817,36 @@ img .flip {
   min-height: 200px;
   width: 100%; }
   @media only screen and (max-width: 40em) {
-    /* line 1, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+    /* line 1, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
     .searchMainWrapper {
       min-height: 150px; } }
-  /* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+  /* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
   .searchMainWrapper #edit-submit {
     margin-left: 0.1rem;
     height: 50px;
     line-height: 13px;
     background-color: #999999; }
-  /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+  /* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
   .searchMainWrapper .searchmainContent input {
     float: left; }
-  /* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+  /* line 21, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
   .searchMainWrapper .searchmainContent .searchinputbox {
     height: 50px;
     width: 90%;
     font-size: 1.5rem;
     border: 0px; }
     @media only screen and (max-width: 40em) {
-      /* line 21, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+      /* line 21, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
       .searchMainWrapper .searchmainContent .searchinputbox {
         width: 75%; } }
-  /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+  /* line 30, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
   .searchMainWrapper .searchmainContent .searchButton {
     height: 50px;
     float: right;
     background-color: transparent;
     padding: 0px;
     margin: 0px; }
-  /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+  /* line 41, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
   .searchMainWrapper #contentfilterblock input {
     height: 50px;
     width: 90% !important;
@@ -10087,41 +10854,41 @@ img .flip {
     border: 0px;
     margin-right: 4px; }
     @media only screen and (max-width: 40em) {
-      /* line 41, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
+      /* line 41, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_searchTopbox.scss */
       .searchMainWrapper #contentfilterblock input {
         width: 75%; } }
 
-/* line 4, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
+/* line 4, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
 .row-node-top-menu {
   margin-top: -2rem;
   margin-left: 2rem;
   padding-bottom: 1.5rem; }
-  /* line 8, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
+  /* line 8, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
   .row-node-top-menu ul {
     list-style: none; }
-    /* line 11, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
+    /* line 11, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
     .row-node-top-menu ul a::before {
       background-image: url("http://kivdev.monoclick-dev.se/sites/all/themes/kivnew/images/PilMeny28.png");
       float: left; }
-    /* line 18, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
+    /* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_innehallsmeny.scss */
     .row-node-top-menu ul li {
       margin-bottom: 0.8rem; }
 
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-evenemang.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_view-2015-evenemang.scss */
 .view-2015-evenemang .evenemang_date {
   margin-top: -4px;
   margin-bottom: -10px; }
 
-/* line 11, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-evenemang.scss */
+/* line 11, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_view-2015-evenemang.scss */
 .view-2015-evenemang .listcontent h5:first-child {
   margin-top: 0px; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
 .view-2015-staff .listheight {
   min-height: 160px; }
 
 /*Overrides LIZTA bilder*/
-/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_view-2015-staff.scss */
 .view-2015-staff .kivlistview .imgplaceholder img,
 .view-2015-staff .evenemang .imgplaceholder img,
 .view-2015-dokument .kivlistview .imgplaceholder img, .view-2015-dokument .evenemang .imgplaceholder img {
@@ -10129,15 +10896,15 @@ img .flip {
   min-width: 160px;
   width: 100%; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
 .pager-next {
   border: 1px solid #DDDDDD;
   background-color: #f77136; }
-  /* line 5, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
+  /* line 5, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
   .pager-next a {
     padding: 4rem;
     color: #FFFFFF; }
-  /* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
+  /* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kivbuttons.scss */
   .pager-next:hover {
     background-color: #e2974a;
     color: #000000; }
@@ -10169,7 +10936,7 @@ img .flip {
 }
  */
 /* :not(:required) hides these rules from IE9 and below */
-/* line 28, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loader.scss */
+/* line 28, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loader.scss */
 .loader:not(:required) {
   /* hide "loading..." text */
   /*font: 0/0 a;
@@ -10259,102 +11026,106 @@ img .flip {
     transform: rotate(360deg);
   }
 }*/
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .menybreadcrumb {
   display: none; }
 
-/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 6, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .kiv-tv-wrapper h1, .section-webb-tv .kiv-tv-wrapper h2, .section-webb-tv .kiv-tv-wrapper h3, .section-webb-tv .kiv-tv-wrapper h4 {
   color: #FFFFFF; }
 
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .kiv-tv-wrapper h5, .section-webb-tv .kiv-tv-wrapper p {
   color: #b2a16c; }
 
-/* line 10, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .kiv-tv-wrapper .kiv-tv-size {
   text-align: center; }
 
-/* line 13, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 13, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .kiv-tv-wrapper.top-tv {
   background-color: #111111;
   padding-top: 4rem;
   padding-bottom: 4rem; }
-  /* line 17, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  /* line 17, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
   .section-webb-tv .kiv-tv-wrapper.top-tv .video-filter {
     width: 100%;
     max-width: 640px; }
 
-/* line 24, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
 .section-webb-tv .kiv-media-cat {
   background-color: #222222; }
-  /* line 27, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  /* line 27, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
   .section-webb-tv .kiv-media-cat h2 {
     padding-top: 4rem !important;
     color: #FFFFFF; }
-  /* line 30, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+  /* line 30, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
   .section-webb-tv .kiv-media-cat .aj-carusel {
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 0rem 0rem; }
-    /* line 34, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    /* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
     .section-webb-tv .kiv-media-cat .aj-carusel h3 {
       font-size: 1.2rem;
       color: #FFFFFF; }
-    /* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    /* line 38, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
     .section-webb-tv .kiv-media-cat .aj-carusel h4 {
       font-size: 1rem;
       color: #b2a16c; }
-    /* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    /* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
     .section-webb-tv .kiv-media-cat .aj-carusel img {
       max-height: 250px; }
-    /* line 45, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+    /* line 45, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
     .section-webb-tv .kiv-media-cat .aj-carusel button {
       z-index: 9999;
       background-color: #000000;
       height: 60px;
       width: 60px;
       margin-top: -4rem; }
-      /* line 51, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
+      /* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_webtv.scss */
       .section-webb-tv .kiv-media-cat .aj-carusel button:hover {
         background-color: #000000; }
 
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .top-bg-colors .color-top-black, .zf-2col-stacked .color-top-black, .zf-2col-bricks .color-top-black {
   background-color: #000; }
 
-/* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 6, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .top-bg-colors .color-top-white, .zf-2col-stacked .color-top-white, .zf-2col-bricks .color-top-white {
   background-color: #fff; }
 
-/* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .top-bg-colors .color-top-grey333, .zf-2col-stacked .color-top-grey333, .zf-2col-bricks .color-top-grey333 {
   background-color: #333; }
 
-/* line 12, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .top-bg-colors .color-top-grey666, .zf-2col-stacked .color-top-grey666, .zf-2col-bricks .color-top-grey666 {
   background-color: #666; }
 
-/* line 28, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 28, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .page-taxonomy-term .ajimage-omrade-nod {
   -o-object-fit: contain;
      object-fit: contain; }
 
-/* line 35, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 35, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .page-taxonomy-term-980 .omossspace h1 {
-  color: transparent; }
+  color: transparent !important; }
 
-/* line 38, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 38, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .page-taxonomy-term-980 .breadcrumb-BG {
   background-color: #FFFFFF; }
 
-/* line 42, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+/* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
 .page-taxonomy-term-980 .ajimage-omrade-nod img {
   -o-object-fit: contain;
      object-fit: contain; }
 
+/* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-980 .top-bild-wrapper {
+  margin-bottom: -100px !important; }
+
 /* Slider */
-/* line 3, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -10370,82 +11141,82 @@ img .flip {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
 
-/* line 17, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 17, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-list {
   position: relative;
   overflow: hidden;
   display: block;
   margin: 0;
   padding: 0; }
-  /* line 24, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-list:focus {
     outline: none; }
-  /* line 28, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 28, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-list.dragging {
     cursor: pointer;
     cursor: hand; }
 
-/* line 34, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-/* line 42, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 42, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-track {
   position: relative;
   left: 0;
   top: 0;
   display: block; }
-  /* line 49, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 49, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-track:before,
   .slick-track:after {
     content: "";
     display: table; }
-  /* line 54, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 54, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-track:after {
     clear: both; }
-  /* line 58, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-loading .slick-track {
     visibility: hidden; }
 
-/* line 62, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-slide {
   float: left;
   height: 100%;
   min-height: 1px;
   display: none; }
-  /* line 66, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 66, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   [dir="rtl"] .slick-slide {
     float: right; }
-  /* line 69, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 69, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-slide img {
     display: block; }
-  /* line 72, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 72, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-slide.slick-loading img {
     display: none; }
-  /* line 78, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 78, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-slide.dragging img {
     pointer-events: none; }
-  /* line 82, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 82, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-initialized .slick-slide {
     display: block; }
-  /* line 86, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 86, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-loading .slick-slide {
     visibility: hidden; }
-  /* line 90, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+  /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
   .slick-vertical .slick-slide {
     display: block;
     height: auto;
     border: 1px solid transparent; }
 
-/* line 96, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick.scss */
+/* line 96, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-arrow.slick-hidden {
   display: none; }
 
 /* Slider */
-/* line 40, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 40, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
 
@@ -10458,7 +11229,7 @@ img .flip {
   font-style: normal; }
 
 /* Arrows */
-/* line 59, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 59, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-prev,
 .slick-next {
   position: absolute;
@@ -10477,23 +11248,23 @@ img .flip {
   padding: 0;
   border: none;
   outline: none; }
-  /* line 76, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 76, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-prev:hover,
   .slick-prev:focus,
   .slick-next:hover, .slick-next:focus {
     outline: none;
     background: transparent;
     color: transparent; }
-    /* line 80, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
     .slick-prev:hover:before,
     .slick-prev:focus:before,
     .slick-next:hover:before, .slick-next:focus:before {
       opacity: 1; }
-  /* line 84, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 84, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
     opacity: 0.25; }
-  /* line 87, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 87, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-prev:before,
   .slick-next:before {
     font-family: "slick";
@@ -10504,40 +11275,40 @@ img .flip {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
-/* line 98, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 98, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-prev {
   left: -25px; }
-  /* line 100, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   [dir="rtl"] .slick-prev {
     left: auto;
     right: -25px; }
-  /* line 104, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 104, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-prev:before {
     content: "←"; }
-    /* line 106, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    /* line 106, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
-/* line 112, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 112, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-next {
   right: -25px; }
-  /* line 114, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 114, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
-  /* line 118, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 118, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-next:before {
     content: "→"; }
-    /* line 120, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    /* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
     [dir="rtl"] .slick-next:before {
       content: "←"; }
 
 /* Dots */
-/* line 128, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 128, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
-/* line 132, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+/* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -10547,7 +11318,7 @@ img .flip {
   padding: 0;
   margin: 0;
   width: 100%; }
-  /* line 141, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+  /* line 141, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
   .slick-dots li {
     position: relative;
     display: inline-block;
@@ -10556,7 +11327,7 @@ img .flip {
     margin: 0 5px;
     padding: 0;
     cursor: pointer; }
-    /* line 149, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    /* line 149, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
     .slick-dots li button {
       border: 0;
       background: transparent;
@@ -10569,13 +11340,13 @@ img .flip {
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      /* line 161, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+      /* line 161, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
       .slick-dots li button:hover, .slick-dots li button:focus {
         outline: none; }
-        /* line 163, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+        /* line 163, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
         .slick-dots li button:hover:before, .slick-dots li button:focus:before {
           opacity: 1; }
-      /* line 167, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+      /* line 167, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
       .slick-dots li button:before {
         position: absolute;
         top: 0;
@@ -10591,31 +11362,86 @@ img .flip {
         opacity: 0.25;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; }
-    /* line 184, C:/andreas/web/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
+    /* line 184, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick-theme.scss */
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
 
-/* line 2, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+/* line 2, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
 .item-list .pager-load-more {
   margin-top: 1rem; }
-  /* line 4, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+  /* line 4, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
   .item-list .pager-load-more li {
     background-color: #ebeae9; }
-    /* line 6, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+    /* line 6, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
     .item-list .pager-load-more li a {
       color: #000000; }
-    /* line 9, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+    /* line 9, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
     .item-list .pager-load-more li:hover {
       background-color: #DDDDDD; }
 
-/* line 15, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+/* line 15, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
 .item-list ul li {
   margin-left: 0px; }
 
-/* line 19, C:/andreas/web/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
+/* line 19, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_loadmore.scss */
 .item-list .pager-next {
   border: 0px; }
+
+/* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.kulturkatalogenloggainbutton {
+  border-left: 1px solid #000;
+  background-color: #f77136 !important;
+  color: #fff; }
+  /* line 7, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+  .kulturkatalogenloggainbutton:hover {
+    background-color: #e2974a !important; }
+
+/* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .listcontent .row .columns {
+  min-height: 120px !important; }
+
+/* line 21, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .imgplaceholder {
+  min-height: 120px !important; }
+
+/* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .kulturkat #filtersortering {
+  margin-top: 0px;
+  margin-bottom: 0.5rem; }
+
+/* line 32, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .item-list ul {
+  list-style: none; }
+  /* line 35, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+  .view-display-id-kulturkatalogen_annons_block .item-list ul .pager-load-more li {
+    background-color: #ff0000; }
+    /* line 37, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+    .view-display-id-kulturkatalogen_annons_block .item-list ul .pager-load-more li a {
+      color: #000; }
+    /* line 40, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+    .view-display-id-kulturkatalogen_annons_block .item-list ul .pager-load-more li:hover {
+      background-color: #ddd; }
+
+/* line 46, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .item-list .pager-load-more {
+  margin-top: 1rem; }
+
+/* line 49, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.view-display-id-kulturkatalogen_annons_block .item-list .pager {
+  clear: both;
+  text-align: center; }
+  /* line 52, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+  .view-display-id-kulturkatalogen_annons_block .item-list .pager li {
+    background-image: none;
+    display: inline;
+    list-style-type: none;
+    padding: 0.5em; }
+
+/* line 62, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
+.node-culture-catalog .artmaincontent h5 {
+  font-size: 1.8rem;
+  color: #f77136 !important; }
 
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';
@@ -10655,48 +11481,48 @@ img .flip {
 //@import 'foundation/components/offcanvas';
 @import 'foundation/components/visibility';
   */
-/* line 80, stdin */
+/* line 83, stdin */
 .h2 {
   color: #000000 !important;
   font-weight: 100; }
 
-/* line 85, stdin */
+/* line 88, stdin */
 h1 {
   line-height: 1.1em !important; }
 
-/* line 87, stdin */
+/* line 90, stdin */
 .row {
   max-width: 62.5rem !important; }
 
-/* line 91, stdin */
+/* line 94, stdin */
 .size-21 {
   font-size: 1.2rem; }
 
-/* line 94, stdin */
+/* line 97, stdin */
 .size-24 {
   font-size: 1.4rem; }
 
-/* line 98, stdin */
+/* line 101, stdin */
 #contentHeader h1 {
   text-transform: uppercase;
   color: #b2a16c;
   margin-bottom: 0px; }
 
-/* line 103, stdin */
+/* line 106, stdin */
 #contentHeader a {
   text-transform: uppercase; }
 
-/* line 108, stdin */
+/* line 111, stdin */
 .row {
   max-width: 1200px; }
 
-/* line 113, stdin */
+/* line 116, stdin */
 body {
   height: auto;
   overflow: scroll; }
 
 @media only screen {
-  /* line 120, stdin */
+  /* line 123, stdin */
   .small-min-300.column {
     width: 300px;
     float: left;
@@ -10704,12 +11530,12 @@ body {
        -moz-box-sizing: content-box;
             box-sizing: content-box;
     background-color: #333; }
-    /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
+    /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/_kivmixin.scss */
     .small-min-300.column + .column {
       float: left; } }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 125, stdin */
+  /* line 128, stdin */
   .medium-min-300.column {
     width: 350px;
     float: left;
@@ -10717,10 +11543,10 @@ body {
        -moz-box-sizing: content-box;
             box-sizing: content-box;
     background-color: #EEEEEE; }
-    /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
+    /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/_kivmixin.scss */
     .medium-min-300.column + .column {
       float: left; }
-  /* line 128, stdin */
+  /* line 131, stdin */
   .large-min-300.column {
     width: 270px;
     float: left;
@@ -10728,37 +11554,37 @@ body {
        -moz-box-sizing: content-box;
             box-sizing: content-box;
     background-color: #666; }
-    /* line 24, C:/andreas/web/kivsassproj/sass/devScss/_kivmixin.scss */
+    /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/_kivmixin.scss */
     .large-min-300.column + .column {
       float: left; } }
 
 @font-face {
   font-family: "foundation-icons";
-  src: url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot");
-  src: url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.eot?#iefix") format("embedded-opentype"), url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.woff") format("woff"), url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.ttf") format("truetype"), url("http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons.svg#fontcustom") format("svg");
+  src: url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons.eot");
+  src: url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons.woff") format("woff"), url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons.ttf") format("truetype"), url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-/* line 149, stdin */
+/* line 158, stdin */
 .clear {
   clear: both; }
 
-/* line 154, stdin */
+/* line 163, stdin */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 159, stdin */
+/* line 168, stdin */
 .clearfix:after {
   clear: both; }
 
-/* line 163, stdin */
+/* line 172, stdin */
 .clearfix {
   zoom: 1;
   /* ie 6/7 */ }
 
-/* line 166, stdin */
+/* line 175, stdin */
 .scroll-top {
   width: 40px;
   height: 40px;
@@ -10770,35 +11596,35 @@ body {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: #333333; }
-  /* line 176, stdin */
+  /* line 185, stdin */
   .scroll-top i {
     font-size: 1.7rem;
     padding: 0px;
     margin: 0px;
     color: #FFFFFF; }
-  /* line 182, stdin */
+  /* line 191, stdin */
   .scroll-top:hover {
     background-color: #999999;
     color: #333333; }
 
-/* line 187, stdin */
+/* line 196, stdin */
 .open {
   font-size: 1.2rem; }
 
-/* line 188, stdin */
+/* line 197, stdin */
 .move-right .exit-off-canvas {
   -webkit-transition: background 300ms ease;
           transition: background 300ms ease;
   background: rgba(0, 0, 0, 0.8); }
-  /* line 191, stdin */
+  /* line 200, stdin */
   .move-right .exit-off-canvas:hover {
     background: rgba(0, 0, 0, 0.8); }
 
-/* line 195, stdin */
+/* line 204, stdin */
 .item img {
   width: 100%; }
 
-/* line 200, stdin */
+/* line 209, stdin */
 .loader {
   display: none;
   position: fixed;
@@ -10812,87 +11638,83 @@ body {
   left: 50%;
   margin-left: -100px; }
 
-/* line 215, stdin */
+/* line 224, stdin */
 .block-title {
   display: none; }
 
-/* line 217, stdin */
+/* line 226, stdin */
 .views-field-field-category, .views-label-field-underomr-de {
   display: none; }
 
-/* line 220, stdin */
+/* line 229, stdin */
 #debug h1.thin {
   font-weight: 100 !important; }
 
-/* line 223, stdin */
+/* line 232, stdin */
 #debug h1.extralight {
   font-weight: 200 !important; }
 
-/* line 224, stdin */
+/* line 233, stdin */
 #debug h1.light {
   font-weight: 300 !important; }
 
-/* line 225, stdin */
+/* line 234, stdin */
 #debug h1.regular {
   font-weight: 400 !important; }
 
-/* line 226, stdin */
+/* line 235, stdin */
 #debug h1.simibold {
   font-weight: 600 !important; }
 
 /*// Small screens
 @media only screen {body{ background-color:#fad490;}} /* Define mobile styles */
-/* line 251, stdin */
+/* line 260, stdin */
 .mozaikitems .row {
   margin: 0 -0.9rem 0 -0.99rem; }
 
-/* line 254, stdin */
+/* line 263, stdin */
 .left-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 257, stdin */
+  /* line 266, stdin */
   .left-small span {
     font-size: 15px !important; }
 
-/* line 264, stdin */
+/* line 273, stdin */
 .right-small {
   height: 65px;
   width: 65px;
   line-height: 56px;
   cursor: pointer;
   cursor: hand; }
-  /* line 267, stdin */
+  /* line 276, stdin */
   .right-small span {
     font-size: 15px !important; }
 
-/* line 273, stdin */
+/* line 282, stdin */
 .tab-bar {
   height: 65px; }
-  /* line 275, stdin */
+  /* line 284, stdin */
   .tab-bar img {
     width: 160px; }
 
-/* line 279, stdin */
+/* line 288, stdin */
 .tab-bar-logosection {
   margin-right: 5em;
   margin-top: 0.31rem; }
 
-/* line 284, stdin */
-.artikelwrapper a {
-  color: #666666; }
-
-/* line 288, stdin */
+/* line 293, stdin */
 .outeromrade {
   display: none; }
 
-/* line 295, stdin */
-.artikelMenu {
-  margin-top: 0.7rem; }
-
-/* line 299, stdin */
+/* line 298, stdin */
 .datumtemplate, .kivlistview h5 .date-display-single, .evenemang h5 .date-display-single, .kivlistview .evenemang_date .date-display-single, .evenemang .evenemang_date .date-display-single {
   font-size: 0.9rem;
   font-weight: 600; }
+
+/*.section-ljudmagasinet h1{
+color:transparent!important;
+}*/

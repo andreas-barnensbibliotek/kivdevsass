@@ -174,7 +174,7 @@
                     <div class="itemcontainer row" style="">
                         <div class="itembox">
                             <div class="imgbox" style="text-align:center;">
-                                <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/forfattstartsida.png" alt>
+                                <img src="http://www.kulturivast.se/sites/default/files/forfattstartsida.png" alt>
                             </div>
                             <div class="textbox">
                                 <h2>Årets första<br />författardag</h2>
@@ -216,7 +216,7 @@
                             </div>
 
                             <div class="imgbox">
-                                <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/framefirstside.png" alt>
+                                <img src="http://www.kulturivast.se/sites/default/files/puff_framefirstside.png" alt="Frame">
                             </div>
                         </div>
                     </div>
@@ -242,18 +242,14 @@
             <!-- vi arrangörsdagar -->
             <div class="small-12 view-frontpage ">
                 <div class="themegradientPink">
-                    <div class="itemcontainer row" style="background: url('http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/artsbg.png') no-repeat; background-size: cover;">
+                    <div class="itemcontainer row" style="background: url('http://www.kulturivast.se/sites/default/files/Puff_artsbg.png') no-repeat; background-size: cover;">
                         <div class="itembox">
-
                             <div class="imgbox">
-                                <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/artsrub.png" alt>
+                                <img src="http://www.kulturivast.se/sites/default/files/Puff_artsrub.png" alt="Artsandaudiences">
                                 <h2>November 7-8 2016</h2>
                             </div>
                             <div class="textbox">
-                                
-                               
-                            </div>
-                            <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
+                            </div>                           
                         </div>
                     </div>
                 </div>
@@ -303,7 +299,10 @@
                     <div class="itemcontainer row" style="">
                         <div class="itembox">
                             <div class="textbox">
-                                <h2>Nytt från Filmcloud</h2>
+                                <h2>
+                                    Beställ material till<br />
+                                    Sommarboken
+                                </h2>
                             </div>
 
                             <div class="imgbox">
@@ -314,7 +313,13 @@
                 </div>
             </div>
 
-
+            <div class="small-12 view-frontpage ">
+                <div class="themebildcover">
+                    <div class="itemcontainer row" style="">
+                        <img src="http://www.kulturivast.se/sites/default/files/PUFF970-Sommarboken2016.png" >
+                    </div>
+                </div>
+            </div>
 
                     <!-- ############################################################################################################################### -->
 
@@ -456,14 +461,25 @@
             <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
             <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+   
 
 
             <script src="public/js/app.js"></script>
             <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/isotope.pkgd.min.js"></script>
-
+    <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/viewport-units-buggyfill.js"></script>
+    <script src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/js/viewport-units-buggyfill.hacks.js"></script>
             <div class="loader">
                 <img src="http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/page-loader.gif" />
             </div>
+    <script>
+window.viewportUnitsBuggyfill.init({
+    // ignore browser capability, run this puppy everywhere
+    force: true,
+    // milliseconds to delay between updates of viewport-units
+    // caused by orientationchange, pageshow, resize events
+    refreshDebounceWait: 250,
+    hacks: window.viewportUnitsBuggyfillHacks
+  });</script>
 </body>
 
 

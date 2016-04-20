@@ -253,12 +253,16 @@
         }
         img { 
             height: 20vw; 
+            /* IE9 and 10 */
+             content: 'viewport-units-buggyfill; height: 20vw;';
+
              @media #{$xxlarge-up} { 
             height: 12vw; 
          }    
-            _max-height:300px;
+            _max-height:200px;
             transform: scale(1.0,1.0); 
             object-fit: scale-down;
+           
         }
         
     }
@@ -347,9 +351,9 @@
         }
         h2{
             text-align:left;
-            color:#fff !important;            
-            @include responsive-lineheight(4vw, 24px, 66px);
-           @include responsive-font(4vw, 24px, 54px);
+            color:#fff !important;
+            @include responsive-font(4vw, 16px, 54px);            
+            @include responsive-lineheight(4vw, 20px, 66px);           
         }
         h3{
             background: linear-gradient(to right, #83224b 20%, #83224b 20%); /* Standard syntax */
@@ -387,18 +391,12 @@
              font-weight:300; 
              line-height:2.3vw;     
         }
-       
-
     }
 
     .themeforfattardag{
          @extend .startfontExtend;
-       
-         /*font-size:3vw!important;*/
-
         .textbox{
-             padding-top:2.5vw;
-           
+            padding-top:2.5vw;           
             margin-left:5vw;
         }
         .imgbox {
@@ -406,8 +404,7 @@
         }
         h2{
            @include responsive-lineheight(4vw, 24px, 66px);
-           @include responsive-font(4vw, 24px, 54px);
-            
+           @include responsive-font(4vw, 24px, 54px);            
         }
         h3{             
            @include responsive-lineheight(3.3vw, 24px, 70px);
@@ -417,9 +414,6 @@
 
      .themearrangorstraff2{
          @extend .startfontExtend;
-       
-         /*font-size:3vw!important;*/
-
         .itemcontainer{
               height: 100vh;
               display: flex;
@@ -427,10 +421,6 @@
               align-items: center;
               div{ margin:0;}
             }
-            .block{
-  
-            }
-            
             .itembox{
               text-align: center;             
               width:50vw;
@@ -446,20 +436,18 @@
                      position: relative; 
               }
             .textblock{
-                 position: absolute; 
-               top: 5.5vw;
-               left: 0;
-               text-align: center; 
-               width: 100%; 
-              font-size:4vw;
-  
+                position: absolute; 
+                top: 5.5vw;
+                left: 0;
+                text-align: center; 
+                width: 100%; 
+                font-size:4vw;  
             }
         h2{
            @include responsive-lineheight(4vw, 24px, 66px);
            @include responsive-font(4vw, 24px, 54px);
            font-weight:800;
-           color:#d3b2ff;
-            
+           color:#d3b2ff;            
         }
         h3{             
            @include responsive-lineheight(3.3vw, 24px, 70px);
@@ -470,54 +458,49 @@
         }        
     }
 
-      .themearrangorstraff{
+    .themearrangorstraff{
          @extend .startfontExtend;
-       
          /*font-size:3vw!important;*/
          background:#000;
        
-            .itemcontainer{
-              padding: 0 3rem;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              background: url('http://www.kulturivast.se/sites/default/files/PUFF97Arrangorstraff.jpg') no-repeat center center;
-              background-size: cover;
-              color: white;
-              text-align: center;
-              font-size: 2rem;
-              min-height: 20rem;
-              
+        .itemcontainer{
+            padding: 0 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('http://www.kulturivast.se/sites/default/files/PUFF97Arrangorstraff.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            min-height: 20rem;
+            @media #{$small-only} {
+                min-height: 8rem;
+            }              
         }        
-           
-        h2{
-           @include responsive-lineheight(4vw, 24px, 66px);
-           @include responsive-font(4vw, 24px, 54px);
-           font-weight:800;
-           color:#d3b2ff;
-            
+        h2{ 
+            @include responsive-font(5vw, 24px, 62px);
+            @include responsive-lineheight(4vw, 24px, 66px);
+            font-weight:800;
+            color:#d3b2ff;            
         }
-        h3{             
-           @include responsive-lineheight(3.3vw, 24px, 70px);
-           @include responsive-font(3vw, 18px, 40px);
-             font-weight:300;
-             color:$white;
-             line-height:2vw;
+        h3{ 
+            @include responsive-font(3vw, 16px, 36px);            
+            @include responsive-lineheight(3.3vw, 24px, 70px);           
+            font-weight:300;
+            color:$white;
+            line-height:2vw;
         }        
     }
 
     
-       .themearmkroksresor{
-         @extend .startfontExtend;
-       background:#188a66;
-         /*font-size:3vw!important;*/
-         .itemcontainer{
-          
-             vertical-align:middle;
-         }
-         .itembox{
-           
-         }
+    .themearmkroksresor{
+        @extend .startfontExtend;
+        background:#188a66;
+        
+        .itemcontainer{          
+            vertical-align:middle;
+        }
         .textbox{           
             display: flex;
             flex-direction: column;
@@ -529,17 +512,17 @@
             text-align:left;
         }
         h2{
-           @include responsive-lineheight(3vw, 22px, 66px);
-           @include responsive-font(3vw, 22px, 54px);
-           font-weight:800;
-           color:#c6ffb2;
+            @include responsive-lineheight(3vw, 22px, 66px);
+            @include responsive-font(3vw, 22px, 54px);
+            font-weight:800;
+            color:#c6ffb2;
            
         }
         h3{             
-           @include responsive-lineheight(2vw, 22px, 70px);
-           @include responsive-font(2vw, 16px, 40px);
-          font-weight:300;
-          color:$white;
+            @include responsive-lineheight(2vw, 22px, 70px);
+            @include responsive-font(2vw, 16px, 40px);
+            font-weight:300;
+            color:$white;
         }        
     }
 
@@ -553,46 +536,37 @@
             }
             h2{   
                 color:#000 !important;
-                @include responsive-lineheight(3vw, 22px, 66px);
                 @include responsive-font(3vw, 22px, 54px);
+                @include responsive-lineheight(3vw, 22px, 66px);                
                 font-weight:800;        
             }
             h3{
-                color:#000 !important;        
+                color:#000 !important;
+                @include responsive-font(2vw, 14px, 40px);        
                 @include responsive-lineheight(2vw, 22px, 70px);
-                @include responsive-font(2vw, 16px, 40px);
+               
             }
         }  
     }
       .themefilmcloud{
-         @extend .startfontExtend;
-       background:#97c121;
-         /*font-size:3vw!important;*/
-         .itembox{
-            
-         }
-
-        .textbox{
-             padding-top:2.5vw;
+        @extend .startfontExtend;
+        background:#97c121;
+        .textbox{           
             text-align:right;
             vertical-align:middle; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
-        }
-        .imgbox {
-           
-        }
-        h2{
-           @include responsive-lineheight(4vw, 24px, 66px);
-           @include responsive-font(4vw, 24px, 54px);
-           color:$white;
-           font-weight:300;
-            
-        }
-        h3{             
-           @include responsive-lineheight(3.3vw, 24px, 70px);
-           @include responsive-font(3vw, 18px, 40px);
+            justify-content: center;            
+            h2{
+                @include responsive-font(4vw, 24px, 54px);
+                @include responsive-lineheight(4vw, 24px, 66px);
+                color:$white;
+                font-weight:300;            
+            }
+            h3{             
+               @include responsive-lineheight(3.3vw, 24px, 70px);
+               @include responsive-font(3vw, 18px, 40px);
+            }   
         }        
     }
 
@@ -600,35 +574,41 @@
          @extend .startfontExtend;
         background: #000;
          /*font-size:3vw!important;*/
-        .textbox{
-            padding-top:3vw;
-            padding-left:0;
-        }
-        .imgbox{
-            text-align:right;
-        }
-        h2{
-            text-align:left;
-            color:#fff !important;            
-            @include responsive-lineheight(4vw, 24px, 66px);
-            @include responsive-font(4vw, 24px, 54px);
-        }
-        h3{
-            background: linear-gradient(to right, #83224b 20%, #83224b 20%); /* Standard syntax */
-            color:#fff !important;
+         .itemcontainer{
+             div{ margin:0;
+                padding:0;}
+             padding:0;
+            .itembox{
+                margin:0;
+                padding:0;
+                .imgbox{
+                    text-align:right;
+                }
+                .textbox{
+                    padding-top:3vw;
+                    padding-left:0;  
+                    padding-bottom:0;
+                    margin-bottom:0;             
+                    h2{
+                        text-align:left;
+                        color:#ef2c21 !important;            
+                        @include responsive-lineheight(4vw, 24px, 66px);
+                        @include responsive-font(4vw, 24px, 54px);
+                        font-weight:800;
+                    }
+                    h3{
+                        background: linear-gradient(to right, #83224b 20%, #83224b 20%); /* Standard syntax */
+                        color:#fff !important;
            
-            }        
-    }
-    .themesommarboken{
-        
-       background: radial-gradient( #8c523d, #3b1d11); /* Standard syntax */   
-         /*font-size:3vw!important;*/
-         .itembox{
-            
+                        }   
+                }
+            }     
          }
-
+    }
+    .themesommarboken{        
+       background: radial-gradient( #8c523d, #3b1d11); /* Standard syntax */   
+         /*font-size:3vw!important;*/       
         .textbox{
-             padding-top:2.5vw;
             text-align:right;
             vertical-align:middle; 
             display: flex;
@@ -636,17 +616,44 @@
             justify-content: center;
         }
         .imgbox {
-           
+           display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         h2{
-           @include responsive-lineheight(4vw, 24px, 66px);
-           @include responsive-font(4vw, 24px, 54px);
-           color:$white;
-           font-weight:300;
+            @include responsive-font(2.5vw, 18px, 54px);
+            @include responsive-lineheight(3vw, 20px, 66px);          
+            color:#f1e0aa;
+            font-weight:300;
             
         }
-        h3{             
-           @include responsive-lineheight(3.3vw, 24px, 70px);
-           @include responsive-font(3vw, 18px, 40px);
+        h3{
+            @include responsive-font(3vw, 18px, 40px);             
+            @include responsive-lineheight(3.3vw, 24px, 70px);           
         }        
+    }
+     .themebildcover{
+       .itemcontainer{
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              div{ margin:0;}
+            }
+            .itembox{
+                text-align: center;             
+                width:100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media #{$small-up} {
+                    height: 34vw;
+                }     
+                @media #{$medium-up} {
+                    min-height: 30vw;
+                }     
+                @media #{$large-up} {
+                    min-height: 20vw;
+                }     
+            }
     }
