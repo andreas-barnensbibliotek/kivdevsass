@@ -135,9 +135,9 @@ body {
 @media #{$large-up} {  
 }
 $font-path:"";
-$font-path: "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons";
+//$font-path: "http://develop-v1.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons";
 //$font-path: "/public/fonts/foundation-icons/foundation-icons";
-//$font-path: "http://www.kulturivast.se/sites/all/themes/kivnew/fonts/foundation-icons";
+$font-path: "../fonts/foundation-icons/foundation-icons";
 //$font-path: "http://kulturivast.se.preview.binero.se/sites/all/themes/kivnew/fonts/foundation-icons/foundation-icons";
 @font-face {
   font-family: "foundation-icons";

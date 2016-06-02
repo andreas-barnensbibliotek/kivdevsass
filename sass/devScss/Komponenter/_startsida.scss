@@ -540,10 +540,24 @@
               img{height:auto;}
                @media #{$small-up} {
                     height: 34vw;
-                }     
-               
-            }
+                }  
+        }        
+
     }
+    .themebildajcover{
+        a{  
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-flow: row wrap;
+  
+        }
+       div{
+            display: flex;
+            flex-flow: row wrap;
+            height: 30vw;
+        }
+}
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
