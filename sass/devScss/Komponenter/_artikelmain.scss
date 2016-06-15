@@ -39,6 +39,7 @@
             text-decoration:none;
             color:$white;
          }
+         
        
     }
     .artikelbild{
@@ -183,7 +184,11 @@
             line-height: 1.4;
             margin-left: 0px;
         }
-    
+     .kulturkatFoto{
+            display:inline;
+            font-style:italic;
+            font-weight:100;           
+        }
 }
 .element-invisible{display:none;}
 

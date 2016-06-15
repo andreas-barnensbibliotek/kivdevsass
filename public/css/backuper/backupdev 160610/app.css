@@ -9247,133 +9247,133 @@ ul.multiColumn {
     text-decoration: none;
     color: #FFFFFF; }
 
-/* line 45, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 44, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelbild {
   margin: 1.5rem 0rem; }
 
-/* line 49, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 48, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .faktabox {
   background-color: #dcdbda; }
-  /* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 50, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .faktabox h1, .faktabox h2, .faktabox h3 {
     color: #f77136; }
 
-/* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 55, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelButton {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-/* line 61, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artsidecontainer {
   display: block;
   padding: 1rem 1.2rem 1rem 1.2rem;
   background-color: #dcdbda; }
   @media only screen and (min-width: 64.0625em) {
-    /* line 61, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer {
       padding-bottom: 2rem;
       padding-left: 0.7rem;
       padding-right: 2rem;
       padding-top: 0.5rem; } }
-  /* line 74, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 73, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer ul {
     list-style: none;
     margin-left: 0px; }
-  /* line 78, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 77, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 84, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 83, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h2 {
     text-transform: uppercase; }
-  /* line 87, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 86, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h3 {
     font-size: 1.5rem;
     text-transform: uppercase; }
-  /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 90, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer p {
     font-size: 0.9rem; }
-  /* line 93, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 92, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .kontaktkort {
     font-size: 0.9rem; }
-    /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 94, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 99, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .avd {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 105, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 104, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelkontatkort {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 109, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelFakta {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-  /* line 117, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 116, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .success {
     width: 100%; }
 
-/* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 119, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .standardbutton {
   text-align: center;
   padding-right: 0.7rem; }
 
-/* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 124, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .l-main {
   display: none; }
 
-/* line 127, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 126, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .view-2015-supporting-articles .level2, .view-2015-supporting-articles-suo .level2 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  /* line 130, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 129, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .view-2015-supporting-articles .level2:nth-child(odd), .view-2015-supporting-articles-suo .level2:nth-child(odd) {
     background-color: #dcdbda; }
-    /* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 131, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .view-2015-supporting-articles .level2:nth-child(odd) .artsidecontainer, .view-2015-supporting-articles-suo .level2:nth-child(odd) .artsidecontainer {
       background-color: #ebeae9; }
 
-/* line 140, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h1, .artmaincontent h2, .artmaincontent h3, .artmaincontent h4, .artmaincontent h5 {
   color: #000000; }
 
-/* line 143, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 142, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h3 {
   font-size: 1rem;
   font-weight: 600; }
 
-/* line 147, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 146, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .filicons h3 {
   font-size: 1.5rem;
   font-weight: 200; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 138, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 0.5rem; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 138, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 10rem; } }
 
-/* line 157, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 156, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent blockquote {
   border-left: 10px solid #EEEEEE;
   padding: 0 0 0 2.0875rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   quotes: "”" "“" "‘" "’"; }
-  /* line 167, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 166, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent blockquote p:before {
     color: #ccc;
     content: open-quote;
@@ -9384,7 +9384,7 @@ ul.multiColumn {
     font-family: "bodoni-urw";
     font-weight: 800; }
 
-/* line 180, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 179, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .citatblock, .artmaincontent blockquote, .artmaincontent blockquote p {
   color: #000;
   font-size: 2rem;
@@ -9392,23 +9392,17 @@ ul.multiColumn {
   line-height: 1.4;
   margin-left: 0px; }
 
-/* line 187, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
-.artmaincontent .kulturkatFoto {
-  display: inline;
-  font-style: italic;
-  font-weight: 100; }
-
-/* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 188, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .element-invisible {
   display: none; }
 
-/* line 197, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 192, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .node-type-informationssida .ajimage-omrade-nod img {
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 200px; }
 
-/* line 203, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 198, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .top-bild-wrapper {
   margin-bottom: 3rem !important; }
 
@@ -10528,22 +10522,6 @@ ul.multiColumn {
           flex-flow: row wrap;
   height: 30vw; }
 
-/* line 563, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.page-frontpage-gallery .listheight {
-  height: 140px; }
-
-/* line 566, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.page-frontpage-gallery #kivisotope {
-  margin-bottom: 3rem; }
-
-/* line 569, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.page-frontpage-gallery .card-label {
-  display: none; }
-
-/* line 572, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-.page-frontpage-gallery .showingresstext {
-  display: none !important; }
-
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
@@ -11529,14 +11507,6 @@ img .flip {
 .node-culture-catalog .artmaincontent h5 {
   font-size: 1.8rem;
   color: #f77136 !important; }
-
-/* line 66, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_kulturkatalogen.scss */
-.node-culture-catalog .kulturkatFoto {
-  display: inline;
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: #666;
-  line-height: 2rem; }
 
 /*@import 'foundation/components/grid';
 @import 'foundation/components/accordion';

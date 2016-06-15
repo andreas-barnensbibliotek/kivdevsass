@@ -588,14 +588,13 @@ a.flex-prev{
 	bottom: 3.5rem;
 	color: #fff;
 	width: 100%;
-	margin:0 3vw;
+	
 	
 }
 .flex-slider .flex-text p{
 	font-family: Arial, serif;
 	font-weight: 400;
 	margin-bottom: 0;
-   
 	text-shadow: 1px 1px 4px #000;
 }
 

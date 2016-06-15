@@ -558,6 +558,21 @@
             height: 30vw;
         }
 }
+
+    .page-frontpage-gallery{
+        .listheight{
+            height:140px;
+        }
+        #kivisotope{
+          margin-bottom:3rem;
+        }
+        .card-label{
+            display:none;
+        }
+        .showingresstext{
+            display:none!important;
+        }
+    }
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
 <img src="http://www.kulturivast.se/sites/default/files/styles/full-image-950x400px/public/banner/mik-2016-anmalan-950x400.jpg?itok=v7navIZJ" />
