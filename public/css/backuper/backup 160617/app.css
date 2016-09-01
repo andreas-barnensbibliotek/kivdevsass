@@ -10559,23 +10559,14 @@ ul.multiColumn {
     z-index: 9999; }
   /* line 591, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-prev {
-    left: 18px;
-    top: 32%; }
-  /* line 595, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    left: 24px; }
+  /* line 594, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-next {
-    right: 18px;
-    top: 32%; }
-  /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    right: 24px; }
+  /* line 597, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
-    color: #ccc; }
-    @media only screen and (max-width: 40em) {
-      /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
-        font-size: 34px; } }
-    @media only screen and (min-width: 40.0625em) {
-      /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
-        font-size: 48px; } }
+    color: #fff;
+    font-size: 52px; }
 
 /*<img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/hatt.jpg'>
 <img src='http://kivdev.monoclick-dev.se/sites/default/files/bilder/frontpage/bibliotek.jpg'>
