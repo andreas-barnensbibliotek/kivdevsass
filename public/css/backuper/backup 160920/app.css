@@ -11274,25 +11274,6 @@ img .flip {
 .page-taxonomy-term-980 .top-bild-wrapper {
   margin-bottom: -100px !important; }
 
-/* line 52, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.page-taxonomy-term-2192 .omossspace h1 {
-  color: transparent !important;
-  margin-top: -1rem; }
-
-/* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.page-taxonomy-term-2192 .breadcrumb-BG {
-  background-color: #FFFFFF; }
-
-/* line 60, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.page-taxonomy-term-2192 .ajimage-omrade-nod img {
-  -o-object-fit: contain;
-     object-fit: contain; }
-
-/* line 64, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
-.page-taxonomy-term-2192 .top-bild-wrapper {
-  margin-bottom: -60px !important;
-  margin-top: 60px !important; }
-
 /* Slider */
 /* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-slider {
