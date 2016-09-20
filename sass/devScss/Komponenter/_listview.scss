@@ -52,7 +52,7 @@
            background-color:$darkgrey; 
     } 
     .listheight{
-        min-height:88px;
+        min-height:120px;
         background-color:$darkgrey; 
     }
     .ingresstext{
@@ -177,11 +177,7 @@
              margin-bottom:2px;	 
              margin-left:-6px;    
 	    }    
-        @media #{$large-up} { 
-            position:absolute;
-            right:0px; 
-            top:0rem;
-	    } 
+        
     }
     
    .ingresstextlista{display:none;}

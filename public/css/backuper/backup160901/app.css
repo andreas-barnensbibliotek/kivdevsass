@@ -8469,7 +8469,7 @@ ul.off-canvas-list {
   margin: 0rem 1rem;
   text-transform: uppercase;
   font-stretch: condensed;
-  font-size: 1rem; }
+  font-size: 0.9rem; }
   /* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   ul.off-canvas-list .nolink {
     color: #FFFFFF;
@@ -8551,10 +8551,9 @@ ul.multiColumn {
 /* line 108, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
 .off-canvas-submenu.multiColumn {
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: lowercase;
   font-stretch: normal;
-  margin-bottom: .9rem;
   /*a{         
         color:#000;
         border-bottom:1px solid $tuatara;
@@ -8564,7 +8563,7 @@ ul.multiColumn {
         font-size:0.8rem;
         
     }*/ }
-  /* line 117, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
+  /* line 116, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_mainMenu.scss */
   .off-canvas-submenu.multiColumn li {
     border-top: 0px; }
 
@@ -8618,7 +8617,7 @@ ul.multiColumn {
       max-width: 230px; }
   /* line 54, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .listheight, .evenemang .listheight {
-    min-height: 120px;
+    min-height: 88px;
     background-color: #5a5958; }
   /* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
   .kivlistview .ingresstext, .evenemang .ingresstext {
@@ -8739,37 +8738,44 @@ ul.multiColumn {
     margin-bottom: 2px;
     margin-left: -6px; } }
 
-/* line 183, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+@media only screen and (min-width: 64.0625em) {
+  /* line 173, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+  .apsisbtnboxList {
+    position: absolute;
+    right: 0px;
+    top: 0rem; } }
+
+/* line 187, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .ingresstextlista {
   display: none; }
 
-/* line 189, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .kivlistview .imgplaceholder img, .view-press-gallery .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 195, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 199, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-press-gallery .showingresstext_list {
   display: none; }
 
-/* line 200, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 204, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-id-press_gallery.view-display-id-page_2 .view-filters {
   margin-bottom: 1rem; }
 
-/* line 208, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 212, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .imgplaceholder img, .view-2015-dokument .evenemang .imgplaceholder img {
   max-width: 180px;
   min-width: 140px; }
 
-/* line 213, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 217, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .kivlistview .listheight, .view-2015-dokument .evenemang .listheight {
   min-height: 130px; }
 
-/* line 217, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 221, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-dokument .showingresstext_list {
   display: none; }
 
-/* line 224, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
+/* line 228, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_listview.scss */
 .view-2015-staff .showingresstext_list {
   display: none; }
 
@@ -9202,176 +9208,172 @@ ul.multiColumn {
   display: none; }
 
 /* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
-.artikelMainContainer h1, .artikelMainContainer h3 {
+.artikelMainContainer h1, .artikelMainContainer h2, .artikelMainContainer h3 {
   color: #f77136; }
 
-/* line 6, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
-.artikelMainContainer h2 {
-  color: #000000; }
-
-/* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 10, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .success {
   width: 100%; }
 
-/* line 14, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 12, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .row:first-child {
   margin-bottom: 0rem; }
 
-/* line 18, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 16, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikeltopImage {
   margin-bottom: -7.5rem;
   max-height: 300px;
   min-height: 150px;
   overflow: hidden; }
-  /* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 22, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikeltopImage img {
     min-height: 150px; }
 
-/* line 26, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 24, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelwrapper {
   padding-top: 2.5rem;
   /*.medium-4 {       
             background-color:$beige;                  
         }*/ }
-  /* line 31, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 29, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikelwrapper a {
     color: #666666;
     text-decoration: underline; }
-  /* line 36, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 34, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikelwrapper li a {
     text-decoration: none; }
-  /* line 40, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 38, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artikelMainContainer .artikelwrapper .button {
     text-decoration: none;
     color: #FFFFFF; }
 
-/* line 47, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 45, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelMainContainer .artikelbild {
   margin: 1.5rem 0rem; }
 
-/* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 49, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .faktabox {
   background-color: #dcdbda; }
-  /* line 53, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 51, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .faktabox h1, .faktabox h2, .faktabox h3 {
     color: #f77136; }
 
-/* line 58, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 56, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artikelButton {
   padding-top: 0px !important;
   padding-bottom: 0px !important; }
 
-/* line 63, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 61, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artsidecontainer {
   display: block;
   padding: 1rem 1.2rem 1rem 1.2rem;
   background-color: #dcdbda; }
   @media only screen and (min-width: 64.0625em) {
-    /* line 63, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 61, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer {
       padding-bottom: 2rem;
       padding-left: 0.7rem;
       padding-right: 2rem;
       padding-top: 0.5rem; } }
-  /* line 76, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 74, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer ul {
     list-style: none;
     margin-left: 0px; }
-  /* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 78, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer li {
     list-style: none;
     border-bottom: 2px solid #EEEEEE;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
-  /* line 86, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 84, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h2 {
     text-transform: uppercase; }
-  /* line 89, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 87, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer h3 {
     font-size: 1.5rem;
     text-transform: uppercase; }
-  /* line 93, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 91, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer p {
     font-size: 0.9rem; }
-  /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 93, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .kontaktkort {
     font-size: 0.9rem; }
-    /* line 97, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 95, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .namn {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 102, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 100, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .avd {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-    /* line 107, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 105, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelkontatkort {
       font-weight: bold;
       line-height: 1.1rem;
       text-transform: uppercase; }
-    /* line 112, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 110, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .artsidecontainer .kontaktkort .artikelFakta {
       color: #000000;
       margin-bottom: 0.4rem;
       line-height: 1.2rem; }
-  /* line 119, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 117, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artsidecontainer .success {
     width: 100%; }
 
-/* line 122, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 120, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .standardbutton {
   text-align: center;
   padding-right: 0.7rem; }
 
-/* line 127, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 125, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .l-main {
   display: none; }
 
-/* line 129, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 127, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .view-2015-supporting-articles .level2, .view-2015-supporting-articles-suo .level2 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
-  /* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 130, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .view-2015-supporting-articles .level2:nth-child(odd), .view-2015-supporting-articles-suo .level2:nth-child(odd) {
     background-color: #dcdbda; }
-    /* line 134, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+    /* line 132, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
     .view-2015-supporting-articles .level2:nth-child(odd) .artsidecontainer, .view-2015-supporting-articles-suo .level2:nth-child(odd) .artsidecontainer {
       background-color: #ebeae9; }
 
-/* line 142, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 140, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h1, .artmaincontent h2, .artmaincontent h3, .artmaincontent h4, .artmaincontent h5 {
   color: #000000; }
 
-/* line 145, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 143, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent h3 {
   font-size: 1rem;
   font-weight: 600; }
 
-/* line 149, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 147, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .filicons h3 {
   font-size: 1.5rem;
   font-weight: 200; }
 
 @media only screen and (min-width: 40.0625em) {
-  /* line 141, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 0.5rem; } }
 
 @media only screen and (min-width: 64.0625em) {
-  /* line 141, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 139, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent {
     padding-right: 10rem; } }
 
-/* line 159, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 157, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent blockquote {
   border-left: 10px solid #EEEEEE;
   padding: 0 0 0 2.0875rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   quotes: "”" "“" "‘" "’"; }
-  /* line 169, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+  /* line 167, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
   .artmaincontent blockquote p:before {
     color: #ccc;
     content: open-quote;
@@ -9382,7 +9384,7 @@ ul.multiColumn {
     font-family: "bodoni-urw";
     font-weight: 800; }
 
-/* line 182, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 180, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .citatblock, .artmaincontent blockquote, .artmaincontent blockquote p {
   color: #000;
   font-size: 2rem;
@@ -9390,23 +9392,23 @@ ul.multiColumn {
   line-height: 1.4;
   margin-left: 0px; }
 
-/* line 189, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 187, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .artmaincontent .kulturkatFoto {
   display: inline;
   font-style: italic;
   font-weight: 100; }
 
-/* line 195, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 193, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .element-invisible {
   display: none; }
 
-/* line 199, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 197, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .node-type-informationssida .ajimage-omrade-nod img {
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 200px; }
 
-/* line 205, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
+/* line 203, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_artikelmain.scss */
 .top-bild-wrapper {
   margin-bottom: 3rem !important; }
 
@@ -10544,66 +10546,34 @@ ul.multiColumn {
 
 /* line 575, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
 .page-frontpage-gallery .kiv-media-cat {
-  margin: 6rem 2rem 2rem; }
-  @media only screen and (max-width: 40em) {
-    /* line 575, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-    .page-frontpage-gallery .kiv-media-cat {
-      margin: 6rem 2rem 1rem; } }
-  /* line 582, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  margin: 7rem 0 5rem 0; }
+  /* line 579, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .aj-carusel h3 {
     font-size: 1.75rem; }
-  /* line 585, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 582, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .aj-carusel button {
     -webkit-border-radius: 6px;
             border-radius: 6px;
     height: 46px;
     width: 46px;
     z-index: 9999; }
-  /* line 594, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+  /* line 591, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-prev {
     left: 18px;
-    top: 33%;
-    margin-left: -3rem;
-    background: url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/Pil-karusell-V46NY.png") no-repeat; }
-    @media only screen and (max-width: 40em) {
-      /* line 594, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-prev {
-        top: 31%; } }
-    @media only screen and (min-width: 40.0625em) {
-      /* line 594, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-prev {
-        top: 33%; } }
-    @media only screen and (min-width: 90.0625em) {
-      /* line 594, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-prev {
-        top: 38%; } }
-  /* line 609, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    top: 32%; }
+  /* line 595, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-next {
     right: 18px;
-    top: 33%;
-    margin-right: -3rem;
-    background: url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/Pil-karusell-H46NY.png") no-repeat; }
-    @media only screen and (max-width: 40em) {
-      /* line 609, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-next {
-        top: 31%; } }
-    @media only screen and (min-width: 40.0625em) {
-      /* line 609, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-next {
-        top: 33%; } }
-    @media only screen and (min-width: 90.0625em) {
-      /* line 609, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
-      .page-frontpage-gallery .kiv-media-cat .slick-next {
-        top: 38%; } }
-  /* line 625, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+    top: 32%; }
+  /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
   .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
-    color: transparent; }
+    color: #ccc; }
     @media only screen and (max-width: 40em) {
-      /* line 625, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
         font-size: 34px; } }
     @media only screen and (min-width: 40.0625em) {
-      /* line 625, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
+      /* line 599, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_startsida.scss */
       .page-frontpage-gallery .kiv-media-cat .slick-prev::before, .page-frontpage-gallery .kiv-media-cat .slick-next::before {
         font-size: 48px; } }
 
@@ -11872,10 +11842,6 @@ body {
 .datumtemplate, .kivlistview h5 .date-display-single, .evenemang h5 .date-display-single, .kivlistview .evenemang_date .date-display-single, .evenemang .evenemang_date .date-display-single {
   font-size: 0.9rem;
   font-weight: 600; }
-
-/* line 303, stdin */
-.flex-control-nav {
-  bottom: -60px; }
 
 /*.section-ljudmagasinet h1{
 color:transparent!important;

@@ -574,7 +574,10 @@
         }
        .kiv-media-cat{
            
-           margin:7rem 0 5rem 0;
+           margin:6rem 2rem 2rem;
+           @media #{$small-only} {
+            margin:6rem 2rem 1rem;
+           }  
            .aj-carusel{
                h3{
                    font-size:$h3-font-size-Ajslider;
@@ -590,16 +593,39 @@
            } 
            .slick-prev {
                 left: 18px;
-                  top: 32%;
+                top: 33%;
+                margin-left:-3rem;
+                background:url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/Pil-karusell-V46NY.png") no-repeat;
+                @media #{$small-only} {
+                  top: 31%;
+                }  
+                @media #{$medium-up} {
+                  top: 33%;
+                }  
+                @media #{$xlarge-up} {
+                  top: 38%;
+                }  
             }
            .slick-next{
                 right: 18px;
-                  top: 32%;
+                top: 33%;
+                margin-right:-3rem;
+                background:url("http://develop-v1.kulturivast.se/sites/all/themes/kivnew/images/Pil-karusell-H46NY.png") no-repeat;
+                   //font-size: 48px;
+                @media #{$small-only} {
+                   top: 31%;
+                }  
+                @media #{$medium-up} {
+                    top: 33%;
+                }  
+                @media #{$xlarge-up} {
+                  top: 38%;
+                }  
             }
            .slick-prev::before, .slick-next::before {
                 //background: #666 none repeat scroll 0 0;
                 //border-radius: 6px;
-                color: #ccc;
+                color: transparent;
                 //font-family: "slick";
 
                 //font-size: 48px;
