@@ -11293,6 +11293,22 @@ img .flip {
   margin-bottom: -60px !important;
   margin-top: 60px !important; }
 
+/* line 72, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-2166 .breadcrumb-BG {
+  background: #FFFFFF; }
+
+/* line 76, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-2166 .omossspace h1 {
+  color: #FFFFFF; }
+
+/* line 80, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-2166 .omradesnamn {
+  color: #dcdbda; }
+
+/* line 84, E:/kulturivastdev/kivsassproj/sass/devScss/Komponenter/_siteisite.scss */
+.page-taxonomy-term-2166 #breadcrumbval a, .page-taxonomy-term-2166 .omradesnamn a, .page-taxonomy-term-2166 .visaallt a {
+  color: #dcdbda; }
+
 /* Slider */
 /* line 3, E:/kulturivastdev/kivsassproj/sass/devScss/vendor/_slick.scss */
 .slick-slider {
